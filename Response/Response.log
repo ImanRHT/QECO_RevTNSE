@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  14 SEP 2024 05:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  15 SEP 2024 23:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1365,33 +1365,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 1590--1591
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1592--1593
+
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1596 \newpage
+l.1606 \newpage
                 [6]pdfTeX warning (ext4): destination with the same identifier 
 (name{section.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1598 \section{Response to Reviewer 1}
+l.1608 \section{Response to Reviewer 1}
                                        
-Underfull \hbox (badness 10000) in paragraph at lines 1601--1602
+Underfull \hbox (badness 10000) in paragraph at lines 1611--1612
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1603--1604
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1606--1607
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1609--1610
+Underfull \hbox (badness 10000) in paragraph at lines 1613--1614
 
  []
 
@@ -1401,7 +1396,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1616--1617
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1620--1621
+Underfull \hbox (badness 10000) in paragraph at lines 1619--1620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1626--1627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1630--1631
 
  []
 
@@ -1409,29 +1414,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1632 ... system as WDs harvest energy from ETs.}
+l.1642 ... system as WDs harvest energy from ETs.}
                                                   \newline [7]
-Underfull \hbox (badness 10000) in paragraph at lines 1632--1633
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1636--1637
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1639--1640
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1642--1643
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1644--1645
+Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1652--1653
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1654--1655
 
  []
 
@@ -1439,15 +1444,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1653 	\item E
+l.1663 	\item E
                valuating the performance of WiEnTM in different scenarios an...
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 1656--1657
+Underfull \hbox (badness 10000) in paragraph at lines 1666--1667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1668--1669
+Underfull \hbox (badness 10000) in paragraph at lines 1678--1679
 
  []
 
@@ -1455,48 +1460,48 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1687 	}
+l.1697 	}
           [9]
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1697--1697
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1690--1691
+Underfull \hbox (badness 10000) in paragraph at lines 1700--1701
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1692--1693
+Underfull \hbox (badness 10000) in paragraph at lines 1702--1703
 
  []
 
 File: simulation2_a.pdf Graphic file (type pdf)
 <use simulation2_a.pdf>
-Package pdftex.def Info: simulation2_a.pdf  used on input line 1704.
+Package pdftex.def Info: simulation2_a.pdf  used on input line 1714.
 (pdftex.def)             Requested size: 223.744pt x 107.47685pt.
 File: simulation2_b.pdf Graphic file (type pdf)
 <use simulation2_b.pdf>
-Package pdftex.def Info: simulation2_b.pdf  used on input line 1709.
+Package pdftex.def Info: simulation2_b.pdf  used on input line 1719.
 (pdftex.def)             Requested size: 223.744pt x 112.50995pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1723 \section
+l.1733 \section
                {Response to Reviewer 2} [10]pdfTeX warning (ext4): destination 
 with the same identifier (name{section.4}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.1723 \section{Response to Reviewer 2}
+l.1733 \section{Response to Reviewer 2}
                                        
-Underfull \hbox (badness 10000) in paragraph at lines 1727--1728
+Underfull \hbox (badness 10000) in paragraph at lines 1737--1738
 
  []
 
 
-Overfull \hbox (3.20198pt too wide) in paragraph at lines 1775--1775
+Overfull \hbox (3.20198pt too wide) in paragraph at lines 1785--1785
 []|$\OML/cmm/m/it/12 x[]; x[]; x[]$| 
  []
 
@@ -1507,20 +1512,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1782 ...ed this comment satisfactorily. \newpage
+l.1792 ...ed this comment satisfactorily. \newpage
                                                    [11]pdfTeX warning (ext4): d
 estination with the same identifier (name{section.5}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.1784 \section{Response to Reviewer 3}
+l.1794 \section{Response to Reviewer 3}
                                        
-Underfull \hbox (badness 10000) in paragraph at lines 1787--1788
+Underfull \hbox (badness 10000) in paragraph at lines 1797--1798
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1789--1790
+Underfull \hbox (badness 10000) in paragraph at lines 1799--1800
 
  []
 
@@ -1528,59 +1533,39 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1790 
+l.1800 
         [12]
-Underfull \hbox (badness 10000) in paragraph at lines 1794--1795
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1797--1798
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1801--1802
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1804--1805
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1806--1807
+Underfull \hbox (badness 10000) in paragraph at lines 1807--1808
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1808--1809
+Underfull \hbox (badness 10000) in paragraph at lines 1811--1812
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1813--1814
+Underfull \hbox (badness 10000) in paragraph at lines 1814--1815
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1817--1818
+Underfull \hbox (badness 10000) in paragraph at lines 1816--1817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1820--1821
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1819
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1821 	
-         [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1824--1825
+
+Underfull \hbox (badness 10000) in paragraph at lines 1823--1824
 
  []
 
@@ -1594,18 +1579,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 1830--1831
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1836--1837
+pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1831 	
+         [13]
+Underfull \hbox (badness 10000) in paragraph at lines 1834--1835
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1838--1839
+Underfull \hbox (badness 10000) in paragraph at lines 1837--1838
 
  []
 
 
-Overfull \hbox (3.20198pt too wide) in paragraph at lines 1883--1883
+Underfull \hbox (badness 10000) in paragraph at lines 1840--1841
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1846--1847
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1848--1849
+
+ []
+
+
+Overfull \hbox (3.20198pt too wide) in paragraph at lines 1893--1893
 []|$\OML/cmm/m/it/12 x[]; x[]; x[]$| 
  []
 
@@ -1613,7 +1618,7 @@ Overfull \hbox (3.20198pt too wide) in paragraph at lines 1883--1883
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1886--1887
+Underfull \hbox (badness 10000) in paragraph at lines 1896--1897
 
  []
 
@@ -1621,9 +1626,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1887 
+l.1897 
         [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1888--1889
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1899
 
  []
 
@@ -1631,34 +1636,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1892 \end{my}
+l.1902 \end{my}
                 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1894--1895
+Underfull \hbox (badness 10000) in paragraph at lines 1904--1905
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1896--1898
+Underfull \hbox (badness 10000) in paragraph at lines 1906--1908
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1906--1906
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1909--1910
-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1915 \end{my}
-                [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1917--1918
+Underfull \hbox (badness 10000) in paragraph at lines 1916--1916
 
  []
 
@@ -1667,24 +1657,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 1919--1920
 
  []
 
+pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1925 \end{my}
+                [16]
+Underfull \hbox (badness 10000) in paragraph at lines 1927--1928
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1929--1930
+
+ []
+
 File: simulation2_a.pdf Graphic file (type pdf)
 <use simulation2_a.pdf>
-Package pdftex.def Info: simulation2_a.pdf  used on input line 1926.
+Package pdftex.def Info: simulation2_a.pdf  used on input line 1936.
 (pdftex.def)             Requested size: 223.744pt x 107.47685pt.
 File: simulation2_b.pdf Graphic file (type pdf)
 <use simulation2_b.pdf>
-Package pdftex.def Info: simulation2_b.pdf  used on input line 1931.
+Package pdftex.def Info: simulation2_b.pdf  used on input line 1941.
 (pdftex.def)             Requested size: 223.744pt x 112.50995pt.
 File: simulation3_a.pdf Graphic file (type pdf)
 <use simulation3_a.pdf>
-Package pdftex.def Info: simulation3_a.pdf  used on input line 1942.
+Package pdftex.def Info: simulation3_a.pdf  used on input line 1952.
 (pdftex.def)             Requested size: 119.48784pt x 149.86205pt.
 File: simulation3_b.pdf Graphic file (type pdf)
 <use simulation3_b.pdf>
-Package pdftex.def Info: simulation3_b.pdf  used on input line 1947.
+Package pdftex.def Info: simulation3_b.pdf  used on input line 1957.
 (pdftex.def)             Requested size: 126.32315pt x 149.86205pt.
 
-Overfull \hbox (1.43779pt too wide) in paragraph at lines 1947--1948
+Overfull \hbox (1.43779pt too wide) in paragraph at lines 1957--1958
  [][] 
  []
 
@@ -1692,19 +1697,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1973 	}
+l.1983 	}
          \newline [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1973--1974
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1976--1977
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1981--1982
+Underfull \hbox (badness 10000) in paragraph at lines 1983--1984
 
  []
 
@@ -1713,24 +1708,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1986--1987
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{section.6}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1988 \section{Response to Reviewer 4}
-                                       
-Underfull \hbox (badness 10000) in paragraph at lines 1992--1993
 
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1994 	\underline{Authors' Reply}
-                                  : We have applied the reviewer's comment t...
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 1994--1995
+Underfull \hbox (badness 10000) in paragraph at lines 1991--1992
 
  []
 
@@ -1739,45 +1718,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 1996--1997
 
  []
 
+pdfTeX warning (ext4): destination with the same identifier (name{section.6}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1998 \section{Response to Reviewer 4}
+                                       
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2003
 
-Underfull \hbox (badness 10000) in paragraph at lines 1998--1999
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2004 	\underline{Authors' Reply}
+                                  : We have applied the reviewer's comment t...
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 2004--2005
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2003--2004
+Underfull \hbox (badness 10000) in paragraph at lines 2006--2007
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2011--2012
+Underfull \hbox (badness 10000) in paragraph at lines 2008--2009
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2015--2016
+Underfull \hbox (badness 10000) in paragraph at lines 2013--2014
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2017--2018
+Underfull \hbox (badness 10000) in paragraph at lines 2021--2022
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2025--2026
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2027--2028
 
  []
 
 File: TDMA.pdf Graphic file (type pdf)
 <use TDMA.pdf>
-Package pdftex.def Info: TDMA.pdf  used on input line 2028.
+Package pdftex.def Info: TDMA.pdf  used on input line 2038.
 (pdftex.def)             Requested size: 203.23045pt x 95.0pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2031--2032
+Underfull \hbox (badness 10000) in paragraph at lines 2041--2042
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2033--2034
+Underfull \hbox (badness 10000) in paragraph at lines 2043--2044
 
  []
 
@@ -1785,18 +1790,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2034 	
+l.2044 	
          [19]
-Underfull \hbox (badness 10000) in paragraph at lines 2041--2042
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2049--2050
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 2051--2052
 
  []
@@ -1806,24 +1801,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 2059--2060
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2061 	\underline{Authors' Reply}
-                                  : To address the reviewer's comment, we ha...
-[20]
+
 Underfull \hbox (badness 10000) in paragraph at lines 2061--2062
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2073
+Underfull \hbox (badness 10000) in paragraph at lines 2069--2070
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2071 	\underline{Authors' Reply}
+                                  : To address the reviewer's comment, we ha...
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 2071--2072
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2086--2087
+Underfull \hbox (badness 10000) in paragraph at lines 2082--2083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2096--2097
 
  []
 
@@ -1831,12 +1836,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2087 
+l.2097 
         [21]pdfTeX warning (ext4): destination with the same identifier (name{p
 age.22}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2088 \end{document}
+l.2098 \end{document}
                       [22] (./Response.aux)
 
 LaTeX Warning: There were undefined references.
@@ -1881,7 +1886,7 @@ ve/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/
 texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on Response.pdf (65 pages, 1764314 bytes).
+Output written on Response.pdf (65 pages, 1764417 bytes).
 PDF statistics:
  1651 PDF objects out of 1728 (max. 8388607)
  1370 compressed objects within 14 object streams
