@@ -63,26 +63,22 @@ K.~Arulkumaran, M.~P. Deisenroth, M.~Brundage, and A.~A. Bharath, ``Deep
   reinforcement learning: A brief survey,'' \emph{IEEE Signal Process Mag},
   vol.~34, no.~6, pp. 26--38, Nov 2017.
 
-\bibitem{huang2019deep}
-L.~Huang, S.~Bi, and Y.-J.~A. Zhang, ``Deep reinforcement learning for online
-  computation offloading in wireless powered mobile-edge computing networks,''
-  \emph{IEEE Trans. Mob. Comput.}, vol.~19, no.~11, pp. 2581--2593, Jul 2019.
+\bibitem{munir2021multi}
+M.~S. Munir, N.~H. Tran, W.~Saad, and C.~S. Hong, ``Multi-agent
+  meta-reinforcement learning for self-powered and sustainable edge computing
+  systems,'' \emph{IEEE Transactions on Network and Service Management},
+  vol.~18, no.~3, pp. 3353--3374, 2021.
 
-\bibitem{Bolourian-WCL24}
-M.~Bolourian and H.~Shah-Mansouri, ``Deep {Q}-learning for minimum task drop in
-  {SWIPT}-enabled mobile-edge computing,'' \emph{IEEE Wireless Commun.
-  Letters}, vol.~13, no.~3, pp. 894--898, Mar 2024.
+\bibitem{gong2022edge}
+Y.~Gong, H.~Yao, J.~Wang, M.~Li, and S.~Guo, ``Edge intelligence-driven joint
+  offloading and resource allocation for future {6G} {I}ndustrial {I}nternet of
+  {T}hings,'' \emph{accepted for publication in IEEE Trans. Netw. Sci. Eng.},
+  2024.
 
-\bibitem{zhao2019deep}
-N.~Zhao, Y.-C. Liang, D.~Niyato, Y.~Pei, M.~Wu, and Y.~Jiang, ``Deep
-  reinforcement learning for user association and resource allocation in
-  heterogeneous cellular networks,'' \emph{IEEE Trans. Wireless Commun.},
-  vol.~18, no.~11, pp. 5141--5152, Aug 2019.
-
-\bibitem{9253665}
-M.~Tang and V.~W. Wong, ``Deep reinforcement learning for task offloading in
-  mobile edge computing systems,'' \emph{IEEE Trans. Mob. Comput.}, vol.~21,
-  no.~6, pp. 1985--1997, Nov 2020.
+\bibitem{wu2024combining}
+G.~Wu, X.~Chen, Y.~Shen, Z.~Xu, H.~Zhang, S.~Shen, and S.~Yu, ``Combining
+  lyapunov optimization with actor-critic networks for privacy-aware iiot
+  computation offloading,'' \emph{IEEE Internet Things J.}, Jan 2024.
 
 \bibitem{sun2024hierarchical}
 C.~Sun, X.~Li, C.~Wang, Q.~He, X.~Wang, and V.~C. Leung, ``Hierarchical deep
@@ -90,17 +86,35 @@ C.~Sun, X.~Li, C.~Wang, Q.~He, X.~Wang, and V.~C. Leung, ``Hierarchical deep
   in mobile edge-cloud computing,'' \emph{accepted for publication in IEEE
   Trans. Services Computing}, 2024.
 
-\bibitem{dai2020edge}
-Y.~Dai, K.~Zhang, S.~Maharjan, and Y.~Zhang, ``Edge intelligence for
-  energy-efficient computation offloading and resource allocation in \text{5G}
-  beyond,'' \emph{IEEE Trans. Veh. Technol.}, vol.~69, no.~10, pp.
-  12\,175--12\,186, Aug 2020.
+\bibitem{zhang2023multi}
+J.~Zhang, F.~Shen, L.~Tang, F.~Yan, F.~Qin, and C.~Wang, ``A multi-agent
+  reinforcement learning approach for dynamic offloading with partial
+  information-sharing in iot networks,'' in \emph{2023 IEEE 98th Vehicular
+  Technology Conference (VTC2023-Fall)}.\hskip 1em plus 0.5em minus 0.4em\relax
+  IEEE, 2023, pp. 1--5.
 
-\bibitem{huang2021deadline}
-H.~Huang, Q.~Ye, and Y.~Zhou, ``Deadline-aware task offloading with
-  partially-observable deep reinforcement learning for multi-access edge
-  computing,'' \emph{IEEE Trans. Netw. Sci. Eng.}, vol.~9, no.~6, pp.
-  3870--3885, Sep 2021.
+\bibitem{lin2022multi}
+S.-Y. Lin, C.-M. Huang, and T.-Y. Wu, ``Multi-access edge computing-based
+  vehicle-vehicle-rsu data offloading over the multi-rsu-overlapped
+  environment,'' \emph{IEEE Open Journal of Intelligent Transportation
+  Systems}, vol.~3, pp. 7--32, 2022.
+
+\bibitem{wei2023many}
+Z.~Wei, B.~Li, R.~Zhang, X.~Cheng, and L.~Yang, ``Many-to-many task offloading
+  in vehicular fog computing: A multi-agent deep reinforcement learning
+  approach,'' \emph{IEEE Transactions on Mobile Computing}, vol.~23, no.~3, pp.
+  2107--2122, 2023.
+
+\bibitem{yuan2023adaptive}
+S.~Yuan, B.~Dong, H.~Lvy, H.~Liu, H.~Chen, C.~Wu, S.~Guo, Y.~Ding, and J.~Li,
+  ``Adaptive incentivize for cross-silo federated learning in iiot: A
+  multi-agent reinforcement learning approach,'' \emph{IEEE Internet of Things
+  Journal}, 2023.
+
+\bibitem{huang2019deep}
+L.~Huang, S.~Bi, and Y.-J.~A. Zhang, ``Deep reinforcement learning for online
+  computation offloading in wireless powered mobile-edge computing networks,''
+  \emph{IEEE Trans. Mob. Comput.}, vol.~19, no.~11, pp. 2581--2593, Jul 2019.
 
 \bibitem{liu2021learn}
 Z.~Liu, Y.~Zhao, J.~Song, C.~Qiu, X.~Chen, and X.~Wang, ``Learn to coordinate
@@ -114,22 +128,83 @@ H.~Zhou, K.~Jiang, X.~Liu, X.~Li, and V.~C. Leung, ``Deep reinforcement
   computing,'' \emph{IEEE Internet Things J.}, vol.~9, no.~2, pp. 1517--1530,
   Jun 2021.
 
+\bibitem{liao2023online}
+L.~Liao, Y.~Lai, F.~Yang, and W.~Zeng, ``Online computation offloading with
+  double reinforcement learning algorithm in mobile edge computing,'' \emph{J
+  Parallel Distrib Comput}, vol. 171, pp. 28--39, Jan 2023.
+
+\bibitem{wu2023computation}
+G.~Wu, H.~Wang, H.~Zhang, Y.~Zhao, S.~Yu, and S.~Shen, ``Computation offloading
+  method using stochastic games for software-defined-network-based multiagent
+  mobile edge computing,'' \emph{IEEE Internet Things J.}, vol.~10, no.~20, pp.
+  17\,620--17\,634, May 2023.
+
+\bibitem{dai2020edge}
+Y.~Dai, K.~Zhang, S.~Maharjan, and Y.~Zhang, ``Edge intelligence for
+  energy-efficient computation offloading and resource allocation in \text{5G}
+  beyond,'' \emph{IEEE Trans. Veh. Technol.}, vol.~69, no.~10, pp.
+  12\,175--12\,186, Aug 2020.
+
+\bibitem{wu2024privacy}
+G.~Wu, X.~Chen, Z.~Gao, H.~Zhang, S.~Yu, and S.~Shen, ``Privacy-preserving
+  offloading scheme in multi-access mobile edge computing based on madrl,''
+  \emph{J. Parallel Distributed Comput.}, vol. 183, p. 104775, Jan 2024.
+
+\bibitem{zhao2019deep}
+N.~Zhao, Y.-C. Liang, D.~Niyato, Y.~Pei, M.~Wu, and Y.~Jiang, ``Deep
+  reinforcement learning for user association and resource allocation in
+  heterogeneous cellular networks,'' \emph{IEEE Trans. Wireless Commun.},
+  vol.~18, no.~11, pp. 5141--5152, Aug 2019.
+
+\bibitem{Bolourian-WCL24}
+M.~Bolourian and H.~Shah-Mansouri, ``Deep {Q}-learning for minimum task drop in
+  {SWIPT}-enabled mobile-edge computing,'' \emph{IEEE Wireless Commun.
+  Letters}, vol.~13, no.~3, pp. 894--898, Mar 2024.
+
+\bibitem{9253665}
+M.~Tang and V.~W. Wong, ``Deep reinforcement learning for task offloading in
+  mobile edge computing systems,'' \emph{IEEE Trans. Mob. Comput.}, vol.~21,
+  no.~6, pp. 1985--1997, Nov 2020.
+
+\bibitem{huang2021deadline}
+H.~Huang, Q.~Ye, and Y.~Zhou, ``Deadline-aware task offloading with
+  partially-observable deep reinforcement learning for multi-access edge
+  computing,'' \emph{IEEE Trans. Netw. Sci. Eng.}, vol.~9, no.~6, pp.
+  3870--3885, Sep 2021.
+
+\bibitem{wu2023multi}
+G.~Wu, Z.~Xu, H.~Zhang, S.~Shen, and S.~Yu, ``Multi-agent drl for joint
+  completion delay and energy consumption with queuing theory in mec-based
+  iiot,'' \emph{J. Parallel Distributed Comput.}, vol. 176, pp. 80--94, Jun
+  2023.
+
 \bibitem{gao2022large}
 Z.~Gao, L.~Yang, and Y.~Dai, ``Large-scale computation offloading using a
   multi-agent reinforcement learning in heterogeneous multi-access edge
   computing,'' \emph{IEEE Trans. Mob. Comput.}, vol.~22, no.~6, pp. 3425--3443,
   Jan 2023.
 
-\bibitem{gong2022edge}
-Y.~Gong, H.~Yao, J.~Wang, M.~Li, and S.~Guo, ``Edge intelligence-driven joint
-  offloading and resource allocation for future {6G} {I}ndustrial {I}nternet of
-  {T}hings,'' \emph{accepted for publication in IEEE Trans. Netw. Sci. Eng.},
-  2024.
+\bibitem{tang2022uav}
+Q.~Tang, L.~Liu, C.~Jin, J.~Wang, Z.~Liao, and Y.~Luo, ``An uav-assisted mobile
+  edge computing offloading strategy for minimizing energy consumption,''
+  \emph{Computer Networks}, vol. 207, p. 108857, 2022.
 
-\bibitem{liao2023online}
-L.~Liao, Y.~Lai, F.~Yang, and W.~Zeng, ``Online computation offloading with
-  double reinforcement learning algorithm in mobile edge computing,'' \emph{J
-  Parallel Distrib Comput}, vol. 171, pp. 28--39, Jan 2023.
+\bibitem{guo2022energy}
+M.~Guo, Q.~Li, Z.~Peng, X.~Liu, and D.~Cui, ``Energy harvesting computation
+  offloading game towards minimizing delay for mobile edge computing,''
+  \emph{Computer Networks}, vol. 204, p. 108678, 2022.
+
+\bibitem{seo2022differential}
+H.~Seo, H.~Oh, J.~K. Choi, and S.~Park, ``Differential pricing-based task
+  offloading for delay-sensitive iot applications in mobile edge computing
+  system,'' \emph{IEEE Internet of Things Journal}, vol.~9, no.~19, pp.
+  19\,116--19\,131, 2022.
+
+\bibitem{li2022joint}
+Y.~Li, B.~Yang, H.~Wu, Q.~Han, C.~Chen, and X.~Guan, ``Joint offloading
+  decision and resource allocation for vehicular fog-edge computing networks: A
+  contract-stackelberg approach,'' \emph{IEEE Internet of Things Journal},
+  vol.~9, no.~17, pp. 15\,969--15\,982, 2022.
 
 \bibitem{mnih2015human}
 V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~A. Rusu, J.~Veness, M.~G. Bellemare,
@@ -162,175 +237,5 @@ Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
   ``Dueling network architectures for deep reinforcement learning,'' in
   \emph{Proc. of International Conference on Machine Learning}.\hskip 1em plus
   0.5em minus 0.4em\relax New York, NY, Jun 2016.
-
-\bibitem{b1}
-X.~Wang, Y.~Han, V.~C.~M. Leung, X.~Y. D.~Niyato, and X.~Chen, ``Convergence of
-  edge computing and deep learning: A comprehensive survey,'' \emph{IEEE
-  Commun. Surveys \& Tuts.}, vol.~22, no.~2, pp. 869--904, Second Quarter 2020.
-
-\bibitem{b3}
-D.~Ma, G.~Lan, M.~Hassan, W.~Hu, and S.~K. Das, ``{Sensing, computing, and
-  communications for energy harvesting IoTs: A survey},'' \emph{IEEE Commun.
-  Surveys \& Tuts.}, vol.~22, no.~2, pp. 1222--1250, Second Quarter 2020.
-
-\bibitem{b11}
-L.~Ji and S.~Guo, ``Energy-efficient cooperative resource allocation in
-  wireless powered mobile edge computing,'' \emph{IEEE Internet of Things J.},
-  vol.~6, no.~3, pp. 4744--4754, Jun. 2019.
-
-\bibitem{b35}
-Y.~Yu, Y.~Yan, S.~Li, and D.~Wu, ``Task delay minimization in wireless powered
-  mobile edge computing networks: A deep reinforcement learning approach,'' in
-  \emph{Proc. of Int. Conf. Wireless Commun. Signal Process. (WCSP)}, Changsha,
-  China, Mar. 2021.
-
-\bibitem{b4}
-Y.~Mao, C.~You, J.~Zhang, K.~Huang, and K.~B. Letaief, ``A survey on mobile
-  edge computing: The communication perspective,'' \emph{IEEE Commun. Surveys
-  \& Tuts.}, vol.~19, no.~4, pp. 2322--2358, Fourth Quarter 2017.
-
-\bibitem{b38}
-Y.~Li, Y.~Wu, M.~Dai, B.~Lin, W.~Jia, and X.~Shen, ``{Hybrid NOMA-FDMA assisted
-  dual computation offloading: A latency minimization approach},'' \emph{IEEE
-  Trans. Netw. Sci. Eng.}, vol.~9, no.~5, pp. 3345--3360, Sep. 2022.
-
-\bibitem{b37}
-K.~Guo, M.~Yang, Y.~Zhang, and J.~Cao, ``{Joint computation offloading and
-  bandwidth assignment in cloud-assisted edge computing},'' \emph{IEEE Trans.
-  Cloud Comput.}, vol.~10, no.~1, pp. 451--460, Mar. 2022.
-
-\bibitem{b5}
-M.~Aazam, S.~Islam, S.~T. Lone, and A.~Abbas, ``{Cloud of Things (CoT):
-  Cloud-Fog-IoT task offloading for sustainable Internet of Things},''
-  \emph{IEEE Trans. Sustain. Comput.}, vol.~7, no.~1, pp. 87--98, Mar. 2022.
-
-\bibitem{b6}
-B.~Kar, W.~Yahya, Y.-D. Lin, and A.~Ali, ``{A survey on offloading in federated
-  cloud-edge-fog systems with traditional optimization and machine learning},''
-  [Online]. Available:
-  \href{https://arxiv.org/abs/2202.10628}{https://arxiv.org/abs/2202.10628}.
-
-\bibitem{b39}
-R.~Zhang and C.~Zhou, ``{A computation task offloading scheme based on
-  mobile-cloud and edge computing for WBANs},'' in \emph{Proc. of IEEE Int.
-  Conf. Commun. (ICC)}, Seoul, Korea, Repulic of, Mar. 2022.
-
-\bibitem{b40}
-Z.~Gao, W.~Hao, and S.~Yang, ``{Joint offloading and resource allocation for
-  multi-user multi-edge collaborative computing system},'' \emph{IEEE Trans.
-  Veh. Technol.}, vol.~71, no.~3, pp. 3383--3388, Mar. 2022.
-
-\bibitem{b7}
-P.~X. Nguyen, D.-H. Tran, O.~Onireti, P.~H. Tin, S.~Q. Nguyen, S.~Chatzinotas,
-  and H.~V. Poor, ``{Backscatter-assisted data offloading in OFDMA-based
-  wireless-powered mobile edge computing for IoT networks},'' \emph{IEEE
-  Internet of Things J.}, vol.~8, no.~11, pp. 9233--9243, Jun. 2021.
-
-\bibitem{b8}
-S.~Bi and Y.~J.~A. Zhang, ``Wireless powered communication: Opportunities and
-  challenges,'' \emph{IEEE Commun. Mag.}, vol.~53, no.~4, pp. 117--125, Apr.
-  2015.
-
-\bibitem{b9}
-F.~Wang, J.~Xu, X.~Wang, and S.~Cui, ``Joint offloading and computing
-  optimization in wireless powered mobile-edge computing systems,'' \emph{IEEE
-  Trans. Wireless Commun.}, vol.~17, no.~3, pp. 1784--1797, Mar. 2018.
-
-\bibitem{b10}
-Y.~J. A.~Z. S.~Bi, ``Computation rate maximization for wireless powered
-  mobile-edge computing with binary computation offloading,'' \emph{IEEE Trans.
-  Wireless Commun.}, vol.~17, no.~6, pp. 4177--4190, Jun. 2018.
-
-\bibitem{b30}
-T.~Bai, C.~Pan, H.~Ren, Y.~Deng, M.~Elkashlan, and A.~Nallanathan, ``{Resource
-  allocation for intelligent reflecting surface aided wireless powered mobile
-  edge computing in OFDM systems},'' \emph{IEEE Trans. Wireless Commun.},
-  vol.~20, no.~8, pp. 5389--5407, Aug. 2021.
-
-\bibitem{b33}
-X.~Wang, Z.~ning, L.~Guo, S.~Guo, and G.~Wang, ``Online learning for
-  distributed computation offloading in wireless powered mobile edge computing
-  networks,'' \emph{IEEE Trans. Parallel and Distrib. Syst.}, vol.~33, no.~8,
-  pp. 1841--1855, Aug. 2022.
-
-\bibitem{b13}
-F.~Wang, J.~Xu, and S.~Cui, ``Optimal energy allocation and task offloading
-  policy for wireless powered mobile edge computing systems,'' \emph{IEEE
-  Trans. Wireless Commun.}, vol.~19, no.~4, pp. 2443--2459, Apr. 2020.
-
-\bibitem{b29}
-D.~Wu, F.~Wang, X.~Cao, and J.~Xu, ``Wireless powered user cooperative
-  computation in mobile edge computing systems,'' in \emph{Proc. of IEEE
-  Globecom Workshops (GC Wkshps)}, Abu Dhabi, UAE, Dec. 2018.
-
-\bibitem{b26}
-Y.~Zhang, X.~Dong, and Y.~Zhao, ``Decentralized computation offloading over
-  wireless-powered mobile-edge computing networks,'' in \emph{Proc. of IEEE
-  Int. Conf. on Artif. Intell. and Inf. Syst. (ICAIIS)}, Dalian, China, Mar.
-  2020.
-
-\bibitem{b28}
-L.~Huang, S.~Bi, and Y.-J.~A. Zhang, ``{Deep reinforcement learning for online
-  computation offloading in wireless powered mobile edge computing networks},''
-  \emph{IEEE Trans. Mobile Comput.}, vol.~19, no.~11, pp. 2581--2593, Nov.
-  2020.
-
-\bibitem{b32}
-X.~He, Y.~Shen, X.~Wang, S.~Wang, S.~Xu, and J.~Ren, ``Online scheduling for
-  energy minimization in wireless powered mobile edge computing,'' in
-  \emph{Proc. of IEEE Wireless Commun. and Netw. Conf. (WCNC)}, Austin, TX,
-  Apr. 2022.
-
-\bibitem{b14}
-S.~Mao, J.~Wu, L.~Liu, D.~Lan, and A.~Taherkordi, ``Energy-efficient
-  cooperative communication and computation for wireless powered mobile-edge
-  computing,'' \emph{IEEE Syst. J.}, vol.~16, no.~1, pp. 287--298, Mar. 2022.
-
-\bibitem{b2}
-T.~Zhu, J.~Li, Z.~Cai, Y.~Li, and H.~Gao, ``Computation scheduling for wireless
-  powered mobile edge computing networks,'' in \emph{Proc. of IEEE INFOCOM},
-  Toronto, Canada, Jul. 2020.
-
-\bibitem{b41}
-D.~Fraser, ``Pyan,'' \url{https://github.com/davidfraser/pyan}, 2020.
-
-\bibitem{b12}
-A.~Baek, K.~Lee, and H.~Choi, ``{CPU and GPU parallel processing for mobile
-  augmented reality},'' in \emph{Proc. of Int. Congr. on Image and Signal
-  Process. (CISP)}, Hangzhou, China, Dec. 2013.
-
-\bibitem{b16}
-B.~Ma, H.~Shah-Mansouri, and V.~W.~S. Wong, ``{Full-duplex relaying for D2D
-  communication in mmWave based 5G networks},'' \emph{IEEE Trans. Wireless
-  Commun.}, vol.~17, no.~7, pp. 4417--4431, Apr. 2018.
-
-\bibitem{b17}
-Y.~Gu, W.~Saad, M.~Bennis, M.~Debbah, and Z.~Han, ``{Matching theory for future
-  wireless networks: Fundamentals and applications},'' \emph{IEEE Commun.
-  Mag.}, vol.~53, no.~5, pp. 52--59, May 2015.
-
-\bibitem{b18}
-J.~Krarup and P.~M. Pruzan, ``Reducibility of minimax to minisum 0-1
-  programming problems,'' \emph{Eur. J. of Oper. Res.}, vol.~6, no.~2, pp.
-  125--132, Jan. 2011.
-
-\bibitem{b31}
-{J. Nocedal and S. J. Wright}, \emph{{Numerical Optimization}}.\hskip 1em plus
-  0.5em minus 0.4em\relax Springer, 1999.
-
-\bibitem{b23}
-Y.~Shiloach and U.~Vishkin, ``{An {$O(n^2{\log}n)$} parallel max-flow
-  algorithm},'' \emph{J. of Algorithms}, vol.~3, no.~2, pp. 128--146, Feb.
-  1982.
-
-\bibitem{b24}
-M.~Keller and H.~Karl, ``Response time-optimized distributed cloud resource
-  allocation,'' in \emph{Proc. of ACM SIGCOMM Workshop on Distrib. Cloud
-  Comput.}, New York, NY, Aug. 2014.
-
-\bibitem{b21}
-H.~Chen, J.~Gong, L.~Yuan, and Y.~Huang, ``Various channel models in wireless
-  communications,'' in \emph{Proc. of Int. Conf. on Comput. Syst., Electronics
-  and Control (ICCSEC)}, Dalian, China, Dec. 2017.
 
 \end{thebibliography}

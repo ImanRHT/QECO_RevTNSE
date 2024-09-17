@@ -84,7 +84,16 @@ Mobile edge computing (MEC) \cite{mao2017survey} has emerged as a promising tech
 
 Efficient task offloading in MEC is a complex optimization challenge due to the dynamic nature of the network and the variety of MDs and servers involved \cite{jiang2019toward} \cite{TNSE-WU-24}. In particular, determining the optimal offloading strategy, scheduling the tasks, and selecting the most suitable EN for task offloading are the main challenges that demand careful consideration. Furthermore, the uncertain requirements and sensitive latency properties of computation tasks pose nontrivial challenges that can significantly impact the computation offloading performance in MEC systems with limited resources.
 
-\subsection{Related Work}
+\textcolor{blue}{To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) hold promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives \cite{arulkumaran2017deep}. RL can effectively tackle the challenges of MEC arising from the ever-changing nature of networks, MDs, and servers' heterogeneity. This ultimately improves the MD users' QoE. We explore state-of-the-art RL-based techniques characteristic to discuss how they address task offloading problems in MEC. To minimize energy consumption, Munir \textit{et al.} \cite{munir2021multi} developed a semi-distributed approach using a multi-agent RL (MARL) framework for self-powered MEC. Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the industrial IoT (IIoT) systems to jointly optimize task offloading and resource allocation to achieve lower energy consumption and decreased task delay. To investigate privacy aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} proposed a deep Q-network (DQN)-based method. They transform the problem on MDP to optimize computation rate and energy consumption in a queuing-based IIoT network. Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources.}
+
+
+
+
+
+
+
+
+
 %Researchers have recently proposed several task offloading algorithms to tackle the aforementioned issues. Mao \textit{et al.} in \cite{mao2016dynamic} introduced a computation offloading algorithm for MEC systems. This scheme aims to reduce the MD's energy consumption while meeting the computation delay constraints. In \cite{zhang2016energy}, Zhang \textit{et al.} proposed an offloading scheme for MEC in heterogeneous cellular networks, taking into account the energy-constrained MEC scenario and the heterogeneity of MDs when optimizing the offloading decisions. Bi \textit{et al.} in \cite{bi2018computation} proposed an algorithm to optimize decision-making about computation offloading and power transferring in a wireless-powered MEC. Ning \textit{et al.} in \cite{ning2018cooperative} introduced a heuristic algorithm designed to enhance the efficiency of the partial computation offloading model. The works in \cite{mao2016dynamic}-\cite{ning2018cooperative} primarily focus on quasi-static systems and are not well-suited for dynamic systems and time-varying conditions. 
 
 %The uncertain requirements and sensitive latency properties of computation tasks in MEC systems with limited resources pose nontrivial challenges that can significantly impact the computation offloading performance. In \cite{jovsilo2019wireless}, Josilo \textit{et al.} proposed a distributed algorithm based on a Stackelberg game. Lee \textit{et al.} in \cite{lee2019online} designed an algorithm based on online optimization techniques to minimize the maximum delay of the tasks in a hybrid edge-cloud network. Yang \textit{et al.} in \cite{yang2018distributed} explored an overhead minimization problem, aiming to jointly optimize delay and energy consumption in MEC. They proposed a distributed offloading algorithm to mitigate the wireless channel competition among MDs. The works \cite{jovsilo2019wireless}-\cite{yang2018distributed} considered delay-tolerant tasks, which may have a limited applicability due to the real-time processing demand of high computational tasks. Compared to these works, we explore a more realistic MEC scenario involving delay-sensitive tasks with processing deadlines, which poses a more complex challenge.
@@ -94,40 +103,81 @@ Efficient task offloading in MEC is a complex optimization challenge due to the 
 
 %In \cite{mao2016dynamic,zhang2016energy,bi2018computation,ning2018cooperative}, the processing capacity assigned to each MD by an EN remained unaffected by the number of offloaded tasks, resulting in a heavy load on the EN when a significant number of MDs offload their tasks to it. This heavy load can cause significant processing delays and even lead to missed deadlines and dropped tasks. To mitigate this issue, some existing works have proposed task offloading algorithms that consider the workloads at the ENs. In \cite{chen2018task}, Chen \textit{et al.} proposed an algorithm for task offloading in a software-defined ultra-dense network. The goal of this algorithm is to minimize task delay by formulating the task offloading scheme as a mixed integer non-linear program problem. Shah-Mansouri \textit{et al.} in \cite{shah2018hierarchical} proposed a QoE maximization slotwork for offloading decisions based on computation energy and delay reduction. They formulated a potential game to model competition among IoT users and achieved a close-to-optimal social cost.
 
-To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, deep reinforcement learning (DRL) hold promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives \cite{arulkumaran2017deep}. DRL can effectively tackle the challenges of MEC arising from the ever-changing nature of networks, MDs, and servers' heterogeneity. This ultimately improves the MD users' QoE. In \cite{huang2019deep}, Huang \textit{et al.} focused on a wireless-powered MEC. They proposed a DRL-based  approach, capable of attaining near-optimal decisions. This is achieved by selectively considering a compact subset of candidate actions in each iteration. In \cite{Bolourian-WCL24}, the authors proposed an offloading algorithm using deep Q-learning for wireless-powered Internet of Things (IoT) devices in MEC systems. This algorithm aims to minimize the task drop rate while the devices solely rely on harvested energy for operation. In \cite{zhao2019deep}, Zhao \textit{et al.} proposed a computation offloading algorithm based on DRL, which addresses the competition for wireless channels to optimize long-term downlink utility. In this approach, each MD requires quality-of-service information from other MDs. Tang \textit{et al.} in \cite{9253665} investigated the task offloading problem for indivisible and deadline-constrained computational tasks in MEC systems. The authors proposed a distributed DRL-based offloading algorithm designed to handle uncertain workload dynamics at the ENs. Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources. 
-%In \cite{chen2019energy}, Chen \textit{et al.} introduced an online algorithm with polynomial time complexity for offloading in MEC. This algorithm achieves a close-to-optimal energy consumption while ensuring that the delay is bounded. 
-Dai \textit{et al.} in \cite{dai2020edge} introduced the integration of action refinement into DRL and designed an algorithm to concurrently optimize resource allocation and computation offloading. In \cite{huang2021deadline}, Huang \textit{et al.} proposed a DRL-based method based on a partially observable MDP, which guarantees the deadlines of real-time tasks while minimizing the total energy consumption of MDs. Liu  \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL, which can generate interactive information along with resource decisions. Zhou \textit{et al.} in \cite{zhou2021deep} used an MDP to study MEC and modeled the interactions of the environment. They proposed a Q-learning approach to achieve optimal resource allocation strategies and computation offloading. In \cite{gao2022large}, Gao \textit{et al.} introduced an attention-based multi-agent algorithm designed for decentralized computation offloading. This algorithm effectively tackles the challenges of dynamic resource allocation in large-scale heterogeneous networks. Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the industrial IoT systems to jointly optimize task offloading and resource allocation in order to achieve lower  energy consumption and decreased task delay. Liao \textit{et al.} in \cite{liao2023online} introduced a double reinforcement learning algorithm for performing online computation offloading in MEC. This algorithm optimizes transmission power and scheduling of CPU frequency when minimizing both task computation delay and energy consumption.
 
+\subsection{Related Work}
+%\textcolor{black}{We explore state-of-the-art techniques characteristic to discuss how they address task offloading problems in scenarios that need to process massive data with limited devices in MEC, such as the Internet of Things (IoT), Internet of Vehicles (IoV), and Industrial IoT (IIoT)  environment. 
+	
+	
+	
+	%Internet of Things (IoT) \cite{dai2020edge}, \cite{liao2023online}, \cite{Bolourian-WCL24}, 
+	%Internet of Vehicles (IoV) \cite{Bolourian-WCL24}, 
+	%and Industrial IoT (IIoT)  environment \cite{gong2022edge}, \cite{wu2023multi}, \cite{wu2024combining}
+	
+	
+	%\subsubsection{DRL-Based Task Offloading Optimization in MEC}
+	
+	\textcolor{blue}{
+		In recent years, edge computing has become a popular method for scenarios that need to process massive data with weak devices, such as IoTs \cite{zhang2023multi}, Internet of Vehicles (IoVs) \cite{lin2022multi}, \cite{wei2023many}, and Industrial IoT (IIoT) \cite{yuan2023adaptive} environment. To take advantage of RL methods for online computation offloading in MEC, Huang \textit{et al.} in \cite{huang2019deep}, focused on a wireless-powered MEC. They proposed a DRL-based approach, capable of attaining near-optimal decisions. This is achieved by selectively considering a compact subset of candidate actions in each iteration. Liu \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL (MADRL), which can generate interactive information along with resource decisions. Zhou \textit{et al.} in \cite{zhou2021deep} used an MDP to model the interactions of the environment. They proposed a Q-learning approach to achieve optimal resource allocation strategies and computation offloading. Liao \textit{et al.} in \cite{liao2023online} introduced a double DRL algorithm for performing online computation offloading in MEC. This algorithm optimizes transmission power and scheduling of CPU frequency when minimizing both task computation delay and energy consumption. }
+	
+	\textcolor{blue}{
+		In these researches authors investigated simple MEC networks and explored computation offloading problems, mainly focused on delay-tolerant tasks or single MEC network model, and did not take into account the challenges of dynamic network environment with the variety of MDs and servers involved. In actual scenarios, an MEC system can provide delay-constrained services for serval MDs and ENs at the same time, while the works \cite{huang2019deep}, \cite{liu2021learn} not consider delay-sensitive tasks for network model and \cite{zhou2021deep}, \cite{liao2023online} just considered the situation of a single server or user in the MEC system.}
+	
+	\textcolor{blue}{  
+		In fact, the state of MD's computing and transmission power, arrived task's requirement, the energy state of MDs, and workloads at ENs all change dynamically with time in actual systems, thus a more realistic MEC scenario is needed. Besides the works \cite{huang2019deep}--\cite{liao2023online}, Wu \textit{et al.} in \cite{wu2023computation} introduced a stochastic game-based resource allocation in the SDN-based MEC network. They used an MDP and proposed a MARL method to minimize both energy consumption and processing delay. Dai \textit{et al.} in \cite{dai2020edge} introduced the integration of action refinement into DRL and designed an algorithm to concurrently optimize resource allocation and computation offloading. To optimize privacy protection and quality of service, authors in \cite{wu2024privacy} investigated the joint computation offloading and power allocation problems for the IIoT network. They modeled the problem as an MDP and proposed a multi-agent DDQN-based algorithm.
+		In \cite{zhao2019deep}, Zhao \textit{et al.} proposed a computation offloading algorithm based on DRL, which addresses the competition for wireless channels to optimize long-term downlink utility. In this approach, each MD requires quality-of-service information from other MDs.}
+	
+	
+	
+	
+	
+	%In these researchs authours mostly investigated MEC networks and explored computation offloading problem, but in some works such as \cite{zhou2021deep} \cite{liao2023online} have mainly focused on single MEC network model, and has not taken into account the challenges of dynamic network environment with multiple ENs. In fact, the channel quality, requested task, and energy state on an MDs all change dynamically with time in an actual MEC scenario, thus a more realistic MEC scenario is needed, involving delay-sensitive tasks with processing deadlines in multiple MDs and ENs, which poses a more intricate challenge.
+	
+	
+	\textcolor{blue}{
+		While studies like \cite{wu2023computation}--\cite{zhao2019deep} explored task offloading problems in a more advanced scenario and proposed some DRL-based algorithms, MEC systems often encounter challenges related to managing time-varying resource requests from heterogeneous devices, imposing significant challenges in resource accessibility and overall system performance. To address this issue, the authors applied queuing theory to model MEC systems more accurately, reflecting real-world scenarios. 
+		%\subsubsection{Queuing Theory for Computation Offloading}
+		In \cite{Bolourian-WCL24}, the authors proposed an offloading algorithm using deep Q-learning for wireless-powered IoT devices in MEC systems. This algorithm aims to minimize the task drop rate while the devices solely rely on harvested energy for operation. Tang \textit{et al.} in \cite{9253665} investigated the task offloading problem for indivisible and deadline-constrained computational tasks in MEC systems. The authors proposed a distributed DRL-based offloading algorithm designed to handle uncertain workload dynamics at the ENs. 
+		In \cite{huang2021deadline}, Huang \textit{et al.} proposed a DRL-based method based on a partially observable MDP (POMDP), which guarantees the deadlines of real-time tasks while minimizing the total energy consumption of MDs. This algorithm effectively tackles the challenges of dynamic resource allocation in large-scale heterogeneous networks. To optimize delay and energy consumption in an MEC-based IIoT system, Wu \textit{et al.} in \cite{wu2023multi} proposed a multi-agent DQN-based method based on POMDP to address computation offloading problem. In \cite{gao2022large}, Gao \textit{et al.} introduced an attention-based multi-agent algorithm designed for decentralized computation offloading.}
+	
 
-
-
-
-%Liao \textit{et al.} in \cite{liao2023online} introduced a double reinforcement learning algorithm for performing online computation offloading in MEC. This algorithm optimizes transmission power and scheduling of CPU frequency to minimize both task computation delay and energy consumption. In \cite{huang2021deadline}, Huang \textit{et al.} proposed a DRL-based method based on a partially observable MDP, which guarantees the deadlines of real-time tasks while minimizing the total energy consumption of MDs. Liu  \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL, which can generate interactive information along with resource decisions. In \cite{chen2019energy}, Chen \textit{et al.} introduced an online algorithm with polynomial time complexity for offloading in MEC. This algorithm achieves a close-to-optimal energy consumption while ensuring that the delay is bounded. In \cite{dai2020edge}, Dai \textit{et al.} introduced the integration of action refinement into DRL and designed an algorithm to concurrently optimize resource allocation and computation offloading. Zhou \textit{et al.} in \cite{zhou2021deep} used an MDP to study MEC and modeled the interactions between the policy-system environment. They proposed a Q-learning approach to achieve optimal resource allocation strategies and computation offloading. Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the industrial internet of things system to jointly optimize task offloading and resource allocation, which can enable the system to achieve lower total cost of energy consumption and task delay. In \cite{gao2022large}, Gao \textit{et al.} introduced an attention-based multi-agent algorithm designed for decentralized computation offloading. This algorithm effectively tackles the challenges of dynamic resource allocation in large-scale heterogeneous networks. 
-
-
-
-
-%\cite{wu2023noma}
-
-
-
-\subsection{Motivation and Contributions}
-Although DRL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention. 
-%First, prior research in \cite{yang2018distributed} - \cite{shah2018hierarchical} - \cite{9253665} considered delay-tolerant tasks, which may not be realistic due to the real-time processing demand by high computational tasks. Compared to these works, we explore a different and more realistic MEC scenario involving delay-sensitive tasks with processing deadlines, which presents a more challenging problem. The impact of processing deadlines on the dynamic workload at the edge nodes influences the delay experienced by the offloaded tasks. 
-QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay, as assumed in \cite{huang2019deep}--\cite{sun2024hierarchical}, but also by energy consumption. Albeit some existing works such as \cite{dai2020edge}--\cite{liao2023online}, have investigated the trade-off between delay and energy consumption, they fail to properly address the user demands and fulfill QoE requirements. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs.  In contrast to the aforementioned works \cite{huang2019deep}--\cite{liao2023online}, we propose a DRL-based distributed algorithm that provides users with an appropriate balance among QoE factors based on their  demands. We also explore a more realistic MEC scenario involving delay-sensitive tasks with processing deadlines, posing a more intricate challenge.
-
-%The works \cite{jovsilo2019wireless}-\cite{yang2018distributed} considered delay-tolerant tasks, which may have a limited applicability due to the real-time processing demand of high computational tasks. Compared to these works, we explore a more realistic MEC scenario involving delay-sensitive tasks with processing deadlines, which poses a more complex challenge.
-
-%Nevertheless, prior research in \cite{huang2019deep}-\cite{gao2022large} fails to tackle some or all of these challenges.
-
-%Although DRL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention. First, some existing works such as [] - [] considered delay-tolerant tasks, which may not be realistic due to the real-time processing demand by high computational tasks. Compared to the aforementioned works [10]–[15], we explore a different and more realistic MEC scenario involving delay-sensitive tasks with processing deadlines, which presents a challenging problem. The impact of processing deadlines on the dynamic workload at the edge nodes influences the delay experienced by the offloaded tasks. Second, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay as assumed in \cite{zhao2019deep}-\cite{9253665}, but also by energy consumption. Nevertheless, prior research in \cite{huang2019deep}-\cite{gao2022large} fails to tackle some or all of these challenges. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs. In contrast to these works [18]–[21], we aim to propose a DRL-based distributed algorithm that provides users with an appropriate balance among QoE factors based on their demands, inferred from their state.
-
-
-
-
-
-%Although DRL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention. First, Some existing works such as [] - [] considered delay-tolerant tasks, which may not be realistic due to the real-time processing demand by high computational tasks. Comparing with the aforementioned works [10]–[15], we consider a different and more realistic MEC scenario.  We take into account delay-sensitive tasks with processing deadlines, which is chalenging to address because the processing deadlines will affect the load level dynamics at the edge nodes and hence affect the delay of the offloaded tasks. Secound, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay as assumed in  \cite{zhao2019deep}-\cite{9253665}, but also by energy consumption. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs. Nevertheless, prior research in \cite{huang2019deep}-\cite{gao2022large} fail to tackle some or all of these challenges. Different from those works [18]–[21], we aim to propose a DRL-based distributed algorithm that provide users with stricking balance among QoE factors based on their demands, caming from their state in each time. 
-
+%	\begin{table*}[htbp]\textcolor{blue}{
+%		\renewcommand{\arraystretch}{0.6}
+%		\captionsetup{name=TABLE}
+%		\caption{Comparison of Related Works Characteristic\vspace{4mm}}
+%		\scalebox{0.7}{%
+%			\begin{tabular}{ lp{3.4cm}p{4.5cm}p{5.2cm}p{1.7cm}p{3cm}p{4.6cm}l} 
+%				\toprule
+%				\textbf{Paper} & \textbf{Scenario} &  \textbf{Problem} &  \textbf{Objective} &  \textbf{Model} & \textbf{Method} &  \textbf{Drawbacks}  \\ \midrule
+%				\cite{liao2023online} & Queuing-based MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a singel MEC system model  \\\midrule
+%				\cite{zhou2021deep} & heterogeneous MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a singel MEC system model \\\midrule				
+%				\cite{huang2019deep} & Wireless-powered MEC & Computation offloading and resource allocations & Maximize computation rate & MIP & DQN & Not consider delay-sensitive tasks \\\midrule
+%				\cite{wu2024privacy} & MEC-based IIoT  & Joint power allocation and computation offloading  & Optimization of privacy protection and quality of service. & MDP & Multi-agent DDPG & Not take user's deman into consideration \\\midrule
+%				\cite{zhao2019deep} & MEC & User association and resource allocation & Optimize downlink utility & MDP & Multi-agent D3QN & Not consider system delay and energy consumtion \\\midrule
+%				\cite{sun2024hierarchical} & MEC & Computation offloading and service caching & Minimize average service delay & MDP & hierarchical DRL & Not consider system energy consumtion \\\midrule
+%				\cite{wu2023computation} & SDN-based MEC & Stochastic game-based resource allocation & Minimize energy consumption and processing delay & MDP & MARL & Not consider tasks with maximum delay tolerance\\\midrule
+%				\cite{dai2020edge} & MEC & Resource allocation and computation offloading & Minimize energy consumption & MDP & DDPG & Not take user's deman into consideration \\\midrule
+%				\cite{liu2021learn} & MEC & Resource allocation and computation offloading & Minimize execution cost & POMDP & MADRL &  Not consider delay-sensitive tasks \\\midrule
+%				\cite{gong2022edge} & MEC-based IIoT & Resource allocation and computation offloading & Minimize task computation delay and energy consumption & MDP & DRL & Not take user's deman into consideration\\\midrule
+%				\cite{gao2022large} & Queuing-based heterogeneous MEC & Decentralized computation offloading & Optimize system cost and completion rates & MDP & Multi-agent DDPG & Not take user's deman into consideration \\\midrule
+%				\cite{9253665} &  Queuing-based MEC &  Computation offloading & Minimize drop rate and computation delay. & MDP & D3QN + LSTM & Not consider system energy consumtion\\\midrule
+%				\cite{wu2024combining} & Queuing-based IIoT MEC & Privacy aware computation offloading & Optimization of computation rate and energy consumption & MDP & DDPG  & Not take user's deman into consideration \\\midrule
+%				\cite{wu2023multi} & Queuing-based IIoT MEC & Computation offloading & Optimize delay and energy consumption & POMDP & Multi-agent DQN&  Not consider tasks with maximum delay tolerance \\\midrule
+%				\cite{huang2021deadline} & Queuing-based MEC & Computation offloading & Optimize drop rate and energy consumption & POMDP & DDPG & Not consider computation delay \\ \midrule
+%				\cite{Bolourian-WCL24} & Queuing-based MEC with EHs& Energy harvesting  computation offloading & Minimize drop rate and energy consumption. & MDP  & DQN & Not consider computation delay  \\\midrule
+%				QECO &  Queuing-based MEC &  Computation offloading & Maximize the QoE of each MD individually &MDP & D3QN + LSTM & \\
+%				\toprule
+%		\end{tabular}}
+%		\label{table1}}
+%\end{table*}
+	
+	
+	
+	\subsection{Motivation and Contributions}
+	
+	Although DRL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention.  \textcolor{blue}{As shown in Table~\ref{table1}, current research primarily focuses on minimizing energy consumption \cite{tang2022uav}, reducing processing delays \cite{guo2022energy}, \cite{seo2022differential}, maximizing computation rates~\cite{huang2019deep}, or optimizing a weighted balance among performance factors \cite{li2022joint}. However, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay, as considered in \cite{sun2024hierarchical}, \cite{9253665} but also by energy consumption \cite{Bolourian-WCL24}, \cite{huang2021deadline}. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs. 
+		While some existing works such as \cite{liao2023online}, \cite{wu2024privacy}, \cite{dai2020edge}, \cite{gao2022large}, \cite{li2022joint} have investigated the trade-off between delay and energy consumption, they fail to address the user demands and fulfill QoE requirements properly.} In contrast to the aforementioned works, we propose a DRL-based distributed algorithm that provides users with an appropriate balance among QoE factors based on their demands. %We also explore a more realistic MEC scenario involving delay-sensitive tasks with processing deadlines, posing a more intricate challenge.
+	
+	
 
 
 
@@ -194,7 +244,7 @@ We investigate a MEC system consisting of a set of MDs denoted by $\mathcal{I} =
 \begin{figure}
 	\captionsetup{name=Fig.}
 	\centering
-	\includegraphics[width=.7\linewidth]{Fig/queue}
+	\includegraphics[width=.7\linewidth]{ queue}
 	\vspace*{-1mm}
 	\caption{An illustration of MD $i \in \mathcal{I}$ and EN $j \in \mathcal{J}$ in the MEC system.}
 	\vspace*{-3mm}
@@ -410,7 +460,7 @@ We now present QECO algorithm so as to address the distributed offloading decisi
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{Fig/DQN}
+	\includegraphics[width=0.7\linewidth]{ DQN}
 	\captionsetup{name=Fig.}
 	
 	\caption{The neural network of MD $i \in \mathcal{I}$, which characterize the Q-value of each action $\boldsymbol{a} \in \mathcal{A}$ under state $\boldsymbol{s}_i(t) \in \mathcal{S}$.}
@@ -626,36 +676,36 @@ We use the following methods as benchmarks.
 
 %\newpage
 
-\begin{table}
-	\centering
-	\renewcommand{\arraystretch}{1}
-	\captionsetup{name=TABLE}
-	\caption{Simulation Parameters}
-	\scalebox{1}{%
-		\begin{tabular}{ l|l } 
-			%\toprule
-			\textbf{Parameter} & \textbf{Value}  \\ \hline
-			%\midrule
-			%Number of MDs $i$  & 50  \\ 
-			%Number of EN $j$  & 5  \\ 
-			%Number of episodes $N^{\text{ep}}$  & 1000  \\ 
-			%Number of time slots $T$  & 100 (with $\tau = 0.1$ second) \\ 
-			Computation capacity of MD $f_i$  & 2.6 GHz \\ 
-			Computation capacity of EN $f_j^{\text{E}}$ & 42.8 GHz  \\ 
-			Transmission capacity of MD $r_{i,j}(t)$ & 14 Mbps  \\ 
-			Task arrival rate & 150 Task/sec  \\ 
-			Size of task $\lambda_i(t)$  & $\{\text{1.0, 1.1, \ldots , 7.0}\}$ Mbits \\ 
-			Required CPU cycles of task $\rho_i(t)$  & $\{\text{0.197,0.297,0.397}\}$ $\times10^3$ \\ 
-			Deadline of task $ \Delta_i$  & 10 time slots (1 Sec)\\ 
-			Battery level percentage of MD $\phi_i(t)$  & $\{\text{25, 50, 75}\}$\\ %Percent \\ 
-			%Computation power of MD $p_i^{\text{C}}$ & \text{$10^{-27}(f_i)^3$}  \\ 
-			Computation power of EN $p_j^{\text{E}}$ & 5 W  \\ 
-			Transmission power of MD $p_i^{\text{T}}$ & 2.3 W  \\ 
-			Standby power of MD $p_i^{\text{I}}$& 0.1 W  \vspace{1mm}\\ 
-			%\toprule
-	\end{tabular}}
-	\label{table}
-\end{table}
+%\begin{table}
+%	\centering
+%	\renewcommand{\arraystretch}{1}
+%	\captionsetup{name=TABLE}
+%	\caption{Simulation Parameters}
+%	\scalebox{1}{%
+%		\begin{tabular}{ l|l } 
+%			%\toprule
+%			\textbf{Parameter} & \textbf{Value}  \\ \hline
+%			%\midrule
+%			%Number of MDs $i$  & 50  \\ 
+%			%Number of EN $j$  & 5  \\ 
+%			%Number of episodes $N^{\text{ep}}$  & 1000  \\ 
+%			%Number of time slots $T$  & 100 (with $\tau = 0.1$ second) \\ 
+%			Computation capacity of MD $f_i$  & 2.6 GHz \\ 
+%			Computation capacity of EN $f_j^{\text{E}}$ & 42.8 GHz  \\ 
+%			Transmission capacity of MD $r_{i,j}(t)$ & 14 Mbps  \\ 
+%			Task arrival rate & 150 Task/sec  \\ 
+%			Size of task $\lambda_i(t)$  & $\{\text{1.0, 1.1, \ldots , 7.0}\}$ Mbits \\ 
+%			Required CPU cycles of task $\rho_i(t)$  & $\{\text{0.197,0.297,0.397}\}$ $\times10^3$ \\ 
+%			Deadline of task $ \Delta_i$  & 10 time slots (1 Sec)\\ 
+%			Battery level percentage of MD $\phi_i(t)$  & $\{\text{25, 50, 75}\}$\\ %Percent \\ 
+%			%Computation power of MD $p_i^{\text{C}}$ & \text{$10^{-27}(f_i)^3$}  \\ 
+%			Computation power of EN $p_j^{\text{E}}$ & 5 W  \\ 
+%			Transmission power of MD $p_i^{\text{T}}$ & 2.3 W  \\ 
+%			Standby power of MD $p_i^{\text{I}}$& 0.1 W  \vspace{1mm}\\ 
+%			%\toprule
+%	\end{tabular}}
+%	\label{table}
+%\end{table}
 
 \subsection{Performance Comparison and Convergence}
 \label{section:2}
@@ -701,13 +751,13 @@ As can be observed from Fig.~\ref{chart2} (a), at task arrival rate 450, QECO ef
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.34\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/completed_tasks_1} 
+		\includegraphics[width=\textwidth]{ completed_tasks_1} 
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
 	\begin{minipage}[b]{0.34\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/completed_tasks_2}
+		\includegraphics[width=\textwidth]{ completed_tasks_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
 	\end{minipage}
 	%\vspace{-0.65cm}
@@ -722,13 +772,13 @@ As can be observed from Fig.~\ref{chart2} (a), at task arrival rate 450, QECO ef
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.340\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/energy_1} 		
+		\includegraphics[width=\textwidth]{ energy_1} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	%\hspace{-0.2cm}
 	\begin{minipage}[b]{0.340\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/energy_2}
+		\includegraphics[width=\textwidth]{ energy_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
 	\end{minipage}
 	%\vspace{-0.7cm}
@@ -741,13 +791,13 @@ As can be observed from Fig.~\ref{chart2} (a), at task arrival rate 450, QECO ef
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.340\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/delay_1} 		
+		\includegraphics[width=\textwidth]{ delay_1} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
 	\begin{minipage}[b]{0.340\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/delay_2}
+		\includegraphics[width=\textwidth]{ delay_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
 	\end{minipage}
 	%\vspace{-0.7cm}
@@ -760,12 +810,12 @@ As can be observed from Fig.~\ref{chart2} (a), at task arrival rate 450, QECO ef
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.340\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/qoe_1} 		
+		\includegraphics[width=\textwidth]{ qoe_1} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
 	\begin{minipage}[b]{0.340\linewidth}
-		\includegraphics[width=\textwidth]{Fig/qoe_2}
+		\includegraphics[width=\textwidth]{ qoe_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
 	\end{minipage}
 	%\vspace{-0.7cm}
@@ -804,16 +854,16 @@ We finally delve into the investigation of the convergence performance of the QE
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.34\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/conv1_f} 
+		\includegraphics[width=\textwidth]{ conv1_f} 
 		\textcolor{white}{i}\hspace{0.4cm}(a)
 	\end{minipage}
 	\hspace{-0.26cm}
-	\begin{minipage}[b]{0.4\linewidth}
+	\begin{minipage}[b]{0.34\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{Fig/conv2_f}
+		\includegraphics[width=\textwidth]{ conv2_f}
 		\textcolor{white}{i}\hspace{0.4cm}(b)
 	\end{minipage}
-	\vspace{-0.65cm}
+
 	\caption{The convergence of the average QoE across episodes under different hyper-parameters: (a) Learning rate; (b) Batch size.}
 	\label{chart0}
 \end{figure}
@@ -834,580 +884,6 @@ There are multiple directions for future work. A complementary approach involves
 
 \newpage
 
-
-
-
-\begin{abstract}
-	Mobile edge computing (MEC) is envisioned to address the computation demands of Internet of Things (IoT) devices. However, it is crucial for the MEC to operate in coordination with the cloud tier to achieve a highly scalable IoT system. In addition, IoT devices require regular maintenance to either recharge or replace their batteries which may not always be feasible. Wireless energy transfer (WET) can provide IoT devices a stable source of energy. Nonetheless, proper scheduling of energy harvesting and efficient allocation of computing resources are the key for sustainable operation of these devices. In this paper, we introduce a three-tier wireless powered mobile edge computing (WPMEC) consisting of cloud, MEC servers, and IoT devices. We first formulate a combinatorial optimization problem that aims to minimize the wireless energy transmission. To tackle the complexity of the problem, we use bipartite graph matching and propose a harvest-then-offload mechanism for IoT devices. We also exploit parallel processing to increase the performance of the proposed algorithm. Through numerical experiments, we evaluate the performance of our proposed mechanism. Our results show that the proposed mechanism significantly reduces the required energy for the operation of IoT devices comparing to different offloading policies. \textcolor{blue}{We further show that WiEnTM results in up to 34\% less wireless energy transmission in comparison to an existing work in the literature.}
-\end{abstract}
-
-\begin{IEEEkeywords}
-	Bipartite graph matching, mobile edge computing (MEC), wireless power transfer (WPT), Internet of Things (IoT)
-\end{IEEEkeywords}
-
-\section{Introduction}
-\textcolor{blue}{The Internet of Things (IoT) applications (e.g., smart cities \cite{b1}, homes \cite{b3}, and augmented/virtual reality \cite{b11}) are mostly involved with computation-intensive and latency-sensitive tasks. Mobile edge computing (MEC) is a state-of-the-art computation paradigm to address the challenge of insufficient computing resources in IoT networks \cite{b35, b4}. By deploying the edge servers, nearby devices can offload their computation tasks. Dispatching those tasks that require a higher amount of energy will let devices save more energy \cite{b38}. However, as the computation tasks become more and more intensive, coordination with cloud servers will be inevitable \cite{b37}. The three-tier computing models consisting of cloud, edge, and IoT devices are introduced to overcome the aforementioned challenge \cite{b5,b6,b39,b40}.}
-
-\textcolor{blue}{In addition to their restricted computation resources, IoT devices usually have small battery capacities which is mainly due to their small form factor and the constraints of the production cost \cite{b1}.} Thus, their battery needs to be replaced or recharged quite often which may be infeasible or costly in some cases such as toxic \cite{b7} or hard-to-reach environments \cite{b4}. Thanks to the latest developments of radio frequency (RF) enabled wireless energy transfer (WET) technology, a promising solution called wireless powered communication (WPC) has been introduced \cite{b8}. In WPC, wireless devices (WDs) are powered by dedicated energy transmitters (ETs) \cite{b8}. As wireless powered networks do not require replacement or manual recharging of batteries, they have significantly lower maintenance costs. Therefore, these networks are more scalable compared to the battery powered networks in terms of size \cite{b8}. \textcolor{blue}{By combining the advantages of MEC and WPC, the newly emerged wireless powered MEC (WPMEC) holds a major promise to overcome the fundamental hurdles in scalability of the IoT networks \cite{b9,b10,b30,b33}.}
-
-Computation offloading has attracted many research projects in recent years \cite{b5,b39,b40,b11,b13,b29,b26,b28,b32}. \textcolor{blue}{It helps WDs save more energy and reduce the tasks' execution time.} As energy is crucial for the operation and maintenance of wireless powered systems, many of these works are focusing on analyzing and optimizing energy. Aazam \textit{et al.} in \cite{b5} analyzed the energy and performance of a three-tier cloud-edge-IoT offloading model. \textcolor{blue}{In \cite{b39}, authors proposed a scheme that aims to minimize the total cost in terms of energy and delay for a three-tier cloud-edge-IoT system. Gao \textit{et al.} in \cite{b40} proposed an offloading algorithm to minimize an objective called the energy time cost for a three-tier network. Although \cite{b5}, \cite{b39}, and \cite{b40} all benefit from a computationally-scalable three-tier system, IoT devices still rely on battery energy and hence lack the sustainability feature of WPMEC systems.} In \cite{b11}, authors provided a method to maximize energy efficiency in a two-user WPMEC system with user cooperation, non-divisible tasks, and harvest-then-offload TDMA protocol. Wang \textit{et al.} in \cite{b13} presented a heuristic solution to reduce the ET's total transmission energy consumption over a finite horizon in a single-user WPMEC system. In \cite{b29}, authors presented a single-user WPMEC framework with task partitioning to jointly optimize the computation rate and transmit energy. The methods proposed in \cite{b11,b13,b29} are not suitable for larger networks. Zhang \textit{et al.} in \cite{b26} introduced a decentralized game for a multi-user MEC system to optimize the ET's energy and computation costs. Nonetheless, reaching an equilibrium may require a considerable number of iterations. It also needs all WDs to cooperate with each other which may not be feasible in many cases. Huang \textit{et. al} in \cite{b28} proposed an offloading algorithm based on deep reinforcement learning for WPMEC systems with non-divisible tasks to maximize a value function (e.g., computation rate or energy efficiency). \textcolor{blue}{However, the proposed system model is oversimplified and thus less applicable to real-world scenarios.} He \textit{et al.} in \cite{b32} designed a scheduling algorithm to minimize the processing energy consumption for a multi-user WPMEC network with multiple access points (APs) and non-divisible tasks. As a task usually models a program, it consists of a number of interrelated subprograms. It may also include subprograms to send and retrieve data which cannot be offloaded. Therefore, non-divisible task models used in \cite{b11,b26,b28}, and \cite{b32} may not accurately represent real world applications. Additionally, such models cannot properly utilize multiple computing resources.
-
-By considering the challenges of the aforementioned works, the following questions arise:
-\begin{enumerate}
-	\item \textcolor{blue}{\textit{How can we take advantage of cloud computing in addition to MEC to meet different requirements of IoT applications?}}
-	\item \textcolor{blue}{\textit{How can we provide RF energy to enable the battery-less IoT devices operate seamlessly?}}
-	\item \textcolor{blue}{\textit{What would be the optimal offloading decision when considering the subtasks' interdependencies?}}
-\end{enumerate}
-
-To answer these questions, we propose a novel three-tier WPMEC system with multiple WDs to minimize the ET's total transmitted energy. In the proposed system, we partition tasks into a number of fine-grained subtasks to consider their interdependencies. We design an offloading and scheduling algorithm to be executed efficiently on parallel processors such as graphical processing units (GPUs). \textcolor{blue}{This significantly reduces the execution time of the algorithm.}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=.33\textwidth]{system_model.pdf}
-	\caption{Proposed three-tier WPMEC system in an IoT network.}\label{fig1}
-\end{figure}
-
-Our main contributions are as follows.
-\begin{enumerate}
-	\item \textit{Problem formulation}: We formally define the mixed-integer ET's energy minimization (ETEM) problem by deciding on offloading, WET time, and computation scheduling of subtasks for a multi-user three-tier WPMEC system \textcolor{blue}{considering task interdependencies and MEC server computation time.}
-	\item \textit{Algorithm design}: We propose wireless energy transmission minimization (WiEnTM) algorithm based on bipartite graph matching. We first study the properties of the problem to decompose it into individual problems for each subtask to make it suitable for the matching algorithm. \textcolor{blue}{By efficiently utilizing parallel processing on decomposed problems, we prove that our proposed algorithm has a logarithmic time complexity with respect to the network size.}
-	\item \textit{Performance evaluation}: Extensive numerical experiments are carried out to evaluate the proposed algorithm. Our experiments show major reduction in the WDs' required energy in comparison with baseline offloading policies. \textcolor{blue}{The algorithm also reduces the energy consumption by 34\% for large tasks compared to an existing work \cite{b13}.}
-\end{enumerate}
-
-The rest of this paper is organized as follows. In Section II, we first present the MEC system model including the edge and cloud servers and IoT devices. We then present the computation task partitioning model. Section III consists of the energy optimization problem and a step-by-step formulation. In Section IV, we propose our WiEnTM algorithm to efficiently solve the problem. Simulation results are presented in Section V. We conclude the paper in Section VI.
-
-\section{System Model}
-In this section, we first introduce the IoT network and computation task models. The IoT network consists of IoT devices and computing servers. The task model represents the subtasks as a directed acyclic graph (DAG) and introduces its associated properties. \textcolor{blue}{Some of the key notations are listed in Table \ref{table1}}.
-
-\subsection{Network Model}
-As illustrated in Fig. \ref{fig1}, we consider a three-tier WPMEC system with a cloud server and a hybrid access point (HAP)\footnote{Our analysis can be extended to the case of multiple HAPs by modeling the MEC server as a pool of edge computing servers and considering the fact that each IoT device can only be connected to an HAP.} in a network of multiple WDs. \textcolor{blue}{The HAP is equipped with an MEC server and an ET. MEC and the cloud servers are both able to receive and execute the offloaded tasks and then send the results back to WDs.} ET broadcasts stable RF power to WDs. Thus, with proper scheduling, WDs can sustain their operation by only relying on the harvested energy \cite{b8}. In order to allow multiple WDs to share the same RF-channel, we assume a time-division multiple access (TDMA) protocol for WDs, as inspired by \cite{b11} and \cite{b14}. Moreover, we assume that WDs have half-duplex transmission. As a result, computation offloading cannot be performed simultaneously with energy harvesting \cite{b2}. We thus adopt the \textit{harvest-then-offload} \cite{b2} model of scheduling, as shown in Fig. \ref{fig2}. \textcolor{blue}{In contrast, for the case of full-duplex transmission, scheduling algorithms are categorized as the simultaneous wireless information and power transfer (SWIPT) \cite{b8} mode. However, considering the constraints of the production costs and devices' form factor for battery-less WDs, they usually lack a full-duplex transceiver for energy harvesting and data transmission.}
-
-We now introduce the detailed network model. Let $\mathcal{D}\triangleq\{1,...,D\}$ denote the set of WDs where $D$ indicates the total number of WDs. Each device $d\in\mathcal{D}$ is connected to the HAP and hence, the cloud server, using a wireless interface. \textcolor{blue}{We regard a complete cycle of executing a single subtask for all WDs having a candidate subtask as an \textit{episode}. Each episode jointly models the harvest-then-offload timing, subtasks' deadlines, and TDMA‌ scheduling of WDs.} As shown in Fig. \ref{fig2}, an episode of length $\Gamma$ is divided into two time frames: WET time (i.e., harvesting time) and offloading/local computation time. In the case of offloading, the latter is consisted of three time slots. The first slot is to relocate the task bits from WD $d\in\mathcal{D}$ to the HAP. Then, the task should be either executed on the MEC server or transmitted to the cloud. We consider that the computation time on the cloud server is negligible due to the high computation capacity compared to WDs or the MEC server. Thus, in the case of offloading to the cloud server, the second time slot indicates the time required to send the task data of WD $d\in\mathcal{D}$ from the HAP to the cloud server and then retrieve the processed data. Finally, the results should be transmitted from the HAP back to the corresponding WD in the third time slot.
-
-\textcolor{blue}{Now that we have introduced the network model, we need to provide an approach to calculate the length of episode $\Gamma$. As stated earlier, each episode reflects the requirements of the harvest-then-offload timing and subtask deadlines. Therefore, $\Gamma$ is directly related to the individual subtask deadlines being executed in that episode. In other words, $\Gamma$ can be calculated as the summation of the subtasks' deadlines. In the next section, we will calculate the length of each episode.}
-
-\begin{table}
-	\centering
-	\caption{{\color{blue}List of key notations}}
-	\ContinuedFloat
-	\label{table1}
-	{\color{blue}\begin{tabular}{ |p{2cm}|p{12cm}|}
-			\hline
-			\textbf{Symbol} & \textbf{Description} \\
-			\hline
-			$x^{\text{L}}_{v_d^u}, x^{\text{M}}_{v_d^u}, x^{\text{C}}_{v_d^u}$ & Binary offloading decisions \\
-			$\tau_{1,v_d^u}$ & Length of scheduled time for data transmission of subtask $v_d^u$ \\
-			$\tau_{2,v_d^u}$ & Length of scheduled time for execution of subtask $v_d^u$\\
-			$\tau_{3,v_d^u}$ & Length of scheduled time for retrieving the result of subtask $v_d^u$ \\
-			$\tau_0^u$ & WET time in episode $u$\\
-			$p^{u}$ & ET's power in episode $u$ \\
-			$\Gamma^u$ & Length of episode $u$ \\
-			$\mu_{v_d^u}$ & Response time of cloud server for subtask $v_d^u$ \\
-			$C_{v_d^u}$ & Number of CPU cycles required for subtask $v_d^u$ \\
-			$N_{i,j}$ & Number of bits required to transmit the result of subtask $i$ and $j$ \\
-			$g_d$ & Channel gain between WD $d$ and ET \\
-			$h_d$ & Channel gain between WD $d$ and MEC server \\
-			$\sigma^2$ & Noise power at the HAP \\
-			$\eta_d$ & Energy harvesting efficiency of WD $d$ \\
-			$\zeta_{d}$ & CPU's effective switched capacitance of WD $d$ \\
-			$r_{t,v_d^u}$ & Virtual resource for tier $t$ and subtask $v_d^u$ \\
-			$F^{\text{M},\max}$ & Maximum CPU frequency of MEC server \\
-			$F^{\text{L},\max}_{d}$ & Maximum CPU frequency of WD $d$ \\
-			$P^{\text{ET},\max}$ & ET's maximum transmission power \\
-			$P^{\text{AP},\max}$ & AP's maximum transmission power \\
-			$P^{\text{WD},\max}_d$ & Maximum transmission power of WD $d$ \\
-			$D$ & Number of WDs \\
-			$V_d$ & Number of subtasks of WD $d$ \\
-			$B_d$ & Bandwidth of WD $d$ \\
-			$\mathcal{D}$, $\mathcal{D}^u$ & Set of WDs \\ 
-			$\mathcal{U}$ & Set of episodes \\
-			$\mathcal{V}_d$ & Set of subtasks of WD $d$ \\
-			$\mathcal{R}^{\text{virt}}$ & Set of virtual resources \\
-			$\mathcal{I}_{v_d^u}$ & Set of episodes associated to executing prerequisite subtasks of the subtask $v_d^u$ \\
-			$\mathcal{J}_{v_d^u}$ & Set of episodes associated to executing subtasks with the subtask $v_d^u$ as their prerequisite \\
-			\hline
-	\end{tabular}}
-\end{table}
-
-\subsection{Task Model}
-Generally, there are two main methods for computation offloading: 1) \textit{Binary offloading}, and 2) \textit{partial offloading} which is also known as \textit{program partitioning} \cite{b4}. \textcolor{blue}{In the former method, each task, as an independent unit, is either fully computed locally or offloaded to an MEC server, based on the system constraints such as task arrival time, deadline, and energy harvesting-related constraints.} However, the latter provides a more fine-grained model of tasks by dividing each of them into a number of interrelated subtasks based on the dependencies inside each task \cite{b4}. These subtasks together form a directed, weighted, and acyclic graph known as \textit{task call graph} \cite{b4}. \textcolor{blue}{The partial offloading provides a more realistic model of tasks as it leverages the task call graph to represent each task. This accurately models the call stack of a computer program\footnote{\textcolor{blue}{For instance, \textit{Pyan}\cite{b41} is a Python module that generates the task call graph of a Python code by analysis of its modules and functions.}}} It can also lead to building networks with a higher performance as the optimal offloading decisions are made for each subtask instead of the whole task. Apart from that, by leveraging program partitioning, one can extract and process them in parallel. That being said, it can be a preferred model for many applications including distributively training deep neural networks \cite{b1}, advanced image processing based on parallel processing, and also most of the augmented reality applications \cite{b12}.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=180pt]{TDMA.pdf}
-	\caption{\textcolor{blue}{Harvest-then-offload scheduling with TDMA protocol for a system of two WDs. An episode of length $\Gamma$ is divided into two times frames of WET and offloading/local computing. In the case of offloading, the offloading/local computing time frame consists of three slots. The first and last slots are for transmitting the data and retrieving the results, respectively. The second slot is dedicated to the computation in the MEC server or transmission to/from the cloud server.}}\label{fig2}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=180pt]{task_call_graph.pdf}
-	\caption{An example of task call graph with eight subtasks for device $d$. Each parameter $C_{i}$ indicates the computation intensity of subtask $i$ in terms of the number of CPU cycles. Weights $N_{i,j}$ represent the number of bits transferred between subtasks $i$ and $j$.}\label{fig3}
-\end{figure}
-
-In this paper, we assume that each device $d\in\mathcal{D}$ has a task which can be partitioned into a number of $V_d$ subtasks using the program partitioning method. We denote $\mathcal{G}_d(\mathcal{V}_d,\mathcal{E}_d)$ as the task call graph of device $d\in\mathcal{D}$ where $\mathcal{V}_d$ indicates the set of vertices which are the subtasks and $\mathcal{E}_d$ denotes the set of edges representing the connection between each two subtasks. Each directed edge $(i,j)\in\mathcal{E}_d$ shows the transmission of the $i$-th subtask output to the $j$-th subtask. An example of this graph with specified computation modes is shown in Fig. \ref{fig3}. For illustration purposes, solid-circled vertices show the subtasks that are computed locally, while vertices with dashed circles correspond to the offloaded subtasks. The black ones are computed on the nearby MEC server and the red one is computed on the remote cloud server. In addition, each subtask $i$ is labeled by a parameter $C_{i}$ which indicates the required CPU cycles to perform the task and represents the task computation intensity. The weight $N_{i,j}$ of the edge from $i$ to $j$ denotes the number of bits required to transmit the result of subtask $i$ to subtask $j$. As the task requires the subtasks to accumulate or send/receive data at the start and end of its procedure, the ones at these ends are executed locally and no offloading decision is made for them \cite{b4}.
-
-\section{Problem Formulation}
-This section presents the steps toward formulating the ETEM problem. After providing motivations behind the selection of the objective, we formulate each part of the problem from the objective function to the constraints.
-
-\subsection{Problem Objective}
-Due to the high attenuation of RF energy over distances \cite{b8}, WET may require the HAP to consume a considerable amount of energy to provide sustainable operation for WDs. Due to its high cost, it is desired for HAP to consume less energy at the ET. In this paper, we formulate an optimization problem to minimize the total energy consumption of the HAP at the ET by jointly considering computation offloading, scheduling, and power allocation while guaranteeing the task completion and energy constraints. We also adopt the network and task models described in Section II.
-
-Since the proposed WPMEC system consists of multiple WDs and hence multiple task call graphs, we consider the time horizon of the problem to be the number of required episodes to execute the subtasks of all WDs. \textcolor{blue}{We denote $\mathcal{U}\triangleq\{0,...,U-1\}$ as the set of episodes, where $U\triangleq\max_{d\in\mathcal{D}}V_d$  indicates the number of episodes. Note that $V_d$ is obtained from the call graph of the corresponding task.} Therefore, the ET's cumulative energy consumption will be the sum of energy broadcasting over the time horizon. We define $\Gamma^u$, $\tau_0^u$, and $p^u$ as the length of episode $u\in\mathcal{U}$, WET time, and ET's power in episode $u\in\mathcal{U}$, respectively. We will then calculate the HAP's energy consumption at the ET as follows.
-\begin{equation}\label{eq2}
-	E^{\text{ET}} = \sum_{u\in\mathcal{U}}\tau_0^up^u = \boldsymbol{\tau}_0\boldsymbol{p}^{\intercal},
-\end{equation}
-where $\boldsymbol{\tau}_0 = \left(\tau_0^u\right)_{u\in\mathcal{U}}$ and $\boldsymbol{p} = \left(p^u\right)_{u\in\mathcal{U}}$ denote the vectors of WET time and ET's transmission power, respectively.
-
-\subsection{Energy harvesting}
-In this subsection, we present the energy harvesting-related constraints. \textcolor{blue}{As described earlier, we assume sustainable operation of WDs by only relying on the harvested energy (i.e., battery-less network). Thus, the cumulative energy consumption of the devices on each episode must be no more than their harvested energy.} The required energy of WDs can be divided into two parts: 1) Local computation energy, and 2) energy to send the task's data to the MEC server. We adopt the CPU's dynamic power equation \cite{b2}, \cite{b4}, \cite{b13} to model the local computation energy. We denote $\mathcal{D}^u$ as the set of WDs having a candidate subtask in episode $u\in\mathcal{U}$. We also denote $v_d^u\in\mathcal{V}_d$ as the candidate subtask of WD $d\in\mathcal{D}^u$ to be executed in episode $u\in\mathcal{U}$ and $\tau_{2,v_d^u}$ as the length of time slot scheduled for local computation of this subtask. Therefore, the energy consumption for locally executing subtask $v_d^u\in\mathcal{V}_d$ is
-\begin{equation}\label{eq3}
-	\begin{aligned}
-		E^{\text{LO}}(\tau_{2,v_d^u})=\zeta_d C_{v_d^u}\left(\frac{C_{v_d^u}}{\tau_{2,v_d^u}}\right)^2=\frac{\zeta_d C_{v_d^u}^3}{\left(\tau_{2,v_d^u}\right)^2},&\\
-		\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U},&
-	\end{aligned}
-\end{equation}
-where $C_{v_d^u}$ is the number of CPU cycles for executing subtask $v_d^u\in\mathcal{V}_d$ of the corresponding task call graph. Moreover, $\zeta_d$ is the CPU's effective switched capacitance \cite{b13} of device $d\in\mathcal{D}^u$. 
-
-In order to derive the WD energy consumption in case of offloading, we first use the Shannon formula to calculate the transmission rate between the device and MEC server. Assume that $B_d,g_d,q_{v_d^u},$ and $\sigma^2$ denote the spectrum bandwidth, wireless channel gain of device $d\in\mathcal{D}^u$ for data transmission, transmission power for offloading subtask $v_d^u\in\mathcal{V}_d$, and noise power at the HAP, respectively. The transmission rate is then given as
-\begin{equation}\label{eq4}
-	r_{v_d^u}=B_d\log_2\left(1+\frac{g_dq_{v_d^u}}{\sigma^2}\right),\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}.
-\end{equation}
-
-By utilizing (\ref{eq4}), we will have the following equation for the offloading transmission power.
-\begin{equation}\label{eq5}
-	q_{v_d^u} = \frac{\sigma^2}{g_d}\left(2^{\frac{r_{v_d^u}}{B_d}}-1\right),\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}.
-\end{equation}
-
-According to the task call graph in Fig. \ref{fig3}, the prerequisite of remotely executing a subtask $v_d^u\in\mathcal{V}_d$ for each device $d\in\mathcal{D}^u$ is to offload the required input data (i.e., the summation of weights of the subtask's input edges) to the MEC server. A time slot with length denoted as $\tau_{1,v_d^u}$ is scheduled for data transmission of subtask $v_d^u\in\mathcal{V}_d$ from device $d\in\mathcal{D}^u$ to the MEC server. We consider $\mathcal{I}_{v_d^u}=\{i\in\mathcal{U}|(v_d^i,v_d^u)\in\mathcal{E}_d\}$ as the set of episodes associated to those subtasks which have an output edge to vertex $v_d^u\in\mathcal{V}_d$. Therefore, by utilizing (\ref{eq5}), we can calculate the offloading energy consumption for each subtask $v_d^u\in\mathcal{V}_d$ as follows.
-\begin{equation}\label{eq6}
-	\begin{aligned}
-		E^{\text{OF}}(\tau_{1,v_d^u}) = \tau_{1,v_d^u}q_{v_d^u} = \frac{\tau_{1,v_d^u}\sigma^2}{g_d}\left(2^{\frac{\sum_{i\in\mathcal{I}_{v_d^u}}{N_{v_d^i,v_d^u}}}{\tau_{1,v_d^u}B_d}}-1\right),&\\
-		\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U} &.
-	\end{aligned}
-\end{equation}
-
-We now determine the amount of harvested energy. Let $\eta_d$ and $h_d$ denote the energy harvesting efficiency of WD $d\in\mathcal{D}$ and channel gain between the WD and ET, respectively. The harvested energy during each episode $u\in\mathcal{U}$, denoted as $E^{\text{EH}}(\tau_0^u,p^u)$, is
-\begin{equation}\label{eq7}
-	E^{\text{EH}}(\tau_0^u,p^u) = \eta_dh_d\tau_0^up^u,\quad\forall u\in\mathcal{U}.
-\end{equation}
-
-By denoting $P^{\text{ET}, \max}$ as the maximum power ET can transmit, we will have the following constraint on $p^u$.
-\begin{equation}\label{eq7_1}
-	0\leq p^u\leq P^{\text{ET}, \max},\quad\forall u\in\mathcal{U}.
-\end{equation}
-
-We denote $x^{\text{L}}_{v_d^u}$, $x^{\text{M}}_{v_d^u}$, and $x^{\text{C}}_{v_d^u}$ as binary variables that indicate the offloading decision of subtask $v_d^u$ of device $d\in\mathcal{D}^u$ in episode $u\in\mathcal{U}$. If $x^{\text{L}}_{v_d^u}=1$, the subtask is performed locally while $x^{\text{M}}_{v_d^u}=1$ indicates that the subtask is offloaded to the MEC server and $x^{\text{C}}_{v_d^u}=1$ means that it is offloaded to the cloud server. As stated earlier, we consider that the proposed WPMEC system is fully wireless powered. As a result, the consumed energy of each WD should be at most equal to its harvested energy. Therefore, by utilizing (\ref{eq3}), (\ref{eq6}), and (\ref{eq7}), we have the following constraint.
-\begin{equation}\label{eq8}
-	\begin{aligned}
-		E^{\text{LO}}(\tau_{2,v_d^u})x^{\text{L}}_{v_d^u} + E^{\text{OF}}(\tau_{1,v_d^u})\left(x^{\text{M}}_{v_d^u}+x^{\text{C}}_{v_d^u}\right) \leq E^{\text{EH}}(\tau_0^u,p^u),& \\
-		\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}.&
-	\end{aligned}
-\end{equation}
-Note that the excessive harvested energy cannot be stored for future use.
-
-\subsection{Harvest-then-offload TDMA scheduling}
-We adopt the harvest-then-offload scheduling mechanism to enable WDs with half-duplex transmission to execute or offload their computation tasks. We also leverage a TDMA protocol for scheduling multiple WDs according to Fig. \ref{fig2}. We consider that an episode of WET and task execution for all WDs should not exceed the length of episode $\Gamma^u$. Therefore, by assuming $u\in\mathcal{U}$ as the episode, the following constraints should be satisfied.
-\begin{equation}\label{eq9}
-	\tau_0^u + \sum_{d\in\mathcal{D}^u}\left(\tau_{1,v_d^u} +\tau_{2,v_d^u}+\tau_{3,v_d^u}\right) \leq \Gamma^u,\quad\forall u\in\mathcal{U},
-\end{equation}
-\begin{equation}\label{eq9_1}
-	0\leq\tau_0^u\leq\Gamma^u,\quad\forall u\in\mathcal{U},
-\end{equation}
-where $\tau_{3,v_d^u}$ denotes the length of scheduled time for retrieving the results of subtask $v_d^u\in\mathcal{V}_d$ from the MEC server. \textcolor{blue}{It is worth noting that inequality (\ref{eq9}) also enforces a hard deadline for each cycle of subtasks' execution in each episode. Thus, the total execution time of each task generated by WDs is constrained. This way, we can address the requirements of latency-sensitive tasks as well. Also, it can be concluded that $\Gamma^u$ is a key factor in the optimal value of the ETEM problem. A longer episode (i.e., larger $\Gamma^u$) provides more time for execution of the tasks. In fact, this will enlarge the feasible region of the ETEM optimization problem and enhances the energy-efficiency of the algorithm.}
-
-As illustrated in Fig. \ref{fig2}, in the case of offloading to the MEC server (i.e., $x^{\text{M}}_{v_d^u}=1$) or cloud server (i.e., $x^{\text{C}}_{v_d^u}=1$), the time $\tau_{1,v_d^u}$ must be at most $\Gamma^u$. The figure also shows that if the subtask is executed locally (i.e., $x^{\text{L}}_{v_d^u}=1$ and $x^{\text{M}}_{v_d^u}=x^{\text{C}}_{v_d^u}=0$), $\tau_{1,v_d^u}$ should be equal to zero. Therefore, the following constraint holds.
-\begin{equation}\label{eq10}
-	\tau^{\min}_{1,v_d^u}\leq\tau_{1,v_d^u}\leq \tau^{\max}_{1,v_d^u},\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U},
-\end{equation}
-where $\tau^{\min}_{1,v_d^u}\triangleq\frac{\sum_{i\in\mathcal{I}_{v_d^u}}N_{v_d^i,v_d^u}}{B_d\log_2\left( 1+\frac{g_dP^{\text{WD}, \max}_d}{\sigma^2}\right)}\left(x^{\text{M}}_{v_d^u} + x^{\text{C}}_{v_d^u}\right)$ and  $\tau^{\max}_{1,v_d^u}\triangleq\Gamma^u\left(x^{\text{M}}_{v_d^u} + x^{\text{C}}_{v_d^u}\right)$ are obtained using (\ref{eq4}). In addition, $P^{\text{WD}, \max}_d$ denotes the maximum transmission power for WD $d\in\mathcal{D}$.
-
-Constraints (\ref{eq8}) and (\ref{eq10}) address a tradeoff between the energy consumption and the transmission duration in the WDs. Above statements are also held for time $\tau_{3,v_d^u}$. Thus, we introduce the following constraint:
-\begin{equation}\label{eq11}
-	\tau^{\min}_{3,v_d^u} \leq \tau_{3,v_d^u} \leq \tau^{\max}_{3,v_d^u},\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U},
-\end{equation}
-where
-$\tau^{\min}_{3,v_d^u}\triangleq\frac{\sum_{j\in\mathcal{J}_{v_d^u}}N_{v_d^u,v_d^j}}{B_d\log_2\left( 1+\frac{g_dP^{\text{AP}, \max}}{\sigma^2}\right)}\left(x^{\text{M}}_{v_d^u} + x^{\text{C}}_{v_d^u}\right), $ $\tau^{\max}_{3,v_d^u}\triangleq\Gamma^u\left(x^{\text{M}}_{v_d^u} + x^{\text{C}}_{v_d^u}\right),$  $\mathcal{J}_{v_d^u}=\{j\in\mathcal{U}|(v_d^u,v_d^j)\in\mathcal{E}_d\},$ and $P^{\text{AP}, \max}$ denotes the maximum AP's transmission power.
-
-It is also worth noting that according to Fig. \ref{fig2}, in the case of local computation, there will not be any time required for data transmission between the MEC server and the corresponding WD. Thus, we have the following constraints for the first and last subtasks of each task call graph.
-\begin{equation}\label{eq12_1}
-	\tau_{1,v_d^0} = \tau_{3,v_d^0} = \tau_{1,v_d^{V_d-1}} = \tau_{3,v_d^{V_d-1}} = 0,\quad\forall d\in\mathcal{D},
-\end{equation}
-\begin{equation}\label{eq12_2}
-	x^{\text{M}}_{v_d^0} = x^{\text{C}}_{v_d^0} = x^{\text{M}}_{v_d^{V_d-1}} = x^{\text{C}}_{v_d^{V_d-1}} = 0,\quad\forall d\in\mathcal{D},
-\end{equation}
-where $v_d^0,v_d^{V_d-1}\in\mathcal{V}_d$ indicate the first and last subtasks of device $d\in\mathcal{D}$, respectively.
-
-We denote $F^{\text{L},\max}_{d}$ as the maximum CPU frequency of device $d\in\mathcal{D}$. We also denote $F^{\text{M},\max}$ as the maximum CPU frequency of the MEC server. We consider $C_{v_d^u}$ as the number of CPU cycles for executing a subtask $v_d^u\in\mathcal{V}_d$ on device $d\in\mathcal{D}^u$. Thus, $\tau_{2,v_d^u}$ will be at least $C_{v_d^u}/F^{\text{L},\max}_{d}$ if the subtask is locally computed or $C_{v_d^u}/F^{\text{M},\max}$ in the case of offloading to the MEC server. However, as the cloud servers mostly benefit from powerful processors, we omit the processing delay if the subtask is offloaded to the cloud server. Therefore, the scheduling time $\tau_{2,v_d^u}$ is affected by the server's load and also the round-trip and transmission delay from the MEC server to the cloud. We refer this as the response time which is denoted as $\mu_{v_d^u}\geq 0$ for each device $d\in\mathcal{D}^u$ and episode $u\in\mathcal{U}$. As a result, we have
-\begin{equation}\label{eq13}
-	\tau^{\min}_{2,v_d^u} \leq \tau_{2,v_d^u} \leq\Gamma^u,\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U},
-\end{equation}
-where $\tau^{\min}_{2,v_d^u}\triangleq\frac{C_{v_d^u}}{F^{\text{L},\max}_{d}}x^{\text{L}}_{v_d^u} + \frac{C_{v_d^u}}{F^{\text{M},\max}}x^{\text{M}}_{v_d^u} +
-\mu_{v_d^u}x^{\text{C}}_{v_d^u}$. The response time $\mu_{v_d^u}$ is estimated by the MEC server at the beginning of each episode $u\in\mathcal{U}$ for each WD $d\in\mathcal{D}^u$.
-
-\subsection{ET's Energy Minimization (ETEM) Problem}
-To formulate the problem, we first define three offloading decision vectors for cloud, edge, and local computation as $\boldsymbol{x}^\text{C} = \left(x^{\text{C}}_{v_d^u}\right)_{\sum_{d\in\mathcal{D}}V_d}$, $\boldsymbol{x}^{\text{M}} = \left(x^{\text{M}}_{v_d^u}\right)_{\sum_{d\in\mathcal{D}}V_d}$, and $\boldsymbol{x}^{\text{L}} = \left(x^{\text{L}}_{v_d^u}\right)_{\sum_{d\in\mathcal{D}}V_d}$, respectively. We also define decision matrix $\boldsymbol{X} = \left(x_{t,v_d^u}\right)_{3\times \sum_{d\in\mathcal{D}}V_d} = \left(\boldsymbol{x^\text{C}};\boldsymbol{x^\text{M}};\boldsymbol{x^\text{L}}\right)$, where each row corresponds to a tier number $t\in\{1,2,3\}$. We also define $\boldsymbol{T} = (\tau_{m,v_d^u})_{3\times \sum_{d\in\mathcal{D}}V_d}$ as the computation scheduling matrix with $m\in\{1,2,3\}$ representing the time frame number. We can now formulate the ETEM problem as follows.
-\begin{subequations}
-	\begin{alignat}{4}
-		\text{ETEM: }\displaystyle{\minimize_{\boldsymbol{X},\boldsymbol{p},\boldsymbol{\tau}_0,\boldsymbol{T}}}\quad & \boldsymbol{\tau}_0\boldsymbol{p}^{\intercal} \label{p1a}\\
-		%
-		\textrm{subject to} \quad & \text{constraints } (\ref{eq7_1})\text{--}(\ref{eq13}), \label{p1b}\\
-		%
-		\begin{split}
-			&x^{\text{L}}_{v_d^u} + x^{\text{M}}_{v_d^u} + x^{\text{C}}_{v_d^u} = 1,\\
-			%
-			&\quad\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}, \label{p1c}
-			%
-		\end{split}\\
-		\begin{split}
-			&x^{\text{L}}_{v_d^u}, x^{\text{M}}_{v_d^u}, x^{\text{C}}_{v_d^u}\in\left\{0,1\right\},\\
-			%
-			&\quad\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}. \label{p1d}
-			%
-		\end{split}
-	\end{alignat}
-\end{subequations}
-
-ETEM is a mixed-integer optimization problem which is intractable. In the next section, we will propose our algorithm called WiEnTM to efficiently solve the problem by leveraging bipartite graph matching and parallel processing\cite{b16}.
-
-\section{Wireless Energy Transmission Minimization (WiEnTM) Algorithm}
-
-In this section, we propose our parallel WiEnTM algorithm to solve the ETEM problem using bipartite graph matching. We also analyze the time complexity of each parallel block of the algorithm.
-
-\subsection{Bipartite Graph Matching}
-Matching in graph theory can provide a tractable approach to combinatorial optimization problems \cite{b17}. Matching theory has been widely used for resource allocation in wireless networks where the users and resources are modeled as a bipartite graph \cite{b16}, \cite{b17}. In this graph, users are connected to resources via edges. Each edge is associated with a weight which represents the cost of using the corresponding resource. A subset of edges associated with a feasible resource allocation is called a \textit{matching}. The goal is to find the minimum weighted graph matching.
-
-
-\begin{figure*}[ht]
-	\centering
-	\begin{subfigure}{.21\textwidth}
-		\centering
-		\includegraphics[height=\linewidth]{matching1.pdf}
-		\caption{}
-		\label{fig:4a}
-	\end{subfigure}\hspace{8mm}
-	\begin{subfigure}{.21\textwidth}
-		\centering
-		\includegraphics[height=\linewidth]{matching2.pdf}
-		\caption{}
-		\label{fig:4b}
-	\end{subfigure}
-	
-	\caption{An example for matching bipartite graph of subtasks $\mathcal{V}_d$ and computation resources $\mathcal{R}$. Set $\mathcal{R}$ contains resources $r_1$ (i.e., cloud servers), $r_2$ (i.e., MEC servers), and $r_3$ (i.e., local devices). a) Many-to-one matching. b) Equivalent one-to-one matching by utilizing virtual resources $\mathcal{R}^{\text{virt}}$ where each $r_{t,v_d^u}$ is related to tier number $t\in\{1,2,3\}$ and subtask $v_d^u$.} \label{fig:4}
-\end{figure*}
-
-The bipartite graph in Fig. \ref{fig:4} provides an example of matching problem in the proposed WPMEC system. In Fig. \ref{fig:4a}, each subtask $v_d^u\in\mathcal{V}_d$ of device $d\in\mathcal{D}^u$ in episode $u\in\mathcal{U}$ is matched with computation resources of set $\mathcal{R}$ which consists of cloud, MEC server, and local devices. It is important to note that device $d$ can only be matched with itself or cloud/edge resources not other devices.
-
-\textcolor{blue}{To leverage the matching algorithm, we need to calculate the cost of each matching between subtasks and computing resources. To accomplish this, we first transform the ETEM problem into an equivalent simplified problem. We then show that the transformed problem is decomposable, and the resultant decomposed problems are still equivalent to the ETEM problem.}
-
-For each matching, the binary decision variables $x_{v_d^u}^{\text{L}}$, $x_{v_d^u}^{\text{M}}$, and $x_{v_d^u}^{\text{C}}$ will have known values (e.g., matching subtask $v_d^u\in\mathcal{V}_d$ with the cloud resource will result in $x_{v_d^u}^{\text{C}} = 1$ and $x_{v_d^u}^{\text{L}}=x_{v_d^u}^{\text{M}}=0$). However, the ETEM problem is still non-convex even with eliminating binary variables. This is due to the term $\tau_0^up^u$ which is neither a convex nor concave function of $\tau_0^u$ and $p^u$. For the sake of resolving this issue, we present the following theorem.
-
-\begin{theorem}
-	Given a matching (i.e., particular values of binary variables $x^{\text{L}}_{v_d^u}$, $x^{\text{M}}_{v_d^u}$, and $x^{\text{C}}_{v_d^u}$), ETEM can be transformed into a convex optimization problem.
-\end{theorem}
-\begin{IEEEproof}
-	Refer to Appendix A.
-\end{IEEEproof}
-
-We now transform the ETEM problem with the change of variable $\varepsilon^u=\tau_0^up^u$ into a more tractable form. This helps us calculate the edge weights in the matching graph. In order to accomplish this, it is required to decompose the aforementioned problem into problems for each subtask $v_d^u\in\mathcal{V}_d$ of device $d\in\mathcal{D}$ in episode $u\in\mathcal{U}$. We first provide two important remarks as follows.
-
-\begin{remark}
-	The optimal value of variable $\tau_{3,v_d^u}$ will be
-	\begin{equation}\label{eq18}
-		\tau_{3,v_d^u}^{\ast} \triangleq \tau_{3,v_d^u}^{\min},\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}.
-	\end{equation}
-\end{remark}
-\noindent The above equation eliminates constraint (\ref{eq11}).
-
-Variable $\tau_{3,v_d^u}$ is only present in constraints (\ref{eq9}) and (\ref{eq11}). Since (\ref{eq9}) forces a hard deadline on the scheduling times, it is desirable for $\tau_{3,v_d^u}$ to have the smallest possible value which is dictated by constraint (\ref{eq11}). Therefore, at the optimal point of ETEM problem, \ref{eq18} will be achieved.
-
-\begin{remark}
-	We can calculate the transmitted wireless energy during each episode $u\in\mathcal{U}$ as
-	\begin{equation}\label{eq19}
-		\varepsilon^u = \max_{d\in\mathcal{D}^u}\left\{\frac{E^{\text{LO}}(\tau_{2,v_d^u})x^{\text{L}}_{v_d^u}}{\eta_d h_d} + \frac{E^{\text{OF}}(\tau_{1,v_d^u})\left(x^{\text{M}}_{v_d^u}+x^{\text{C}}_{v_d^u}\right)}{\eta_d h_d}\right\},
-	\end{equation}
-	where $v_d^u\in\mathcal{V}_d$ is the candidate subtask of device $d\in\mathcal{D}^u$ that is being executed in episode $u\in\mathcal{U}$.
-\end{remark}
-
-We know that the objective of the ETEM problem is to minimize the wireless energy transmission. This minimum value must meet the energy requirements of all WDs. Therefore, it is the maximum energy consumption among WDs in each episode $u\in\mathcal{U}$. Using the above remark, we can rewrite the objective function and eliminate constraint (\ref{eq8}).
-
-Using (\ref{eq19}), we can transform ETEM into a minimax optimization problem but it may still be difficult to solve when there are large number of WDs. We know that constraint (\ref{eq9}) is creating a dependency between subtasks. By rewriting this constraint for each subtask, we will be able to reduce this minimax optimization problem into a number of independent problems. As a result, the ETEM problem will convert into a minisum optimization problem \cite{b18} which is easier to solve.
-
-In order to eliminate the aforementioned dependency in constraint (\ref{eq9}), we first consider a given value for the WET time $\tau_0^u$ which satisfies constraint (\ref{eq9_1}). Thus, the ET's transmitted energy will only depend on $p^u$. There are iterative methods to calculate the appropriate value of $\tau_0^u$ such as the one proposed in \cite{b2}. By decomposing the summation on the left-hand side of (\ref{eq9}), this constraint can be rewritten for each subtask $v_d^u\in\mathcal{V}_d$. We first introduce a new parameter $0\leq\beta_{v_d^u}\leq|\mathcal{D}^u|$ which reflects the priority, computation complexity, or input/output size of each subtask $v_d^u\in\mathcal{V}_d$. We then introduce the following constraint.
-\begin{equation}\label{eq28}
-	\tau_{1,v_d^u} + \tau_{2,v_d^u} \leq \frac{\beta_{v_d^u}}{|\mathcal{D}^u|}\left(\Gamma^u-\tau_0^u\right) - \tau_{3,v_d^u}^{\ast}.
-\end{equation}
-
-We now reconstruct (\ref{eq9}) using (\ref{eq28}). To do so, we accumulate each side of (\ref{eq28}) over all WDs in $\mathcal{D}$ and choose $\beta_{v_d^u}$ such that
-\begin{equation}\label{eq27}
-	\sum_{d\in\mathcal{D}^u}\beta_{v_d^u} \leq 	|\mathcal{D}^u|,\quad\forall u\in\mathcal{U}.
-\end{equation}
-
-It can be easily shown that when the above condition holds, constraint (\ref{eq28}) ensures that constraint (\ref{eq9}) is met. Moreover, in the case of equality, constraints (\ref{eq9}) and (\ref{eq28}) will be equivalent. \textcolor{blue}{We will analyze the effect of $\beta_{v_d^u}$ on the optimal solution in Section V.}
-
-For ease of exposition, we now define the following two functions for each $v_d^u\in\mathcal{V}_d$ assuming $x^{\text{L}}_{v_d^u}$, $x^{\text{M}}_{v_d^u}$, and $x^{\text{C}}_{v_d^u}$ are given.
-\begin{equation}\label{eq20}
-	\begin{aligned}
-		e_1(\tau_{1,v_d^u}) &\triangleq \frac{E^{\text{OF}}_{v_d^u}\left(x^{\text{M}}_{v_d^u}+x^{\text{C}}_{v_d^u}\right)}{\eta_d h_d}\\
-		&= \frac{\tau_{1,v_d^u}\left(x^{\text{M}}_{v_d^u}+x^{\text{C}}_{v_d^u}\right)}{\sigma^{-2}g_d\eta_d h_d}\left(2^{\frac{\sum_{i\in\mathcal{I}_{v_d^u}}{N_{v_d^i,v_d^u}}}{\tau_{1,v_d^u}B_d}}-1\right),
-	\end{aligned}
-\end{equation}
-\begin{equation}\label{eq21}
-	e_2(\tau_{2,v_d^u}) \triangleq \frac{E^{\text{LO}}_{v_d}x_{\text{L}}^{v_d}}{\eta_d h_d} = \frac{\zeta_d C_{v_d^u}^3x^{\text{L}}_{v_d^u}}{\eta_d h_d\left(\tau_{2,v_d^u}\right)^2}.
-\end{equation}
-
-As WDs may require different amounts of power, the problem for each subtask may find different values for $p^u$. Thus, we define $p_{v_d^u}$ as the required ET's power for subtask $v_d^u\in\mathcal{V}_d$. Let $p_{v_d^u}^{\ast}$ and $p^{u^\ast}$ denote the optimal values of $p_{v_d^u}$ and $p^u$, respectively. We know that $p^u$ must be enough to power all WDs. As a result, we can calculate $p^{u^\ast}$ by selecting the maximum $p_{v_d^u}^{\ast}$ as follows.
-\begin{equation}\label{eq29}
-	p^{u^\ast} = \max_{d\in\mathcal{D}^u}p_{v_d^u}^{\ast},\quad\forall u\in\mathcal{U}.
-\end{equation}
-
-In the following remark, we will present an equality constraint for calculating $p_{v_d^u}^{\ast}$.
-
-\begin{remark}
-	The following constraint is equivalent to (\ref{eq8}) when $\tau_0^u$ is given.
-	\begin{equation}\label{eq30}
-		e_1\left(\tau_{1,v_d^u}\right) + e_2\left(\tau_{2,v_d^u}\right) - p_{v_d^u}\tau_0^u = 0.
-	\end{equation}
-\end{remark}
-
-Based on the definition of $p_{v_d^u}$, $p_{v_d^u}\tau_0^u$ will be the energy required by each subtask $v_d^u\in\mathcal{V}_d$. We know that $e_1\left(\tau_{1,v_d^u}\right) + e_2\left(\tau_{2,v_d^u}\right)$ is the total energy consumption for local computation or offloading of subtask $v_d^u\in\mathcal{V}_d$. In the optimal point of ETEM problem, there should not be any excessive WET. As a result, equality (\ref{eq30}) holds.
-
-We now utilize (\ref{eq28}) and (\ref{eq20})--(\ref{eq30}) to reformulate the ETEM problem into a simplified ETEM problem (S-ETEM) with given offloading decisions $x^{\text{L}}_{v_d^u}$, $x^{\text{M}}_{v_d^u}$, and $x^{\text{C}}_{v_d^u}$.
-\begin{subequations}
-	\begin{alignat}{4}
-		\text{S-ETEM: }\displaystyle{\minimize_{\boldsymbol{p}^\text{v}, \boldsymbol{\tau}_{1}, \boldsymbol{\tau}_{2}}} \quad & \sum_{u\in\mathcal{U}} \sum_{d\in\mathcal{D}^u} e_1\left(\tau_{1,v_d^u}\right)+e_2\left(\tau_{2,v_d^u}\right) \label{eq26}\\
-		\textrm{subject to} \quad & 0 \leq p_{v_d^u} \leq P^{\text{ET}, \max}, \forall d\in\mathcal{D}^u, \forall u\in\mathcal{U},\\
-		& \text{constraints }(\ref{eq10}), (\ref{eq13}),\\
-		%
-		\begin{split}
-			& \text{constraints }(\ref{eq28}), (\ref{eq30}),\\ & \quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}.
-		\end{split}
-	\end{alignat}
-\end{subequations}
-where $\boldsymbol{p}^{\text{v}} \triangleq (p_{v_d^u})_{\sum_{d\in\mathcal{D}}V_d}$, $\boldsymbol{\tau}_{1} \triangleq (\tau_{1,v_d^u})_{\sum_{d\in\mathcal{D}}V_d}$, and $\boldsymbol{\tau}_{2} \triangleq (\tau_{2,v_d^u})_{\sum_{d\in\mathcal{D}}V_d}$.
-
-The above problem is a convex optimization problem. The proof is similar to the proof of Theorem 1 and is omitted due to space limit. \textcolor{blue}{It is also worth noting that for a given $\beta_{v_d^u}$, by solving S-ETEM, we can achieve the optimal solution of the ETEM problem. In other words, by determining the optimal value of $\beta_{v_d^u}$ for each $d\in\mathcal{D}^u$ and $u\in\mathcal{U}$, the optimal ET's transmitted energy can be obtained and there would not be any approximation.}
-
-The S-ETEM problem can be further decomposed as its objective function is separable. Thus, we can have problems specific to each subtask $v_d^u\in\mathcal{V}_d$. We regard these problems as decomposed S-ETEM (DS-ETEM). We can then calculate the weight of each matching as the solution of DS-ETEM which will be individually solved for each subtask $v_d^u\in\mathcal{V}_d$ of WD $d\in\mathcal{D}^u$ and episode $u\in\mathcal{U}$.
-\begin{subequations}
-	\begin{alignat}{4}
-		\text{DS-ETEM: }\displaystyle{\minimize_{p_{v_d^u}, \tau_{1,v_d^u}, \tau_{2,v_d^u}}}\quad &e_1\left(\tau_{1,v_d^u}\right) + e_2\left(\tau_{2,v_d^u}\right) \label{eq31}\\
-		%
-		\textrm{subject to} \quad&
-		\tau^{\min}_{1,v_d^u} \leq \tau_{1,v_d^u} \leq \tau^{\max}_{1,v_d^u},\\
-		%
-		& \tau^{\min}_{2,v_d^u} \leq \tau_{2,v_d^u} \leq \Gamma^u,\\
-		%
-		& 0 \leq p_{v_d^u} \leq P^{\text{ET}, \max},\\
-		%
-		& \text{constraints } (\ref{eq28}), (\ref{eq30}).
-	\end{alignat}
-\end{subequations}
-
-We continue by presenting \textit{matching rules} \cite{b16} which are constraints on selecting optimal matching to ensure it is a feasible solution of ETEM problem. The first matching rule is that each WD can only be matched to one of the resources corresponding to the equality constraint (\ref{p1c}) in the ETEM problem. Note that each resource can be assigned to multiple WDs. Therefore, we call this matching as a \textit{many-to-one} matching. 
-For a specific matching, if the constraints of DS-ETEM problem are satisfied for all subtasks, the matching (i.e., a subset of edges in the matching graph) is considered as a feasible matching \cite{b16}. We exclude the edges corresponding to infeasible matchings from the problem by setting their weights to infinity. Thus, these edges will never be selected in the minimum weight matching as they have infinite edge weights.
-
-Since solving many-to-one matching problems are difficult \cite{b16}, we further convert this matching into a \textit{one-to-one} matching similar to Fig. \ref{fig:4b}. In order to perform this transformation, we first introduce the concept of \textit{virtual resource} as inspired by \cite{b16}. Each virtual resource corresponds to an identical copy of a resource associated to each subtask. The matching between a subtask and a virtual resource is called a \textit{virtual matching}. From Fig. \ref{fig:4a}, it can be observed that subtasks $v_2^1$, $v_3^1$, and $v_3^2$ of WD2 and WD3 are connected to resource $r_2$. We replace this resource with three virtual resources $r_{2,1}$, $r_{2,2}$, and $r_{2,3}$. This makes the many-to-one matching of Fig. \ref{fig:4a}, an equivalent one-to-one matching.
-
-In the next subsection, we propose an algorithm to solve this one-to-one matching.
-
-\subsection{Proposed Algorithm}
-In this subsection, we describe our parallel algorithm named WiEnTM to solve the non-convex ETEM problem using the aforementioned minimum weighted graph matching. The algorithm consists of three stages. In the first stage, the weight of all possible matchings are calculated in parallel. We regard this stage as \textit{matching graph weight calculation} (MGW) algorithm. \textcolor{blue}{Note that in order to calculate the weights of subtasks, there is no need to actually execute them. The only required information is the size of input and output of each subtask which is already known from the task call graph. Thus, Lines 4 to 17 of the MGW algorithm can be run simultaneously.} The next stage is intended to find the optimal matchings based on these weights. In the final stage, the algorithm utilizes the optimal virtual matching to determine the desired optimal offloading decisions and scheduling.
-
-Let $\mathcal{R}^{\text{virt}}$ denote the set of virtual resources. We consider $r_{t,v_d^u}^{\text{virt}}\in\mathcal{R}^{\text{virt}}$ as the virtual resource for tier $t\in\{1,2,3\}$ and subtask $v_d^u\in\mathcal{V}_d$. We then define the matrix $\boldsymbol{W}^{\text{virt}} = \left(w_{v_d^u,r_{t,v_d^u}}^{\text{virt}}\right)_{\left(\sum_{d\in\mathcal{D}}{\left(V_d-2\right)}\right)\times|\mathcal{R}^{\text{virt}}|}$ whose entries are the edge weights of the one-to-one matching graph initialized with infinity for all elements. We similarly define matrices $\boldsymbol{T}_i^{\text{virt}} = \left(\tau_{i,v_d^u}^{\text{virt}}\right)_{\left(\sum_{d\in\mathcal{D}}{\left(V_d-2\right)}\right)\times|\mathcal{R}^{\text{virt}}|}, i\in\{1,2,3\}$ and $\boldsymbol{P}^{\text{virt}} = \left(p_{v_d^u}^{\text{virt}}\right)_{\left(\sum_{d\in\mathcal{D}}{\left(V_d-2\right)}\right)\times|\mathcal{R}^{\text{virt}}|}$as auxiliary matrices to store the optimal scheduling times and required powers for different matchings, respectively. As the first and last subtasks are always performed locally, we exclude them from the matching algorithm. Thus, these matrices as well as the power vector will all have $\sum_{d\in\mathcal{D}}{\left(V_d-2\right)}$ rows which corresponds to all subtasks except the first and last ones.
-\begin{algorithm}[t]
-	\DontPrintSemicolon
-	\SetAlgoLined
-	\caption{MGW algorithm}\label{alg1}
-	\KwIn{$\mathcal{D}, \mathcal{D}^u, \mathcal{R}^{\text{virt}}, \mathcal{V}_d, \mathcal{U}, \Gamma^u, V_d, \tau_{1,v_d^u}^{\min}, \tau_{2,v_d^u}^{\min}, \tau_{3,v_d^u}^{\min}, B_d, \sigma,$ $ \mu_{v_d^u}, g_d, \eta_d, h_d, \beta_{v_d^u}, \tau_0^u, F^{\text{L},\max}_{d}, F^{\text{M},\max}, \forall r_{t,v_d^u}^{\text{virt}}\in\mathcal{R}^{\text{virt}}, t\in\{1,2,3\}, v_d^u\in\mathcal{V}_d, d\in\mathcal{D}, u\in\mathcal{U}$}
-	\KwOut{Virtual matching graph weights $\boldsymbol{W}^{\text{virt}}$, virtual scheduling times $\boldsymbol{T}_{1}^{\text{virt}}$, $\boldsymbol{T}_{2}^{\text{virt}}$, $\boldsymbol{T}_{3}^{\text{virt}}$, and virtual power values $\boldsymbol{P}^{\text{virt}}$}
-	
-	\SetKwProg{Coblock}{cobegin}{ }{coend}
-	$\boldsymbol{W}^{\text{virt}}$ $\leftarrow \left(+\infty\right)_{\left(\sum_{d\in\mathcal{D}}\left(V_d-2\right)\right)\times |\mathcal{R}^{\text{virt}}|}$;\;
-	$\boldsymbol{T}_1^{\text{virt}}$, $\boldsymbol{T}_2^{\text{virt}}$, $\boldsymbol{T}_3^{\text{virt}}$ $\leftarrow \left(+\infty\right)_{\left(\sum_{d\in\mathcal{D}}\left(V_d-2\right)\right)\times |\mathcal{R}^{\text{virt}}|}$;\;
-	$\boldsymbol{P} ^{\text{virt}}$ $\leftarrow \left(+\infty\right)_{\left(\sum_{d\in\mathcal{D}}\left(V_d-2\right)\right)\times |\mathcal{R}^{\text{virt}}|}$;\;
-	
-	\Coblock{$r_{t,v_d^u}\left(0:|\mathcal{R}^{\text{virt}}|\right)$}{
-		Assign $x^{\text{L}}_{v_d^u}$, $x^{\text{M}}_{v_d^u}$, and $x^{\text{C}}_{v_d^u}$ based on $r_{t,v_d^u}^{\text{virt}}$;\;
-		
-		\tcc{Eqs. (\ref{eq18}), (\ref{eq20}), and (\ref{eq21})}
-		\If {$\tau_{j,v_d^u}^{\min} \leq \tau_{j,v_d^u}^{\max}, j\in\{1,2\}$}{
-			\eIf{$u\not\in\{0, V_d-1\}$}{
-				$\tau_{3,v_d^u}^{\text{virt}^{\ast}} \leftarrow \tau_{3,v_d^u}^{\ast}$; \tcp*{Eq. (\ref{eq18})}
-				Solve DS-ETEM for $p_{v_d^u}^{\ast}, \tau_{1,v_d^u}^{\ast}, \tau_{2,v_d^u}^{\ast}$ and assign to $p_{v_d^u}^{\text{virt}^{\ast}} , \tau_{1,v_d^u}^{\text{virt}^{\ast}} , \tau_{2,v_d^u}^{\text{virt}^{\ast}}$;\;
-				$w_{v_d^u,r_{t,v_d^u}}^{\text{virt}} \leftarrow e_1\left(\tau_{1,v_d^u}^{\ast}\right) + e_2\left(\tau_{2,v_d^u}^{\ast}\right)$;\;
-			}{
-				$x^{\text{L}^{\ast}}_{v_d^u} \leftarrow 1$; $x^{\text{M}^{\ast}}_{v_d^u}, x^{\text{C}^{\ast}}_{v_d^u} \leftarrow 0$;\;
-				$\tau_{1,v_d^u}^{\ast}, \tau_{3,v_d^u}^{\ast} \leftarrow 0$;\;
-				Solve DS-ETEM for $p_{v_d^u}^{\ast}, \tau_{2,v_d^u}^{\ast}$ given $x^{\text{L}^{\ast}}_{v_d^u}, x^{\text{M}^{\ast}}_{v_d^u},x^{\text{C}^{\ast}}_{v_d^u}$;\;
-			}
-		}
-	}
-	\Coblock{$v_d^u\left(0:\sum_{d\in\mathcal{D}}\left(V_d-2\right)\right)$}{
-		\If {$w_{v_d^u,r_{t,v_d^u}}^{\text{virt}} = +\infty, \forall r_{t,v_d^u}^{\text{virt}}\in\mathcal{R}^{\text{virt}}$}{
-			\Return infeasible;
-		}
-	}
-\end{algorithm}
-
-\begin{algorithm}[t]
-	\DontPrintSemicolon
-	\SetAlgoLined
-	\caption{WiEnTM algorithm}\label{alg2}
-	\KwIn{$\mathcal{D}, \mathcal{D}^u, \mathcal{R}^{\text{virt}}, \mathcal{V}_d, \mathcal{U}, \Gamma^u, V_d, \tau_{1,v_d^u}^{\min}, \tau_{2,v_d^u}^{\min}, \tau_{3,v_d^u}^{\min}, B_d, \sigma,$ $ \mu_{v_d^u}, g_d, \eta_d, h_d, \beta_{v_d^u}, \tau_0^u, F^{\text{L},\max}_{d}, F^{\text{M},\max}, \forall r_{t,v_d^u}^{\text{virt}}\in\mathcal{R}^{\text{virt}}, t\in\{1,2,3\}, v_d^u\in\mathcal{V}_d, d\in\mathcal{D}, u\in\mathcal{U}$}
-	\KwOut{Offloading decisions \mbox{\boldmath$X$}$^{\ast}$, WET powers $\boldsymbol{p}^{\ast}$, and scheduling times $\boldsymbol{T}^{\ast}$}
-	
-	\SetKwProg{Coblock}{cobegin}{ }{coend}
-	
-	\mbox{\boldmath$X$}$^{\text{virt}^{\ast}} \leftarrow \left(0\right)_{\left(\sum_{d\in\mathcal{D}}\left(V_d-2\right)\right)\times |\mathcal{R}^{\text{virt}}|}$;\;
-	
-	Run \textrm{MGW} algorithm;\;
-	
-	\Coblock{$v_d^u\left(0:\sum_{d\in\mathcal{D}}\left(V_d-2\right)\right)$}{
-		$r_{\min} \leftarrow \textrm{argmin}_{r_{t,v_d^u}\in\mathcal{R}^{\text{virt}}} \left(w_{v_d^u,r_{t,v_d^u}}\right)$;\;
-		$x_{v_d^u,r_{\min}}^{\text{virt}^{\ast}} \leftarrow 1$;\;
-	}
-	
-	\For{$u\in\mathcal{U}$}{
-		\Coblock{$d\left(0:|\mathcal{D}^u|\right)$}{
-			\If{$u\not\in\{0,V_d-1\}$}{
-				Find the non-zero element in \mbox{\boldmath$x$}$^{\text{virt}^{\ast}}_{v_d^u}$ row;\;
-				Set $x^{\text{L}^{\ast}}_{v_d^u}, x^{\text{M}^{\ast}}_{v_d^u}, x^{\text{C}^{\ast}}_{v_d^u},$ and $p_{v_d^u}^{\ast}, \tau_{1,v_d^u}^{\ast}, \tau_{2,v_d^u}^{\ast},\tau_{3,v_d^u}^{\ast}$ based on the value of tier number $t$ determined in Line 10 and the outputs of MGW in Line 2;\;
-			}
-		}
-		$p^{u^{\ast}} \leftarrow \max_{d\in\mathcal{D}^u} p_{v_d^u}^{\ast}$;\;
-	}
-\end{algorithm}
-
-
-
-We now explain the MGW algorithm. The first stage of this algorithm (Lines 5-19) requires $|\mathcal{R}^{\text{virt}}|\times \left(\sum_{d\in\mathcal{D}}\left(V_d-2\right)\right)$ parallel executions as shown by a block inside \textit{cobegin} and \textit{coend} keywords. We regard this block as a \textit{kernel}. Each kernel has two input parameters $\lambda_{\text{id}}$ and $\lambda_{\text{count}}$ in the form of $\lambda_\text{id}(0:\lambda_{\text{count}})$ where $\lambda_{\text{id}}$ is the identifier of each kernel and is given during the execution. In addition, $\lambda_{\text{count}}$ is the total number of required executions of the parallel block. In each kernel, the algorithm solves DS-ETEM for virtual resource $r_{t,v_d^u}^{\text{virt}}\in\mathcal{R}^{\text{virt}}$ of subtask $v_d^u\in\mathcal{V}_d$ (Lines 11 and 16) using the techniques such as sequential quadratic programming \cite{b31}. Note that this is a convex problem with only three variables. For the subtasks at both ends, the algorithm enforces the local computation by setting $x^{\text{L}^{\ast}}_{v_d^u} = 1$ and $x^{\text{M}^{\ast}}_{v_d^u} = x^{\text{C}^{\ast}}_{v_d^u} = 0$ (Lines 14-15). It then similarly solves DS-ETEM to obtain optimal values of $\tau_{0,v_d^u}$ and $\tau_{2,v_d^u}$ denoted by $\tau_{0,v_d^u}^{\ast}$ and $\tau_{2,v_d^u}^{\ast}$ (Line 16). Moreover, if $\tau_{j,v_d^u}^{\min} > \tau_{j,v_d^u}^{\max}$ for $j\in\{1,2\}$, the algorithm skips solving DS-ETEM. The next kernel (Lines 20-25) checks for matching feasibility. In the case of having infinite weights for all virtual resources of subtask $v_d^u\in\mathcal{V}_d$, the algorithm stops the executions and indicates the infeasibility. Therefore, checking this condition for each subtask requires $\sum_{d\in\mathcal{D}}\left(V_d-2\right)$ parallel execution.
-
-Next, we analyze the complexity of the MGW algorithm. Problem DS-ETEM is formulated for each subtask $v_d^u\in\mathcal{V}_d$. Thus, it has a time complexity of $O(1)$. The if-statement in the last kernel can also be executed with the time complexity of $O(1)$. This is due to having only three resource options for a given subtask. In order to analyze the time complexity of the parallel algorithm, a parameter known as \textit{depth}\cite{b23} is defined as the time complexity of the longest series of computations that are required to be executed sequentially. Another parameter known as \textit{work}\cite{b23} denotes the total number of primitive works executed by the parallel processor. Therefore, the first kernel of the MGW algorithm has the depth of $O(1)$ and work of $O(UD)$ where $U$ and $D$ are the number of episodes and WDs, respectively, and $UD$ is the total number of virtual resources. In addition, the second kernel of MGW has the depth of $O(1)$ and work of $O(UD)$.
-
-Algorithm 2 presents the WiEnTM algorithm. The algorithm first exploits the MGW algorithm in Line 1 to find the matching weights and related matrices. Lines 3 to 6 are intended to find the index in the weight matrix which offers the minimum weight for subtask $v_d^u\in\mathcal{V}_d$ to obtain the corresponding optimal virtual matching. In this kernel, we consider $r_{\min}$ as a temporary variable to store the minimum-weighted virtual resource. Let $\boldsymbol{X}^{\text{virt}^{\ast}} = \left(x_{v_d^u,r_{t,v_d^u}}^{\text{virt}^{\ast}}\right)_{\left(\sum_{d\in\mathcal{D}}{\left(V_d-2\right)}\right)\times|\mathcal{R}^{\text{virt}}|}$denote the optimal virtual matching. In Line 5, we set the corresponding position in $\boldsymbol{X}^{\text{virt}^{\ast}}$ matrix. The last loop of Algorithm 2 from Line 7 to Line 15 aims to map $\boldsymbol{X}^{\text{virt}^{\ast}}$ to the corresponding optimal decision matrix which we denote as $\boldsymbol{X}^{\ast}$. In addition, we also determine the optimal values of $\boldsymbol{p}$ and $\boldsymbol{T}$ denoted as $\boldsymbol{p}^{\ast}$ and $\boldsymbol{T}^{\ast}$, respectively. This is done according to the matching graph and the output of the previous stage. We know that the non-zero element in each row of $\boldsymbol{X}^{\text{virt}^{\ast}}$ corresponds to the optimal matching of a subtask. We can obtain the optimal values of $\boldsymbol{X}^{\ast}$ and $\boldsymbol{T}^{\ast}$ by executing Line 11. In order to calculate the optimal vector of WET powers $\boldsymbol{p}^{\ast}$, we need to find the maximum value of $p_{v_d^u}^{\ast}$ over all WDs according to (\ref{eq29}) (Line 14).
-
-We further analyze the complexity of WiEnTM algorithm. The argmin operation (Line 4) is only executed over three virtual resources of the subtask. Therefore, the depth and work of the block in Lines 3-6 are $O(1)$ and $O(UD)$, respectively. In the next kernel, finding the non-zero element in each row only requires three comparisons. As a result, the primitive in this block has the time complexity of $O(1)$. Therefore, the depth of this kernel over WDs has the complexity of $O(1)$. It also has the work with complexity $O(|\mathcal{D}^u|)=O(D)$. In Line 14, we execute a $\max$ operation. In general, maximization is a traditional reduction operation which can be parallelized in a tree-like structure with the depth of $O(\log_2D)$ and the work of $O(2D)$. Therefore, the last stage of the algorithm has the depth of $O(U\log_2D)$ and the work of $O(UD)$.
-
-\begin{figure}
-	\centering
-	\begin{subfigure}{.2\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{tcg1.pdf}
-		\caption{}
-		\label{fig:5a}
-	\end{subfigure}\hspace{6mm}
-	\begin{subfigure}{.2\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{tcg2.pdf}
-		\caption{}
-		\label{fig:5b}
-	\end{subfigure}
-	
-	\caption{Task call graph of a) WD1 and b) WD2. The numbers on each node represent the sequence in which the corresponding subtask is executed as well as the normalized computation cycle. Edge weights are input/output data sizes of subtasks in Kbits.} \label{fig:5}
-\end{figure}
-
-\begin{figure*}[ht]
-	\centering
-	\begin{subfigure}[b]{.22\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation_a.pdf}
-		\caption{} \label{fig:6a}
-	\end{subfigure}\hspace{15mm}
-	\begin{subfigure}[b]{.22\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation_b.pdf}
-		\caption{} \label{fig:6b}
-	\end{subfigure}\hspace{15mm}
-	\begin{subfigure}[b]{.22\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation_c.pdf}
-		\caption{} \label{fig:6c}
-	\end{subfigure}
-	
-	\caption{Impact of increasing the task's total number of CPU cycles \textcolor{blue}{(i.e., $\sum_{v_d\in\mathcal{V}_d}C_{v_d}$)} on a) The optimal number of offloading decisions of WD1, b) the optimal number of offloading decisions of WD2, and c) ET's transmitted energy, for constant and adaptive $\beta_{v_d^u}$ approaches.} \label{fig:6}
-\end{figure*}
-
-As the value of $U$ represents the maximum number of subtasks among devices, it does not scale with the size of network $D$. Therefore, we can consider it as a constant in analyzing time complexity. To summarize, by considering this fact, the depth and work of our parallel WiEnTM algorithm are $O(\log_2D)$ and $O(D)$, respectively.
-
-\section{Performance Evaluation}
-In this section, we investigate the performance of WiEnTM algorithm by evaluating the computation time of tasks and the ET's energy transmission. We further compare our proposed algorithm with an existing work in \cite{b13}.
-
-\subsection{Simulation Setup}
-We consider two devices WD1 and WD2 with task call graphs shown in Fig. \ref{fig:5a} and Fig. \ref{fig:5b}. \textcolor{blue}{These figures show the dependencies in the task call graph of each WD. An arrow leaving node $i$ toward $j$ indicates that task $j$ is dependent on task $i$.} The size of subtasks to be transferred between the devices and cloud/MEC server is shown in Kbits as the weight of edges. The normalized computation cycles of each subtask is also shown next to the vertices. This value reflects the required computation cycles for each subtask \textcolor{blue}{(i.e., $C_{v_d^u}, \forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}$)} divided by the task's total computation cycle \textcolor{blue}{(i.e., $\sum_{u\in\mathcal{U}}C_{v_d^u}, \forall d\in\mathcal{D}$)}. Constant parameters are set as $\zeta_1=\zeta_2=10^{-28} \text{F}$ (i.e., CPU's effective switched capacitance)\cite{b2}, $\eta_1=\eta_2=0.51$ (i.e., energy harvesting efficiency) \cite{b2}, $\sigma^2=10^{-9}\text{W}$ (i.e., noise power) \cite{b2}, $\Gamma_1=0.8\text{s}$, $\Gamma_2=\Gamma_3=\Gamma_4=\Gamma_5=0.6\text{s}$, $\Gamma_6=0.3\text{s}$, $\Gamma_7=0.4\text{s} \text{ (i.e., length of each episode)}$, $P^{\text{ET}, \max} = 50\text{W}$, $P^{\text{AP}, \max} = 25\text{W}$, and $P^{\text{WD}, \max}_1 = P^{\text{WD}, \max}_2 = 25\text{mW}$. We set the cloud response times $\mu_{v_d^u}=20\text{ms}, \forall d\in\mathcal{D}^u, \forall u\in\mathcal{U}$ as inspired by \cite{b24}. We also set $B_1 = B_2 = 50\text{MHz}, F_{1}^{\text{L},\max} = F_{2}^{\text{L},\max} = 160\text{MHz}$, and $F^{\text{M},\max} = 2.2\text{GHz}$. We adopt the simplified path loss model \cite{b21} for wireless channel gains. Without loss of generality, we set $g_d = h_d = -5\text{dB}, \forall d\in\mathcal{D}$.
-
-In order to analyze the effect of $\beta_{v_d^u}$ on the optimal solution, we consider two cases for $\beta_{v_d^u}$ :
-1) Constant with $\beta_{v_d^u}=1, \forall v_d^u\in \mathcal{V}_d$, 2) adaptive $\beta_{v_d^u}$ with $0\leq k \leq 1$ given as follows.
-\begin{equation}\label{eq32}
-	\begin{aligned}
-		\beta_{v_d^u} = &\frac{kC_{v_d^u}}{\sum_{d'\in\mathcal{D}^u}C_{v_{d'}^u}}|\mathcal{D}^u| +\\
-		&\frac{(1-k)\sum_{v_d^i\in\mathcal{I}_{v_{d'}^u}}N_{v_{d'}^i,v_d^u}}{\sum_{d'\in\mathcal{D}^u}\sum_{v_{d'}^i\in\mathcal{I}_{v_{d'}^u}}N_{v_{d'}^i,v_{d'}^u}}|\mathcal{D}^u|,\quad\forall d\in\mathcal{D}^u, \forall u\in\mathcal{U},
-	\end{aligned}
-\end{equation}
-where we consider $k=0.8$. Note that the above value is an example of adaptive $\beta_{v_d^u}$ and determining it's optimal value is beyond the scope of this work. \footnote{\textcolor{blue}{For the case of non-optimal $\beta_{v_d^u}$, one needs to analyze the approximation ratio of the proposed algorithm. An approach similar to \cite{b2} can be followed. However, we leave this extension as future work.}}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{.39\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation2_a1.pdf}
-		\caption{} \label{fig:7a1}
-	\end{subfigure}
-	\begin{subfigure}[b]{.39\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation2_b1.pdf}
-		\caption{} \label{fig:7b1}
-	\end{subfigure}
-	
-	\caption{The total computation time of our three-tier WPMEC and the scheme proposed in \cite{b13} for different task's total CPU cycles \textcolor{blue}{(i.e., $\sum_{v_d\in\mathcal{V}_d}C_{v_d}$)} for a) WD1, and b) WD2.} \label{fig:71}
-\end{figure}
-
-We now describe the intuition behind the adaptive $\beta_{v_d^u}$ value given in (\ref{eq32}). According to (\ref{eq2}) and (\ref{eq3}), it can be observed that increasing the number of CPU cycles and input/output data bits of each subtask will increase the energy required by the subtask. Constraint (\ref{eq28}) depicts that increasing $\beta_{v_d^u}$ will expand the feasible space for $\tau_{1,v_d^u}$ and $\tau_{2,v_d^u}$ which will decrease the energy consumption. Therefore, subtasks with high number of CPU cycles and high amount of input/output data bits are the bottleneck of energy consumption. As a result, modeling $\beta_{v_d^u}$ based on a weighted sum of normalized number of CPU cycles and input/output bits should decrease the energy consumption compared to assigning equal $\beta_{v_d^u}$ to all subtasks. 
-
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{.37\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation2_a.pdf}
-		\caption{} \label{fig:7a}
-	\end{subfigure}
-	\begin{subfigure}[b]{.37\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation2_b.pdf}
-		\caption{} \label{fig:7b}
-	\end{subfigure}
-	
-	\caption{\textcolor{blue}{Comparison of ET's transmitted energy between WiEnTM and the algorithm proposed in \cite{b13} for different a) task's CPU cycles (i.e., $\sum_{v_d\in\mathcal{V}_d}C_{v_d}$) and, b) task's internal input/output bits (i.e., $\sum_{v_d^i,v_d^j\in\mathcal{V}_d}N_{v_d^i,v_d^j}$).}} \label{fig:7}
-\end{figure}
-
-\subsection{Simulation Results}
-Figs. \ref{fig:6a} and \ref{fig:6b} show the transition between different optimal offloading decisions as we increase the task's CPU cycles \textcolor{blue}{(i.e., $\sum_{u\in\mathcal{U}}C_{v_d^u}, \forall d\in\mathcal{D}$)} for WD1 and WD2, respectively. In both of these figures, we illustrate the number of offloading decisions for the local, edge, and cloud computing. Note that for each WD, the sum of offloading decisions is the number of subtasks. It can be observed that as we increase the task CPU cycles, the offloading decisions gradually transit from the local to the edge and finally to the cloud. Additionally, it is shown that for WD1 which has a larger number of task CPU cycles, the system relies more on the cloud server than WD2. Fig. \ref{fig:6c} shows the  optimal ET’s energy transmission. From Fig. \ref{fig:6c}, it can be perceived that adaptive technique offers up to 47\% less energy consumption in comparison with the constant $\beta_{v_d^u}$ approach. It means that setting $\beta_{v_d^u}$ according to the number of CPU cycles and input/output sizes greatly enhances the performance comparing to the constant approach.
-
-By considering adaptive $\beta_{v_d^u}$ given in (\ref{eq32}), we also compare our proposed three-tier WPMEC system with the scheme proposed in \cite{b13}. Figs. \ref{fig:7a1} and \ref{fig:7b1} illustrate the task's execution time for WD1 and WD2, respectively. The results show that by using WiEnTM, up to $13\%$ overall less total computation time can be obtained for WD1 in comparison to \cite{b13}. This is because WD1 has a computationally intensive task. However, a lower improvement is achieved for WD2 as it has a lighter task which is mostly executed locally by the device or on the MEC server.
-
-\textcolor{blue}{We further investigate the performance of our proposed WiEnTM algorithm by evaluating the ET's transmitted energy in comparison to that of \cite{b13}. Figs. \ref{fig:7a} and \ref{fig:7b} illustrate the effect of the task's CPU cycles and the task size (i.e., the number of input/output bits), respectively. The results show that by using WiEnTM, the ET consumes up to $34\%$ less energy compared to the algorithm in \cite{b13}.}
-
-\textcolor{blue}{We now consider 200 WDs and investigate the ET transmission energy required to enable WDs execute their tasks. We study three different policies: 1) Local computing, 3) computation offloading, and 3) WiEnTM algorithm. We assume that among these devices, 100 WDs have a task with the call graph shown in Fig. \ref{fig:5a} and the rest with the task call graph of Fig. \ref{fig:5b}.} In the local computing case, all WDs harvest the energy to execute their subtasks locally while in the computation offloading case, the energy is used to offload all the subtasks. \textcolor{blue}{Fig. \ref{fig:9a} shows the ET's energy transmission when we vary the task's total CPU cycles. Additionally, Fig. \ref{fig:9b} illustrates the ET's energy for different numbers of the task's total input/output bits, which reflect the size of the tasks.} As can be observed, WiEnTM substantially reduces the required energy as it achieves the optimal offloading decisions. \textcolor{blue}{In particular, according to Fig. \ref{fig:9a}, comparing to the local computing case, a higher improvement is obtained for the computationally intensive tasks.} This is because the WDs require more energy to execute all their subtasks locally. However, for light tasks with low computation cycles, the WiEnTM algorithm significantly outperforms the offloading case as it is more preferred to execute such tasks locally. \textcolor{blue}{The results of Fig. \ref{fig:9b} imply that WiEnTM mainly follows the policy of offloading to edge/cloud server for tasks with a small number of input/output bits. As we increase the number of bits, the algorithm tends to rely more on local computing. As can be observed, WiEnTM greatly outperforms both schemes.} 
-
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{.24\textwidth}
-		\centering
-		\includegraphics[height=1.2\linewidth]{simulation3_a.pdf}
-		\caption{} \label{fig:9a}
-	\end{subfigure}
-	\begin{subfigure}[b]{.24\textwidth}
-		\centering
-		\includegraphics[height=1.2\linewidth]{simulation3_b.pdf}
-		\caption{} \label{fig:9b}
-	\end{subfigure}
-	
-	\caption{\textcolor{blue}{Comparison of ET's transmitted energy for three offloading policies when there are 200 WDs. 1) Local computation-only, 2) computation offloading-only, and 3) WiEnTM algorithm.}} \label{fig:9}
-\end{figure}
-
-\section{Conclusion}
-In this paper, we studied a three-tier WPMEC system that is consisting of edge and cloud servers as well as WDs. We first proposed a harvest-then-offload mechanism that efficiently schedules the computing resources and allocates the wireless energy. This is achieved by formulating an optimization problem that aims to minimize the ET's energy transmission while satisfying the tasks computation deadline. We then proposed a matching algorithm called WiEnTM that optimally solves the aforementioned problem. We further proposed a parallel implementation of this algorithm with nearly logarithmic complexity. We also investigated the performance of WiEnTM through numerical experiments. Our results show a significant reduction in ET's transmitted energy compared to different offloading policies. \textcolor{blue}{Our algorithm also requires up to 34\% less overall ET's energy transmission compared to an existing work in the literature.}
-
-For future work, we will consider the dynamic behavior of three-tier WPMEC system and propose an online learning approach to achieve the optimal decisions under uncertainty. \textcolor{blue}{We will also study more powerful WDs with full-duplex capability in future.}
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
@@ -1451,11 +927,47 @@ For future work, we will consider the dynamic behavior of three-tier WPMEC syste
 \begin{enumerate}
 
 \item \underline{Reviewer's Comment}: 
-\textit{``Lots of the studies focus on the research on resource optimisation of MEC by DRL, it is expected to survey the state-of-the-art within 3 years, and summarise it as an individual section, departing from the Section of Introduction. Besides, the existing related work only has one paragraph without any discussion about the pros/cons of the previous work.''} \newline
+\textit{``(a) Lots of the studies focus on the research on resource optimisation of MEC by DRL, it is expected to survey the state-of-the-art within 3 years, and summarise it as an individual section, departing from the Section of Introduction. (b) Besides, the existing related work only has one paragraph without any discussion about the pros/cons of the previous work.''} \newline
 
-\underline{Authors' Reply}:\\
+\underline{Authors' Reply}: (a) To address the reviewer comment about state-of-the-art within 3 years discusion, we have added this paragraph to the Section I, as follows. \newline
+	\begin{my}{1cm}{1cm}
+	\rev{\,\,\,\, To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) hold promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives \cite{arulkumaran2017deep}. RL can effectively tackle the challenges of MEC arising from the ever-changing nature of networks, MDs, and servers' heterogeneity. This ultimately improves the MD users' QoE. We explore state-of-the-art RL-based techniques characteristic to discuss how they address task offloading problems in MEC. To minimize energy consumption, Munir \textit{et al.} \cite{munir2021multi} developed a semi-distributed approach using a multi-agent RL (MARL) framework for self-powered MEC. Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the industrial IoT (IIoT) systems to jointly optimize task offloading and resource allocation to achieve lower energy consumption and decreased task delay. To investigate privacy aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} proposed a deep Q-network (DQN)-based method. They transform the problem on MDP to optimize computation rate and energy consumption in a queuing-based IIoT network. Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources.}
+\end{my}
 
-Ref
+
+\vspace{6mm}
+
+(b) We have also revised the ralated works section, as below.\\	 
+
+	\begin{my}{1cm}{1cm}
+	\rev{\,\,\,\, In recent years, edge computing has become a popular method for scenarios that need to process massive data with weak devices, such as IoTs \cite{zhang2023multi}, Internet of Vehicles (IoVs) \cite{lin2022multi}, \cite{wei2023many}, and Industrial IoT (IIoT) \cite{yuan2023adaptive} environment. To take advantage of RL methods for online computation offloading in MEC, Huang \textit{et al.} in \cite{huang2019deep}, focused on a wireless-powered MEC. They proposed a DRL-based approach, capable of attaining near-optimal decisions. This is achieved by selectively considering a compact subset of candidate actions in each iteration. Liu \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL (MADRL), which can generate interactive information along with resource decisions. Zhou \textit{et al.} in \cite{zhou2021deep} used an MDP to model the interactions of the environment. They proposed a Q-learning approach to achieve optimal resource allocation strategies and computation offloading. Liao \textit{et al.} in \cite{liao2023online} introduced a double DRL algorithm for performing online computation offloading in MEC. This algorithm optimizes transmission power and scheduling of CPU frequency when minimizing both task computation delay and energy consumption.
+		
+	\,\,\,\, In these researches authors investigated simple MEC networks and explored computation offloading problems, mainly focused on delay-tolerant tasks or single MEC network model, and did not take into account the challenges of dynamic network environment with the variety of MDs and servers involved. In actual scenarios, an MEC system can provide delay-constrained services for serval MDs and ENs at the same time, while the works \cite{huang2019deep}, \cite{liu2021learn} not consider delay-sensitive tasks for network model and \cite{zhou2021deep}, \cite{liao2023online} just considered the situation of a single server or user in the MEC system.
+	
+\,\,\,\, In these researches authors investigated simple MEC networks and explored computation offloading problems, mainly focused on delay-tolerant tasks or single MEC network model, and did not take into account the challenges of dynamic network environment with the variety of MDs and servers involved. In actual scenarios, an MEC system can provide delay-constrained services for serval MDs and ENs at the same time, while the works \cite{huang2019deep}, \cite{liu2021learn} not consider delay-sensitive tasks for network model and \cite{zhou2021deep}, \cite{liao2023online} just considered the situation of a single server or user in the MEC system.
+
+\,\,\,\, In fact, the state of MD's computing and transmission power, arrived task's requirement, the energy state of MDs, and workloads at ENs all change dynamically with time in actual systems, thus a more realistic MEC scenario is needed. Besides the works \cite{huang2019deep}--\cite{liao2023online}, Wu \textit{et al.} in \cite{wu2023computation} introduced a stochastic game-based resource allocation in the SDN-based MEC network. They used an MDP and proposed a MARL method to minimize both energy consumption and processing delay. Dai \textit{et al.} in \cite{dai2020edge} introduced the integration of action refinement into DRL and designed an algorithm to concurrently optimize resource allocation and computation offloading. To optimize privacy protection and quality of service, authors in \cite{wu2024privacy} investigated the joint computation offloading and power allocation problems for the IIoT network. They modeled the problem as an MDP and proposed a multi-agent DDQN-based algorithm.
+In \cite{zhao2019deep}, Zhao \textit{et al.} proposed a computation offloading algorithm based on DRL, which addresses the competition for wireless channels to optimize long-term downlink utility. In this approach, each MD requires quality-of-service information from other MDs.
+
+
+\,\,\,\, While studies like \cite{wu2023computation}--\cite{zhao2019deep} explored task offloading problems in a more advanced scenario and proposed some DRL-based algorithms, MEC systems often encounter challenges related to managing time-varying resource requests from heterogeneous devices, imposing significant challenges in resource accessibility and overall system performance. To address this issue, the authors applied queuing theory to model MEC systems more accurately, reflecting real-world scenarios. 
+In \cite{Bolourian-WCL24}, the authors proposed an offloading algorithm using deep Q-learning for wireless-powered IoT devices in MEC systems. This algorithm aims to minimize the task drop rate while the devices solely rely on harvested energy for operation. Tang \textit{et al.} in \cite{9253665} investigated the task offloading problem for indivisible and deadline-constrained computational tasks in MEC systems. The authors proposed a distributed DRL-based offloading algorithm designed to handle uncertain workload dynamics at the ENs. 
+In \cite{huang2021deadline}, Huang \textit{et al.} proposed a DRL-based method based on a partially observable MDP (POMDP), which guarantees the deadlines of real-time tasks while minimizing the total energy consumption of MDs. This algorithm effectively tackles the challenges of dynamic resource allocation in large-scale heterogeneous networks. To optimize delay and energy consumption in an MEC-based IIoT system, Wu \textit{et al.} in \cite{wu2023multi} proposed a multi-agent DQN-based method based on POMDP to address computation offloading problem. In \cite{gao2022large}, Gao \textit{et al.} introduced an attention-based multi-agent algorithm designed for decentralized computation offloading.}
+\end{my}
+
+\vspace{6mm}
+
+We have also revised the motivation and contributions subsection, as below.
+
+\vspace{6mm}
+
+	\begin{my}{1cm}{1cm}
+	\rev{\,\,\,\, Although DRL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention.  \textcolor{blue}{As shown in Table~\ref{table1}, current research primarily focuses on minimizing energy consumption \cite{tang2022uav}, reducing processing delays \cite{guo2022energy}, \cite{seo2022differential}, maximizing computation rates~\cite{huang2019deep}, or optimizing a weighted balance among performance factors \cite{li2022joint}. However, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay, as considered in \cite{sun2024hierarchical}, \cite{9253665} but also by energy consumption \cite{Bolourian-WCL24}, \cite{huang2021deadline}. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs. 
+    While some existing works such as \cite{liao2023online}, \cite{wu2024privacy}, \cite{dai2020edge}, \cite{gao2022large}, \cite{li2022joint} have investigated the trade-off between delay and energy consumption, they fail to address the user demands and fulfill QoE requirements properly.} In contrast to the aforementioned works, we propose a DRL-based distributed algorithm that provides users with an appropriate balance among QoE factors based on their demands.}
+\end{my}
+
+
+\newpage
 
 \item \underline{Reviewer's Comment}: 
 \textit{``Please highlight what and how the proposed approach provides "high performance" to further specify the motivations and contributions. Especially, please highlight the reason why the authors design the framework by integrating LSTM. Otherwise, it will make the innovations seem weak.''} \newline
@@ -1473,11 +985,32 @@ Ref
 \underline{Authors' Reply}:\\
 
 \item \underline{Reviewer's Comment}: 
-\textit{``Other concerns are also expected to be addressed: (a) be careful to use words like "battery level" to express the energy consumption, because some of the energy is provided by the wired line power. (b) Most of the references are out of 3 years, please investigate more studies published in recent years. (c) The authors should thoroughly check the writing style, grammar, and spelling to enhance the paper's clarity, conciseness, and overall impact.''} \newline
+\textit{``Other concerns are also expected to be addressed: (a) be careful to use words like "battery level" to express the energy consumption, because some of the energy is provided by the wired line power. (b) Most of the references are out of 3 years, please investigate more studies published in recent years.} (c) The authors should thoroughly check the writing style, grammar, and spelling to enhance the paper's clarity, conciseness, and overall impact.''\newline
 
-\underline{Authors' Reply}:\\
+\underline{Authors' Reply}: (a) We have changed the word "battry level" to "energy state" in whole paper of the revised manuscript. \newline
 
-Ref
+(b) We have added some related refrences, which are under 3 years, in Section I, as follow: \newline
+
+		\begin{my}{1cm}{1cm}
+	\rev{
+		{\small
+			\noindent\hspace{-0.3mm}\cite{munir2021multi} Munir, Md Shirajum and Tran, Nguyen H and Saad, Walid and Hong, Choong Seon, ``Multi-agent meta-reinforcement learning for self-powered and sustainable edge computing systems,'' \textit{IEEE Trans. Netw. Serv. Manag.}, vol. 18, no. 3, pp. 3353-3374. 2021.\\[6pt]
+			\cite{wu2024combining} G. Wu, X. Chen, Y. Shen, Z. Xu, H. Zhang, S. Shen, and S. Yu,``Combining Lyapunov optimization with Actor-Critic networks for privacy-aware IIoT computation offloading,'' in \textit{IEEE Internet Things J.}, 2024, Early Access\\[6pt]
+			\cite{lin2022multi} Lin, Shih-Yang and Huang, Chung-Ming and Wu, Tzu-Yu, ``Multi-access edge computing-based vehicle-vehicle-RSU data offloading over the multi-RSU-overlapped environment,'' \textit{IEEE Open J. Intell. Transp. Syst.}, vol. 3, pp. 7--32, 2022.\\[6pt]
+			\cite{wei2023many} Wei, Zhiwei and Li, Bing and Zhang, Rongqing and Cheng, Xiang and Yang, Liuqing, ``Many-to-many task offloading in vehicular fog computing: A multi-agent deep reinforcement learning approach,'' \textit{IEEE Trans. Mob. Comput.}, vol. 23, no. 3, pp. 2107--2122, 2023.\\[6pt]
+			\cite{wu2023multi} G. Wu, Z. Xu, H. Zhang, S. Shen, and S. Yu,  ``Multi-agent DRL for joint completion delay and energy consumption with queuing theory in MEC-based IIoT,'' in \textit{Journal of Parallel and Distributed Computing}, vol. 176, pp. 80–94, Jun. 2023.\\[6pt]
+			\cite{wu2023computation} G. Wu, H. Wang, H. Zhang, Y. Zhao, S. Yu, and S. Shen, ``Computation offloading method using stochastic games for software-defined-network-based multiagent mobile edge computing,'' \textit{IEEE Internet Things J.}, vol. 10, no. 20, pp. 17620–17634, Oct. 2023.\\[6pt]
+			\cite{wu2024privacy} G. Wu, X. Chen, Z. Gao, H. Zhang, S. Yu, and S. Shen, ``Privacy-preserving offloading scheme in multi-access mobile edge computing based on MADRL,'' \textit{Journal of Parallel and Distributed Computing}, vol. 10, no. 1, pp. 451--460, Mar. 2022.\\[6pt]
+			\cite{yuan2023adaptive} Yuan, Shijing and Dong, Beiyu and Lvy, Hongtao and Liu, Hongze and Chen, Hongyang and Wu, Chentao and Guo, Song and Ding, Yue and Li, Jie, ``Adaptive incentivize for cross-silo federated learning in IIoT: A multi-agent reinforcement learning approach,'' \textit{IEEE Internet Things J.}, 2023.\\[6pt]
+			\cite{zhang2023multi} Zhang, Jing and Shen, Fei and Tang, Liang and Yan, Feng and Qin, Fei and Wang, Chao, ``A Multi-Agent Reinforcement Learning Approach for Dynamic Offloading with Partial Information-Sharing in IoT Networks,'' \textit{2023 IEEE 98th Vehicular Technology Conference (VTC2023-Fall)}, pp. 1--5, 2023.\\[6pt]
+			\cite{tang2022uav} Tang, Qiang and Liu, Lixin and Jin, Caiyan and Wang, Jin and Liao, Zhuofan and Luo, Yuansheng, ``An UAV-assisted mobile edge computing offloading strategy for minimizing energy consumption,'' \textit{Computer Networks}, vol. 207, pp. 108857, 2022.\\[6pt]
+			\cite{seo2022differential} Seo, Hyeonseok and Oh, Hyeontaek and Choi, Jun Kyun and Park, Sangdon, ``Differential pricing-based task offloading for delay-sensitive IoT applications in mobile edge computing system,'' \textit{IEEE Internet Things J.}, vol. 9, no. 19, pp. 19116--19131, 2022.\\[6pt]
+			\cite{guo2022energy} Guo, Mian and Li, Qirui and Peng, Zhiping and Liu, Xiushan and Cui, Delong, ``Energy harvesting computation offloading game towards minimizing delay for mobile edge computing,'' \textit{Computer Networks}, vol. 204, pp. 108678, 2022.\\[6pt]
+			\cite{li2022joint} Li, Yuwei and Yang, Bo and Wu, Hao and Han, Qiaoni and Chen, Cailian and Guan, Xinping, ``Joint offloading decision and resource allocation for vehicular fog-edge computing networks: A contract-stackelberg approach,'' \textit{IEEE Internet Things J.}, vol. 9, no. 17, pp. 15969--15982, 2022.\\[10pt]}\\}
+\end{my}
+
+(c)
+
 
 \end{enumerate}
 
@@ -1489,48 +1022,42 @@ Ref
 	
 	\item \underline{Reviewer's Comment}: 
 	\textit{``The authors should provide a comparative table to highlight their contributions. Specially, the authors should compare their method with other references on computation task offloading cited in the paper, including aspects such as scenarios, methods, advances, drawbacks, and so on.''} \newline
-	
-	
-	\underline{Authors' Reply}:\\
-	Ref
-	
+
+	\underline{Authors' Reply}: To address the reviewer's comment, we have included a table in the 'Related Works' subsection that compares the key characteristics of relevant studies, as below:
 	\begin{table*}[htbp]\textcolor{blue}{
-			\renewcommand{\arraystretch}{0.7}
+			\renewcommand{\arraystretch}{0.6}
 			\captionsetup{name=TABLE}
-			\caption{Comparison of Related Works}
+			\caption{\textcolor{blue}{Comparison of Related Works Characteristic\vspace{4mm}}}
 			\scalebox{0.7}{%
-				\begin{tabular}{ lp{2.3cm}p{4.5cm}p{5cm}p{1.5cm}p{3cm}p{5cm}l} 
+				\begin{tabular}{ lp{3.4cm}p{4.5cm}p{5.2cm}p{1.7cm}p{3cm}p{4.6cm}l} 
 					\toprule
-					\textbf{Paper} & \textbf{Scenario} &  \textbf{Problem} &  \textbf{Objective} &  \textbf{Model} & \textbf{Algorithm/Methods} &  \textbf{Drawbacks}  \\ \midrule
+					\textbf{Paper} & \textbf{Scenario} &  \textbf{Problem} &  \textbf{Objective} &  \textbf{Model} & \textbf{Method} &  \textbf{Drawbacks}  \\ \midrule
+					\cite{liao2023online} & Queuing-based MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a singel MEC system model  \\\midrule
+					\cite{zhou2021deep} & heterogeneous MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a singel MEC system model \\\midrule				
 					\cite{huang2019deep} & Wireless-powered MEC & Computation offloading and resource allocations & Maximize computation rate & MIP & DQN & Not consider delay-sensitive tasks \\\midrule
-					\cite{Bolourian-WCL24} & MEC with EH devices& Energy harvesting  computation offloading & Minimize drop rate and energy consumption. & MDP  & Deep Q-Learning & \\\midrule
-					\cite{zhao2019deep} & MEC & Wireless channels competition & Optimize downlink utility & MDP & Multi-agent D3QN & \\\midrule
-					\cite{9253665} &  MEC &  Computation offloading & Minimize drop rate and computation delay. & MDP & D3QN + LSTM & Not consider system energy consumtion\\\midrule
+					\cite{wu2024privacy} & MEC-based IIoT  & Joint power allocation and computation offloading  & Optimization of privacy protection and quality of service. & MDP & Multi-agent DDPG & Not take user's deman into consideration \\\midrule
+					\cite{zhao2019deep} & MEC & User association and resource allocation & Optimize downlink utility & MDP & Multi-agent D3QN & Not consider system delay and energy consumtion \\\midrule
 					\cite{sun2024hierarchical} & MEC & Computation offloading and service caching & Minimize average service delay & MDP & hierarchical DRL & Not consider system energy consumtion \\\midrule
-					\cite{dai2020edge} & MEC & Resource allocation and computation offloading & Minimize energy consumption & MDP & DDPG & \\\midrule
-					\cite{huang2021deadline} & MEC & Computation offloading & Minimizing total energy consumption & POMDP & DDPG & \\ \midrule
+					\cite{wu2023computation} & SDN-based MEC & Stochastic game-based resource allocation & Minimize energy consumption and processing delay & MDP & MARL & Not consider tasks with maximum delay tolerance\\\midrule
+					\cite{dai2020edge} & MEC & Resource allocation and computation offloading & Minimize energy consumption & MDP & DDPG & Not take user's deman into consideration \\\midrule
 					\cite{liu2021learn} & MEC & Resource allocation and computation offloading & Minimize execution cost & POMDP & MADRL &  Not consider delay-sensitive tasks \\\midrule
-					\cite{zhou2021deep} & MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a singel MEC system model \\\midrule
-					\cite{gao2022large} & heterogeneous MEC & Decentralized computation offloading & Optimize system cost and completion rates & MDP & Multi-agent DDPG & Not take MD's demans into consideration \\\midrule
-					\cite{gong2022edge} & MEC-based IIoT & Resource allocation and computation offloading & Minimize task computation delay and energy consumption & MDP & DRL & Not take MD's demans into consideration\\\midrule
-					\cite{liao2023online} & MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a singel MEC system model  \\\midrule
-					\cite{wu2023multi} & MEC-based IIoT & Computation offloading & Optimize delay and energy consumption & POMDP & Multi-agent DQN& \\\midrule
-					\cite{wu2023computation} & SDN-based MEC & Stochastic game-based resource allocation & Minimize energy consumption and processing delay & MDP & MARL & \\\midrule
-					\cite{wu2024privacy} & MEC-based IIoT  & Joint power allocation and computation offloading  & Optimization of privacy protection and quality of service. & MDP & Multi-agent DDPG & \\\midrule
-					\cite{wu2024combining} & MEC-based IIoT & Privacy aware computation offloading & Optimization of computation rate and energy consumption & MDP & DDPG  & \\\midrule
-					QECO &  MEC &  Computation offloading & Maximize the QoE of each MD individually &MDP & D3QN + LSTM & \\
+					\cite{gong2022edge} & MEC-based IIoT & Resource allocation and computation offloading & Minimize task computation delay and energy consumption & MDP & DRL & Not take user's deman into consideration\\\midrule
+					\cite{gao2022large} & Queuing-based heterogeneous MEC & Decentralized computation offloading & Optimize system cost and completion rates & MDP & Multi-agent DDPG & Not take user's deman into consideration \\\midrule
+					\cite{9253665} &  Queuing-based MEC &  Computation offloading & Minimize drop rate and computation delay. & MDP & D3QN + LSTM & Not consider system energy consumtion\\\midrule
+					\cite{wu2024combining} & Queuing-based IIoT MEC & Privacy aware computation offloading & Optimization of computation rate and energy consumption & MDP & DDPG  & Not take user's deman into consideration \\\midrule
+					\cite{wu2023multi} & Queuing-based IIoT MEC & Computation offloading & Optimize delay and energy consumption & POMDP & Multi-agent DQN&  Not consider tasks with maximum delay tolerance \\\midrule
+					\cite{huang2021deadline} & Queuing-based MEC & Computation offloading & Optimize drop rate and energy consumption & POMDP & DDPG & Not consider computation delay \\ \midrule
+					\cite{Bolourian-WCL24} & Queuing-based MEC with EHs& Energy harvesting  computation offloading & Minimize drop rate and energy consumption. & MDP  & DQN & Not consider computation delay  \\\midrule
+					QECO &  Queuing-based MEC &  Computation offloading & Maximize the QoE of each MD individually &MDP & D3QN + LSTM & \\
 					\toprule
 			\end{tabular}}
-			\label{table}}
+			\label{table1}}
 	\end{table*}
-	
-	
-	\newpage
 	\item \underline{Reviewer's Comment}: 
 	\textit{``I think more explanations should be added for the QoE function. How can the defined function reflect QoE?''} \newline
 	
-	\underline{Authors' Reply}:\\
-	\newpage
+	\underline{Authors' Reply}: 
+
 	\item \underline{Reviewer's Comment}: 
 	\textit{``(a) What inputs and outputs of Algorithm 2? (b) They should be added to make readers clearly understand the results.''} \\\newline
 	\underline{Authors' Reply}: (a) To address the reviewer concern about algorithm 2, we have revised secound paragraph of subsection (Training Process Algorithm at EN $j \in \mathcal{J})$ in Section IV to clarify the inputs and outputs of algorithms 2, as follows. \newline
@@ -1575,523 +1102,28 @@ Ref
 	\end{my}
 
 \newpage
+
 	\item \underline{Reviewer's Comment}: 
 	\textit{``The following references closely related to the current work should be discussed or compared with the current work for completeness.''} \newline
 		\begin{my}{1cm}{1cm}
 		\rev{
 			{\small
-				\noindent\cite{b35} G. Wu, Z. Xu, H. Zhang, S. Shen, and S. Yu,  ``Multi-agent DRL for joint completion delay and energy consumption with queuing theory in MEC-based IIoT,'' in \textit{Journal of Parallel and Distributed Computing}, vol. 176, pp. 80–94, Jun. 2023.\\[6pt]
-				\cite{b38} G. Wu, H. Wang, H. Zhang, Y. Zhao, S. Yu, and S. Shen, ``Computation offloading method using stochastic games for software-defined-network-based multiagent mobile edge computing,'' \textit{IEEE Internet of Things Journal}, vol. 10, no. 20, pp. 17620–17634, Oct. 2023.\\[6pt]
-				\cite{b37} G. Wu, X. Chen, Z. Gao, H. Zhang, S. Yu, and S. Shen, ``Privacy-preserving offloading scheme in multi-access mobile edge computing based on MADRL,'' \textit{Journal of Parallel and Distributed Computing}, vol. 10, no. 1, pp. 451--460, Mar. 2022.\\[6pt]
-				\cite{b39} G. Wu, X. Chen, Y. Shen, Z. Xu, H. Zhang, S. Shen, and S. Yu,``Combining Lyapunov optimization with Actor-Critic networks for privacy-aware IIoT computation offloading,'' in \textit{IEEE Internet of Things Journal}, 2024, Early Access\\[10pt]}\\}
+				\noindent\hspace{-0.5mm}\cite{wu2024combining}  G. Wu, X. Chen, Y. Shen, Z. Xu, H. Zhang, S. Shen, and S. Yu,``Combining Lyapunov optimization with Actor-Critic networks for privacy-aware IIoT computation offloading,'' in \textit{IEEE Internet of Things Journal}, 2024, Early Access\\[6pt]
+				\cite{wu2023computation} G. Wu, H. Wang, H. Zhang, Y. Zhao, S. Yu, and S. Shen, ``Computation offloading method using stochastic games for software-defined-network-based multiagent mobile edge computing,'' \textit{IEEE Internet of Things Journal}, vol. 10, no. 20, pp. 17620–17634, Oct. 2023.\\[6pt]
+				\cite{wu2024privacy} G. Wu, X. Chen, Z. Gao, H. Zhang, S. Yu, and S. Shen, ``Privacy-preserving offloading scheme in multi-access mobile edge computing based on MADRL,'' \textit{Journal of Parallel and Distributed Computing}, vol. 10, no. 1, pp. 451--460, Mar. 2022.\\[6pt]
+				\cite{wu2023multi} G. Wu, Z. Xu, H. Zhang, S. Shen, and S. Yu,  ``Multi-agent DRL for joint completion delay and energy consumption with queuing theory in MEC-based IIoT,'' in \textit{Journal of Parallel and Distributed Computing}, vol. 176, pp. 80–94, Jun. 2023\\[10pt]}\\}
 	\end{my}
 
 	
 	\underline{Authors' Reply}:\\
 	
-	We have also cited these works in the following sentences in Section I of the revised manuscript.\\
+	We have cited these works in the Section I of the revised manuscript.\\
 
-\begin{my}{1cm}{1cm}
-	\rev{
-		
-		
-		$\cdots$
-		
-	
-		}
-\end{my}
+
 	
 \end{enumerate}
 
-\newpage
-
-\section{Response to Reviewer 1}
-\begin{enumerate}
-	
-	\item \underline{Reviewer's Comment}: \textit{``(a) The Introduction is verbose and confusing. (b) The authors should consider clarifying the relationship between task offloading and energy optimization in this paper.''} \newline
-
-\underline{Authors' Reply}: (a) To address the reviewer comment, we have first summarized the explanation of the Internet of Things (IoT) applications, mobile edge computing (MEC), and the motivations of the proposed three-tier computing model. We have revised the first paragraph of Section I as follows.\\
-
-\begin{my}{1cm}{1cm}
-	\rev{The Internet of Things (IoT) applications (e.g., smart cities \cite{b1}, homes \cite{b3}, and augmented/virtual reality \cite{b11}) are mostly involved with computation-intensive and latency-sensitive tasks. Mobile edge computing (MEC) is a state-of-the-art computation paradigm to address the challenge of insufficient computing resources in IoT networks \cite{b35, b4}. By deploying the edge servers, nearby devices can offload their computation tasks. Dispatching those tasks that require a higher amount of energy will let devices save more energy \cite{b38}. However, as the computation tasks become more and more intensive, coordination with cloud servers will be inevitable \cite{b37}. The three-tier computing models consisting of cloud, edge, and IoT devices are introduced to overcome the aforementioned challenge \cite{b5,b6,b39,b40}. }\newline
-\end{my}
-
-We have also revised the second paragraph of Section I to better emphasize the role of the proposed system in overcoming the challenges of IoT systems.\\	
-
-\begin{my}{1cm}{1cm}
-	\rev{In addition to their restricted computation resources, IoT devices usually have small battery capacities which is mainly due to their small form factor and the constraints of the production cost \cite{b1}.
-	
-	$\cdots$
-	
-By combining the advantages of MEC and WPC, the newly emerged wireless powered MEC (WPMEC) holds a major promise to overcome the fundamental hurdles in scalability of the IoT networks \cite{b9,b10,b30,b33}.}\newline
-	
-\end{my}
-
-(b) Furthermore, we clarify the relationship between computation offloading and energy optimization. Note that in WPMEC systems, the energy for the operation of WDs is provided by the HAP. Thus, we formulate an optimization problem to minimize the total energy consumption of the HAP at the ET by jointly considering computation offloading, scheduling, and power allocation while guaranteeing the task completion and energy constraints. The following explanations have been added to Section I of the revised manuscript. \\
-
-\begin{my}{1cm}{1cm}
-	\rev{ 
-		By deploying the edge servers, nearby devices can offload their computation tasks. Dispatching those tasks that require a higher amount of energy will let devices save more energy \cite{b38}.
-		
-		$\cdots$
-		
-However, due to the limitation of WET and the cost of ETs, reducing the energy consumption is crucial.
-
-$\cdots$		
-		
-It helps WDs save more energy and reduce the tasks' execution time, which consequently reduces the energy consumption of WPMEC system as WDs harvest energy from ETs.}\newline
-	
-\end{my}
-
-We have also revised the first paragraph of Section III.A to address the reviewer comment. \\
-
-\begin{my}{1cm}{1cm}
-	\rev{In WPMEC systems, the energy for the operation of WDs is provided by the HAP.  Due to the high attenuation of WET over distances \cite{b8}, a considerable amount of energy is required to be provided for sustainable operation of WDs, which imposes a high cost to HAP. In this paper, we formulate an optimization problem to minimize the total energy consumption of the HAP at the ET by jointly considering computation offloading, scheduling, and power allocation while guaranteeing the task completion and energy constraints.} \newline
-\end{my} 
-
-We hope the above changes make the introduction more concise and less confusing.\\
-
-\item \underline{Reviewer's Comment}: \textit {``The authors introduce many works on computation offloading and energy consumption, however, the contributions of the paper are not clear.''} \newline
-
-\underline{Authors' Reply}: We first clarify our contributions in comparison to the existing works. In the ETEM problem formulation, unlike other works in the WPMEC literature (e.g., \cite{b11,b13,b28}), we first consider a three-tier computing paradigm that includes wireless devices, edge servers, and the remote cloud server. This architecture helps in further scaling WPMEC systems in terms of computation capability. We also take the MEC server computation time into account to more accurately model the MEC servers. Another main contribution is considering task interdependencies to capture real-world applications. In the WiEnTM algorithm, we first exploit the bipartite graph matching to tackle the complexity of the combinatorial ETEM problem. With efficient parallelization, we then propose a low complexity algorithm that can solve ETEM in real-time.
-
-In summary, the main contributions of our work are:
-
-\begin{enumerate}
-	\item Formulating ETEM problem for a three-tier wireless powered mobile edge computing system considering task interdependencies and MEC server computation time to minimize the energy consumption.
-	\item Proposing WiEnTM offloading and scheduling algorithm that greatly enhances energy efficiency while imposing a logarithmic time complexity by leveraging parallel processing and bipartite graph matching. Therefore, the algorithm can easily accommodate the real-time requirements of an offloading scheme. In order to apply the matching algorithm to ETEM problem, we study the characteristics of the problem. We first reduce it into a simplified form (i.e., S-ETEM). Next, we introduce a design parameter $\beta_{v_d^u}$ for each subtask $v_d^u\in\mathcal{V}_d$ of WD $\mathcal{D}^u$ and episode $u\in\mathcal{U}$ to decompose it into a number of independent problems (i.e., DS-ETEM).
-	\item Evaluating the performance of WiEnTM in different scenarios and comparing to other state-of-the-art algorithms.
-\end{enumerate}
-
-In Section I of the revised manuscript, we have further explained the related works and clarified our main contributions as follows.\\
-
-\begin{my}{1cm}{1cm}
-	\rev{
-		\textcolor{blue}{In \cite{b39}, authors proposed a scheme that aims to minimize the total cost in terms of energy and delay for a three-tier cloud-edge-IoT system. Gao \textit{et al.} in \cite{b40} proposed an offloading algorithm to minimize an objective called the energy time cost for a three-tier network. Although \cite{b5}, \cite{b39}, and \cite{b40} all benefit from a computationally-scalable three-tier system, IoT devices still rely on battery energy and hence lack the sustainability feature of WPMEC systems.}
-		
-		$\cdots$
-		
-		However, the proposed system model is oversimplified and thus less applicable to real-world scenarios.\\
-	}
-\end{my}
-
-To make the contributions more clear, we have made the following changes to Section I of the revised manuscript.\\
-
-\begin{my}{1cm}{1cm}
-	\rev{\textcolor{blue}{By considering the challenges of the aforementioned works, the following questions arise:}
-\begin{enumerate}
-	\item \textcolor{blue}{\textit{How can we take advantage of cloud computing in addition to MEC to meet different requirements of IoT applications?}}
-	\item \textcolor{blue}{\textit{How can we provide RF energy to enable the battery-less IoT devices operate seamlessly?}}
-	\item \textcolor{blue}{\textit{What would be the optimal offloading decision when considering the subtasks' interdependencies?}}
-\end{enumerate}
-	
-$\cdots$	
-	
-	
-	
-		\begin{enumerate}
-			\item \textcolor{blue}{\textit{Problem formulation}: We formally define the mixed-integer ET's energy minimization (ETEM) problem by deciding on offloading, WET time, and computation scheduling of subtasks for a multi-user three-tier WPMEC system} considering task interdependencies and MEC server computation time.
-			\item \textcolor{blue}{\textit{Algorithm design}: We propose wireless energy transmission minimization (WiEnTM) algorithm based on bipartite graph matching. We first study the properties of the problem to decompose it into individual problems for each subtask to make it suitable for the matching algorithm.} By efficiently utilizing parallel processing on decomposed problems, we prove that our proposed algorithm has a logarithmic time complexity with respect to the network size.
-			\item \textcolor{blue}{\textit{Performance evaluation}: Extensive numerical experiments are carried out to evaluate the proposed algorithm. Our experiments show major reduction in the WDs' required energy in comparison with baseline offloading policies.} The algorithm also reduces the energy consumption by 34\% for large tasks compared to an existing work \cite{b13}.\\
-		\end{enumerate}
-	}
-\end{my}
-
-\item \underline{Reviewer's Comment}: \textit {``Experiments need to be improved. WiEnTm proposed by this paper only compares time with WPMEC- [16]. However, WiEnTm is an energy optimization algorithm, and the main purpose of this paper is energy efficiency. I would like to know the energy performance of WiEnTm compared to other works, but it is not reflected in the paper. In addition, if authors want to show the performance of the proposed mechanism in various aspects, then it is necessary to compare it with state-of-the-art works.''} \newline
-
-\underline{Authors' Reply}: To address the reviewer's comment, we have included Fig. \ref{fig:7r} in Section V of the revised manuscript. This figure shows the energy consumption of our proposed algorithm in comparison to a state-of-the-art work in the literature. We have also updated the following paragraph in Section V of the revised manuscript to explain the results.\newline
-\begin{my}{1cm}{1cm}
-	\rev{We further investigate the performance of our proposed WiEnTM algorithm by evaluating the ET's transmitted energy in comparison to that of \cite{b13}. Figs. \ref{fig:7ar} and \ref{fig:7br} illustrate the effect of the task's CPU cycles and the task size (i.e., the number of input/output bits), respectively. The results show that by using WiEnTM, the ET consumes up to $34\%$ less energy compared to the algorithm in \cite{b13}.\\
-	}
-
-\end{my}
-
-\setcounter{figure}{7}
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{.43\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation2_a.pdf}
-		\caption{} \label{fig:7ar}
-	\end{subfigure}
-	\begin{subfigure}[b]{.43\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation2_b.pdf}
-		\caption{} \label{fig:7br}
-	\end{subfigure}
-	
-	\caption{\textcolor{blue}{Comparison of ET's transmitted energy between WiEnTM and the algorithm proposed in \cite{b13} for different a) task's CPU cycles (i.e., $\sum_{v_d\in\mathcal{V}_d}C_{v_d}$) and, b) task's internal input/output bits (i.e., $\sum_{v_d^i,v_d^j\in\mathcal{V}_d}N_{v_d^i,v_d^j}$).}} \label{fig:7r}
-\end{figure}
-
- \setstretch{1.2}
-
-\end{enumerate}
-
-We highly appreciate the reviewer for the comments and suggestions. We hope that we have properly addressed these issues.
-
-
-\section{Response to Reviewer 2}
-\begin{enumerate}
-
-
-\item \underline{Reviewer's Comment}: \textit{``It would be great if the authors provided one or multiple tables of key symbols and their corresponding description in the appendix or paper body instead of describing them in the text. This way is much easier to refer to the symbols.''} \newline
-
-\underline{Authors' Reply}: In the revised manuscript, we have added the following table which includes the key notations alongside their descriptions. 
-
-\setcounter{table}{0}
-
-\begin{my}{0cm}{0cm}
-	\rev{
-		\begin{table}[h]
-			\centering
-			\caption{\textcolor{blue}{List of key notations}}
-			\label{table2}
-			{\color{blue}\begin{tabular}{ |p{2cm}|p{12cm}|  }
-				\hline
-				\textbf{Symbol} & \textbf{Description} \\
-				\hline
-				$x^{\text{L}}_{v_d^u}, x^{\text{M}}_{v_d^u}, x^{\text{C}}_{v_d^u}$ & Binary offloading decisions \\
-				$\tau_{1,v_d^u}$ & Length of scheduled time for data transmission of subtask $v_d^u$ \\
-				$\tau_{2,v_d^u}$ & Length of scheduled time for execution of subtask $v_d^u$\\
-				$\tau_{3,v_d^u}$ & Length of scheduled time for retrieving the result of subtask $v_d^u$ \\
-				$\tau_0^u$ & WET time in episode $u$\\
-				$p^{u}$ & ET's power in episode $u$ \\
-				$\Gamma^u$ & Length of episode $u$ \\
-				$\mu_{v_d^u}$ & Response time of cloud server for subtask $v_d^u$ \\
-				$C_{v_d^u}$ & Number of CPU cycles required for subtask $v_d^u$ \\
-				$N_{i,j}$ & Number of bits required to transmit the result of subtask $i$ and $j$ \\
-				$g_d$ & Channel gain between WD $d$ and ET \\
-				$h_d$ & Channel gain between WD $d$ and MEC server \\
-				$\sigma^2$ & Noise power at the HAP \\
-				$\eta_d$ & Energy harvesting efficiency of WD $d$ \\
-				$\zeta_{d}$ & CPU's effective switched capacitance of WD $d$ \\
-				$r_{t,v_d^u}$ & Virtual resource for tier $t$ and subtask $v_d^u$ \\
-				$F^{\text{M},\max}$ & Maximum CPU frequency of MEC server \\
-				$F^{\text{L},\max}_{d}$ & Maximum CPU frequency of WD $d$ \\
-				$P^{\text{ET},\max}$ & ET's maximum transmission power \\
-				$P^{\text{AP},\max}$ & AP's maximum transmission power \\
-				$P^{\text{WD},\max}_d$ & Maximum transmission power of WD $d$ \\
-				$D$ & Number of WDs \\
-				$V_d$ & Number of subtasks of WD $d$ \\
-				$B_d$ & Bandwidth of WD $d$ \\
-				$\mathcal{D}$, $\mathcal{D}^u$ & Set of WDs \\ 
-				$\mathcal{U}$ & Set of episodes \\
-				$\mathcal{V}_d$ & Set of subtasks of WD $d$ \\
-				$\mathcal{R}^{\text{virt}}$ & Set of virtual resources \\
-				$\mathcal{I}_{v_d^u}$ & Set of episodes associated to executing prerequisite subtasks of the subtask $v_d^u$ \\
-				$\mathcal{J}_{v_d^u}$ & Set of episodes associated to executing subtasks with the subtask $v_d^u$ as their prerequisite \\
-				\hline
-			\end{tabular}}
-	\end{table}}
-\end{my}
-
- \setstretch{1.2}
-
-\end{enumerate}
-
-We would like to gratefully thank the reviewer for the valuable suggestion and comment. We hope that we have addressed this comment satisfactorily. \newpage
-
-\section{Response to Reviewer 3}
-\begin{enumerate}
-
-\item \underline{Reviewer's Comment}: \textit{``Although the optimization objective of the investigated problem is to minimize energy consumption of the HAP, the time consumption for all subtasks generated by WDs still should be constrained. Otherwise, the QoS of latency-sensitive tasks cannot be guaranteed by the proposed algorithms.''} \newline
-
-\underline{Authors' Reply}: The time consumption for all subtasks generated by WDs are indeed constrained in our work. With the introduction of episodes, we have simultaneously addressed the requirements of harvest-then-offload mechanism and the subtasks' deadlines. Constraint (\ref{eq9}) applies a hard deadline $\Gamma^u$ on each episode $u\in\mathcal{U}$ (i.e., a cycle of subtasks' executions) which is obtained based on the deadline of subtasks. In order to clarify this, we have included the following sentences in Section III of the revised manuscript. \newline
-
-\begin{my}{1cm}{1cm}
-\rev{	
-	It is worth noting that inequality (\ref{eq9}) also enforces a hard deadline for each cycle of subtasks' execution in each episode. Thus, the total execution time of each task generated by WDs is constrained. This way, we can address the requirements of latency-sensitive tasks as well.
-}\newline
-\end{my}
-
-Furthermore, we have included the following sentences to better illustrate the intention behind defining an \textit{episode} in Section II of the revised manuscript.\\
-
-\begin{my}{1cm}{1cm}
-	\rev{We regard a complete cycle of executing a single subtask for all WDs having a candidate subtask as an \textit{episode}. Each episode jointly models the harvest-then-offload timing, subtasks' deadlines, and TDMA scheduling of WDs.
-	}\newline
-\end{my}
-
-\item \underline{Reviewer's Comment}: \textit {``(a) The definition of an “episode” is not stated clearly. (b) The first question is how to decide the length of an episode? (c) Since the length of an episode will affect the performance of scheduling, it should be analyzed theoretically. (d) Besides, how to decide the number of episodes?''} \newline
-
-\underline{Authors' Reply}: We address each of the above comments one by one.\newline
-
-(a) In Section II of the revised manuscript, we have first clarified the definition of an episode as follows.\\
-
-\begin{my}{1cm}{1cm}
-\rev{We regard a complete cycle of executing a single subtask for all
-	WDs having a candidate subtask as an \textit{episode}. Each episode
-	jointly models the harvest-then-offload timing, subtasks' deadlines, and TDMA scheduling of WDs.}\newline
-
-\end{my}
-
-(b) An episode is a complete cycle of subtasks' execution, including harvest-then-offload timing and subtasks' deadlines. Therefore, similar to other works in the literature of WPMEC (e.g., \cite{b2,b13,b28}), we consider that the length of an episode is directly related to subtasks' deadlines. In the revised manuscript, we have included the following paragraph in Section II to discuss an approach to calculate the length of an episode.\newline
-
-\begin{my}{1cm}{1cm}
-	\rev{Now that we have introduced the network model, we need to provide an approach to calculate the length of episode $\Gamma$. As stated earlier, each episode reflects the requirements of the harvest-then-offload timing and subtask deadlines. Therefore, $\Gamma$ is directly related to the individual subtask deadlines being executed in that episode. In other words, $\Gamma$ can be calculated as the summation of the subtasks' deadlines. In the next section, we will calculate the length of each episode.}\newline
-	
-\end{my}
-
-(c) The length of an episode is present in inequality constraint (\ref{eq9}). Thus, a longer episode (i.e., the subtasks' deadlines) will enlarge the feasible region of the ETEM optimization problem and enhances the optimal solution and results in less energy consumption. In Section V, we have used this intuition to propose the adaptive approach for calculating the $\beta_{v_d^u}$ parameters. To further clarify, we have included the following sentences in Section III of the revised manuscript.\newline
-
-\begin{my}{1cm}{1cm}
-	\rev{Also, it can be concluded that $\Gamma^u$ is a key factor in the optimal value of the ETEM problem. A longer episode (i.e., larger $\Gamma^u$) provides more time for execution of the tasks. In fact, this will enlarge the feasible region of the ETEM optimization problem and enhances the energy-efficiency of the algorithm.}\newline
-\end{my}
-
-(d) The number of episodes corresponds to the time horizon of the problem. We defined the horizon to be the time required to accomplish a task on all WDs. Therefore, as long as there exists a subtask to be executed on WDs, a new episode will be required. This will result in having $\max_{d\in\mathcal{D}}V_d$ episodes. In the revised manuscript, we have updated the following sentences to further clarify how the number of required episodes (i.e., $U$) is calculated.\\
-
-\begin{my}{1cm}{1cm}
-	\rev{We denote $\mathcal{U}\triangleq\{0,...,U-1\}$ as the set of episodes, where $U\triangleq\max_{d\in\mathcal{D}}V_d$  indicates the number of episodes. Note that $V_d$ is obtained from the call graph of the corresponding task. \newline}
-\end{my}
-
-\item \underline{Reviewer's Comment}: \textit {``There are too many symbols in this paper. It is hard for readers to quickly find the meaning of each symbol. A symbol table should be added to improve the readability of this paper.''} \newline
-
-\underline{Authors' Reply}: In the revised manuscript, we have added Table \ref{table3} which includes the key notations alongside their descriptions. \newline
-
-\setcounter{table}{0}
-
-\begin{my}{1cm}{1cm}
-	\rev{		\begin{table}[h]
-			\centering
-			\caption{\textcolor{blue}{List of key notations}}
-			\label{table3}
-			{\color{blue}\begin{tabular}{ |p{2cm}|p{12cm}|  }
-				\hline
-				\textbf{Symbol} & \textbf{Description} \\
-				\hline
-				$x^{\text{L}}_{v_d^u}, x^{\text{M}}_{v_d^u}, x^{\text{C}}_{v_d^u}$ & Binary offloading decisions \\
-				$\tau_{1,v_d^u}$ & Length of scheduled time for data transmission of subtask $v_d^u$ \\
-				$\tau_{2,v_d^u}$ & Length of scheduled time for execution of subtask $v_d^u$\\
-				$\tau_{3,v_d^u}$ & Length of scheduled time for retrieving the result of subtask $v_d^u$ \\
-				$\tau_0^u$ & WET time in episode $u$\\
-				$p^{u}$ & ET's power in episode $u$ \\
-				$\Gamma^u$ & Length of episode $u$ \\
-				$\mu_{v_d^u}$ & Response time of cloud server for subtask $v_d^u$ \\
-				$C_{v_d^u}$ & Number of CPU cycles required for subtask $v_d^u$ \\
-				$N_{i,j}$ & Number of bits required to transmit the result of subtask $i$ and $j$ \\
-				$g_d$ & Channel gain between WD $d$ and ET \\
-				$h_d$ & Channel gain between WD $d$ and MEC server \\
-				$\sigma^2$ & Noise power at the HAP \\
-				$\eta_d$ & Energy harvesting efficiency of WD $d$ \\
-				$\zeta_{d}$ & CPU's effective switched capacitance of WD $d$ \\
-				$r_{t,v_d^u}$ & Virtual resource for tier $t$ and subtask $v_d^u$ \\
-				$F^{\text{M},\max}$ & Maximum CPU frequency of MEC server \\
-				$F^{\text{L},\max}_{d}$ & Maximum CPU frequency of WD $d$ \\
-				$P^{\text{ET},\max}$ & ET's maximum transmission power \\
-				$P^{\text{AP},\max}$ & AP's maximum transmission power \\
-				$P^{\text{WD},\max}_d$ & Maximum transmission power of WD $d$ \\
-				$D$ & Number of WDs \\
-				$V_d$ & Number of subtasks of WD $d$ \\
-				$B_d$ & Bandwidth of WD $d$ \\
-				$\mathcal{D}$, $\mathcal{D}^u$ & Set of WDs \\ 
-				$\mathcal{U}$ & Set of episodes \\
-				$\mathcal{V}_d$ & Set of subtasks of WD $d$ \\
-				$\mathcal{R}^{\text{virt}}$ & Set of virtual resources \\
-				$\mathcal{I}_{v_d^u}$ & Set of episodes associated to executing prerequisite subtasks of the subtask $v_d^u$ \\
-				$\mathcal{J}_{v_d^u}$ & Set of episodes associated to executing subtasks with the subtask $v_d^u$ as their prerequisite \\
-				\hline
-			\end{tabular}}
-	\end{table}}
-\end{my}
-
-\item \underline{Reviewer's Comment}: \textit {``In the proposed MGW algorithm, how could all executions in line 4 to line 17 proceed parallelly? As the authors mentioned that all subtasks have dependencies, one subtask should be computed based on the results of other subtasks. In this case, how could the weights be assigned parallelly? A more delicate methods for dealing the dependencies among subtasks should be provided.''} \newline
-
-\underline{Authors' Reply}: Lines 4 to 17 of the MGW algorithm can be indeed run simultaneously. The algorithm does not require any information about the output of the subtasks' executions in order to execute these lines. In fact, it only requires the sizes of inputs and outputs of each subtask which are given by the task call graph. We have added the following sentences in Section IV of the revised manuscript to better clarify this fact.\\
-
-\begin{my}{1cm}{1cm}
-	\rev{Note that in order to calculate the weights of subtasks, there is no need to actually execute them. The only required information is the size of input and output of each subtask which is already known from the task call graph. Thus, Lines 4 to 17 of the MGW algorithm can be run simultaneously.\newline}
-\end{my}
-
-\item \underline{Reviewer's Comment}: \textit {``No theoretical guarantee for the energy consumption of the proposed algorithm was provided in this paper. What is the approximation ratio of the proposed algorithm? Theoretical analysis should be provided.''\newline}
-
-\underline{Authors' Reply}: 
-It should be noted that S-ETEM problem achieves the optimal solution of the original ET's energy minimization (ETEM) problem. Furthermore, DS-ETEM problem can achieve the optimal solution with no approximation. In particular, the ETEM problem has been transformed into S-ETEM problem. These two problems are equivalent and can achieve the same optimal solution. This has been achieved by converting the many-to-one matching into a one-to-one matching by introducing the concept of virtual resources. In order to further decompose the ETEM problem and eliminate the dependency of constraint (\ref{eq9}), we have introduced the parameter $\beta_{v_d^u}$. By determining the optimal value of $\beta_{v_d^u}$, the optimal energy can be obtained and there would not be any approximation when solving the problem. Please note that determining the optimal value of $\beta_{v_d^u}$ is beyond the scope of our work and is considered for future works. However, there are approaches to calculate it iteratively such as the one given in \cite{b2}. In order to address the reviewer's comment, we have revised the manuscript and further clarified the derivation of ETEM and S-ETEM problems and the role of $\beta_{v_d^u}$.\\
-
-\begin{my}{1cm}{1cm}
-	\rev{
-	To leverage the matching algorithm, we need to calculate the cost of each matching between subtasks and computing resources. To accomplish this, we first transform the ETEM problem into an equivalent simplified problem. We then show that the transformed problem is decomposable, and the resultant decomposed problems are still equivalent to the ETEM problem. \newline
-
-	$\cdots$
-	
-	It is also worth noting that for a given $\beta_{v_d^u}$, by solving S-ETEM, we can achieve the optimal solution of the ETEM problem. In other words, by determining the optimal value of $\beta_{v_d^u}$ for each $d\in\mathcal{D}^u$ and $u\in\mathcal{U}$, the optimal ET's transmitted energy can be obtained and there would not be any approximation.\\
-}
-\end{my}
-
-We have also added the following explanation in the footnote of Page 10.\newline
-
-\begin{my}{1cm}{1cm}
-	\rev{
-		For the case of non-optimal $\beta_{v_d^u}$, one needs to analyze the approximation ratio of the proposed algorithm. An approach similar to \cite{b2} can be followed. However, we leave this extension as future work.\newline
-	}
-\end{my}
-
-\item \underline{Reviewer's Comment}: \textit {``In the experiments, only two WDs were deployed in the network. And the dependencies of subtasks generated by each WD were not provided in the experiments. Besides, the authors only evaluated the impact of CPU cycles for WDs on algorithm performance, which is not enough.''} \newline
-
-\underline{Authors' Reply}: To address the reviewer's comment, we have included more simulation results in the revised manuscript. First, we have considered a scenario with 200 WDs and included Figs. \ref{fig:10a} and \ref{fig:10b} that show ET’s transmitted energy for WiEnTM and two baseline schemes. As suggested by the reviewer, in Fig. \ref{fig:10a}, we vary the task's total internal input and output bits, while in Fig. \ref{fig:10b}, we evaluate the effect of total CPU cycles on energy consumption. In addition, we have included Figs. \ref{fig:7arr} and \ref{fig:7brr} that evaluate the effect of both the total number of CPU cycles and the total internal input/output bits of the task on ET's transmitted energy for WiEnTM in comparison to the offloading algorithm in \cite{b13}. We have included the following explanations in Section V of the revised manuscript.\\
-
-\setcounter{figure}{7}
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{.43\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation2_a.pdf}
-		\caption{} \label{fig:7arr}
-	\end{subfigure}
-	\begin{subfigure}[b]{.43\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{simulation2_b.pdf}
-		\caption{} \label{fig:7brr}
-	\end{subfigure}
-	
-	\caption{\textcolor{blue}{Comparison of ET's transmitted energy between WiEnTM and the algorithm proposed in \cite{b13} for different a) task's CPU cycles (i.e., $\sum_{v_d\in\mathcal{V}_d}C_{v_d}$) and, b) task's internal input/output bits (i.e., $\sum_{v_d^i,v_d^j\in\mathcal{V}_d}N_{v_d^i,v_d^j}$).}} \label{fig:7rr}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{.24\textwidth}
-		\centering
-		\includegraphics[height=1.2\linewidth]{simulation3_a.pdf}
-		\caption{} \label{fig:10a}
-	\end{subfigure}
-	\begin{subfigure}[b]{.24\textwidth}
-		\centering
-		\includegraphics[height=1.2\linewidth]{simulation3_b.pdf}
-		\caption{} \label{fig:10b}
-	\end{subfigure}
-	
-	\caption{\textcolor{blue}{Comparison of ET's transmitted energy for three offloading policies when there are 200 WDs. 1) Local computation only, 2) computation offloading only, and 3) WiEnTM algorithm.}} \label{fig:10}
-\end{figure}
-
-\begin{my}{1cm}{1cm}
-	\rev{
-	We further investigate the performance of our proposed WiEnTM algorithm by evaluating the ET's transmitted energy in comparison to that of \cite{b13}. Figs. \ref{fig:7arr} and \ref{fig:7brr} illustrate the effect of the task's CPU cycles and the task size (i.e., the number of input/output bits), respectively. The results show that by using WiEnTM, the ET consumes up to $34\%$ less energy compared to the algorithm in \cite{b13}.
-	
-	$\cdots$
-		
-	We now consider 200 WDs and investigate the ET transmission energy required to enable WDs execute their tasks. We study three different policies: 1) Local computing, 3) computation offloading, and 3) WiEnTM algorithm. We assume that among these devices, 100 WDs have a task with the call graph shown in Fig. \ref{fig:5a} and the rest with the task call graph of Fig. \ref{fig:5b}.
-		
-		$\cdots$
-		
-	Fig. \ref{fig:10a} shows the ET's energy transmission when we vary the task's total CPU cycles. Additionally, Fig. \ref{fig:10b} illustrates the ET's energy for different numbers of the task's total  input/output bits, which reflect the size of the tasks.
-	
-		$\cdots$
-	
-	In particular, according to Fig. \ref{fig:10a}, comparing to the local computing case, a higher improvement is obtained for the computationally intensive tasks.
-	
-		$\cdots$
-		
-	The results of Fig. \ref{fig:10b} imply that WiEnTM mainly follows the policy of offloading to edge/cloud server for tasks with a small number of input/output bits. As we increase the number of bits, the algorithm tends to rely more on local computing. As can be observed, WiEnTM greatly outperforms both schemes.
-	}\newline
-\end{my}
-
-Furthermore, the dependencies between subtasks of each WD are shown in Fig. \ref{fig:5}. We have included the following sentences in Section V of the revised manuscript to further clarify this issue.\newline
-
-\begin{my}{1cm}{1cm}
-	\rev{
-		These figures show the dependencies in the task call graph of each WD. An arrow leaving node $i$ toward $j$ indicates that subtask $j$ is dependent on subtask $i$.
-	}\newline
-\end{my}
-
-\end{enumerate}
-
-We would like to gratefully thank the reviewer for the valuable comments and suggestions. We hope that we have addressed these comments satisfactorily.\newline
-
-\section{Response to Reviewer 4}
-\begin{enumerate}
-	
-	
-	\item \underline{Reviewer's Comment}: \textit{````an'' MEC rather than ``a'' MEC;''} \newline
-	
-	\underline{Authors' Reply}: We have applied the reviewer's comment throughout the paper and updated the manuscript.\\
-	
-	\item \underline{Reviewer's Comment}: \textit{``This paper considers half-duplex transmission for WDs, where computation offloading cannot be performed simultaneously with energy harvesting. How about the full-duplex?''} \newline
-	
-	\underline{Authors' Reply}: Inspired by \cite{b2,b10,b11,b14}, in our work, we consider half-duplex transmission for WDs. Due to the production costs, battery-less devices usually lack a full-duplex transceiver. In the case that devices are equipped with full-duplex transceivers, we do not need a harvest-then-offload mechanism as both offloading and energy harvesting can be done simultaneously. There are several works studying simultaneous wireless information and power transfer (SWIPT) \cite{b8} for devices with full-duplex transmission. However, this is beyond the scope of our work and is considered for future works. We have added the following explanations to Section II of the revised manuscript. \newline
-		
-	\begin{my}{1cm}{1cm}
-		\rev{
-			In contrast, for the case of full-duplex transmission, scheduling algorithms are categorized as the simultaneous wireless information and power transfer (SWIPT) \cite{b8} mode. However, considering the constraints of the production costs and devices' form factor for battery-less WDs, they usually lack a full-duplex transceiver to perform energy harvesting and data transmission simultaneously.
-		}\newline
-	\end{my}
-	
-	We have also added the following sentence to Section VI of the revised manuscript.
-
-	\begin{my}{1cm}{1cm}
-		\rev{
-				We will also study more powerful WDs with full-duplex capability in future.
-		}\newline
-	\end{my}
-	
-	
-	\item \underline{Reviewer's Comment}: \textit{``The font size in Fig. 2 should be adjusted. For example, the font is too large for ``WET''.''} \newline
-	
-	\underline{Authors' Reply}: We have adjusted the font size of Fig. \ref{fig2r} as suggested. \newline
-	
-	\renewcommand{\figurename}{Fig.}
-	\renewcommand{\thefigure}{2}
-	\begin{my}{1cm}{1cm}
-		\rev{
-			\begin{figure}[h!]
-				\centering
-				\includegraphics[height=95pt]{TDMA.pdf}
-				\caption{\textcolor{blue}{Harvest-then-offload scheduling with TDMA protocol for a system of two WDs. An episode of length $\Gamma$ is divided into two times frames of WET and offloading/local computing. In the case of offloading, the offloading/local computing time frame consists of three slots. The first and last slots are for transmitting the data and retrieving the results, respectively. The second slot is dedicated to the computation in the MEC server or transmission to/from the cloud server.}}\label{fig2r}
-			\end{figure}
-		}
-	\end{my}
-	
-	\item \underline{Reviewer's Comment}: \textit{``The authors state that “the partial offloading provides a more realistic model of tasks”. It is suggested to provide more explanation.''}\newline
-	
-	\underline{Authors' Reply}: In the partial offloading model, each task is represented by its call stack which exactly maps to a real computer program. Note that binary offloading is a special case of partial offloading when we only consider a single partition. To further clarify this issue, we have included the following explanation in Section II of the revised manuscript.\newline
-	
-	\begin{my}{1cm}{1cm}
-		\rev{
-			The partial offloading provides a more realistic model of tasks as it leverages the task call graph to represent each task. This accurately models the call stack of a computer program.\newline
-		}
-	\end{my}
-
-	We have also provided an application example in the footnote of Page 3 as below.\newline
-	
-	\begin{my}{1cm}{1cm}
-		\rev{
-			\textcolor{blue}{For instance, \textit{Pyan}\cite{b41} is a Python module that generates the task call graph of a Python code by analysis of its modules and functions.}\newline
-		}
-	\end{my}
-
-	\item \underline{Reviewer's Comment}: \textit{``Why ``the cumulative energy consumption of the devices is no more than their harvested energy''? could you please give a realistic example to illustrate the assumption?''}\newline
-	
-	\underline{Authors' Reply}: Indeed, the cumulative energy consumption of devices must be no more than their harvested energy. It is because we consider wireless-powered devices which cannot store energy for later use. Thus, the devices cannot use more energy than the harvested amount. It also ensures the sustainable operation of the devices. The same assumption has been made in similar works \cite{b10,b30,b13,b39,b26,b2}. We have included the following sentences in Section II of the revised manuscript to make this fact more clear.\newline
-	
-	\begin{my}{1cm}{1cm}
-		\rev{
-			As described earlier, we assume sustainable operation of WDs by only relying on the harvested energy (i.e., battery-less network). Thus, the cumulative energy consumption of the devices on each episode must be no more than their harvested energy.\\
-		}
-	\end{my}
-
-	\item \underline{Reviewer's Comment}: \textit{``More recent and important references are required.''}\newline
-	
-	\underline{Authors' Reply}: To address the reviewer's comment, we have removed a few of outdated references and cited five recently published papers as follows. \newline
-	\begin{my}{1cm}{1cm}
-		\rev{
-	{\small
-		\noindent\cite{b35} Y. Yu, Y. Yan, S. Li, and D. Wu, ``Task delay minimization in wireless powered mobile edge computing networks: A deep reinforcement learning approach,'' in \textit{Proc. of Int. Conf. Wireless Commun. Signal Process. (WCSP)}, Changsha, China, Mar. 2021.\\[10pt]
-		\cite{b38} Y. Li, Y. Wu, M. Dai, B. Lin, W. Jia, and X. Shen, ``Hybrid NOMA-FDMA assisted dual computation offloading: A latency minimization approach,'' \textit{IEEE Trans. Netw. Sci. Eng.}, vol. 9, no. 5, pp. 3345--3360, Sep. 2022.\\[10pt]
-		\cite{b37} K. Guo, M. Yang, Y. Zhang, and J. Cao, ``Joint computation offloading and bandwidth assignment in cloud-assisted edge computing,'' \textit{IEEE Trans. Cloud Comput.}, vol. 10, no. 1, pp. 451--460, Mar. 2022.\\[10pt]
-		\cite{b39} R. Zhang and C. Zhou, ``A computation task offloading scheme based on mobile-cloud and edge computing for WBANs,'' in \textit{Proc. of IEEE Int. Conf.	Commun. (ICC)}, Seoul, Korea, Repulic of, Mar. 2022.\\[10pt]
-		\cite{b40} Z. Gao, W. Hao, and S. Yang, ``Joint offloading and resource allocation for multi-user multi-edge collaborative computing system,'' \textit{IEEE Trans. Veh. Technol.}, vol. 71, no. 3, pp. 3383--3388, Mar. 2022.}\\}
-	\end{my}
-
-	We have also cited these works in the following sentences in Section I of the revised manuscript.\\
-	
-	\begin{my}{1cm}{1cm}
-		\rev{
-			Mobile edge computing (MEC) is a state-of-the-art computation paradigm to address the challenge of insufficient computing resources in Internet of Things (IoT) networks \cite{b35, b4}. By deploying the edge servers, nearby devices can offload their computation tasks. Dispatching those tasks that require a higher amount of energy will let devices save more energy \cite{b38}. However, as the computation tasks become more and more intensive, a coordination with cloud servers might be inevitable \cite{b37}. As a result, three-tier models consisting of cloud, edge, and IoT devices are introduced to overcome the aforementioned challenges \cite{b5,b6,b39,b40}.
-			
-			$\cdots$
-			
-			In the existing work \cite{b39}, authors proposed a scheme that aims to minimize the total cost in terms of energy and delay for a three-tier cloud-edge-IoT system. Gao \textit{et al.} in \cite{b40} proposed an offloading algorithm to minimize an objective called the energy time cost (ETC) for a three-tier network. Although \cite{b5}, \cite{b39}, and \cite{b40} all benefit from a computationally-scalable three-tier system, IoT devices still rely on battery energy and they thus lack the sustainability feature of WPMEC systems.
-			\\}
-	\end{my}
-	
-\end{enumerate}
+\vfill
 
 We would like to gratefully thank the reviewer for the valuable comments and suggestions. We hope that we have satisfactorily addressed these comments.\newline
 

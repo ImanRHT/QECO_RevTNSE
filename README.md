@@ -1,2 +1,0 @@
-# QECO_RevTNSE
-None
