@@ -610,6 +610,8 @@ In \cite{huang2021deadline}, Huang \textit{et al.} proposed a DRL-based method b
 %Although DRL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention. First, Some existing works such as [] - [] considered delay-tolerant tasks, which may not be realistic due to the real-time processing demand by high computational tasks. Comparing with the aforementioned works [10]–[15], we consider a different and more realistic MEC scenario.  We take into account delay-sensitive tasks with processing deadlines, which is chalenging to address because the processing deadlines will affect the load level dynamics at the edge nodes and hence affect the delay of the offloaded tasks. Secound, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay as assumed in  \cite{zhao2019deep}-\cite{9253665}, but also by energy consumption. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs. Nevertheless, prior research in \cite{huang2019deep}-\cite{gao2022large} fail to tackle some or all of these challenges. Different from those works [18]–[21], we aim to propose a DRL-based distributed algorithm that provide users with stricking balance among QoE factors based on their demands, caming from their state in each time. 
 
 
+
+
 In this study, we delve into the computation task offloading problem in MEC systems, where strict task processing deadlines and energy constraints can adversely affect the system performance. We propose a distributed QoE-oriented computation offloading (QECO) algorithm that leverages DRL to efficiently handle task offloading in uncertain loads at ENs. This algorithm empowers MDs to make offloading decisions utilizing only locally observed information, such as task size, queue details, \textcolor{blue}{energy status}, and historical workloads at the ENs. By adopting the appropriate policy based on each MD’s specific requirements at any given time, the QECO algorithm significantly improves the QoE for individual users.
 
 
@@ -619,9 +621,11 @@ In this study, we delve into the computation task offloading problem in MEC syst
 Our main contributions are summarized as follows:
 
 \begin{itemize}
-	\item \textit{Task Offloading Problem in the MEC System:} We formulate the task offloading problem as an MDP for time-sensitive tasks. This approach takes into account the dynamic nature of workloads at the ENs and concentrates on providing high performance in the MEC system while maximizing the long-term QoE.
+	 \item \textit{Task Offloading Problem in the MEC System:} \textcolor{purple}{ We formulate the task offloading problem in queuing-based MEC as an MDP for time-sensitive tasks, taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). This approach concentrates on providing high performance in the MEC system while maximizing the long-term QoE, by effectively utilizing the capabilities of resources and handling the dynamic nature of workload at ENs.}
+
 	
-	\item \textit{DRL-based Offloading Algorithm:} To address the problem of long-term QoE maximization, we focus on task completion, task delay, and energy consumption to quantify the MDs' QoE. We propose QECO algorithm based on DRL that empowers each MD to make offloading decisions independently, without prior knowledge of the other MDs' tasks and offloading models. With a focus on the MD's \textcolor{blue}{energy level}, our approach leverages \textcolor{blue}{dueling double deep Q-network (D3QN)} \cite{wang2016dueling} and long short-term memory (LSTM) \cite{hochreiter1997long} to prioritize and strike an appropriate balance between QoE factors. We also analyze the training convergence and complexity of the proposed algorithm.
+	\item \textit{DRL-based Offloading Algorithm:} To address the problem of long-term QoE maximization, we focus on task completion, task delay, and energy consumption to quantify the MDs' QoE. We propose QECO algorithm based on DRL that empowers each MD to make offloading decisions independently, without prior knowledge of the other MDs' tasks and offloading models. \textcolor{purple}{With a focus on the MD's energy level, our approach leverages dueling double deep Q-network (D3QN) \cite{wang2016dueling} to prioritize and strike an appropriate balance between QoE factors. To handle the uncertainty of workloads at ENs, we integrate long short-term memory (LSTM) \cite{hochreiter1997long} into D3QN, enabling MDs to forecast ENs' workloads over time and improve the estimation of long-term QoE. Additionally, we provide an analysis of the training convergence and computational complexity of the proposed algorithm.}
+
 	 
 	\item \textit{Performance Evaluation:} We conduct comprehensive experiments to evaluate the QECO's performance as well as its training convergence under different computation workloads. \textcolor{teal}{The results demonstrate that our algorithm quickly converges compired to DQN and D3QN methods and effectively utilizes the processing capabilities of MDs and ENs, resulting in substantial improvement of at least 37\% in average QoE. This advantage is achieved through a 14\% increase in the number of completed tasks, along with 11.7\% and 10.7\% reductions in task delay and energy consumption, respectively, when compared to the distributed and collective DRL-based offloading algorithm (DCDRL) \cite{qiu2020distributed} and several benchmark methods.}
 	
@@ -630,6 +634,8 @@ Our main contributions are summarized as follows:
 \end{itemize}
 
 The structure of this paper is as follows. Section~\ref{section:II} presents the system model, followed by the problem formulation in Section ~\ref{section:III}. In Section~\ref{section:IV}, we present the algorithm, while Section~\ref{section:V} provides an evaluation of its performance. Finally, we conclude in Section~\ref{section:VI}.
+
+
 
 \section{System Model} 
 \label{section:II}
@@ -679,7 +685,7 @@ We investigate a MEC system consisting of a set of MDs denoted by $\mathcal{I} =
 	\label{fig1}
 \end{figure}
 
-We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. The size of task $z_i(t)$ is selected from a discrete set $\Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\}$, where $\theta$ represents the number of these values. Hence, $\lambda_i(t) \in \Lambda \cup \{0\}$ to consider the case that no task has arrived. We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
+We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{blue}{The size of task $z_i(t)$ is selected randomly from a discrete set $\Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\}$, where $\theta$ represents the number of these values.} Hence, $\lambda_i(t) \in \Lambda \cup \{0\}$ to consider the case that no task has arrived. We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
 %At the beginning of time slot $t \in \mathcal{T}$, if MD $i \in \mathcal{I}$ has a newly arrived task, we define $z_i(t)$ as the unique index assigned to that task. Let $\lambda_i(t)$ be the number of newly arrived bits at the beginning of time slot $t \in \mathcal{T}$. If a new task $z_i(t)$ exists at the start of time slot $t$, then $\lambda_i(t)$ is equal to the size of task $z_i(t)$. Otherwise, $\lambda_i(t) = 0$. We consider $\rho_i(t)$ to represent the processing density of task $z_i(t)$, indicating the number of CPU cycles required to process a unit of the task.
 
 We define two binary variables, $x_i(t)$ and $y_{i,j}(t)$ for $i \in \mathcal{I}$ and $j \in \mathcal{J}$ to determine the offloading decision and offloading target, respectively. Specifically, $x_i(t)$ indicates whether task $z_i(t)$ is assigned to the computation queue ($x_i(t) = 0$) or to the transmission queue ($x_i(t) = 1$), and $y_{i,j}(t)$ indicates whether task $z_i(t)$ is offloaded to EN $j \in \mathcal{J}$. If the task is dispatched to EN $j$, we set $y_{i,j}(t) = 1$; otherwise, $y_{i,j}(t) = 0$.
@@ -849,7 +855,7 @@ where $\mathcal{D}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t))= 0$ when task $z_i
 
 $\mathcal{E}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t)) = (1-x_i(t)) E_i^{\text{L}}(t)+$
 \begin{alignat}{1}
-\hspace{1.8cm} x_i(t)\bigg( \sum\limits_{\mathcal{J}} \sum\limits_{t^{'}=t}^{T}\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big) E_i^{\text{O}}(t)  \bigg).
+\hspace{1.8cm} x_i(t)\bigg( \sum\limits_{\mathcal{J}} \sum\limits_{t^{'}=t}^{T}\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)  E_i^{\text{O}}(t)  \bigg).
 	\label{22}  
 \end{alignat}
 Given the delay and energy consumtion of task $z_i(t)$, we also define $\mathcal{C}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t))$ that denotes the assosiate cost of task $z_i(t)$ given the action $\boldsymbol{a}_i(t)$ in the state $\boldsymbol{s}_i(t)$. \vspace{1.7mm}
@@ -1296,7 +1302,7 @@ Furthermore, we explore the impact of two main hyper-parameters on the convergen
 	\centering
 	\includegraphics[width=.95\linewidth]{m1}
 	\vspace*{-3mm}
-	\caption{\textcolor{blue}{The convergence of the average QoE across episodes under different optimization modules.}}
+	\caption{\textcolor{blue}{The convergence of the average QoE across episodes under different DQN-based methods.}}
 	\vspace*{-3mm}
 	\label{chart01}
 \end{figure}
