@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  17 SEP 2024 06:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  28 SEP 2024 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Response.tex
-(./Response.tex
+**Paper_Res.tex
+(./Paper_Res.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
@@ -684,7 +684,7 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box110
 )
-(./Response.aux
+(./Paper_Res.aux
 
 LaTeX Warning: Label `26' multiply defined.
 
@@ -692,7 +692,7 @@ LaTeX Warning: Label `26' multiply defined.
 LaTeX Warning: Label `alg:cap2' multiply defined.
 
 )
-\openout1 = `Response.aux'.
+\openout1 = `Paper_Res.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
@@ -760,9 +760,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 68.
 LaTeX Info: Redefining \pageref on input line 68.
 LaTeX Info: Redefining \nameref on input line 68.
- (./Response.out) (./Response.out)
+ (./Paper_Res.out) (./Paper_Res.out)
 \@outlinefile=\write3
-\openout3 = `Response.out'.
+\openout3 = `Paper_Res.out'.
 
  [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 193
@@ -912,7 +912,7 @@ File: conv2_f.pdf Graphic file (type pdf)
 <use conv2_f.pdf>
 Package pdftex.def Info: conv2_f.pdf  used on input line 863.
 (pdftex.def)             Requested size: 176.91496pt x 131.63503pt.
- [18 <./conv1_f.pdf> <./conv2_f.pdf>] [19] (./Response.bbl [20])
+ [18 <./conv1_f.pdf> <./conv2_f.pdf>] [19] (./Paper_Res.bbl [20])
 [21]
 
 LaTeX Warning: No \author given.
@@ -962,19 +962,9 @@ l.956 \end{my}
 name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.970 \newpage
+l.971 \newpage
                [4]
-Underfull \hbox (badness 10000) in paragraph at lines 972--974
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 975--976
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--979
+Underfull \hbox (badness 10000) in paragraph at lines 973--975
 
  []
 
@@ -1004,12 +994,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 990--991
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 992--993
+Underfull \hbox (badness 10000) in paragraph at lines 992--994
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1010
+Underfull \hbox (badness 10000) in paragraph at lines 995--996
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--998
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1014--1015
 
  []
 
@@ -1017,174 +1017,174 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1010 \end{my}
+l.1015 \end{my}
                 [5]pdfTeX warning (ext4): destination with the same identifier 
 (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1018 \newpage
+l.1023 \newpage
                 [6]pdfTeX warning (ext4): destination with the same identifier 
 (name{section.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1020 \section{Response to Reviewer 2}
+l.1025 \section{Response to Reviewer 2}
                                        
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1025
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1030
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 1054--1054
+Underfull \hbox (badness 4686) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Online com-pu-ta-tion of-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 heterogeneous
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1054--1054
+Underfull \hbox (badness 2359) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Wireless-powered
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Computation of-fload-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Not con-sider delay-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Multi-agent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Multi-agent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Computation of-fload-ing
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 1054--1054
+Underfull \hbox (badness 1852) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Not con-sider tasks with
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1054--1054
+Underfull \hbox (badness 2359) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1054--1054
+Underfull \hbox (badness 2359) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Not con-sider delay-
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1054--1054
+Underfull \hbox (badness 2359) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 1054--1054
+Underfull \hbox (badness 5331) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Minimize task com-pu-ta-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Decentralized
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 1054--1054
+Underfull \hbox (badness 5622) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Optimize sys-tem cost and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Multi-agent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Underfull \hbox (badness 2197) in paragraph at lines 1054--1054
+Underfull \hbox (badness 2197) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Privacy aware com-pu-ta-
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 1054--1054
+Underfull \hbox (badness 2111) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Optimize de-lay and en-ergy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Multi-agent
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 1054--1054
+Underfull \hbox (badness 1852) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Not con-sider tasks with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Overfull \hbox (7.45766pt too wide) in paragraph at lines 1054--1055
+Overfull \hbox (7.45766pt too wide) in paragraph at lines 1059--1060
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1058
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1063
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1064
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1069
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1064
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1069
 
  []
 
@@ -1192,24 +1192,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1064 	
+l.1069 	
          [7]
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1071
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
 
  []
 
 
-Overfull \hbox (12.0pt too wide) detected at line 1088
+Overfull \hbox (12.0pt too wide) detected at line 1093
 [][] 
  []
 
 
-Overfull \hbox (12.0pt too wide) detected at line 1088
+Overfull \hbox (12.0pt too wide) detected at line 1093
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
+Underfull \hbox (badness 10000) in paragraph at lines 1106--1107
 
  []
 
@@ -1217,29 +1217,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1104 \newpage
+l.1109 \newpage
                 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1108
+Underfull \hbox (badness 10000) in paragraph at lines 1111--1113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1114--1115
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1128--1129
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
 
  []
 
@@ -1247,25 +1247,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1130 \end{document}
-                      [9] (./Response.aux)
+l.1135 \end{document}
+                      [9] (./Paper_Res.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Response.out' has not changed.
+Package rerunfilecheck Info: File `Paper_Res.out' has not changed.
 (rerunfilecheck)             Checksum: 681FF6E683C8F38740CE650202AC8853;4962.
  ) 
 Here is how much of TeX's memory you used:
  14776 strings out of 478994
- 226220 string characters out of 5858183
- 567744 words of memory out of 5000000
+ 226238 string characters out of 5858183
+ 567746 words of memory out of 5000000
  31867 multiletter control sequences out of 15000+600000
  446873 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,21n,74p,1766b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,21n,74p,1767b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm12
 .600pk>{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/loc
@@ -1285,7 +1285,7 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Response.pdf (30 pages, 950860 bytes).
+Output written on Paper_Res.pdf (30 pages, 950943 bytes).
 PDF statistics:
  880 PDF objects out of 1000 (max. 8388607)
  712 compressed objects within 8 object streams
