@@ -61,6 +61,13 @@ L.~Wu, P.~Sun, H.~Chen, Y.~Zuo, Y.~Zhou, and Y.~Yang, ``{NOMA}-enabled
   based approach,'' \emph{IEEE Trans. Netw. Sci. Eng.}, vol.~11, no.~2, pp.
   2170--2181, Mar 2024.
 
+\bibitem[Mnih et~al.(2015)Mnih, Kavukcuoglu, Silver, Rusu, Veness, Bellemare,
+  Graves, Riedmiller, Fidjeland, Ostrovski, et~al.]{mnih2015human}
+V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~A. Rusu, J.~Veness, M.~G. Bellemare,
+  A.~Graves, M.~Riedmiller, A.~K. Fidjeland, G.~Ostrovski \emph{et~al.},
+  ``Human-level control through deep reinforcement learning,'' \emph{Nature},
+  vol. 518, no. 7540, pp. 529--533, Feb 2015.
+
 \bibitem[Arulkumaran et~al.(2017)Arulkumaran, Deisenroth, Brundage, and
   Bharath]{arulkumaran2017deep}
 K.~Arulkumaran, M.~P. Deisenroth, M.~Brundage, and A.~A. Bharath, ``Deep
@@ -217,12 +224,12 @@ Y.~Li, B.~Yang, H.~Wu, Q.~Han, C.~Chen, and X.~Guan, ``Joint offloading
   contract-stackelberg approach,'' \emph{IEEE Internet Things J.}, vol.~9,
   no.~17, pp. 15\,969--15\,982, 2022.
 
-\bibitem[Mnih et~al.(2015)Mnih, Kavukcuoglu, Silver, Rusu, Veness, Bellemare,
-  Graves, Riedmiller, Fidjeland, Ostrovski, et~al.]{mnih2015human}
-V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~A. Rusu, J.~Veness, M.~G. Bellemare,
-  A.~Graves, M.~Riedmiller, A.~K. Fidjeland, G.~Ostrovski \emph{et~al.},
-  ``Human-level control through deep reinforcement learning,'' \emph{Nature},
-  vol. 518, no. 7540, pp. 529--533, Feb 2015.
+\bibitem[Wang et~al.(2016)Wang, Schaul, Hessel, Hasselt, Lanctot, and
+  Freitas]{wang2016dueling}
+Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
+  ``Dueling network architectures for deep reinforcement learning,'' in
+  \emph{Proc. of International Conference on Machine Learning}.\hskip 1em plus
+  0.5em minus 0.4em\relax New York, NY, Jun 2016.
 
 \bibitem[Hochreiter and Schmidhuber(1997)]{hochreiter1997long}
 S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' \emph{Neural
@@ -238,12 +245,5 @@ X.~Qiu, W.~Zhang, W.~Chen, and Z.~Zheng, ``Distributed and collective deep
 A.~Parekh and R.~G. Gallager, ``A generalized processor sharing approach to
   flow control in integrated services networks: {The} single-node case,''
   \emph{IEEE/ACM Trans. Netw}, vol.~1, no.~3, pp. 344--357, Jun 1993.
-
-\bibitem[Wang et~al.(2016)Wang, Schaul, Hessel, Hasselt, Lanctot, and
-  Freitas]{wang2016dueling}
-Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
-  ``Dueling network architectures for deep reinforcement learning,'' in
-  \emph{Proc. of International Conference on Machine Learning}.\hskip 1em plus
-  0.5em minus 0.4em\relax New York, NY, Jun 2016.
 
 \end{thebibliography}
