@@ -784,12 +784,12 @@ where $p_j^{\text{E}}$ is a constant value which denotes the energy consumption 
 
 In addition to the energy consumed by EN $j$ for task processing, we also take into account the energy consumed by the MD $i$'s user interface in the standby state while waiting for task completion at the EN $j$. We define $E_{i,j}^{\text{I}}(t)$ as the energy consumption associated with the user interface of MD $i \in \mathcal{I}$, which is given by
 \begin{alignat}{1}
-	E_i^{\text{I}}(t) = D_{i,j}^{\text{E}}(t) p_i^{\text{I}} \tau, %= {\lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over \mathcal{B}_j(t) f_j^{\text{E}}} p_i^{\text{I}},
+	E_i^{\text{I}}(t) = \textcolor{blue}{\sum_{\mathcal{J}} y_{i,j}(t)} D_{i,j}^{\text{E}}(t) p_i^{\text{I}} \tau, %= {\lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over \mathcal{B}_j(t) f_j^{\text{E}}} p_i^{\text{I}},
 	\label{16}
 \end{alignat}
 where $p_i^{\text{I}}$ is the standby energy consumption of MD $i \in \mathcal{I}$.
 \begin{alignat}{1}
-	E_i^{\text{O}}(t) = E_i^{\text{T}}(t) + \sum_{\mathcal{J}} E_{i,j}^{\text{E}}(t) + E_i^{\text{I}}(t).
+	E_i^{\text{O}}(t) = E_i^{\text{T}}(t) + \sum_{\mathcal{J}} \textcolor{blue}{y_{i,j}(t)} E_{i,j}^{\text{E}}(t) + E_i^{\text{I}}(t).
 	\label{17}
 \end{alignat}
 
@@ -1024,7 +1024,7 @@ In the next time slot $t+1$, MD $i$ observes the state $\mathcal{S}_i(t+1)$. How
 
 $\mathcal{F}_i^t =\bigg \{ t' \bigg|\; t' \leq t,\; \lambda_i(t')>0, \; (1 - x_i(t')) \; l_i^{\text{C}}(t') \; + $ \vspace{-3mm}
 \begin{equation}
-	\hspace{20mm} x_i(t')\sum\limits_{\mathcal{J}} \sum\limits_{n= t'}^{t}\mathbbm{1}(z_{i,j}^{\text{E}}(n)=z_i(t'))  \; l_{i,j}^{\text{E}}(n) = t \bigg\}.
+	\hspace{10mm} x_i(t')\sum\limits_{\mathcal{J}} \sum\limits_{n= t'}^{t}\mathbbm{1}(z_{i,j}^{\text{E}}(n)=z_i(t'))  \; \textcolor{blue}{y_{i,j}(x)} \, l_{i,j}^{\text{E}}(n) = t \bigg\}.
 	\label{27}  
 	\nonumber
 \end{equation}

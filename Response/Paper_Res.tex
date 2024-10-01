@@ -973,19 +973,37 @@ We have also revised the motivation and contributions subsection, as below.
 \item \underline{Reviewer's Comment}: 
 \textit{``Please highlight what and how the proposed approach provides "high performance" to further specify the motivations and contributions. Especially, please highlight the reason why the authors design the framework by integrating LSTM. Otherwise, it will make the innovations seem weak.''} \newline
 
+\underline{Authors' Reply}:\\
+
+		\begin{my}{1cm}{1cm}
+	\rev{
+		{\dots\
+
+Our main contributions are summarized as follows:
+
+\begin{itemize}
+	\item \textit{Task Offloading Problem in the MEC System:} We formulate the task offloading problem in queuing-based MEC as an MDP for time-sensitive tasks, taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). This approach concentrates on providing high performance in the MEC system while maximizing the long-term QoE, by effectively utilizing the capabilities of resources and handling the dynamic nature of workload at ENs. \vspace{2mm}
+	
+	
+	\item \textit{DRL-based Offloading Algorithm:} To address the problem of long-term QoE maximization, we focus on task completion, task delay, and energy consumption to quantify the MDs' QoE. We propose QECO algorithm based on DRL that empowers each MD to make offloading decisions independently, without prior knowledge of the other MDs' tasks and offloading models. With a focus on the MD's energy level, our approach leverages dueling double deep Q-network (D3QN) \cite{wang2016dueling} to prioritize and strike an appropriate balance between QoE factors. To handle the uncertainty of workloads at ENs, we integrate long short-term memory (LSTM) \cite{hochreiter1997long} into D3QN, enabling MDs to forecast ENs' workloads over time and improve the estimation of long-term QoE. Additionally, we provide an analysis of the training convergence and computational complexity of the proposed algorithm. \vspace{2mm}
+	
+	
+	\item \textit{Performance Evaluation:} We conduct comprehensive experiments to evaluate the QECO's performance as well as its training convergence under different computation workloads. The results demonstrate that our algorithm quickly converges compired to DQN and D3QN methods and effectively utilizes the processing capabilities of MDs and ENs, resulting in substantial improvement of at least 37\% in average QoE. This advantage is achieved through a 14\% increase in the number of completed tasks, along with 11.7\% and 10.7\% reductions in task delay and energy consumption, respectively, when compared to the distributed and collective DRL-based offloading algorithm (DCDRL) \cite{qiu2020distributed} and several benchmark methods.
+	
+	
+\end{itemize}}}
+\end{my}
+
+And also
 
 
-
+\item \underline{Reviewer's Comment}: 
+\textit{``(a) In section III, why is the size of the task selected from a discrete set? Is it selected randomly or in another way? Besides, (b) the authors define the offloading indicate function as $y_{i,j}(t)$, it should be involved when modelling the Edge Execution phrase.''} \newline
 
 \underline{Authors' Reply}:\\
 
 \item \underline{Reviewer's Comment}: 
-\textit{``In section III, why is the size of the task selected from a discrete set? Is it selected randomly or in another way? Besides, the authors define the offloading indicate function as $y_{i,j}(t)$, it should be involved when modelling the Edge Execution phrase.''} \newline
-
-\underline{Authors' Reply}:\\
-
-\item \underline{Reviewer's Comment}: 
-\textit{``Some sota methods (e.g., DDQN, DDPG) are expected to be compared in the section on performance evaluation, and authors should have more discussions about the evaluation results rather than merely introducing them. \textcolor{red}{Besides, I think it is better to design the evaluations with a real dataset. Besides, 9\% and 6\% are not significant improvements compared to other methods.''}} \newline
+\textit{``Some sota methods (e.g., DDQN, DDPG) are expected to be compared in the section on performance evaluation, \textcolor{red}{and authors should have more discussions about the evaluation results rather than merely introducing them. Besides, I think it is better to design the evaluations with a real dataset. Besides, 9\% and 6\% are not significant improvements compared to other methods.''}} \newline
 
 \underline{Authors' Reply}:\\
 
