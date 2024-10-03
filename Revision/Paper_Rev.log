@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  1 OCT 2024 07:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  3 OCT 2024 09:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1609,7 +1609,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 587--587
  []
 
 
-Overfull \hbox (4.69247pt too wide) in paragraph at lines 587--588
+Overfull \hbox (2.34035pt too wide) in paragraph at lines 587--588
 [][]
  []
 
@@ -1631,7 +1631,7 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./queue.pdf): PDF inclusion:
 File: queue.pdf Graphic file (type pdf)
 <use queue.pdf>
 Package pdftex.def Info: queue.pdf  used on input line 681.
-(pdftex.def)             Requested size: 226.79846pt x 80.52844pt.
+(pdftex.def)             Requested size: 252.0pt x 89.47887pt.
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
@@ -1641,8 +1641,8 @@ Package amsmath Warning: Foreign command \over;
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.753 \end{alignat}
-                    <./queue.pdf>]
+l.750 \begin{alignat}{1}
+                         <./queue.pdf>]
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 770
 .
 
@@ -1652,7 +1652,7 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./DQN.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<DQN.pdf, id=341, 902.41138pt x 529.01637pt>
+<DQN.pdf, id=343, 902.41138pt x 529.01637pt>
 File: DQN.pdf Graphic file (type pdf)
 <use DQN.pdf>
 Package pdftex.def Info: DQN.pdf  used on input line 912.
@@ -1700,13 +1700,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1089--1091
  []
 
 
-Package natbib Warning: Citation `30' on page 9 undefined on input line 1124.
-
-
-Package natbib Warning: Citation `32' on page 9 undefined on input line 1124.
-
-
-Overfull \hbox (3.02156pt too wide) in paragraph at lines 1169--1171
+Overfull \hbox (3.02156pt too wide) in paragraph at lines 1139--1141
 [][]
  []
 
@@ -1714,118 +1708,114 @@ Overfull \hbox (3.02156pt too wide) in paragraph at lines 1169--1171
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1207 
+l.1155 
        ]
-<completed_tasks_2.pdf, id=424, 453.695pt x 436.63126pt>
-File: completed_tasks_2.pdf Graphic file (type pdf)
-<use completed_tasks_2.pdf>
-Package pdftex.def Info: completed_tasks_2.pdf  used on input line 1216.
-(pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<completed_tasks_1.pdf, id=425, 453.695pt x 436.63126pt>
-File: completed_tasks_1.pdf Graphic file (type pdf)
-<use completed_tasks_1.pdf>
-Package pdftex.def Info: completed_tasks_1.pdf  used on input line 1222.
-(pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<energy_1.pdf, id=426, 453.695pt x 437.635pt>
+<drop_1.pdf, id=424, 515.9275pt x 462.72874pt>
+File: drop_1.pdf Graphic file (type pdf)
+<use drop_1.pdf>
+Package pdftex.def Info: drop_1.pdf  used on input line 1210.
+(pdftex.def)             Requested size: 126.0pt x 113.0059pt.
+<drop_2.pdf, id=425, 514.92375pt x 462.72874pt>
+File: drop_2.pdf Graphic file (type pdf)
+<use drop_2.pdf>
+Package pdftex.def Info: drop_2.pdf  used on input line 1216.
+(pdftex.def)             Requested size: 126.0pt x 113.2248pt.
+<energy_1.pdf, id=426, 513.92pt x 462.72874pt>
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
-Package pdftex.def Info: energy_1.pdf  used on input line 1236.
-(pdftex.def)             Requested size: 126.0pt x 121.5353pt.
-<energy_2.pdf, id=427, 453.695pt x 436.63126pt>
+Package pdftex.def Info: energy_1.pdf  used on input line 1232.
+(pdftex.def)             Requested size: 126.0pt x 113.44366pt.
+<energy_2.pdf, id=427, 515.9275pt x 462.72874pt>
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
-Package pdftex.def Info: energy_2.pdf  used on input line 1242.
-(pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<delay_1.pdf, id=428, 454.69875pt x 436.63126pt>
+Package pdftex.def Info: energy_2.pdf  used on input line 1238.
+(pdftex.def)             Requested size: 126.0pt x 113.0059pt.
+<delay_1.pdf, id=428, 515.9275pt x 463.7325pt>
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
-Package pdftex.def Info: delay_1.pdf  used on input line 1254.
-(pdftex.def)             Requested size: 126.0pt x 120.99005pt.
-<delay_2.pdf, id=429, 452.69125pt x 436.63126pt>
+Package pdftex.def Info: delay_1.pdf  used on input line 1250.
+(pdftex.def)             Requested size: 126.0pt x 113.25104pt.
+<delay_2.pdf, id=429, 515.9275pt x 462.72874pt>
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
-Package pdftex.def Info: delay_2.pdf  used on input line 1260.
-(pdftex.def)             Requested size: 126.0pt x 121.52971pt.
-<qoe_1.pdf, id=430, 453.695pt x 436.63126pt>
-File: qoe_1.pdf Graphic file (type pdf)
-<use qoe_1.pdf>
-Package pdftex.def Info: qoe_1.pdf  used on input line 1272.
-(pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<qoe_2.pdf, id=431, 453.695pt x 436.63126pt>
+Package pdftex.def Info: delay_2.pdf  used on input line 1256.
+(pdftex.def)             Requested size: 126.0pt x 113.0059pt.
+<qoe_2.pdf, id=430, 515.9275pt x 462.72874pt>
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
-Package pdftex.def Info: qoe_2.pdf  used on input line 1278.
-(pdftex.def)             Requested size: 126.0pt x 121.25655pt.
+Package pdftex.def Info: qoe_2.pdf  used on input line 1268.
+(pdftex.def)             Requested size: 126.0pt x 113.0059pt.
+<qoe_1.pdf, id=431, 515.9275pt x 462.72874pt>
+File: qoe_1.pdf Graphic file (type pdf)
+<use qoe_1.pdf>
+Package pdftex.def Info: qoe_1.pdf  used on input line 1274.
+(pdftex.def)             Requested size: 126.0pt x 113.0059pt.
  [10pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1293 
+l.1299 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1293 
+l.1299 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1293 
+l.1299 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1293 
-        <./completed_tasks_2.pdf> <./completed_tasks_1.pdf> <./energy_1.pdf> <.
-/energy_2.pdf> <./delay_1.pdf> <./delay_2.pdf> <./qoe_1.pdf> <./qoe_2.pdf>]
-<m1.pdf, id=594, 947.54pt x 419.5675pt>
+l.1299 
+        <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf> <./dela
+y_1.pdf> <./delay_2.pdf> <./qoe_2.pdf> <./qoe_1.pdf>]
+<m1.pdf, id=614, 938.50626pt x 433.62pt>
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1318.
-(pdftex.def)             Requested size: 239.39923pt x 106.00557pt.
-<m2.pdf, id=595, 516.93124pt x 357.335pt>
+Package pdftex.def Info: m1.pdf  used on input line 1323.
+(pdftex.def)             Requested size: 226.79846pt x 104.7855pt.
+<m2.pdf, id=615, 512.91624pt x 369.38pt>
 File: m2.pdf Graphic file (type pdf)
 <use m2.pdf>
-Package pdftex.def Info: m2.pdf  used on input line 1333.
-(pdftex.def)             Requested size: 126.0pt x 87.098pt.
-<m3.pdf, id=596, 509.905pt x 357.335pt>
+Package pdftex.def Info: m2.pdf  used on input line 1338.
+(pdftex.def)             Requested size: 126.0pt x 90.73842pt.
+<m3.pdf, id=616, 512.91624pt x 369.38pt>
 File: m3.pdf Graphic file (type pdf)
 <use m3.pdf>
-Package pdftex.def Info: m3.pdf  used on input line 1339.
-(pdftex.def)             Requested size: 126.0pt x 88.29755pt.
-
-(./Paper_Rev.bbl [11pdfTeX warning (ext4): destination with the same identifier
- (name{figure.7}) has been already used, duplicate ignored
+Package pdftex.def Info: m3.pdf  used on input line 1344.
+(pdftex.def)             Requested size: 126.0pt x 90.73842pt.
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
+) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.30 ...n, Li, Zeng, Luo, and Zhang]{zhou2019edge}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.8}) has been already used, duplicat
-e ignored
+l.1361 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.30 ...n, Li, Zeng, Luo, and Zhang]{zhou2019edge}
-                                                   <./m1.pdf> <./m2.pdf> <./m3.
-pdf>])
+l.1361 
+        <./m1.pdf> <./m2.pdf> <./m3.pdf>] (./Paper_Rev.bbl [12]) [13
 
-Package natbib Warning: There were undefined citations.
-
-[12] (./Paper_Rev.aux
-* soulpos - computing points - it may take a few seconds *
+]
+(./Paper_Rev.aux * soulpos - computing points - it may take a few seconds *
 \openout3 = `Paper_Rev.upb'.
 
- (./Paper_Rev.upa))
+
+(./Paper_Rev.upa))
 Package rerunfilecheck Info: File `Paper_Rev.out' has not changed.
 (rerunfilecheck)             Checksum: 0FF535AA68A2A7FF212315F4F8FA7458;4541.
  ) 
 Here is how much of TeX's memory you used:
- 40830 strings out of 478994
- 793288 string characters out of 5858183
- 1257657 words of memory out of 5000000
- 56810 multiletter control sequences out of 15000+600000
+ 40847 strings out of 478994
+ 793579 string characters out of 5858183
+ 1258666 words of memory out of 5000000
+ 56822 multiletter control sequences out of 15000+600000
  567745 words of font info for 544 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 94i,23n,117p,2038b,949s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,23n,117p,2038b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10
 .600pk>{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/texli
@@ -1854,10 +1844,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on Paper_Rev.pdf (12 pages, 1224465 bytes).
+Output written on Paper_Rev.pdf (13 pages, 1223181 bytes).
 PDF statistics:
- 799 PDF objects out of 1000 (max. 8388607)
- 615 compressed objects within 7 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 824 PDF objects out of 1000 (max. 8388607)
+ 639 compressed objects within 7 object streams
+ 130 named destinations out of 1000 (max. 500000)
  129310 words of extra memory for PDF output out of 154059 (max. 10000000)
 

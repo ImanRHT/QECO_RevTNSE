@@ -461,7 +461,7 @@
 \fi
 
 \begin{abstract}
-In the realm of mobile edge computing (MEC), efficient computation task offloading plays a pivotal role in ensuring a seamless quality of experience (QoE) for users. Maintaining a high QoE is paramount in today's interconnected world, where users demand reliable services. This challenge stands as one of the most primary key factors contributing to handling dynamic and uncertain mobile environment. In this study, we delve into computation offloading in MEC systems, where strict task processing deadlines and energy constraints can adversely affect the system performance. We formulate the computation task offloading problem as a Markov decision process (MDP) to maximize the long-term QoE of each user individually. We propose a distributed QoE-oriented computation offloading (QECO) algorithm based on deep reinforcement learning (DRL) that empowers mobile devices to make their offloading decisions without requiring knowledge of decisions made by other devices. Through numerical studies, we evaluate the performance of QECO. \textcolor{teal}{Simulation results with 50 mobile devices and 5 edge nodes validate that the QECO algorithm is able to efficiently recognize the mobile devices' demands and exploit the computational resources of edge nodes. Consequently, it can achieve a significant improvement of 37\% -- 75\% in average QoE compared to several benchmark methods and an existing work.}
+In the realm of mobile edge computing (MEC), efficient computation task offloading plays a pivotal role in ensuring a seamless quality of experience (QoE) for users. Maintaining a high QoE is paramount in today's interconnected world, where users demand reliable services. This challenge stands as one of the most primary key factors contributing to handling dynamic and uncertain mobile environment. In this study, we delve into computation offloading in MEC systems, where strict task processing deadlines and energy constraints can adversely affect the system performance. We formulate the computation task offloading problem as a Markov decision process (MDP) to maximize the long-term QoE of each user individually. We propose a distributed QoE-oriented computation offloading (QECO) algorithm based on deep reinforcement learning (DRL) that empowers mobile devices to make their offloading decisions without requiring knowledge of decisions made by other devices. Through numerical studies, we evaluate the performance of QECO. \textcolor{blue}{Simulation results with 50 mobile devices and 5 edge nodes validate that the QECO algorithm is able to efficiently recognize the mobile devices' demands and exploit the computational resources of edge nodes. Consequently, it can achieve a significant improvement of 34.8\% -- 75.6\% in average QoE compared to several benchmark methods and an existing work.}
 
 %\textcolor{red}{Consequently, it can complete 14\% more tasks and reduce task delay and energy consumption by 10.7\% and 11.7\%, respectively. These together contribute to a significant improvement of at least 37\% in average QoE compared to an existing algorithm.}
 \end{abstract}
@@ -575,7 +575,7 @@ In \cite{huang2021deadline}, Huang \textit{et al.} proposed a DRL-based method b
 				\cite{dai2020edge} & MEC & Resource allocation and computation offloading & Minimize energy consumption & MDP & DDPG & Not take user's demand into consideration \\\midrule
 				\cite{liu2021learn} & MEC & Resource allocation and computation offloading & Minimize execution cost & POMDP & Multi-agent actor-critic network &  Not consider delay-sensitive tasks \\\midrule
 				\cite{gong2022edge} & MEC-based IIoT & Resource allocation and computation offloading & Minimize task computation delay and energy consumption & MDP & DRL & Not take user's demand into consideration\\\midrule
-				\cite{gao2022large} ---& Queuing-based heterogeneous MEC & Decentralized computation offloading & Optimize system cost and completion rates & MDP & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
+				\cite{gao2022large} & Queuing-based heterogeneous MEC & Decentralized computation offloading & Optimize system cost and completion rates & MDP & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
 				\cite{9253665} &  Queuing-based MEC &  Computation offloading & Minimize drop rate and computation delay. & MDP & D3QN + LSTM & Not consider system energy consumtion\\\midrule
 				\cite{wu2024combining} & Queuing-based IIoT MEC & Privacy aware computation offloading & Optimization of computation rate and energy consumption & MDP & Actor-critic network  & Not take user's demand into consideration \\\midrule
 				\cite{wu2023multi} & Queuing-based IIoT MEC & Computation offloading & Optimize delay and energy consumption & POMDP & Multi-agent DQN&  Not consider tasks with maximum delay tolerance \\\midrule
@@ -621,13 +621,13 @@ In this study, we delve into the computation task offloading problem in MEC syst
 Our main contributions are summarized as follows:
 
 \begin{itemize}
-	 \item \textit{Task Offloading Problem in the MEC System:} \textcolor{purple}{ We formulate the task offloading problem in queuing-based MEC as an MDP for time-sensitive tasks, taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). This approach concentrates on providing high performance in the MEC system while maximizing the long-term QoE, by effectively utilizing the capabilities of resources and handling the dynamic nature of workload at ENs.}
+	 \item \textit{Task Offloading Problem in the MEC System:} \textcolor{blue}{ We formulate the task offloading problem in queuing-based MEC as an MDP for time-sensitive tasks, taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). This approach concentrates on providing high performance in the MEC system while maximizing the long-term QoE, by effectively utilizing the capabilities of resources and handling the dynamic nature of workload at ENs.}
 
 	
-	\item \textit{DRL-based Offloading Algorithm:} To address the problem of long-term QoE maximization, we focus on task completion, task delay, and energy consumption to quantify the MDs' QoE. We propose QECO algorithm based on DRL that empowers each MD to make offloading decisions independently, without prior knowledge of the other MDs' tasks and offloading models. \textcolor{purple}{With a focus on the MD's energy level, our approach leverages dueling double deep Q-network (D3QN) \cite{wang2016dueling} to prioritize and strike an appropriate balance between QoE factors. To handle the uncertainty of workloads at ENs, we integrate long short-term memory (LSTM) \cite{hochreiter1997long} into D3QN, enabling MDs to forecast ENs' workloads over time and improve the estimation of long-term QoE. Additionally, we provide an analysis of the training convergence and computational complexity of the proposed algorithm.}
+	\item \textit{DRL-based Offloading Algorithm:} To address the problem of long-term QoE maximization, we focus on task completion, task delay, and energy consumption to quantify the MDs' QoE. We propose QECO algorithm based on DRL that empowers each MD to make offloading decisions independently, without prior knowledge of the other MDs' tasks and offloading models. \textcolor{blue}{With a focus on the MD's energy level, our approach leverages dueling double deep Q-network (D3QN) \cite{wang2016dueling} to prioritize and strike an appropriate balance between QoE factors. To handle the uncertainty of workloads at ENs, we integrate long short-term memory (LSTM) \cite{hochreiter1997long} into D3QN, enabling MDs to forecast ENs' workloads over time and improve the estimation of long-term QoE. Additionally, we provide an analysis of the training convergence and computational complexity of the proposed algorithm.}
 
 	 
-	\item \textit{Performance Evaluation:} We conduct comprehensive experiments to evaluate the QECO's performance as well as its training convergence under different computation workloads. \textcolor{teal}{The results demonstrate that our algorithm quickly converges compired to DQN and D3QN methods and effectively utilizes the processing capabilities of MDs and ENs, resulting in substantial improvement of at least 37\% in average QoE. This advantage is achieved through a 14\% increase in the number of completed tasks, along with 11.7\% and 10.7\% reductions in task delay and energy consumption, respectively, when compared to the distributed and collective DRL-based offloading algorithm (DCDRL) \cite{qiu2020distributed} and several benchmark methods.}
+\item \textit{Performance Evaluation:} \textcolor{blue}{We conducted comprehensive experiments to evaluate QECO's performance under various computational workloads, as well as its training convergence with different techniques and hyperparameters. The results demonstrate that our algorithm effectively utilizes the processing capabilities of MDs and ENs, addressing the dynamic workloads at ENs. It converges more quickly compared to DQN and D3QN methods, while providing a substantial improvement of at least 34.8\% in average QoE. This advantage is achieved through prioritizing MD's QoE preferences, resulting in improvements of at least 12.2\%, 11.7\%, and 10.8\% in the average number of completed tasks, task delay, and energy consumption, respectively, when compared to the distributed and collective DRL-based offloading algorithm (DCDRL) \cite{qiu2020distributed} and several benchmark methods.}
 	
 
 	
@@ -678,8 +678,8 @@ We investigate a MEC system consisting of a set of MDs denoted by $\mathcal{I} =
 \begin{figure}
 	\captionsetup{name=Fig.}
 	\centering
-	\includegraphics[width=.9\linewidth]{ queue}
-	\vspace*{-1mm}
+	\includegraphics[width=1\linewidth]{ queue}
+	\vspace*{-5mm}
 	\caption{An illustration of MD $i \in \mathcal{I}$ and EN $j \in \mathcal{J}$ in the MEC system.}
 	\vspace*{-3mm}
 	\label{fig1}
@@ -744,7 +744,7 @@ To compute the MD's energy consumption in the time slot $t \in \mathcal{T}$, we 
 	E_i^{\text{L}}(t) =  D_i^{\text{C}}(t) p_i^{\text{C}}  \tau, %=  { \lambda_i(t) \rho_i(t)  \over  f_i} p_i^{\text{C}},
 	\label{8}  
 \end{alignat}
-where $p_i^{\text{C}} = 10^{-27}(f_i)^3$ represents the energy consumption of MD $i$'s CPU frequency []. %\cite{mao2016dynamic}.
+where $p_i^{\text{C}} = 10^{-27}(f_i)^3$ represents the energy consumption of MD $i$'s CPU frequency \cite{mao2016dynamic}.
 \subsubsection{Edge Execution}
 We model the edge execution by the queues associated with MDs deployed at ENs. If computation task $z_i(t')$ is dispatched to EN $j$ in time $t' < t$, we let $z_{i,j}^{\text{E}}(t)$ and $\lambda_{i,j}^{\text{E}}(t)$ (in bits) denote the unique index of the task and the size of the task in the $i^{\text{th}}$ queue at EN $j$. We define $\eta_{i,j}^{\text{E}}(t)$ (in bits) as the length of this queue at the end of time slot $t \in \mathcal{T}$. We refer to a queue as an active queue in a certain time slot if it is not empty. That being said, if at least one task is already in the queue from previous time slots or there is a task arriving at the queue, that queue is active. We define $\mathcal{B}_j(t)$ to denote the set of active queues at EN $j$ in time slot $t$.
 \begin{alignat}{1}
@@ -1099,46 +1099,16 @@ The computational complexity of the QECO algorithm is determined by the number o
 
 
 \section{Performance Evaluation}\label{section:V}
-In this section, we first present the simulation setup and training configuration. \textcolor{teal}{We then illustrate the convergence of the proposed DRL-based QECO algorithm under different optimization methods and hyperparameters, and evaluate its performance in comparison to three baseline schemes in addition to the existing work~\cite{qiu2020distributed}.}
+In this section, we first present the simulation setup and training configuration. \textcolor{blue}{We then illustrate the convergence of the proposed DRL-based QECO algorithm under different optimization methods and hyperparameters, and evaluate its performance in comparison to three baseline schemes in addition to the existing work~\cite{qiu2020distributed}.}
 
 %We begin by presenting the simulation setting and training configuration, followed by the evaluation of QECO algorithm under multiple key performance metrics in comparison to benchmark methods.
+
 
 
 \subsection{Simulation Setup}
 We consider a MEC environment with 50 MDs and 5 ENs, similar to \cite{9253665}. We also follow the model presented in \cite{zhou2021deep} to determine the energy consumption. All the parameters are given in Table~\ref{table}. To train the MDs' neural networks, we adopt a scenario comprising 1000 episodes. Each episode contains 100 time slots, each of length 0.1 second. The QECO algorithm incorporates real-time experience into its training process to continuously enhance the offloading strategy. Specifically, we employ a batch size of 16, maintain a fixed learning rate of 0.001, and set the discount factor $\gamma$ to 0.9. The probability of random exploration gradually decreases from an initial value 1, progressively approaching 0.01, all of which is facilitated by an RMSProp optimizer. \textcolor{blue}{Detailed settings regarding the neural networks and simulation can be found at our github repository.\footnote{\textcolor{blue}{The code for reproducing the simulation results of this letter is available at: \href{https://github.com/ImanRHT/QECO}{https://github.com/ImanRHT/QECO.}}}}
 
 
-
-
-%In these simulations, we first evaluate the QECO algorithm for each of the influencing QoE factors, including the number of completed tasks, overall energy consumption, and average delay. Subsequently, we demonstrate the overall improvement of QECO in terms of average QoE by comparing it against the following benchmark methods across multiple challenging scenarios.
-We use the following methods as benchmarks.
-\begin{enumerate}
-
-\item \textbf{Local Computing (LC):} The MDs execute all of their computation tasks using their own computing capacity.
-
-\item \textbf{Full Offloading (FO):} Each MD dispatches all of its computation tasks while choosing the offloading target randomly. %It leverages their complete communication capacity and the computation resources allocated to them by the EN.
-
-\item \textbf{Random Decision (RD):} In this approach, when an MD receives a new task, it randomly makes the offloading decisions and selects the offloading target if it decides to dispatch the task. %This method leverages the MD's complete computational and communication capabilities, and the computational resources allocated to it by the EN.
-
-
-\item \textcolor{teal}{\textbf{DCDRL~\cite{qiu2020distributed}:} This method is a distributed optimization algorithm designed for delay-sensitive tasks in a queuing-based MEC environment, where MDs strategically interact with multiple ENs. We select DCDRL as a benchmark due to its similarity to our work. It is based on the actor-critic framework, which underpins many state-of-the-art DRL algorithms, such as DDPG and Proximal Policy Optimization (PPO)~\cite{30,32}}
-
-
-	
-
-\end{enumerate}
-
-
-
-%In this part, we first illustrate the convergence performance of the proposed DRL-based QECO algorithm, and then we compare its performance of these two proposed methods with the fiducial methods in terms of the energy con- sumption of the system and the average delay of the task at each time slot.
-
-%In the following, we first show the convergence of the proposed algorithm across episodes. Then, we compare the performance of our proposed algorithm with the benchmark methods under different parameter settings.
-
-%In the following, we will compare the performance of the QECO algorithm with benchmark methods under two different computation workloads. This comparison will involve increasing the task arrival rate and the number of MDs.
-
-
-
-%\newpage
 
 \begin{table}
 	\renewcommand{\arraystretch}{1.2}
@@ -1170,6 +1140,38 @@ We use the following methods as benchmarks.
 	\label{table}
 \end{table}
 
+%In these simulations, we first evaluate the QECO algorithm for each of the influencing QoE factors, including the number of completed tasks, overall energy consumption, and average delay. Subsequently, we demonstrate the overall improvement of QECO in terms of average QoE by comparing it against the following benchmark methods across multiple challenging scenarios.
+We use the following methods as benchmarks.
+\begin{enumerate}
+
+\item \textbf{Local Computing (LC):} The MDs execute all of their computation tasks using their own computing capacity.
+
+\item \textbf{Full Offloading (FO):} Each MD dispatches all of its computation tasks while choosing the offloading target randomly. %It leverages their complete communication capacity and the computation resources allocated to them by the EN.
+
+\item \textbf{Random Decision (RD):} In this approach, when an MD receives a new task, it randomly makes the offloading decisions and selects the offloading target if it decides to dispatch the task. %This method leverages the MD's complete computational and communication capabilities, and the computational resources allocated to it by the EN.
+
+
+\item \textcolor{blue}{\textbf{DCDRL~\cite{qiu2020distributed}:} This method is a distributed optimization algorithm designed for delay-sensitive tasks in a queuing-based MEC environment, where MDs strategically interact with multiple ENs. We select DCDRL as a benchmark due to its similarity to our work. It is based on the actor-critic framework \cite{konda1999actor}, which underpins many state-of-the-art DRL algorithms, such as DDPG \cite{lillicrap2015continuous}, and Proximal Policy Optimization \cite{schulman2017proximal}}.
+
+
+
+	
+
+\end{enumerate}
+
+
+
+%In this part, we first illustrate the convergence performance of the proposed DRL-based QECO algorithm, and then we compare its performance of these two proposed methods with the fiducial methods in terms of the energy con- sumption of the system and the average delay of the task at each time slot.
+
+%In the following, we first show the convergence of the proposed algorithm across episodes. Then, we compare the performance of our proposed algorithm with the benchmark methods under different parameter settings.
+
+%In the following, we will compare the performance of the QECO algorithm with benchmark methods under two different computation workloads. This comparison will involve increasing the task arrival rate and the number of MDs.
+
+
+
+%\newpage
+
+
 \subsection{Performance Comparison and Convergence}
 \label{section:2}
 
@@ -1195,37 +1197,31 @@ We use the following methods as benchmarks.
 
 
 
-%This represents a notable enhancement of 77\% and 16\% over LC and PGOA, respectively. This improvement is attributed to our algorithm's ability to reduce each user-associated cost regarding \eqref{28}, while striving to increase the number of completed tasks. As shown in Figs. \ref{chart0} (b), the converged QECO algorithm decreases the average cost by 38\% compared to RD and 25\% compared to PGOA.
+%This represents a notable enhancement of 77\% and 16\% over LC and DCDRL, respectively. This improvement is attributed to our algorithm's ability to reduce each user-associated cost regarding \eqref{28}, while striving to increase the number of completed tasks. As shown in Figs. \ref{chart0} (b), the converged QECO algorithm decreases the average cost by 38\% compared to RD and 25\% compared to DCDRL.
 
 
 %\subsection{Method Comparison}
 %In this part, we first investigate the performance of the proposed DRL-based algorithm under different computation workloads in comparison to benchmark methods across several key performance metrics, including the number of completed tasks, average delay, and energy consumption in the entire system. Then, we evaluate the average QoE of users, which is a balance among these metrics with meticulous attention to users' demands.
 
-
-We first evaluate the number of completed tasks when comparing our proposed QECO algorithm with the other four schemes. As illustrated in Fig.~\ref{chart1} (a), the QECO algorithm consistently outperforms the benchmark methods when we vary the task arrival rate. At a lower task arrival rate (i.e., 50), most of the methods demonstrate similar proficiency in completing tasks. However, as the task arrival rate increases, the efficiency of QECO becomes more evident. Specifically, when the task arrival rate increases to 250, our algorithm can increase the number of completed tasks by 73\% and 47\% compared to RD and PGOA, respectively.
-Similarly, in Fig.~\ref{chart1} (b), as the number of MDs increases, QECO shows significant improvements in the number of completed tasks compared to other methods, especially when faced with a large number of MDs. When there are 110 MDs, our proposed algorithm can effectively increase the number of completed tasks by at least 34\% comparing with other methods. This achievement is attributed to the QECO's ability to effectively handle unknown workloads and prevent congestion at the ENs.
-
-Figs.~\ref{chart2} (a) and ~\ref{chart2} (b) illustrate the overall energy consumption for different values of task arrival rate and the number of MDs, respectively. At the lower task arrival rate, the total energy consumption of all methods is close to each other. The total energy consumption increases when we have a higher task arrival rate.  
-%When the task arrival rate increases, the total energy consumption of each method increases differently. It can be found that the production of more computational tasks leads to a continuous increase in energy consumption until the capacity is saturated, and the energy consumption remains constant at its maximum. The QECO algorithm takes into account the battery level of the MD in its decision-making process. 
-As can be observed from Fig.~\ref{chart2} (a), at task arrival rate 450, QECO effectively reduces overall energy consumption by 18\% and 15\% compared to RD and PGOA, respectively, as it takes into account the \textcolor{blue}{energy level} of the MD in its decision-making process. However, it consumes more energy compared to LC and FO because they do not utilize all computing resources. In particular, LC only uses the MD's computational resources, while FO utilizes the allocated EN computing resources.
-
  \begin{figure}[tbp]
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.5\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{ completed_tasks_2} 
+		\includegraphics[width=\textwidth]{ drop_1} 
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
 	\begin{minipage}[b]{0.5\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{ completed_tasks_1}
+		\includegraphics[width=\textwidth]{ drop_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
 	\end{minipage}
 	\vspace{-0.65cm}
 	\caption{\textcolor{blue}{The number of completed tasks under different computation workloads: (a) task arrival rate; (b) the number of MDs.}}
 	\label{chart1}
 \end{figure}
+
+
 
 
 
@@ -1269,13 +1265,13 @@ As can be observed from Fig.~\ref{chart2} (a), at task arrival rate 450, QECO ef
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.50\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{ qoe_1} 		
+		\includegraphics[width=\textwidth]{ qoe_2} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
 	\begin{minipage}[b]{0.50\linewidth}
 		\centering
-		\includegraphics[width=\textwidth]{ qoe_2}
+		\includegraphics[width=\textwidth]{ qoe_1}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
 	\end{minipage}
 	\vspace{-0.7cm}
@@ -1283,39 +1279,48 @@ As can be observed from Fig.~\ref{chart2} (a), at task arrival rate 450, QECO ef
 	\label{chart4}
 \end{figure} 
 
- 
+
+
+We first evaluate the number of completed tasks when comparing our proposed QECO algorithm with the other four schemes. As illustrated in Fig.~\ref{chart1} (a), the QECO algorithm consistently outperforms the benchmark methods when we vary the task arrival rate. At a lower task arrival rate (i.e., 50), most of the methods demonstrate similar proficiency in completing tasks. However, as the task arrival rate increases, the efficiency of QECO becomes more evident. Specifically, when the task arrival rate increases to 250, our algorithm can increase the number of completed tasks by 69.8\% and 29.6\% compared to RD and DCDRL, respectively.
+Similarly, in Fig.~\ref{chart1} (b), as the number of MDs increases, QECO shows significant improvements in the number of completed tasks compared to other methods, especially when faced with a large number of MDs. When there are 110 MDs, our proposed algorithm can effectively increase the number of completed tasks by at least 24.8\% comparing with other methods. This achievement is attributed to the QECO's ability to effectively handle unknown workloads and prevent congestion at the ENs.
+
+Figs.~\ref{chart2} (a) and ~\ref{chart2} (b) illustrate the overall energy consumption for different values of task arrival rate and the number of MDs, respectively. At the lower task arrival rate, the total energy consumption of all methods is close to each other. The total energy consumption increases when we have a higher task arrival rate.  
+%When the task arrival rate increases, the total energy consumption of each method increases differently. It can be found that the production of more computational tasks leads to a continuous increase in energy consumption until the capacity is saturated, and the energy consumption remains constant at its maximum. The QECO algorithm takes into account the battery level of the MD in its decision-making process. 
+As can be observed from Fig.~\ref{chart2} (a), at task arrival rate 450, QECO effectively reduces overall energy consumption by 18.6\% and 16.2\% compared to RD and DCDRL, respectively, as it takes into account the \textcolor{blue}{energy level} of the MD in its decision-making process. However, it consumes more energy compared to LC and FO because they do not utilize all computing resources. In particular, LC only uses the MD's computational resources, while FO utilizes the allocated EN computing resources. -------
 
 
 
-In Fig.~\ref{chart2} (b), an increasing trend in overall energy consumption is observed as the number of MDs increases since the number of resources available in the system increases, which leads to higher energy consumption. The QECO algorithm consistently outperforms RD and PGOA methods in overall energy consumption, especially when there are a large number of MDs. Specifically, QECO demonstrates a 27\% and 16\% reduction in overall energy consumption compared to RD and PGOA, respectively, when the number of MDs increases to 110.
 
-As shown in Fig.~\ref{chart3} (a), the QECO algorithm maintains a lower average delay compared to other methods as the task arrival rate increases from 50 to 350. Specifically, when the task arrival rate is 200, it reduces the average delay by at least 12\% compared to other methods. However, for task arrival rates exceeding 350, QECO may experience a higher average delay compared to some of the other methods. This can be attributed to the fact that the other algorithms drop more tasks while our proposed algorithm is capable of completing a higher number of tasks, potentially leading to an increase in average delay. In Fig.~\ref{chart3} (b), as the number of MDs increases, we observe a rising trend in the average delay. It can be inferred that an increase in computational load in the system can lead to higher queuing delays and computations at ENs. Considering the QECO's ability to schedule workloads, when the number of MDs increases from 30 to 110, it consistently maintains a lower average delay which is at least 8\% less than the other methods.
 
-%Fig. 6 illustrates a performance comparison of methods in terms of energy consumption in the entire system, considering an increase in the task arrival rate and the number of MDs. With efficient decision-making, the DRL-based algorithm achieves lower energy consumption in both cases compared to RD and PGOA. However, it consumes more energy compared to LC and FC. This is because LC only utilizes the MD's computational resources, and FC solely utilizes the transmission link. In Fig. 6(a), when the task arrival rate is low, the energy consumption of all methods is close to each other, and as the task arrival rate increases, the energy consumption of each method also increases. It can be observed that the generation of more computational tasks leads to a continuous increase in energy consumption. When the task arrival rate increases from 0.1 to 0.9, the DRL-based algorithm increases by 20\%, while RD and PGOA increase by at least 30\%. Similarly, in Fig. 6(b), the DRL-based algorithm effectively reduces energy consumption, especially when the number of MDs is large.The DRL-based algorithm demonstrates a 15\% reduction in energy consumption compared to RD and a 30\% reduction compared to PGOA as the number of MDs increases to 110.
+
+In Fig.~\ref{chart2} (b), an increasing trend in overall energy consumption is observed as the number of MDs increases since the number of resources available in the system increases, which leads to higher energy consumption. The QECO algorithm consistently outperforms RD and DCDRL methods in overall energy consumption, especially when there are a large number of MDs. Specifically, QECO demonstrates a 27.4\% and 20.5\% reduction in overall energy consumption compared to RD and DCDRL, respectively, when the number of MDs increases to 110.
+
+As shown in Fig.~\ref{chart3} (a), the QECO algorithm maintains a lower average delay compared to other methods as the task arrival rate increases from 50 to 350. Specifically, when the task arrival rate is 200, it reduces the average delay by at least 12.4\% compared to other methods. However, for task arrival rates exceeding 350, QECO may experience a higher average delay compared to some of the other methods. This can be attributed to the fact that the other algorithms drop more tasks while our proposed algorithm is capable of completing a higher number of tasks, potentially leading to an increase in average delay. In Fig.~\ref{chart3} (b), as the number of MDs increases, we observe a rising trend in the average delay. It can be inferred that an increase in computational load in the system can lead to higher queuing delays and computations at ENs. Considering the QECO's ability to schedule workloads, when the number of MDs increases from 30 to 110, it consistently maintains a lower average delay which is at least 10.8\% less than the other methods.
+
+%Fig. 6 illustrates a performance comparison of methods in terms of energy consumption in the entire system, considering an increase in the task arrival rate and the number of MDs. With efficient decision-making, the DRL-based algorithm achieves lower energy consumption in both cases compared to RD and DCDRL. However, it consumes more energy compared to LC and FC. This is because LC only utilizes the MD's computational resources, and FC solely utilizes the transmission link. In Fig. 6(a), when the task arrival rate is low, the energy consumption of all methods is close to each other, and as the task arrival rate increases, the energy consumption of each method also increases. It can be observed that the generation of more computational tasks leads to a continuous increase in energy consumption. When the task arrival rate increases from 0.1 to 0.9, the DRL-based algorithm increases by 20\%, while RD and DCDRL increase by at least 30\%. Similarly, in Fig. 6(b), the DRL-based algorithm effectively reduces energy consumption, especially when the number of MDs is large.The DRL-based algorithm demonstrates a 15\% reduction in energy consumption compared to RD and a 30\% reduction compared to DCDRL as the number of MDs increases to 110.
 
 %In the following, we delve into the investigation of the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE as the task arrival rate and the number of MDs increase. This metric signifies the average advantage created by each method for MDs, including a combination of the values of the previously evaluated metrics (task completion, delay, energy consumption) according to the demands of MDs.
 
-%The average QoE comparison in Fig.~\ref{chart4} (a) indicates the superiority of the QECO algorithm in providing MDs with a better experience. By taking into account the specific demands of MDs for each key performance metric, it consistently achieves a higher average QoE across various values of arrival task rates when compared to other methods. Specifically, when the task arrival rate is moderate (i.e., 250), QECO increases the average QoE by 57\% and 33\% compared to RD and PGOA, respectively. In Fig.~\ref{chart4} (b), As the number of MDs increases, the potential workload on the ENs also rises, leading to a decrease in the average QoE for each method (excluding LC). It can be observed that an increase in the ENs' workload leads to a reduction in the allocated computing capacity for MDs, resulting in a decrease in the average QoE. However, QECO effectively manages the uncertain load at the ENs. When the number of MDs increases to 90, it increases the average QoE by at least 29\% more than the other methods.
+%The average QoE comparison in Fig.~\ref{chart4} (a) indicates the superiority of the QECO algorithm in providing MDs with a better experience. By taking into account the specific demands of MDs for each key performance metric, it consistently achieves a higher average QoE across various values of arrival task rates when compared to other methods. Specifically, when the task arrival rate is moderate (i.e., 250), QECO increases the average QoE by 57\% and 33\% compared to RD and DCDRL, respectively. In Fig.~\ref{chart4} (b), As the number of MDs increases, the potential workload on the ENs also rises, leading to a decrease in the average QoE for each method (excluding LC). It can be observed that an increase in the ENs' workload leads to a reduction in the allocated computing capacity for MDs, resulting in a decrease in the average QoE. However, QECO effectively manages the uncertain load at the ENs. When the number of MDs increases to 90, it increases the average QoE by at least 29\% more than the other methods.
 
-We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. Fig.~\ref{chart4} (a) shows the average QoE for different values of task arrival rate. This figure indicates the superiority of the QECO algorithm in providing MDs with an enhanced experience. Specifically, when the task arrival rate is moderate (i.e., 250), QECO improves the average QoE by 57\% and 33\% compared to RD and PGOA, respectively. Fig.~\ref{chart4} (b) illustrates the average QoE when we increase the number of MDs. The EN's workload grows when there are a larger number of MDs, leading to a reduction in the average QoE of all methods except LC. However, QECO effectively manages the uncertain load at the ENs. When the number of MDs increases to 90, QECO achieves at least a 29\% higher QoE comparing with the other methods.
-It is worth noting that although improvements in each of the QoE factors can contribute to enhancing system performance, it is essential to consider the user's demands in each time slot. Therefore, the key difference between QECO and other methods is that it prioritizes users' demands, enabling it to strike an appropriate balance among them, ultimately leading to a higher QoE for MDs.
-
+We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. \textcolor{blue}{Fig.~\ref{chart4} (a) shows the average QoE for different values of the task arrival rate. This figure highlights the superiority of the QECO algorithm in providing MDs with an enhanced experience. At lower task arrival rates (i.e., 50-150), QECO performs optimally and maintains an average QoE of at least 0.72, while the other methods experience a steeper decline, with average QoE dropping to 0--0.54. Specifically, at a task arrival rate of 200, QECO improves the average QoE by 91.7\% compared to DCDRL in the positive average QoE range. As task arrival rates increase to 300, the average QoE significantly decreases for all methods due to increased competition for resources in the MEC system. However, QECO still maintains a positive average QoE, while other methods fall to negative values, with a decline of up to -0.17. For higher task arrival rates (i.e., 350–450), QECO experiences a negative average QoE, but it shows at least a 42.6\% and 24.6\% smaller reduction in average QoE compared to RD and DCDRL, respectively.}
 
 
 
+ Fig.~\ref{chart4} (b) illustrates the average QoE when we increase the number of MDs. The EN's workload grows when there are a larger number of MDs, leading to a reduction in the average QoE of all methods except LC. However, QECO effectively manages the uncertain load at the ENs. \textcolor{blue}{When the number of MDs increases from 30 to 110, QECO consistently maintains at least a 29.8\% higher QoE compared to the other methods. Specifically, at a moderate number of 70 MDs, QECO achieves an average QoE of 0.57, showing a 60.3\% improvement compared to DCDRL.} It is worth noting that although improvements in each of the QoE factors can contribute to enhancing system performance, it is essential to consider the user's demands in each time slot. Therefore, the key difference between QECO and other methods is that it prioritizes users' demands, enabling it to strike an appropriate balance among them, ultimately leading to a higher QoE for MDs.
 
 
 
-
-
-\textcolor{teal}{We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart01} and Fig.~\ref{chart02}. To validate the effectiveness of the QECO algorithm, we assess its convergence speed and rate compared to the vanilla DQN and D3QN-based computation offloading methods, measured by the average QoE across episodes. As shown in Fig.~\ref{chart01}, the average QoE for all computation offloading algorithms rises consistently as the episodes progress, until reaching convergence. Specifically, the vanilla DQN, D3QN, and our proposed algorithm converge after approximately 650, 550, and 400 iterations, respectively. This demonstrates the relatively faster convergence of the QECO algorithm, which also achieves a higher average QoE than the other methods. These results highlight the positive impact of workload prediction by the LSTM network and its advantage in efficiently utilizing the processing capabilities of MDs and ENs.}
+\textcolor{blue}{We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart01} and Fig.~\ref{chart02}. To validate the effectiveness of the QECO algorithm, we assess its convergence speed and rate compared to the vanilla DQN and D3QN-based computation offloading methods, measured by the average QoE across episodes. As shown in Fig.~\ref{chart01}, the average QoE for all computation offloading algorithms rises consistently as the episodes progress, until reaching convergence. Specifically, the vanilla DQN, D3QN, and our proposed algorithm converge after approximately 650, 550, and 400 iterations, respectively. This demonstrates the relatively faster convergence of the QECO algorithm, which also achieves a higher average QoE than the other methods. These results highlight the positive impact of workload prediction by the LSTM network and its advantage in efficiently utilizing the processing capabilities of MDs and ENs.}
 
 Furthermore, we explore the impact of two main hyper-parameters on the convergence speed and the converged result of the proposed algorithm. Fig. \ref{chart02} (a) illustrates the convergence of the proposed algorithm under different learning rates, where the learning rate regulates the step size per iteration towards minimizing the loss function. The QECO algorithm achieves an average QoE of 0.75 when the learning rate is 0.001, indicating relatively rapid convergence. However, with smaller learning rates (e.g., 0.0001) or larger values (e.g., 0.01),  a slower convergence is observed. Fig. \ref{chart02} (b) shows the convergence of the proposed algorithm under different batch sizes, which refer to the number of sampled experiences in each training round. An improvement in convergence performance is observed as the batch size increases from 4 to 16. However, further increasing the batch size from 16 to 32 does not notably enhance the converged QoE or convergence speed. Hence, a batch size of 16 may be more appropriate for training processes.
+
+
 
 \begin{figure}
 	\captionsetup{name=Fig.}
 	\centering
-	\includegraphics[width=.95\linewidth]{m1}
+	\includegraphics[width=.9\linewidth]{m1}
 	\vspace*{-3mm}
 	\caption{\textcolor{blue}{The convergence of the average QoE across episodes under different DQN-based methods.}}
 	\vspace*{-3mm}
@@ -1326,7 +1331,7 @@ Furthermore, we explore the impact of two main hyper-parameters on the convergen
 
 \vspace{-5mm}
 
- \begin{figure}
+\begin{figure}
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.5\linewidth}
 		\centering
@@ -1344,7 +1349,7 @@ Furthermore, we explore the impact of two main hyper-parameters on the convergen
 	\label{chart02}
 \end{figure}
 
-\vspace{3mm}
+\vspace{5mm}
 
 
 \section{Conclusion}\label{section:VI}

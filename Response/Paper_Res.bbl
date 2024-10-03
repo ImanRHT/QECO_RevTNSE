@@ -58,6 +58,12 @@ L.~Wu, P.~Sun, H.~Chen, Y.~Zuo, Y.~Zhou, and Y.~Yang, ``{NOMA}-enabled
   based approach,'' \emph{IEEE Trans. Netw. Sci. Eng.}, vol.~11, no.~2, pp.
   2170--2181, Mar 2024.
 
+\bibitem{mnih2015human}
+V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~A. Rusu, J.~Veness, M.~G. Bellemare,
+  A.~Graves, M.~Riedmiller, A.~K. Fidjeland, G.~Ostrovski \emph{et~al.},
+  ``Human-level control through deep reinforcement learning,'' \emph{Nature},
+  vol. 518, no. 7540, pp. 529--533, Feb 2015.
+
 \bibitem{arulkumaran2017deep}
 K.~Arulkumaran, M.~P. Deisenroth, M.~Brundage, and A.~A. Bharath, ``Deep
   reinforcement learning: A brief survey,'' \emph{IEEE Signal Process Mag},
@@ -206,21 +212,21 @@ Y.~Li, B.~Yang, H.~Wu, Q.~Han, C.~Chen, and X.~Guan, ``Joint offloading
   contract-stackelberg approach,'' \emph{IEEE Internet of Things Journal},
   vol.~9, no.~17, pp. 15\,969--15\,982, 2022.
 
-\bibitem{mnih2015human}
-V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~A. Rusu, J.~Veness, M.~G. Bellemare,
-  A.~Graves, M.~Riedmiller, A.~K. Fidjeland, G.~Ostrovski \emph{et~al.},
-  ``Human-level control through deep reinforcement learning,'' \emph{Nature},
-  vol. 518, no. 7540, pp. 529--533, Feb 2015.
+\bibitem{wang2016dueling}
+Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
+  ``Dueling network architectures for deep reinforcement learning,'' in
+  \emph{Proc. of International Conference on Machine Learning}.\hskip 1em plus
+  0.5em minus 0.4em\relax New York, NY, Jun 2016.
 
 \bibitem{hochreiter1997long}
 S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' \emph{Neural
   Comput}, vol.~9, no.~8, pp. 1735--1780, Sep 1997.
 
-\bibitem{yang2018distributed}
-L.~Yang, H.~Zhang, X.~Li, H.~Ji, and V.~C. Leung, ``A distributed computation
-  offloading strategy in small-cell networks integrated with mobile edge
-  computing,'' \emph{IEEE ACM Trans. Netw.}, vol.~26, no.~6, pp. 2762--2773,
-  Dec 2018.
+\bibitem{qiu2020distributed}
+X.~Qiu, W.~Zhang, W.~Chen, and Z.~Zheng, ``Distributed and collective deep
+  reinforcement learning for computation offloading: A practical perspective,''
+  \emph{IEEE Transactions on Parallel and Distributed Systems}, vol.~32, no.~5,
+  pp. 1085--1101, 2020.
 
 \bibitem{mao2016dynamic}
 Y.~Mao, J.~Zhang, and K.~B. Letaief, ``Dynamic computation offloading for
@@ -232,10 +238,23 @@ A.~Parekh and R.~G. Gallager, ``A generalized processor sharing approach to
   flow control in integrated services networks: {The} single-node case,''
   \emph{IEEE/ACM Trans. Netw}, vol.~1, no.~3, pp. 344--357, Jun 1993.
 
-\bibitem{wang2016dueling}
-Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
-  ``Dueling network architectures for deep reinforcement learning,'' in
-  \emph{Proc. of International Conference on Machine Learning}.\hskip 1em plus
-  0.5em minus 0.4em\relax New York, NY, Jun 2016.
+\bibitem{yang2018distributed}
+L.~Yang, H.~Zhang, X.~Li, H.~Ji, and V.~C. Leung, ``A distributed computation
+  offloading strategy in small-cell networks integrated with mobile edge
+  computing,'' \emph{IEEE ACM Trans. Netw.}, vol.~26, no.~6, pp. 2762--2773,
+  Dec 2018.
+
+\bibitem{konda1999actor}
+V.~Konda and J.~Tsitsiklis, ``Actor-critic algorithms,'' \emph{Advances in
+  neural information processing systems}, vol.~12, 1999.
+
+\bibitem{lillicrap2015continuous}
+T.~Lillicrap, ``Continuous control with deep reinforcement learning,''
+  \emph{arXiv preprint arXiv:1509.02971}, 2015.
+
+\bibitem{schulman2017proximal}
+J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov, ``Proximal
+  policy optimization algorithms,'' \emph{arXiv preprint arXiv:1707.06347},
+  2017.
 
 \end{thebibliography}
