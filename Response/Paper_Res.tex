@@ -885,13 +885,17 @@ There are multiple directions for future work. A complementary approach involves
 \setcounter{page}{1}
 
 \begin{itemize}
-	\item \textbf{Title of Manuscript}: A QoE-Oriented Computation Offloading Algorithm based on Deep Reinforcement Learning for Mobile Edge Computing
+	\item \textbf{Title of Manuscript}: \textit{QECO: A QoE-Oriented Computation Offloading Algorithm based on Deep Reinforcement Learning for Mobile Edge Computing}
+
+
 	
 	
-	\item \textbf{Authors}:  Iman Rahmati, Hamed Shah-Mansouri, and Ali Movaghar
+	\item \textbf{Authors}:  $_*$Iman Rahmati, $_+$Hamed Shah-Mansouri, and $_*$Ali Movaghar
 	
 	
-	\item \textbf{Affiliation}: Departments of Electrical Engineering and Computer Engineering,  Sharif University of Technology, Tehran, Iran
+	Department of Computer Engineering, Sharif University of Technology, Tehran, Iran
+	
+	\item \textbf{Affiliation}: $_*$ Departments of Computer Engineering,  Sharif University of Technology, Tehran, Iran, $_+$ Department of Electrical Engineering, Sharif University of Technology, Tehran, Iran.
 	
 	\item \textbf{Paper Reference Number}: TNSE-2024-03-0468 
 	
@@ -901,14 +905,12 @@ There are multiple directions for future work. A complementary approach involves
 
 \setstretch{1.2}
 
-\noindent We would like to express our gratitude to the reviewers for their valuable recommendations toward improving the quality of our paper. We also want to gratefully thank the associate editor for handling the paper. Our responses to the reviewers' comments are given below. For convenience, we have used blue font for the revised or newly added paragraphs in the manuscript.\newline
+\noindent We would like to express our gratitude to the reviewers for their valuable recommendations toward improving the quality of our paper. We also want to gratefully thank the associate editors for handling the paper. Our responses to the reviewers' comments are given below. For convenience, we have used blue font for the revised or newly added paragraphs in the manuscript.\newline
 
 \setcounter{section}{0}
 \renewcommand*{\thesection}{\Roman{section}}
 \makeatletter
 
-
-\newpage
 
 \section{Response to Reviewer 1}
 \begin{enumerate}
@@ -916,7 +918,16 @@ There are multiple directions for future work. A complementary approach involves
 \item \underline{Reviewer's Comment}: 
 \textit{``(a) Lots of the studies focus on the research on resource optimisation of MEC by DRL, it is expected to survey the state-of-the-art within 3 years, and summarise it as an individual section, departing from the Section of Introduction. (b) Besides, the existing related work only has one paragraph without any discussion about the pros/cons of the previous work.''} \newline
 
-\underline{Authors' Reply}: (a) To address the reviewer comment about state-of-the-art within 3 years discusion, we have added this paragraph to the Section I, as follows. \newline
+\underline{Authors' Reply}: To address the reviewer comment, we have carefully studied the recently published papers and throughly revised the related work section. To be more specific,
+\begin{itemize}
+\item a) We have included the literature review in Section II of the revised manuscript and provided a survey of the recently published state-of-the-art works.
+\item b) Furthemore, we have expanded the explanations about each related work and discussed their pros/vons.
+\end{itemize}
+The newly added Section II of the revised manuscript is as follows. \newline
+
+
+
+
 	\begin{my}{1cm}{1cm}
 	\rev{\,\,\,\, To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) hold promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives \cite{arulkumaran2017deep}. RL can effectively tackle the challenges of MEC arising from the ever-changing nature of networks, MDs, and servers' heterogeneity. This ultimately improves the MD users' QoE. We explore state-of-the-art RL-based techniques characteristic to discuss how they address task offloading problems in MEC. To minimize energy consumption, Munir \textit{et al.} \cite{munir2021multi} developed a semi-distributed approach using a multi-agent RL (MARL) framework for self-powered MEC. Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the industrial IoT (IIoT) systems to jointly optimize task offloading and resource allocation to achieve lower energy consumption and decreased task delay. To investigate privacy aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} proposed a deep Q-network (DQN)-based method. They transform the problem on MDP to optimize computation rate and energy consumption in a queuing-based IIoT network. Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources.}
 \end{my}
@@ -945,7 +956,7 @@ In \cite{Bolourian-WCL24}, the authors proposed an offloading algorithm using de
 
 \vspace{6mm}
 
-We have also revised the motivation and contributions Subsection, as below.
+We have also revised Secion I accordingly to make it consistent with the updated contents of related work. The following paragraph shows the changes we have made in Section I of the revised manuscript.
 
 \vspace{6mm}
 
@@ -956,12 +967,12 @@ We have also revised the motivation and contributions Subsection, as below.
 
 
 
-\newpage
+\vspace{5mm}
 
 \item \underline{Reviewer's Comment}: 
 \textit{``Please highlight what and how the proposed approach provides "high performance" to further specify the motivations and contributions. Especially, please highlight the reason why the authors design the framework by integrating LSTM. Otherwise, it will make the innovations seem weak.''} \newline
 
-\underline{Authors' Reply}: To address the reviewer’s comment, we further specify the contribution and highlight the role of the LSTM network and its impact on the convergence and performance of the QECO algorithm. We have revised the Subsection on motivations and contributions in Section I, as follows:
+\underline{Authors' Reply}: To address the reviewer’s comment, we have further specified the contributions and highlighted the role of the LSTM network and its impact on the convergence and performance of the QECO algorithm. First, to further clarify our contributions, we have revised Section I as follows.
 
 		\begin{my}{1cm}{1cm}
 	\rev{
@@ -970,19 +981,23 @@ We have also revised the motivation and contributions Subsection, as below.
 Our main contributions are summarized as follows:
 
 \begin{itemize}
-	\item \textit{Task Offloading Problem in the MEC System:} We formulate the task offloading problem in queuing-based MEC as an MDP for time-sensitive tasks, taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). This approach concentrates on providing high performance in the MEC system while maximizing the long-term QoE, by effectively utilizing the capabilities of resources and handling the dynamic nature of workload at ENs. \vspace{2mm}
+	\item \textit{Task Offloading Problem in the MEC System:} We formulate the task offloading problem in queuing-based MEC as an MDP for time-sensitive tasks, taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). Given task completion, task delay, and energy consumption as the QoE requirements of mobile devices (MDs), this approach concentrates on maximizing the long-term QoE, by effectively utilizing the resources and properly handling the dynamic nature of workload at ENs. \vspace{2mm}
 	
 	
 	\item \textit{DRL-based Offloading Algorithm:} To address the problem of long-term QoE maximization, we focus on task completion, task delay, and energy consumption to quantify the MDs' QoE. We propose QECO algorithm based on DRL that empowers each MD to make offloading decisions independently, without prior knowledge of the other MDs' tasks and offloading models. With a focus on the MD's energy level, our approach leverages dueling double deep Q-network (D3QN) \cite{wang2016dueling} to prioritize and strike an appropriate balance between QoE factors. To handle the uncertainty of workloads at ENs, we integrate long short-term memory (LSTM) \cite{hochreiter1997long} into D3QN, enabling MDs to forecast ENs' workloads over time and improve the estimation of long-term QoE. Additionally, we provide an analysis of the training convergence and computational complexity of the proposed algorithm. \vspace{2mm}
 	
 	
-\item \textit{Performance Evaluation:} We conducted comprehensive experiments to evaluate QECO's performance under various computational workloads, as well as its training convergence with different techniques and hyperparameters. The results demonstrate that our algorithm effectively utilizes the processing capabilities of MDs and ENs, addressing the dynamic workloads at ENs. It converges more quickly compared to DQN and D3QN methods, while providing a substantial improvement of at least 34.8\% in average QoE. This advantage is achieved through prioritizing MD's QoE preferences, resulting in improvements of at least 12.2\%, 11.7\%, and 10.8\% in the average number of completed tasks, task delay, and energy consumption, respectively, when compared to the distributed and collective DRL-based offloading algorithm (DCDRL) \cite{qiu2020distributed} and several benchmark methods.
+\item \textit{Performance Evaluation:} We conduct comprehensive experiments to evaluate the QECO's performance under various computational workloads, as well as its training convergence with different techniques and hyperparameters. The results demonstrate that our algorithm effectively utilizes the computing resources of MDs and ENs, addressing the dynamic workloads at ENs. It converges more quickly compared to DQN and D3QN methods, while providing a substantial improvement of at least 34.8\% in average QoE. This advantage is achieved through prioritizing MD's QoE preferences, resulting in improvements of at least 12.2\%, 11.7\%, and 10.8\% in the average number of completed tasks, task delay, and energy consumption, respectively, when compared to the distributed and collective DRL-based offloading algorithm (DCDRL) \cite{qiu2020distributed} and several benchmark methods.
 	
 	
 \end{itemize}}}
 \end{my}
+\vspace{5mm}
 
-We have also extended the performance evaluation by comparing vanilla DQN and D3QN to further specify the impacts of the LSTM network, Dueling DQN, and Double DQN. The following chart and discussion have been added to the performance comparison subsection of Section V, as bellow: 
+Second, we have extended the performance evaluation by comparing the performance of our proposed algorithm with vanilla DQN and D3QN to further specify the impacts of the LSTM network, Dueling DQN, and Double DQN. We have added Fig. 7 to Section V of the revised manuscript. This figure highlights the ..... (COMPLETE IT).
+
+
+%The following chart and discussion have been added to the performance comparison subsection of Section V, as bellow: 
 
 \begin{figure}[H]
 	\captionsetup{name=Fig.}
@@ -998,17 +1013,19 @@ We have also extended the performance evaluation by comparing vanilla DQN and D3
 	\rev{
 		{\
 
-We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig. 7 and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence speed and rate compared to the vanilla DQN and D3QN-based computation offloading methods, measured by the average QoE across episodes. As shown in Fig. 7, the average QoE for all computation offloading algorithms rises consistently as the episodes progress, until reaching convergence. Specifically, the vanilla DQN, D3QN, and our proposed algorithm converge after approximately 650, 550, and 400 iterations, respectively. This demonstrates the relatively faster convergence of the QECO algorithm, which also achieves a higher average QoE than the other methods. These results highlight the positive impact of workload prediction by the LSTM network and its advantage in efficiently utilizing the processing capabilities of MDs and ENs.
+We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig. 7 and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and D3QN-based computation offloading methods, measured by the average QoE across episodes. As shown in Fig. 7, the average QoE for all computation offloading algorithms rises consistently as the episodes progress, until reaching convergence. Specifically, the vanilla DQN, D3QN, and our proposed algorithm converge after approximately 650, 550, and 400 iterations, respectively. This demonstrates the relatively faster convergence of the QECO algorithm, which also achieves a higher average QoE than the other methods. These results highlight the positive impact of workload prediction by the LSTM network and its advantage in efficiently utilizing the processing capabilities of MDs and ENs.
 }}
 \end{my}
 
 
-\newpage
+\vspace{5mm}
 
 \item \underline{Reviewer's Comment}: 
 \textit{``(a) In section III, why is the size of the task selected from a discrete set? Is it selected randomly or in another way? Besides, (b) the authors define the offloading indicate function as $y_{i,j}(t)$, it should be involved when modelling the Edge Execution phrase.''} \newline
 
-\underline{Authors' Reply}: (a) The task size is selected randomly from a discrete set to avoid state space complexity. To address the reviewer’s comment, we have added a mention of the random task size selection to the second paragraph of Section II, as follows:
+\underline{Authors' Reply}: (a) Task sizes are chosen from a discrete set because, in most applications, tasks have specific sizes. For instance, in image and video processing, tasks are typically divided into standardized sizes [X,XX,XXX]. Therefore, we assume that task sizes are selected randomly and uniformly from this discrete set. To address the reviewer’s comment and to provide further clarity regarding task sizes, we have revised the second paragraph of Section II as follows.
+
+%The task size is selected randomly from a discrete set to avoid state space complexity. To address the reviewer’s comment, we have added a mention of the random task size selection to the second paragraph of Section II, as follows:
 
 		\begin{my}{1cm}{1cm}
 	\rev{
@@ -1016,9 +1033,12 @@ We finally delve into the investigation of the convergence performance of the QE
 			
 			 \dots
 
-We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{blue}{The size of task $z_i(t)$ is selected randomly from a discrete set $\Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\}$, where $\theta$ represents the number of these values.} Hence, $\lambda_i(t) \in \Lambda \cup \{0\}$ to consider the case that no task has arrived. We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
+We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{blue}{The size of task \( z_i(t) \) is selected randomly and uniformly from a discrete set \( \Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\} \), reflecting the standardized task sizes commonly used in practice, where \( \theta \) represents the number of these values.} Hence, $\lambda_i(t) \in \Lambda \cup \{0\}$ to consider the case that no task has arrived. We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
 
 \dots
+
+
+
 
 }}
 \end{my} \vspace{5mm}
@@ -1053,13 +1073,13 @@ We define $z_i(t)$ as the index assigned to the computation task arriving at MD 
 \end{my}
 
 
-\newpage
+\vspace{5mm}
 
 \item \underline{Reviewer's Comment}: 
-\textit{``Some sota methods (e.g., DDQN, DDPG) are expected to be compared in the section on performance evaluation, and authors should have more discussions about the evaluation results rather than merely introducing them.  \textcolor{red}{Besides, I think it is better to design the evaluations with a real dataset. Besides, 9\% and 6\% are not significant improvements compared to other methods.''}} \newline
+\textit{``(a) Some sota methods (e.g., DDQN, DDPG) are expected to be compared in the section on performance evaluation, and authors should have more discussions about the evaluation results rather than merely introducing them.  \textcolor{red}{(b) Besides, I think it is better to design the evaluations with a real dataset. (c) Besides, 9\% and 6\% are not significant improvements compared to other methods.''}} \newline
 
 
-\underline{Authors' Reply}: (a) To address the reviewer's comments, we extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed}, a distributed optimization algorithm for delay-sensitive tasks based on the actor-critic framework (the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO). We have added this comparison in the Simulation Setup Subsection of Section V as follows: \newline 
+\underline{Authors' Reply}: (a) To address the reviewer's comments, we extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed}, which is a distributed optimization algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. We have added this comparison to Section V of the revised manuscript as follows: \newline 
 
 
 		\begin{my}{1cm}{1cm}
@@ -1087,9 +1107,19 @@ We define $z_i(t)$ as the index assigned to the computation task arriving at MD 
 }}
 \end{my}\vspace{5mm}
 
+	\begin{my}{2cm}{2cm}
+	\rev{
+		{\small
+			\noindent\hspace{-0.5mm}\cite{qiu2020distributed} Qiu, Xiaoyu and Zhang, Weikun and Chen, Wuhui and Zheng, Zibin, ``Distributed and collective deep reinforcement learning for computation offloading: A practical perspective,'' \textit{IEEE Transactions on Parallel and Distributed Systems}, vol. 32, no. 5, pp. 1085--1101, 2021.\\[10pt]
+			\cite{konda1999actor} Konda, Vijay and Tsitsiklis, John, ``Actor-critic algorithms,'' \textit{Advances in neural information processing systems.}, 1999.\\[10pt]
+			\cite{lillicrap2015continuous} Lillicrap, TP, ``Continuous control with deep reinforcement learning,'' \textit{arXiv preprint arXiv:1509.02971}, 2015.\\[10pt]
+			\cite{schulman2017proximal} Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg, ``Proximal policy optimization algorithms,'' in \textit{arXiv preprint arXiv:1707.06347}, 2017.}\\}
+\end{my}
 
 
-We have also revised the evaluation results, as bellow: 
+
+
+We have also revised the evaluation results as bellow: 
 
 
 \begin{figure}[H]\centering
@@ -1160,7 +1190,7 @@ We have also revised the evaluation results, as bellow:
 	\label{chart4}
 \end{figure} 
 
-Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and D3QN. This comparison illustrates the impact of Dueling DQN, Double DQN, and LSTM network techniques, by the following chart and discussion:
+Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and D3QN. This comparison illustrates the impact of Dueling DQN, Double DQN, and LSTM network techniques.  We have added Fig. 7 to Section V of the revised manuscript.
 
 \begin{figure}[H]
 	\captionsetup{name=Fig.}
@@ -1200,12 +1230,12 @@ Fig. 6 (b) illustrates the average QoE when we increase the number of MDs. The E
 
 \end{my}
 
-\newpage
+\vspace{5mm}
 
 \item \underline{Reviewer's Comment}: 
 \textit{``Other concerns are also expected to be addressed: (a) be careful to use words like "battery level" to express the energy consumption, because some of the energy is provided by the wired line power. (b) Most of the references are out of 3 years, please investigate more studies published in recent years. (c) \textcolor{red}{The authors should thoroughly check the writing style, grammar, and spelling to enhance the paper's clarity, conciseness, and overall impact.}}''\newline
 
-\underline{Authors' Reply}: (a) We have changed the word "battery level" to "energy state" in whole paper of the revised manuscript. \newline
+\underline{Authors' Reply}: (a) We have carefully repaced the phrase "battery level" with "energy state" throughout the revised manuscript. \newline
 
 (b) We have added some related refrences, which are under 3 years, in Section I, as follow: \newline
 
@@ -1227,10 +1257,17 @@ Fig. 6 (b) illustrates the average QoE when we increase the number of MDs. The E
 			\cite{li2022joint} Li, Yuwei and Yang, Bo and Wu, Hao and Han, Qiaoni and Chen, Cailian and Guan, Xinping, ``Joint offloading decision and resource allocation for vehicular fog-edge computing networks: A contract-stackelberg approach,'' \textit{IEEE Internet Things J.}, vol. 9, no. 17, pp. 15969--15982, 2022.\\[10pt]}\\}
 \end{my}
 
-(c)
+	We have also cited these works in the following sentences in Section I of the revised manuscript.\\\\
+
+(c) We have thoroughly reviewed the writing style, grammar, and spelling, and have carefully proofread the manuscript. We trust that all issues have been addressed in this revised version. \\\\
+
+
+
 
 
 \end{enumerate}
+
+\textit{We would like to gratefully thank the reviewer for the valuable comments and suggestions. We hope that we have satisfactorily addressed these comments.}\newline
 
 
 \newpage
@@ -1241,11 +1278,11 @@ Fig. 6 (b) illustrates the average QoE when we increase the number of MDs. The E
 	\item \underline{Reviewer's Comment}: 
 	\textit{``The authors should provide a comparative table to highlight their contributions. Specially, the authors should compare their method with other references on computation task offloading cited in the paper, including aspects such as scenarios, methods, advances, drawbacks, and so on.''} \newline
 
-	\underline{Authors' Reply}: To address the reviewer's comment, we have included a table in the 'Related Works' subsection that compares the key characteristics of relevant studies, as below:
+	\underline{Authors' Reply}: To address the reviewer's comment, we have included Table. 1 in the 'Related Works' Section II  subsection that highlights the key characteristics of relevant studies.
 	\begin{table*}[htbp]\textcolor{blue}{
 			\renewcommand{\arraystretch}{0.6}
 			\captionsetup{name=TABLE}
-			\caption{\textcolor{blue}{Comparison of Related Works Characteristic\vspace{4mm}}}
+			\caption{\textcolor{blue}{Comparison of Related Works \vspace{4mm}}}
 			\scalebox{0.7}{%
 				\begin{tabular}{ lp{3.4cm}p{4.5cm}p{5.2cm}p{1.7cm}p{3.1cm}p{4.6cm}l} 
 					\toprule
@@ -1276,7 +1313,7 @@ QECO &  Queuing-based MEC &  Computation offloading & Maximize the QoE of each M
 	\item \underline{Reviewer's Comment}: 
 	\textit{``I think more explanations should be added for the QoE function. How can the defined function reflect QoE?''} \newline
 	
-	\underline{Authors' Reply}: To address the reviewer's comments, we have revised the QoE Function Subsection in Section III, as follows: 
+	\underline{Authors' Reply}: To address the reviewer's comments, we have further explained the QoE function and revised Section III as follows.
 	
 			\begin{my}{1cm}{1cm}
 		\rev{
@@ -1321,15 +1358,15 @@ When the MD is operating in performance mode, the MD's preference is to minimize
 	\newpage
 
 	\item \underline{Reviewer's Comment}: 
-	\textit{``(a) What inputs and outputs of Algorithm 2? (b) They should be added to make readers clearly understand the results.''} \\\newline
-	\underline{Authors' Reply}: (a) To address the reviewer concern about algorithm 2, we have revised secound paragraph of Subsection (Training Process Algorithm at EN $j \in \mathcal{J})$ in Section IV to clarify the inputs and outputs of algorithms 2, as follows. \newline
+	\textit{``(a) What are inputs and outputs of Algorithm 2? (b) They should be added to make readers clearly understand the results.''} \\\newline
+	\underline{Authors' Reply}: (a) To address the reviewer concern about Algorithm 2, we have revised secound paragraph of Subsection (Training Process Algorithm at EN $j \in \mathcal{J})$ in Section IV to clarify the inputs and outputs of Algorithms 2.\newline
 	
 	\begin{my}{1cm}{1cm}
 		\rev{In particular, regarding experience $n$, the target-Q value $\hat{Q}_{i,n}^{\text{T}}$ represents the long-term QoE for action $\boldsymbol{a}_i(n)$ under state $\boldsymbol{s}_i(n)$. This value corresponds to the QoE observed in experience $n$, as well as the approximate expected upcoming QoE. 
 			\textcolor{blue}{Based on the previous sample experiences $\mathcal{N}$, the EN computes the vector $\hat{\mathbf{Q}}_i^{\text{T}} = (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$ and trains the MD's neural network (in steps 11-21 of Algorithm ~\ref{alg:cap2}) to keep parameter vector $\theta^{\text{E}}_i$ in $\textit{Net}_i^{\text{E}}$ update for the MD's \textit{UpdateRequest}}. The key idea of updating $\textit{Net}_i^{\text{E}}$ is to minimize the disparity in Q-values between $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$, as indicated by the following loss function:\\ \dots}
 	\end{my}
 		
-	We have also revised algorithm 1 and 2, as below.\\	
+	We have also revised Algorithms 1 and 2 and included the list of inputs and outputs.\\	
 	
 
 \begin{my}{0.5cm}{0.5cm}	
@@ -1354,14 +1391,8 @@ When the MD is operating in performance mode, the MD's preference is to minimize
 \vspace{10mm}
 	\item \underline{Reviewer's Comment}: 
 	\textit{``The authors should open their experiments in github, so that other researchers can compare their work with other ones.''} \newline
-	\underline{Authors' Reply}: To address the reviewer comment, we make our experiments more accessible by sharing our GitHub rerepository. We have added it into the end of first paragraph of Section V, as follows.
-	\begin{my}{1cm}{1cm}
-		\rev{Detailed settings regarding the neural networks and simulation can be found at our github repository. }
-	\end{my}
-	We have also provided repository URL link in the footnote of Page 8 as below.
-	\begin{my}{1cm}{1cm}
-		\rev{The code for reproducing the simulation results of this letter is available at\newline https://github.com/ImanRHT/QECO.} \newline
-	\end{my}
+	\underline{Authors' Reply}: To address the reviewer comment, we have made our GitHub repository  publicly available. It has also been introduced and cited in metadata and Section V as follows.
+
 
 \newpage
 
