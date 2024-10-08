@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  8 OCT 2024 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  9 OCT 2024 01:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1345,32 +1345,33 @@ Grid set 16 x 16 = 38.39343pt x 49.68562pt
 \TP@tbargs=\toks49
 TextBlockOrigin set to 0pt x 0pt
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 394.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (./Paper_Rev.aux)
 \openout1 = `Paper_Rev.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 396.
-LaTeX Font Info:    ... okay on input line 396.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
 
 -- Lines per column: 58 (exact).
-Package hyperref Info: Link coloring OFF on input line 396.
+Package hyperref Info: Link coloring ON on input line 398.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1380,21 +1381,21 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count413
 )
-LaTeX Info: Redefining \ref on input line 396.
-LaTeX Info: Redefining \pageref on input line 396.
-LaTeX Info: Redefining \nameref on input line 396.
+LaTeX Info: Redefining \ref on input line 398.
+LaTeX Info: Redefining \pageref on input line 398.
+LaTeX Info: Redefining \nameref on input line 398.
  (./Paper_Rev.out) (./Paper_Rev.out)
 \@outlinefile=\write7
 \openout7 = `Paper_Rev.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 396.
+LaTeX Info: Redefining \microtypecontext on input line 398.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `alltext-nott'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using expansion set `alltext'.
-LaTeX Info: Redefining \showhyphens on input line 396.
+LaTeX Info: Redefining \showhyphens on input line 398.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1426,7 +1427,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count420
-Package soulpos Info: Loading soulutf8 on input line 396.
+Package soulpos Info: Loading soulutf8 on input line 398.
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/soulutf8/soulutf8.sty
 Package: soulutf8 2019/12/15 v1.2 Permit use of UTF-8 characters in soul (HO)
@@ -1459,12 +1460,12 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 Package microtype Info: Fixing zero fontdimen6 for font `U/MnSymbolC/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 396.
+(microtype)             (new value: 10.0pt) on input line 398.
 Package microtype Info: Fixing zero fontdimen6 for font `U/MnSymbolC/m/n/7'
-(microtype)             (new value: 7.0pt) on input line 396.
+(microtype)             (new value: 7.0pt) on input line 398.
 Package microtype Info: Fixing zero fontdimen6 for font `U/MnSymbolC/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 396.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 396
+(microtype)             (new value: 5.0pt) on input line 398.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 398
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1473,7 +1474,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 396
+LaTeX Font Info:    Trying to load font information for U+msb on input line 398
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1483,23 +1484,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for T1+qag on input line 45
-3.
+5.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tex-gyre/t1qag.fd
 File: t1qag.fd 2009/09/25 v1.2 font definition file for T1/qag
 )
 Package microtype Info: Fixing zero fontdimen6 for font `U/MnSymbolC/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 453.
+(microtype)             (new value: 8.0pt) on input line 455.
 Package microtype Info: Fixing zero fontdimen6 for font `U/MnSymbolC/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 453.
+(microtype)             (new value: 6.0pt) on input line 455.
 
-Underfull \hbox (badness 2197) in paragraph at lines 453--453
+Underfull \hbox (badness 2197) in paragraph at lines 455--455
 [][][]\T1/ptm/m/n/8 (+20) I. Rah-mati and A. Movaghar are with the De-part-ment
  of Com-
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 453--453
+Underfull \hbox (badness 7326) in paragraph at lines 455--455
 \T1/ptm/m/n/8 (+20) puter En-gi-neer-ing, Sharif Uni-ver-sity of Tech-nol-ogy, 
 Tehran, Iran
  []
@@ -1507,118 +1508,120 @@ Tehran, Iran
 Package lettrine.sty Info: Targeted height = 17.14496pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 17.14503pt (M);
-(lettrine.sty)             reported on input line 489.
+(lettrine.sty)             reported on input line 491.
 [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 \openout3 = `Paper_Rev.upa'.
 
 
 ]
-[2]
-Overfull \hbox (1.42343pt too wide) in paragraph at lines 652--652
+Overfull \hbox (1.42343pt too wide) in paragraph at lines 666--666
 []|\T1/ptm/b/n/8 (-20) Model| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 652--652
+Underfull \hbox (badness 4531) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Online com-pu-ta-tion of-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) heterogeneous
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Wireless-powered
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Computation of-fload-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Multi-agent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Computation of-fload-ing
  []
 
 
-Overfull \hbox (7.09172pt too wide) in paragraph at lines 652--652
+Overfull \hbox (7.09172pt too wide) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (-20) POMDP| 
  []
 
 
-Underfull \hbox (badness 2384) in paragraph at lines 652--652
+Underfull \hbox (badness 2384) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Optimize sys-tem cost and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 652--652
+Underfull \hbox (badness 6542) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Actor-critic net-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Overfull \hbox (7.09172pt too wide) in paragraph at lines 652--652
+Overfull \hbox (7.09172pt too wide) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (-20) POMDP| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Overfull \hbox (7.09172pt too wide) in paragraph at lines 652--652
+Overfull \hbox (7.09172pt too wide) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (-20) POMDP| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--652
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Overfull \hbox (2.34035pt too wide) in paragraph at lines 652--653
+Overfull \hbox (2.34035pt too wide) in paragraph at lines 666--667
 [][]
  []
 
-[3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
-as been already used, duplicate ignored
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
+has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.681 
+l.691 
       ]
 \LTGbeginlineexample=\count421
 \LTGendlineexample=\count422
@@ -1626,23 +1629,23 @@ l.681
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./queue.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<queue.pdf, id=254, 782.925pt x 277.9986pt>
+<queue.pdf, id=257, 782.925pt x 277.9986pt>
 File: queue.pdf Graphic file (type pdf)
 <use queue.pdf>
-Package pdftex.def Info: queue.pdf  used on input line 768.
+Package pdftex.def Info: queue.pdf  used on input line 785.
 (pdftex.def)             Requested size: 252.0pt x 89.47887pt.
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 799.
+(amsmath)                 on input line 816.
 
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.813 \end{alignat}
+l.836 \end{alignat}
                     <./queue.pdf>]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 857
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 874
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
@@ -1651,164 +1654,153 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./DQN.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<DQN.pdf, id=336, 902.41138pt x 529.01637pt>
+<DQN.pdf, id=341, 902.41138pt x 529.01637pt>
 File: DQN.pdf Graphic file (type pdf)
 <use DQN.pdf>
-Package pdftex.def Info: DQN.pdf  used on input line 999.
+Package pdftex.def Info: DQN.pdf  used on input line 1016.
 (pdftex.def)             Requested size: 252.0pt x 147.72803pt.
 [7pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1034 \subsubsection
-                     {\textcolor{red}{Dueling-DQN Approach for Q-Value Estim...
- <./DQN.pdf>]
+l.1057 
+        <./DQN.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1055.
+put line 1072.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1098.
+(hyperref)                removing `math shift' on input line 1115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 1098.
+(hyperref)                removing `\in' on input line 1115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1098.
-
-[8]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1156.
+(hyperref)                removing `math shift' on input line 1115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 1156.
+(hyperref)                removing `math shift' on input line 1173.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1156.
+(hyperref)                removing `\in' on input line 1173.
 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.5.28
-}) has been already used, duplicate ignored
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1173.
+
+[8]pdfTeX warning (ext4): destination with the same identifier (name{equation.5
+.28}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1162 \end{alignat}
+l.1179 \end{alignat}
                     
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1195
 
  []
 
 
-Overfull \hbox (3.02156pt too wide) in paragraph at lines 1226--1228
+Overfull \hbox (3.02156pt too wide) in paragraph at lines 1243--1245
 [][]
  []
 
 [9]
-<drop_1.pdf, id=415, 515.9275pt x 462.72874pt>
+<drop_1.pdf, id=422, 515.9275pt x 462.72874pt>
 File: drop_1.pdf Graphic file (type pdf)
 <use drop_1.pdf>
-Package pdftex.def Info: drop_1.pdf  used on input line 1297.
+Package pdftex.def Info: drop_1.pdf  used on input line 1314.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
-<drop_2.pdf, id=416, 514.92375pt x 462.72874pt>
+<drop_2.pdf, id=423, 514.92375pt x 462.72874pt>
 File: drop_2.pdf Graphic file (type pdf)
 <use drop_2.pdf>
-Package pdftex.def Info: drop_2.pdf  used on input line 1303.
+Package pdftex.def Info: drop_2.pdf  used on input line 1320.
 (pdftex.def)             Requested size: 126.0pt x 113.2248pt.
-<energy_1.pdf, id=417, 513.92pt x 462.72874pt>
+<energy_1.pdf, id=424, 513.92pt x 462.72874pt>
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
-Package pdftex.def Info: energy_1.pdf  used on input line 1319.
+Package pdftex.def Info: energy_1.pdf  used on input line 1336.
 (pdftex.def)             Requested size: 126.0pt x 113.44366pt.
-<energy_2.pdf, id=418, 515.9275pt x 462.72874pt>
+<energy_2.pdf, id=425, 515.9275pt x 462.72874pt>
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
-Package pdftex.def Info: energy_2.pdf  used on input line 1325.
+Package pdftex.def Info: energy_2.pdf  used on input line 1342.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
-<delay_1.pdf, id=419, 515.9275pt x 463.7325pt>
+<delay_1.pdf, id=426, 515.9275pt x 463.7325pt>
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
-Package pdftex.def Info: delay_1.pdf  used on input line 1337.
+Package pdftex.def Info: delay_1.pdf  used on input line 1354.
 (pdftex.def)             Requested size: 126.0pt x 113.25104pt.
-<delay_2.pdf, id=420, 515.9275pt x 462.72874pt>
+<delay_2.pdf, id=427, 515.9275pt x 462.72874pt>
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
-Package pdftex.def Info: delay_2.pdf  used on input line 1343.
+Package pdftex.def Info: delay_2.pdf  used on input line 1360.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
-<qoe_2.pdf, id=421, 515.9275pt x 462.72874pt>
+<qoe_2.pdf, id=428, 515.9275pt x 462.72874pt>
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
-Package pdftex.def Info: qoe_2.pdf  used on input line 1355.
+Package pdftex.def Info: qoe_2.pdf  used on input line 1372.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
-<qoe_1.pdf, id=422, 515.9275pt x 462.72874pt>
+<qoe_1.pdf, id=429, 515.9275pt x 462.72874pt>
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
-Package pdftex.def Info: qoe_1.pdf  used on input line 1361.
+Package pdftex.def Info: qoe_1.pdf  used on input line 1378.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
  [10pdfTeX warning (ext4): destination with the same identifier (name{table.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1374 F
-        igs.~\ref{chart2} (a) and ~\ref{chart2} (b) illustrate the overall e...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
+l.1401 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1374 F
-        igs.~\ref{chart2} (a) and ~\ref{chart2} (b) illustrate the overall e...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
+l.1401 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1374 F
-        igs.~\ref{chart2} (a) and ~\ref{chart2} (b) illustrate the overall e...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
-s been already used, duplicate ignored
+l.1401 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1374 F
-        igs.~\ref{chart2} (a) and ~\ref{chart2} (b) illustrate the overall e...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
-s been already used, duplicate ignored
+l.1401 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1374 F
-        igs.~\ref{chart2} (a) and ~\ref{chart2} (b) illustrate the overall e...
- <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf> <./delay_1.pdf
-> <./delay_2.pdf> <./qoe_2.pdf> <./qoe_1.pdf>]
-<m1.pdf, id=610, 938.50626pt x 433.62pt>
+l.1401 
+        <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf> <./dela
+y_1.pdf> <./delay_2.pdf> <./qoe_2.pdf> <./qoe_1.pdf>]
+<m1.pdf, id=613, 938.50626pt x 433.62pt>
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1410.
+Package pdftex.def Info: m1.pdf  used on input line 1427.
 (pdftex.def)             Requested size: 226.79846pt x 104.7855pt.
-<m2.pdf, id=611, 512.91624pt x 369.38pt>
+<m2.pdf, id=614, 512.91624pt x 369.38pt>
 File: m2.pdf Graphic file (type pdf)
 <use m2.pdf>
-Package pdftex.def Info: m2.pdf  used on input line 1425.
+Package pdftex.def Info: m2.pdf  used on input line 1442.
 (pdftex.def)             Requested size: 126.0pt x 90.73842pt.
-<m3.pdf, id=612, 512.91624pt x 369.38pt>
+<m3.pdf, id=615, 512.91624pt x 369.38pt>
 File: m3.pdf Graphic file (type pdf)
 <use m3.pdf>
-Package pdftex.def Info: m3.pdf  used on input line 1431.
+Package pdftex.def Info: m3.pdf  used on input line 1448.
 (pdftex.def)             Requested size: 126.0pt x 90.73842pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-(./Paper_Rev.bbl [12pdfTeX warning (ext4): destination with the same identifier
- (name{figure.7}) has been already used, duplicate ignored
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
+) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.161 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-8}) has been already used, duplicate ignored
+l.1465 
+        <./m1.pdf>] (./Paper_Rev.bbl [12pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.161 
-       <./m1.pdf> <./m2.pdf> <./m3.pdf>]) [13
+l.191 
+       <./m2.pdf> <./m3.pdf>]) [13
 
 ] (./Paper_Rev.aux
 * soulpos - computing points - it may take a few seconds *
@@ -1819,13 +1811,13 @@ Package rerunfilecheck Info: File `Paper_Rev.out' has not changed.
 (rerunfilecheck)             Checksum: 313BB00E96E3C15E7E46DD3970FB237C;5186.
  ) 
 Here is how much of TeX's memory you used:
- 40845 strings out of 478994
- 793581 string characters out of 5858183
- 1250261 words of memory out of 5000000
+ 40844 strings out of 478994
+ 793484 string characters out of 5858183
+ 1261836 words of memory out of 5000000
  56824 multiletter control sequences out of 15000+600000
  567295 words of font info for 540 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 94i,23n,117p,2038b,989s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,23n,117p,2038b,999s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10
 .600pk>{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/texli
@@ -1854,10 +1846,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on Paper_Rev.pdf (13 pages, 1225436 bytes).
+Output written on Paper_Rev.pdf (13 pages, 1225253 bytes).
 PDF statistics:
- 822 PDF objects out of 1000 (max. 8388607)
- 637 compressed objects within 7 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 824 PDF objects out of 1000 (max. 8388607)
+ 639 compressed objects within 7 object streams
+ 131 named destinations out of 1000 (max. 500000)
  129326 words of extra memory for PDF output out of 154059 (max. 10000000)
 
