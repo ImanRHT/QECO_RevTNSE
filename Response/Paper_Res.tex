@@ -813,7 +813,7 @@ There are multiple directions for future work. A complementary approach involves
 \setcounter{section}{0}
 \renewcommand*{\thesection}{\Roman{section}}
 \makeatletter
-
+\setcounter{table}{0}
 
 \section{Response to Reviewer 1}
 \begin{enumerate}
@@ -832,7 +832,7 @@ The newly added Section II of the revised manuscript is as follows. \newline
 \section{Related Work}
 \label{section:II}
 \,\,\,\,In recent years, edge computing has become a popular method for scenarios that need to process massive data with weak devices, such as IoTs \cite{zhang2023multi}, Internet of Vehicles (IoVs) \cite{lin2022multi}, \cite{wei2023many}, and Industrial IoT (IIoT) \cite{yuan2023adaptive} environment.
-		We explore state-of-the-art RL-based techniques characteristic to discuss how they address task offloading problems in MEC. Table~\ref{table1} provides an intuitive comparison of the related works.
+		We explore state-of-the-art RL-based techniques characteristic to discuss how they address task offloading problems in MEC. Table~\ref{table111} provides an intuitive comparison of the related works.
 	\subsection{DRL-based Computation Offloading for MEC}
 	\,\,\,\,To effectively tackle the challenges of MEC arising from the ever-changing nature of networks, recent research highlights the effectiveness of RL in adapting to environmental changes and learning optimal strategies. To take advantage of RL methods for computation offloading in MEC, most studies transfer the problem to MDP to model the interactions of the environment.
 	Huang \textit{et al.} in \cite{huang2019deep}, focused on a wireless-powered MEC and proposed a DRL-based approach, capable of attaining near-optimal decisions. This is achieved by selectively considering a compact subset of candidate actions in each iteration. Liu \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL, which can generate interactive information along with resource decisions. 
@@ -903,7 +903,7 @@ However, these algorithms in \cite{gong2022edge}–\cite{gao2022large} require g
 				QECO &  Queuing-based MEC &  Computation offloading & Maximize the QoE of each MD individually &MDP & D3QN + LSTM & \\
 				\toprule
 		\end{tabular}}
-		\label{table1}}
+		\label{table111}}
 \end{table*}
 
 
@@ -942,7 +942,7 @@ We have also revised Secion I accordingly to make it consistent with the updated
 
 
 
-\vspace{5mm}
+\vspace{6mm}
 
 \item \underline{Reviewer's Comment}: 
 \textit{``Please highlight what and how the proposed approach provides "high performance" to further specify the motivations and contributions. Especially, please highlight the reason why the authors design the framework by integrating LSTM. Otherwise, it will make the innovations seem weak.''} \newline
@@ -975,8 +975,8 @@ Our main contributions are summarized as follows:
 \end{my}
 \vspace{5mm}
 
-Second, we have extended the performance evaluation by comparing the performance of our proposed algorithm with vanilla DQN and DDQN to further specify the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section V of the revised manuscript.
-This figure highlights the positive effect of workload prediction by the LSTM network. This prediction contributes to improving the efficient utilization of the processing capabilities of ENs, leading to faster convergence of the QECO algorithm and achieving a higher average QoE compared to other methods. ..... (COMPLETE IT).
+Second, we have extended the performance evaluation by comparing the performance of our proposed algorithm with vanilla DQN and DDQN \cite{van2016deep} to further specify the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section V of the revised manuscript.
+This figure highlights the positive effect of workload prediction by the LSTM network. This prediction contributes to improving the efficient utilization of the processing capabilities of ENs, leading to faster convergence of the QECO algorithm and achieving a higher average QoE compared to other methods. 
 
  
 
@@ -992,19 +992,19 @@ This figure highlights the positive effect of workload prediction by the LSTM ne
 	\vspace*{-3mm}
 	\caption{\textcolor{blue}{The convergence of the average QoE across episodes under different DQN-based methods.}}
 	\vspace*{-3mm}
-	\label{chart01}
+	\label{chart000}
 \end{figure}
 
 		\begin{my}{1cm}{1cm}
 	\rev{
 		{\
 
-We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig. 7 and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and D3QN-based computation offloading methods, measured by the average QoE across episodes. As shown in Fig. 7, the average QoE for all computation offloading algorithms rises consistently as the episodes progress, until reaching convergence. Specifically, the vanilla DQN, D3QN, and our proposed algorithm converge after approximately 650, 550, and 400 iterations, respectively. This demonstrates the relatively faster convergence of the QECO algorithm, which also achieves a higher average QoE than the other methods. These results highlight the positive impact of workload prediction by the LSTM network and its advantage in efficiently utilizing the processing capabilities of MDs and ENs.
+	\,\,\,\,We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart000} and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart000}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs.
 }}
 \end{my}
 
 
-\vspace{5mm}
+\vspace{6mm}
 
 \item \underline{Reviewer's Comment}: 
 \textit{``(a) In section III, why is the size of the task selected from a discrete set? Is it selected randomly or in another way? Besides, (b) the authors define the offloading indicate function as $y_{i,j}(t)$, it should be involved when modelling the Edge Execution phrase.''} \newline
@@ -1057,7 +1057,7 @@ We define $z_i(t)$ as the index assigned to the computation task arriving at MD 
 \end{my}
 
 
-\vspace{7mm}
+
 
 \item \underline{Reviewer's Comment}: 
 \textit{``(a) Some sota methods (e.g., DDQN, DDPG) are expected to be compared in the section on performance evaluation, and authors should have more discussions about the evaluation results rather than merely introducing them.  (b) Besides, I think it is better to design the evaluations with a real dataset. (c) Besides, 9\% and 6\% are not significant improvements compared to other methods.''}\newline
@@ -1110,13 +1110,13 @@ We have also revised the evaluation results as bellow:
 
 \begin{figure}[H]\centering
 	\captionsetup{name=Fig.}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ drop_1} 
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ drop_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
@@ -1126,13 +1126,13 @@ We have also revised the evaluation results as bellow:
 \end{figure}\vspace{-8mm}
 \begin{figure}[H]\centering
 	\captionsetup{name=Fig.}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ energy_1} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ energy_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
@@ -1140,16 +1140,16 @@ We have also revised the evaluation results as bellow:
 
 	\caption{\textcolor{blue}{The overall energy consumption under different computation workloads: (a) task arrival rate; (b) the number of MDs.}}
 	\label{chart2}
-\end{figure}\vspace{-12mm}
+\end{figure}\vspace{-8mm}
 \begin{figure}[H]\centering
 	\captionsetup{name=Fig.}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ delay_1} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ delay_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
@@ -1157,23 +1157,23 @@ We have also revised the evaluation results as bellow:
 
 	\caption{\textcolor{blue}{The average delay under different computation workloads: (a) task arrival rate; (b) the number of MDs.}}
 	\label{chart3}
-\end{figure} \vspace{-12mm}
+\end{figure} 
 \begin{figure}[H]\centering
 	\captionsetup{name=Fig.}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ qoe_2} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ qoe_1}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
 	\end{minipage}
 
 	\caption{\textcolor{blue}{The average QoE under different computation workloads: (a) task arrival rate; (b) the number of MDs.}}
-	\label{chart4}
+	\label{chart44}
 \end{figure} 
 
 Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impact of Dueling DQN, Double DQN, and LSTM network techniques. We have added Fig. 7 to Section V of the revised manuscript.
@@ -1185,7 +1185,7 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 	\vspace*{-3mm}
 	\caption{\textcolor{blue}{The convergence of the average QoE across episodes under different DQN-based methods.}}
 	\vspace*{-3mm}
-	\label{chart01}
+	\label{chart111}
 \end{figure}
 		\begin{my}{1cm}{1cm}
 	\rev{
@@ -1193,7 +1193,8 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 			
 			\dots 
 
-	We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart01} and Fig.~\ref{chart02}. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart01}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs. \\\dots }}
+
+\,\,\,\,We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart111} and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart111}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs. \\\dots }}
 
 \end{my}
 
@@ -1208,11 +1209,11 @@ Additionally, to address the reviewer's concern about merely introducing the res
 
 \dots 
 			
-We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. Fig. 6 (a) shows the average QoE for different values of the task arrival rate. This figure highlights the superiority of the QECO algorithm in providing MDs with an enhanced experience. At lower task arrival rates (i.e., 50-150), QECO performs optimally and maintains an average QoE of at least 0.72, while the other methods experience a steeper decline, with average QoE dropping to 0--0.54. Specifically, at a task arrival rate of 200, QECO improves the average QoE by 91.7\% compared to DCDRL in the positive average QoE range. As task arrival rates increase to 300, the average QoE significantly decreases for all methods due to increased competition for resources in the MEC system. However, QECO still maintains a positive average QoE, while other methods fall to negative values, with a decline of up to -0.17. For higher task arrival rates (i.e., 350–450), QECO experiences a negative average QoE, but it shows at least a 42.6\% and 24.6\% smaller reduction in average QoE compared to RD and DCDRL, respectively. \vspace{3mm}
+\,\,\,\,We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. Fig.~\ref{chart44} (a) shows the average QoE for different values of the task arrival rate. This figure highlights the superiority of the QECO algorithm in providing MDs with an enhanced experience. At lower task arrival rates (i.e., 50-150), QECO performs optimally and maintains an average QoE of at least 0.72, while the other methods experience a steeper decline, with average QoE dropping to 0--0.54. Specifically, at a task arrival rate of 200, QECO improves the average QoE by 91.7\% compared to DCDRL in the positive average QoE range. As task arrival rates increase to 300, the average QoE significantly decreases for all methods due to increased competition for resources in the MEC system. However, QECO still maintains a positive average QoE, while other methods fall to negative values, with a decline of up to -0.17. For higher task arrival rates (i.e., 350–450), QECO experiences a negative average QoE, but it shows at least a 42.6\% and 24.6\% smaller reduction in average QoE compared to RD and DCDRL, respectively. \vspace{3mm}
 
 
 
-Fig. 6 (b) illustrates the average QoE when we increase the number of MDs. The EN's workload grows when there are a larger number of MDs, leading to a reduction in the average QoE of all methods except LC. However, QECO effectively manages the uncertain load at the ENs. When the number of MDs increases from 30 to 110, QECO consistently maintains at least a 29.8\% higher QoE compared to the other methods. Specifically, at a moderate number of 70 MDs, QECO achieves an average QoE of 0.57, showing a 60.3\% improvement compared to DCDRL. It is worth noting that although improvements in each of the QoE factors can contribute to enhancing system performance, it is essential to consider the user's demands in each time slot. Therefore, the key difference between QECO and other methods is that it prioritizes users' demands, enabling it to strike an appropriate balance among them, ultimately leading to a higher QoE for MDs. \vspace{3mm}\\\dots }}
+\,\,\,\,Fig.~\ref{chart44} (b) illustrates the average QoE when we increase the number of MDs. The EN's workload grows when there are a larger number of MDs, leading to a reduction in the average QoE of all methods except LC. However, QECO effectively manages the uncertain load at the ENs. When the number of MDs increases from 30 to 110, QECO consistently maintains at least a 29.8\% higher QoE compared to the other methods. Specifically, at a moderate number of 70 MDs, QECO achieves an average QoE of 0.57, showing a 60.3\% improvement compared to DCDRL. It is worth noting that although improvements in each of the QoE factors can contribute to enhancing system performance, it is essential to consider the user's demands in each time slot. Therefore, the key difference between QECO and other methods is that it prioritizes users' demands, enabling it to strike an appropriate balance among them, ultimately leading to a higher QoE for MDs. \vspace{3mm}\\\dots }}
 
 \end{my}\vspace{6mm}
 
@@ -1230,7 +1231,7 @@ To clarify the simulation results, we have revised the Abstract of the manuscrip
 				\dots 
 				
 				Simulation results with 50 mobile devices and 5 edge nodes validate that the QECO algorithm is able to efficiently recognize the mobile devices' demands and exploit the computational resources of edge nodes. 
-				Consequently, it increases the number of completed tasks by 12.2\%, while simultaneously reducing task delay and energy consumption by 11.7\% and 10.8\%, respectively. Together, these improvements align with user preferences, resulting in a significant average QoE enhancement of at least 34.8\% compared to \cite{qiu2020distributed}.
+				Consequently, it increases the number of completed tasks by 12.2\%, while simultaneously reducing task delay and energy consumption by 11.7\% and 10.8\%, respectively. Together, these improvements align with user preferences, resulting in a significant average QoE enhancement of at least 34.8\% compared to an existing algorithm.
 }
 	
 \end{my}
@@ -1275,31 +1276,31 @@ To clarify the simulation results, we have revised the Abstract of the manuscrip
 	
 	\dots
 	
-	In recent years, edge computing has become a popular method for scenarios that need to process massive data with weak devices, such as IoTs \cite{zhang2023multi}, Internet of Vehicles (IoVs) \cite{lin2022multi}, \cite{wei2023many}, and Industrial IoT (IIoT) \cite{yuan2023adaptive} environment.
+	\,\,\,\,In recent years, edge computing has become a popular method for scenarios that need to process massive data with weak devices, such as IoTs \cite{zhang2023multi}, Internet of Vehicles (IoVs) \cite{lin2022multi}, \cite{wei2023many}, and Industrial IoT (IIoT) \cite{yuan2023adaptive} environment.
 	
 	\dots
 	
-	To take advantage of RL methods for computation offloading in MEC, most studies transfer the problem to MDP to model the interactions of the environment.
+	\,\,\,\,To take advantage of RL methods for computation offloading in MEC, most studies transfer the problem to MDP to model the interactions of the environment.
 	\dots
 	Wu \textit{et al.} in \cite{wu2023computation} introduced a stochastic game-based resource allocation in the SDN-based MEC network. They used an MDP and proposed a multi-agent RL method to minimize both energy consumption and processing delay. 
 	
 	
 	\dots
 	
-	Some studies explored task offloading problems in more advanced scenarios. Chen \textit{et al.} in \cite{chen2021drl} addressed a joint optimization problem involving computation offloading and resource allocation, aiming to reduce both task processing delay and energy consumption across all MDs.
+	\,\,\,\,Some studies explored task offloading problems in more advanced scenarios. Chen \textit{et al.} in \cite{chen2021drl} addressed a joint optimization problem involving computation offloading and resource allocation, aiming to reduce both task processing delay and energy consumption across all MDs.
 	To optimize privacy protection and quality of service, authors in \cite{wu2024privacy} investigated the joint computation offloading and power allocation problems for the IIoT network. They modeled the problem as an MDP and proposed a multi-agent deep Q-network (DQN)-based algorithm.
 	
 	\dots 
 	
-	To reflecting real-world scenarios more accurately, the authors applied queuing theory to model MEC systems. It helps in modeling the dynamic nature of network, allowing MEC systems to allocate computational and transmission resources more efficiently.
+	\,\,\,\,To reflecting real-world scenarios more accurately, the authors applied queuing theory to model MEC systems. It helps in modeling the dynamic nature of network, allowing MEC systems to allocate computational and transmission resources more efficiently.
 	To minimize energy consumption, Munir \textit{et al.} \cite{munir2021multi} developed a semi-distributed approach using a multi-agent RL framework for self-powered MEC. 
 \dots
-	To address the privacy-aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} modeled the problem as an MDP and proposed a DQN-based method to optimize the computation rate and energy consumption in a queuing-based IIoT network.
+	\,\,\,\,To address the privacy-aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} modeled the problem as an MDP and proposed a DQN-based method to optimize the computation rate and energy consumption in a queuing-based IIoT network.
 
 	
 	\dots 
 	
-	Due to the limited processing capacities of ENs, the processing capacity that an EN allocates to an MD depends on the EN's workload each time. \dots
+	\,\,\,\,Due to the limited processing capacities of ENs, the processing capacity that an EN allocates to an MD depends on the EN's workload each time. \dots
 	To optimize delay and energy consumption, Wu \textit{et al.} in \cite{wu2023multi} investigated the computation offloading problem in a queuing-based MEC IIoT system. They modeled the problem as a POMDP and proposed a multi-agent proximal policy optimization (PPO)-based method to obtain the optimal offloading strategy in dynamic environments.
 	
 	\dots
@@ -1322,7 +1323,7 @@ We have provided a survey of the recently published state-of-the-art works in Se
 \textit{We would like to gratefully thank the reviewer for the valuable comments and suggestions. We hope that we have satisfactorily addressed these comments.}\newline
 
 
-\newpage
+
 
 	\setcounter{section}{1}
 \setcounter{table}{0}
@@ -1529,13 +1530,13 @@ We have also revised the evaluation results as bellow:
 
 \begin{figure}[H]\centering
 	\captionsetup{name=Fig.}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ drop_1} 
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ drop_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
@@ -1545,13 +1546,13 @@ We have also revised the evaluation results as bellow:
 \end{figure}\vspace{-8mm}
 \begin{figure}[H]\centering
 	\captionsetup{name=Fig.}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ energy_1} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ energy_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
@@ -1562,13 +1563,13 @@ We have also revised the evaluation results as bellow:
 \end{figure}\vspace{-12mm}
 \begin{figure}[H]\centering
 	\captionsetup{name=Fig.}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ delay_1} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ delay_2}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
@@ -1579,20 +1580,20 @@ We have also revised the evaluation results as bellow:
 \end{figure} \vspace{-12mm}
 \begin{figure}[H]\centering
 	\captionsetup{name=Fig.}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ qoe_2} 		
 		\textcolor{white}{i}\hspace{0.6cm}(a)
 	\end{minipage}
 	\hspace{-0.2cm}
-	\begin{minipage}[b]{0.3\linewidth}
+	\begin{minipage}[b]{0.33\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{ qoe_1}
 		\textcolor{white}{i}\hspace{0.6cm}(b)
 	\end{minipage}
 	
 	\caption{\textcolor{blue}{The average QoE under different computation workloads: (a) task arrival rate; (b) the number of MDs.}}
-	\label{chart4}
+	\label{chart444}
 \end{figure} 
 
 Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impact of Dueling DQN, Double DQN, and LSTM network techniques. We have added Fig. 7 to Section V of the revised manuscript.
@@ -1612,7 +1613,7 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 			
 			\dots 
 			
-				We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart01} and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart01}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs. \\\dots }}
+				\,\,\,\,We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart01} and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart01}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs. \\\dots }}
 	
 \end{my}
 
@@ -1632,7 +1633,7 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 				
 				\dots 
 				
-The QoE function evaluates the influence of agent's actions based on its personalized QoE requirement \cite{wang2017qoe}, by taking several key performance factors into account. It incorporates a multi-dimensional and adaptive structure that establishes an appropriate balance among these QoE factors according to the MD's preference, such as individual preferences for reducing task delays or energy consumption, which may vary over time \cite{wang2019intelligent}, \cite{mehrabi2019energy}. To reflect the agent’s personalized QoE requirements, an adaptive trade-off between task completion and cost reduction is designed, where a weighted sum between completion delay and energy consumption plays as an associated cost. The MDs adjusted the weights dynamically to define the significance of each factor based on its energy mode—performance, power-saving, or ultra-power-saving. 
+\,\,\,\,The QoE function evaluates the influence of agent's actions based on its personalized QoE requirement \cite{wang2017qoe}, by taking several key performance factors into account. It incorporates a multi-dimensional and adaptive structure that establishes an appropriate balance among these QoE factors according to the MD's preference, such as individual preferences for reducing task delays or energy consumption, which may vary over time \cite{wang2019intelligent}, \cite{mehrabi2019energy}. To reflect the agent’s personalized QoE requirements, an adaptive trade-off between task completion and cost reduction is designed, where a weighted sum between completion delay and energy consumption plays as an associated cost. The MDs adjusted the weights dynamically to define the significance of each factor based on its energy mode—performance, power-saving, or ultra-power-saving. 
 Based on the system model, we first calculate task delay and energy consumption and then represent the associated cost and QoE function accordingly.
 								
 				\dots
@@ -1648,11 +1649,11 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section V o
 			
 			\dots 
 			
-			We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. Fig. 6 (a) shows the average QoE for different values of the task arrival rate. This figure highlights the superiority of the QECO algorithm in providing MDs with an enhanced experience. At lower task arrival rates (i.e., 50-150), QECO performs optimally and maintains an average QoE of at least 0.72, while the other methods experience a steeper decline, with average QoE dropping to 0--0.54. Specifically, at a task arrival rate of 200, QECO improves the average QoE by 91.7\% compared to DCDRL in the positive average QoE range. As task arrival rates increase to 300, the average QoE significantly decreases for all methods due to increased competition for resources in the MEC system. However, QECO still maintains a positive average QoE, while other methods fall to negative values, with a decline of up to -0.17. For higher task arrival rates (i.e., 350–450), QECO experiences a negative average QoE, but it shows at least a 42.6\% and 24.6\% smaller reduction in average QoE compared to RD and DCDRL, respectively. \vspace{3mm}
+			\,\,\,\,We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. Fig.~\ref{chart444} (a) shows the average QoE for different values of the task arrival rate. This figure highlights the superiority of the QECO algorithm in providing MDs with an enhanced experience. At lower task arrival rates (i.e., 50-150), QECO performs optimally and maintains an average QoE of at least 0.72, while the other methods experience a steeper decline, with average QoE dropping to 0--0.54. Specifically, at a task arrival rate of 200, QECO improves the average QoE by 91.7\% compared to DCDRL in the positive average QoE range. As task arrival rates increase to 300, the average QoE significantly decreases for all methods due to increased competition for resources in the MEC system. However, QECO still maintains a positive average QoE, while other methods fall to negative values, with a decline of up to -0.17. For higher task arrival rates (i.e., 350–450), QECO experiences a negative average QoE, but it shows at least a 42.6\% and 24.6\% smaller reduction in average QoE compared to RD and DCDRL, respectively. \vspace{3mm}
 			
 			
 			
-			Fig. 6 (b) illustrates the average QoE when we increase the number of MDs. The EN's workload grows when there are a larger number of MDs, leading to a reduction in the average QoE of all methods except LC. However, QECO effectively manages the uncertain load at the ENs. When the number of MDs increases from 30 to 110, QECO consistently maintains at least a 29.8\% higher QoE compared to the other methods. Specifically, at a moderate number of 70 MDs, QECO achieves an average QoE of 0.57, showing a 60.3\% improvement compared to DCDRL. It is worth noting that although improvements in each of the QoE factors can contribute to enhancing system performance, it is essential to consider the user's demands in each time slot. Therefore, the key difference between QECO and other methods is that it prioritizes users' demands, enabling it to strike an appropriate balance among them, ultimately leading to a higher QoE for MDs. \vspace{3mm}\\\dots }}
+			\,\,\,\,Fig.~\ref{chart444} (b) illustrates the average QoE when we increase the number of MDs. The EN's workload grows when there are a larger number of MDs, leading to a reduction in the average QoE of all methods except LC. However, QECO effectively manages the uncertain load at the ENs. When the number of MDs increases from 30 to 110, QECO consistently maintains at least a 29.8\% higher QoE compared to the other methods. Specifically, at a moderate number of 70 MDs, QECO achieves an average QoE of 0.57, showing a 60.3\% improvement compared to DCDRL. It is worth noting that although improvements in each of the QoE factors can contribute to enhancing system performance, it is essential to consider the user's demands in each time slot. Therefore, the key difference between QECO and other methods is that it prioritizes users' demands, enabling it to strike an appropriate balance among them, ultimately leading to a higher QoE for MDs. \vspace{3mm}\\\dots }}
 	
 \end{my}\vspace{6mm}
 	
@@ -1699,7 +1700,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section V o
 			
 			\dots
 			
-			We consider a MEC environment with 50 MDs and 5 ENs \dots The algorithm's source code is available at \cite{QECO}.
+			\,\,\,\,We consider a MEC environment with 50 MDs and 5 ENs \dots The algorithm's source code is available at \cite{QECO}.
 			
 			\dots
 	}
@@ -1729,25 +1730,25 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section V o
 				
 				\dots
 				
-				To take advantage of RL methods for computation offloading in MEC, most studies transfer the problem to MDP to model the interactions of the environment.
+				\,\,\,\,To take advantage of RL methods for computation offloading in MEC, most studies transfer the problem to MDP to model the interactions of the environment.
 				\dots
 				Wu \textit{et al.} in \cite{wu2023computation} introduced a stochastic game-based resource allocation in the SDN-based MEC network. They used an MDP and proposed a multi-agent RL method to minimize both energy consumption and processing delay. 
 				
 				
 				\dots
 				
-				Some studies explored task offloading problems in more advanced scenarios. \dots 
+				\,\,\,\,Some studies explored task offloading problems in more advanced scenarios. \dots 
 				To optimize privacy protection and quality of service, authors in \cite{wu2024privacy} investigated the joint computation offloading and power allocation problems for the IIoT network. They modeled the problem as an MDP and proposed a multi-agent deep Q-network (DQN)-based algorithm.
 				
 				\dots 
 				
-				To reflecting real-world scenarios more accurately \dots 
+				\,\,\,\,To reflecting real-world scenarios more accurately \dots 
 				To address the privacy-aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} modeled the problem as an MDP and proposed a DQN-based method to optimize the computation rate and energy consumption in a queuing-based IIoT network.
 				
 				
 				\dots 
 				
-				Due to the limited processing capacities of ENs  \dots
+				\,\,\,\,Due to the limited processing capacities of ENs  \dots
 				To optimize delay and energy consumption, Wu \textit{et al.} in \cite{wu2023multi} investigated the computation offloading problem in a queuing-based MEC IIoT system. They modeled the problem as a POMDP and proposed a multi-agent proximal policy optimization (PPO)-based method to obtain the optimal offloading strategy in dynamic environments.
 				
 				\dots
@@ -1763,7 +1764,7 @@ We have provided a survey of the recently published state-of-the-art works in Se
 	
 \end{enumerate}
 
-\vfill
+\vspace{10mm}
 
 \textit{We would like to gratefully thank the reviewer for the valuable comments and suggestions. We hope that we have satisfactorily addressed these comments.}\newline
 

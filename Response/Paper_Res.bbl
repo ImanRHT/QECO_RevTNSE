@@ -272,10 +272,4 @@ H.~Van~Hasselt, A.~Guez, and D.~Silver, ``Deep reinforcement learning with
   double q-learning,'' in \emph{Proceedings of the AAAI conference on
   artificial intelligence}, vol.~30, no.~1, 2016.
 
-\bibitem{seo2022differential}
-H.~Seo, H.~Oh, J.~K. Choi, and S.~Park, ``Differential pricing-based task
-  offloading for delay-sensitive iot applications in mobile edge computing
-  system,'' \emph{IEEE Internet of Things Journal}, vol.~9, no.~19, pp.
-  19\,116--19\,131, 2022.
-
 \end{thebibliography}
