@@ -1,7 +1,7 @@
 % This template has been tested with IEEEtran of 2015.
  
 % !TeX spellcheck = en-US
-% LTeX: language=en-US
+% LTeX: language=en-US 
 % !TeX encoding = utf8
 % !TeX program = pdflatex
 % !BIB program = bibtex
@@ -259,7 +259,7 @@
 % Enable that parameters of \cref{}, \ref{}, \cite{}, ... are linked so that a reader can click on the number an jump to the target in the document
 \usepackage{hyperref}
 
-
+\usepackage{afterpage}
 
 
 
@@ -452,7 +452,7 @@
 %  - https://tex.stackexchange.com/a/279134/9075
 %  - https://tex.stackexchange.com/q/279789/9075 (TikZ)
 %  - https://tex.stackexchange.com/a/200330/9075 - for non-compsocc papers
-\iffalse
+\iffalse 
   \IEEEoverridecommandlockouts
   \IEEEpubid{\begin{minipage}{\textwidth}\ \\[12pt] \centering
       1551-3203 \copyright 2015 IEEE.
@@ -465,7 +465,7 @@
 \begin{abstract}
 In the realm of mobile edge computing (MEC), efficient computation task offloading plays a pivotal role in ensuring a seamless quality of experience (QoE) for users. Maintaining a high QoE is paramount in today's interconnected world, where users demand reliable services. This challenge stands as one of the most primary key factors contributing to handling dynamic and uncertain mobile environment. In this study, we delve into computation offloading in MEC systems, where strict task processing deadlines and energy constraints can adversely affect the system performance. We formulate the computation task offloading problem as a Markov decision process (MDP) to maximize the long-term QoE of each user individually. We propose a distributed QoE-oriented computation offloading (QECO) algorithm based on deep reinforcement learning (DRL) that empowers mobile devices to make their offloading decisions without requiring knowledge of decisions made by other devices. Through numerical studies, we evaluate the performance of QECO. \textcolor{blue}{
 	Simulation results with 50 mobile devices and 5 edge nodes validate that the QECO algorithm is able to efficiently recognize the mobile devices' demands and exploit the computational resources of edge nodes. 
-Consequently, it increases the number of completed tasks by 12.2\%, while simultaneously reducing task delay and energy consumption by 11.7\% and 10.8\%, respectively. Together, these improvements align with user preferences, resulting in a significant average QoE enhancement of at least 34.8\% compared to \cite{qiu2020distributed}.}
+Consequently, it increases the number of completed tasks by 12.2\%, while simultaneously reducing task delay and energy consumption by 11.7\% and 10.8\%, respectively. Together, these improvements align with user preferences, resulting in a significant average QoE enhancement of at least 34.8\% compared to an existing algorithm.}
 
 
 %\textcolor{red}{Consequently, it can complete 14\% more tasks and reduce task delay and energy consumption by 10.7\% and 11.7\%, respectively. These together contribute to a significant improvement of at least 37\% in average QoE compared to an existing algorithm.}
@@ -621,25 +621,14 @@ Moreover, due to the absence of robust underlying resource scheduling systems, i
 	 To optimize privacy protection and quality of service, authors in \cite{wu2024privacy} investigated the joint computation offloading and power allocation problems for the IIoT network. They modeled the problem as an MDP and proposed a multi-agent deep Q-network (DQN)-based algorithm.
 	 Dai \textit{et al.} in \cite{dai2020edge} introduced the integration of action refinement into DRL and designed an algorithm based on deep deterministic policy gradient (DDPG) to concurrently optimize resource allocation and computation offloading.
 	 In \cite{zhao2019deep}, Zhao \textit{et al.} proposed a computation offloading algorithm based on DRL, which addresses the competition for wireless channels to optimize long-term downlink utility.
-	 These works did not take into account the challenges of a dynamic network environment. For instance, in \cite{chen2021drl}, MDs are assumed to have sufficient transmission and computation resources from ENs, which may not always align with real-world conditions. While the works of \cite{wu2024privacy}--\cite{zhao2019deep} investigated the limited resources in MEC, they did not consider the dynamic workload at ENs in decision making processes, imposing significant challenges in overall system performance. }
-
- 
-
-
-
-	 
-	 
-
-%Besides the works \cite{huang2019deep}--\cite{liao2023online}, 
-
+	 These works did not take into account the challenges of a dynamic network environment. For instance, in \cite{chen2021drl}, MDs are assumed to have sufficient transmission and computation resources from ENs, which may not always align with real-world conditions. While the works of \cite{wu2024privacy}--\cite{zhao2019deep} investigated the limited resources in MEC, they did not consider the dynamic workload at ENs in decision making processes, imposing significant challenges in overall system performance. } 
  \textcolor{blue}{\subsection{Queuing Theory for Efficient Resources Scheduling}}
-
 %In fact, the state of MD's computing and transmission power, arrived task's requirement, the energy state of MDs, and workloads at ENs all change dynamically with time in actual systems, 
-
 %On the other hand, although the works [11]–[15] considered non-divisible tasks, they do not take into account the underlying queuing systems. As a result, the processing and transmission of each task should always be accomplished within one time slot (or before the arrival of the next task), which may not always be guaranteed in practice.
 
 
-	 \begin{table*}[htbp]\textcolor{blue}{
+
+\begin{table*}[htbp]\textcolor{blue}{
 		\renewcommand{\arraystretch}{0.7}
 		\captionsetup{name=TABLE}
 		\caption{Comparison of Related Works}
@@ -660,7 +649,7 @@ Moreover, due to the absence of robust underlying resource scheduling systems, i
 				\cite{gao2022large} & Queuing-based heterogeneous MEC & Decentralized computation offloading & Optimize system cost and completion rates & MDP & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
 				\cite{9253665} &  Queuing-based MEC &  Computation offloading & Minimize drop rate and computation delay. & MDP & D3QN + LSTM & Not consider system energy consumtion\\\midrule
 				\cite{wu2024combining}  & Queuing-based IIoT MEC & Privacy aware computation offloading & Optimization of computation rate and energy consumption & MDP & Actor-critic network  & Not take user's demand into consideration \\\midrule
-				\cite{wu2023multi} 1& Queuing-based IIoT MEC & Computation offloading & Optimize delay and energy consumption & POMDP & Multi-agent PPO&  Not consider tasks with maximum delay tolerance \\\midrule
+				\cite{wu2023multi} & Queuing-based IIoT MEC & Computation offloading & Optimize delay and energy consumption & POMDP & Multi-agent PPO&  Not consider tasks with maximum delay tolerance \\\midrule
 				\cite{huang2021deadline} & Queuing-based MEC & Computation offloading & Optimize drop rate and energy consumption & POMDP & DDPG & Not consider computation delay \\ \midrule
 				\cite{Bolourian-WCL24}  & Queuing-based MEC with EHs& Energy harvesting  computation offloading & Minimize drop rate and energy consumption. & MDP  & DQN & Not consider computation delay  \\\midrule
 				QECO &  Queuing-based MEC &  Computation offloading & Maximize the QoE of each MD individually &MDP & D3QN + LSTM & \\
@@ -668,6 +657,9 @@ Moreover, due to the absence of robust underlying resource scheduling systems, i
 		\end{tabular}}
 		\label{table1}}
 \end{table*}
+
+
+
 
 
   \textcolor{blue}{To reflecting real-world scenarios more accurately, the authors applied queuing theory to model MEC systems. It helps in modeling the dynamic nature of network, allowing MEC systems to allocate computational and transmission resources more efficiently.
@@ -696,12 +688,6 @@ However, these algorithms in \cite{gong2022edge}–\cite{gao2022large} require g
 
 
 %Although DRL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention.  As shown in Table~\ref{table1}, current research primarily focuses on minimizing energy consumption \cite{tang2022uav}, reducing processing delays \cite{guo2022energy}, \cite{seo2022differential}, maximizing computation rates~\cite{huang2019deep}, or optimizing a weighted balance among performance factors \cite{li2022joint}. However, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay, as considered in \cite{sun2024hierarchical}, \cite{9253665} but also by energy consumption \cite{Bolourian-WCL24}, \cite{huang2021deadline}. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs. While some existing works such as \cite{liao2023online}, \cite{wu2024privacy}, \cite{dai2020edge}, \cite{gao2022large}, \cite{li2022joint} have investigated the trade-off between delay and energy consumption, they fail to address the user demands and fulfill QoE requirements properly. In contrast to the aforementioned works, we propose a DRL-based distributed algorithm that provides users with an appropriate balance among QoE factors based on their demands. 
-
-
-
-
-
-
 
 
 
@@ -951,8 +937,8 @@ where vector $\boldsymbol{y}_i(t)=(y_{i,j}(t))_{j \in \mathcal{J}}$ represents t
 
 
 \subsection{QoE Function}
-\textcolor{blue}{The QoE function evaluates the influence of agent's actions based on its personalized QoE requirement, by taking several key performance factors into account. It incorporates a multi-dimensional and adaptive structure that establishes an appropriate balance among these QoE factors according to the MD's preference, such as individual preferences for reducing task delays or energy consumption, which may vary over time. To reflect the agent’s personalized QoE requirements, an adaptive trade-off between task completion and cost reduction is designed, where a weighted sum between completion delay and energy consumption plays as an associated cost. The MDs adjusted the weights dynamically to define the significance of each factor based on its energy mode—performance, power-saving, or ultra power-saving. 
-	Based on the system model, we first formulate the calculation of task delay and energy consumption and then represent the associated cost and QoE function accordingly.}
+\textcolor{blue}{The QoE function evaluates the influence of agent's actions based on its personalized QoE requirement \cite{wang2017qoe}, by taking several key performance factors into account. It incorporates a multi-dimensional and adaptive structure that establishes an appropriate balance among these QoE factors according to the MD's preference, such as individual preferences for reducing task delays or energy consumption, which may vary over time \cite{wang2019intelligent}, \cite{mehrabi2019energy}. To reflect the agent’s personalized QoE requirements, an adaptive trade-off between task completion and cost reduction is designed, where a weighted sum between completion delay and energy consumption plays as an associated cost. The MDs adjusted the weights dynamically to define the significance of each factor based on its energy mode—performance, power-saving, or ultra-power-saving. 
+	Based on the system model, we first calculate task delay and energy consumption and then represent the associated cost and QoE function accordingly.}
 	
  Given the selected action $\boldsymbol{a}_i(t)$ in the observed state $\boldsymbol{s}_i(t)$, we represent $\mathcal{D}_i(\boldsymbol{s}_i(t), \boldsymbol{a}_i(t))$ as the delay of task $z_i(t),$ which indicates the number of time slots from time slot $t$ to the time slot in which task $z_i(t)$ is processed. It is calculated by: \vspace{2mm}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  11 OCT 2024 07:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  11 OCT 2024 09:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,13 +686,16 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 )
 (./Paper_Res.aux
 
+LaTeX Warning: Label `section:II' multiply defined.
+
+
 LaTeX Warning: Label `26' multiply defined.
 
 
 LaTeX Warning: Label `section:II' multiply defined.
 
 
-LaTeX Warning: Label `16' multiply defined.
+LaTeX Warning: Label `table1' multiply defined.
 
 
 LaTeX Warning: Label `17' multiply defined.
@@ -708,9 +711,6 @@ LaTeX Warning: Label `chart01' multiply defined.
 
 
 LaTeX Warning: Label `section:II' multiply defined.
-
-
-LaTeX Warning: Label `table1' multiply defined.
 
 
 LaTeX Warning: Label `chart1' multiply defined.
@@ -803,114 +803,270 @@ LaTeX Info: Redefining \nameref on input line 68.
 \@outlinefile=\write3
 \openout3 = `Paper_Res.out'.
 
- [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 172
+ [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 165
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 172
+LaTeX Font Info:    Trying to load font information for U+msb on input line 165
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 17
-2.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
+5.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [3]
+)
+
+LaTeX Warning: Reference `section:IV' on page 2 undefined on input line 179.
+
+[2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Underfull \hbox (badness 4686) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Online com-pu-ta-tion of-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 heterogeneous
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Wireless-powered
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Computation of-fload-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not con-sider delay-
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Multi-agent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Computation of-fload-ing
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not con-sider tasks with
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not con-sider delay-
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Minimize task com-pu-ta-tion
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Decentralized
+ []
+
+
+Underfull \hbox (badness 5622) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Optimize sys-tem cost and
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Privacy aware com-pu-ta-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Actor-critic
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Optimize de-lay and en-ergy
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Not con-sider tasks with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Overfull \hbox (9.44946pt too wide) in paragraph at lines 274--275
+[][]
+ []
+
 \LTGbeginlineexample=\count328
 \LTGendlineexample=\count329
 
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./queue.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<queue.pdf, id=259, 782.925pt x 277.9986pt>
+<queue.pdf, id=277, 782.925pt x 277.9986pt>
 File: queue.pdf Graphic file (type pdf)
 <use queue.pdf>
-Package pdftex.def Info: queue.pdf  used on input line 229.
+Package pdftex.def Info: queue.pdf  used on input line 320.
 (pdftex.def)             Requested size: 364.23904pt x 129.33163pt.
-[4]
+[5] [6 <./queue.pdf>]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 260.
+(amsmath)                 on input line 351.
 
-[5 <./queue.pdf>] [6]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 318
+[7]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 409
 .
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [7] [8]
-[9] [10]
+) [8]
+[9] [10] [11]
 
-LaTeX Warning: Reference `DQN' on page 11 undefined on input line 455.
-
-[11]
-
-LaTeX Warning: Reference `alg:cap' on page 12 undefined on input line 531.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 544.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 544.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 544.
+LaTeX Warning: Reference `DQN' on page 12 undefined on input line 549.
 
 [12]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 598.
+LaTeX Warning: Reference `alg:cap' on page 13 undefined on input line 601.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 598.
-
+[13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 598.
+(hyperref)                removing `math shift' on input line 614.
 
-[13pdfTeX warning (ext4): destination with the same identifier (name{equation.4
-.28}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.612 \begin{alignat}{1}
-                        ]
-Underfull \hbox (badness 10000) in paragraph at lines 615--617
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\in' on input line 614.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 614.
+
+[14]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 639.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\in' on input line 639.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 639.
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.28
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.645 \end{alignat}
+                   
+Underfull \hbox (badness 10000) in paragraph at lines 659--661
 
  []
 
+[15]
 
-LaTeX Warning: Reference `table' on page 14 undefined on input line 638.
+LaTeX Warning: Reference `table' on page 16 undefined on input line 679.
 
-[14] [15]
+[16] [17]
 
-LaTeX Warning: Reference `chart0' on page 16 undefined on input line 837.
-
-
-LaTeX Warning: Reference `chart0' on page 16 undefined on input line 837.
+LaTeX Warning: Reference `chart02' on page 18 undefined on input line 750.
 
 
-LaTeX Warning: Reference `chart0' on page 16 undefined on input line 837.
+LaTeX Warning: Reference `chart02' on page 18 undefined on input line 752.
 
 
-LaTeX Warning: Reference `chart0' on page 16 undefined on input line 837.
+LaTeX Warning: Reference `chart02' on page 18 undefined on input line 752.
 
-[16] [17] (./Paper_Res.bbl [18]) [19]
+[18] [19] (./Paper_Res.bbl [20]) [21]
 
 LaTeX Warning: No \author given.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--909
+Underfull \hbox (badness 10000) in paragraph at lines 811--812
 
  []
 
@@ -918,14 +1074,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.915 \section{Response to Reviewer 1}
+l.818 \section{Response to Reviewer 1}
                                       
-Underfull \hbox (badness 10000) in paragraph at lines 918--920
+Underfull \hbox (badness 10000) in paragraph at lines 821--823
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--927
+Underfull \hbox (badness 10000) in paragraph at lines 829--830
 
  []
 
@@ -933,195 +1089,195 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.960 ...m and may incur high signaling overhead.}
+l.863 ...m and may incur high signaling overhead.}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{subsection.2.1}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.960 ...m and may incur high signaling overhead.}
+l.863 ...m and may incur high signaling overhead.}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{page.1}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.960 ...m and may incur high signaling overhead.}
-                                                   [1]
-
-LaTeX Warning: Citation `chen2021drl' on page 2 undefined on input line 960.
-
-
-LaTeX Warning: Citation `chen2021drl' on page 2 undefined on input line 960.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
+l.863 ...m and may incur high signaling overhead.}
+                                                   [1]pdfTeX warning (ext4): de
+stination with the same identifier (name{page.2}) has been already used, duplic
+ate ignored
 <to be read again> 
                    \relax 
-l.960 ...m and may incur high signaling overhead.}
+l.863 ...m and may incur high signaling overhead.}
                                                    [2]pdfTeX warning (ext4): de
 stination with the same identifier (name{subsection.2.2}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.960 ...m and may incur high signaling overhead.}
+l.863 ...m and may incur high signaling overhead.}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{subsection.2.3}) has been already used, du
+plicate ignored
+<to be read again> 
+                   \relax 
+l.863 ...m and may incur high signaling overhead.}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{page.3}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.961 \end{my}
+l.864 \end{my}
                [3]
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 1003--1003
+Underfull \hbox (badness 4686) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Online com-pu-ta-tion of-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 heterogeneous
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1003--1003
+Underfull \hbox (badness 2359) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Wireless-powered
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Computation of-fload-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not con-sider delay-
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1003--1003
+Underfull \hbox (badness 1902) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not take user's de-mand
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Multi-agent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Computation of-fload-ing
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 1003--1003
+Underfull \hbox (badness 1852) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not con-sider tasks with
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1003--1003
+Underfull \hbox (badness 2359) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1003--1003
+Underfull \hbox (badness 1902) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not take user's de-mand
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1003--1003
+Underfull \hbox (badness 2359) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not con-sider delay-
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1003--1003
+Underfull \hbox (badness 2359) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 1003--1003
+Underfull \hbox (badness 5331) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Minimize task com-pu-ta-tion
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1003--1003
+Underfull \hbox (badness 1902) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not take user's de-mand
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Decentralized
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 1003--1003
+Underfull \hbox (badness 5622) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Optimize sys-tem cost and
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1003--1003
+Underfull \hbox (badness 1902) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not take user's de-mand
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Underfull \hbox (badness 2197) in paragraph at lines 1003--1003
+Underfull \hbox (badness 2197) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Privacy aware com-pu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Actor-critic
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1003--1003
+Underfull \hbox (badness 1902) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not take user's de-mand
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 1003--1003
+Underfull \hbox (badness 2111) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Optimize de-lay and en-ergy
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 1003--1003
+Underfull \hbox (badness 1852) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Not con-sider tasks with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []|\OT1/ptm/m/n/12 Queuing-based
  []
 
 
-Overfull \hbox (9.44946pt too wide) in paragraph at lines 1003--1004
+Overfull \hbox (9.44946pt too wide) in paragraph at lines 906--907
 [][]
  []
 
@@ -1129,9 +1285,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1036  }
-          [4]
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1045
+l.940  }
+         [4]
+Underfull \hbox (badness 10000) in paragraph at lines 947--949
 
  []
 
@@ -1139,9 +1295,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1070 }}
-          [5]
-Overfull \hbox (8.78362pt too wide) in paragraph at lines 1070--1070
+l.974 }}
+         [5]
+Overfull \hbox (8.78362pt too wide) in paragraph at lines 974--974
 []\OT1/ptm/m/it/12 Performance Eval-u-a-tion: \OT1/ptm/m/n/12 We con-duct com-p
 re-hen-sive ex-per-i-ments to eval-u-ate the QECO's
  []
@@ -1150,15 +1306,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1070 }}
-          [6]
-<m1.pdf, id=521, 938.50626pt x 433.62pt>
+l.974 }}
+         [6]
+<m1.pdf, id=561, 938.50626pt x 433.62pt>
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1085.
+Package pdftex.def Info: m1.pdf  used on input line 991.
 (pdftex.def)             Requested size: 312.20943pt x 144.2463pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1105
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1011
 
  []
 
@@ -1166,115 +1322,105 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1105 
+l.1011 
         [7 <./m1.pdf>]pdfTeX warning (ext4): destination with the same identifi
 er (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1152 }}
-          [8]
-Underfull \hbox (badness 10000) in paragraph at lines 1158--1160
+l.1057 \end{my}
+                [8]
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1064
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1164
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1068
 
  []
 
+<drop_1.pdf, id=600, 515.9275pt x 462.72874pt>
+File: drop_1.pdf Graphic file (type pdf)
+<use drop_1.pdf>
+Package pdftex.def Info: drop_1.pdf  used on input line 1115.
+(pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
+<drop_2.pdf, id=601, 514.92375pt x 462.72874pt>
+File: drop_2.pdf Graphic file (type pdf)
+<use drop_2.pdf>
+Package pdftex.def Info: drop_2.pdf  used on input line 1121.
+(pdftex.def)             Requested size: 156.1047pt x 140.28125pt.
+<energy_1.pdf, id=602, 513.92pt x 462.72874pt>
+File: energy_1.pdf Graphic file (type pdf)
+<use energy_1.pdf>
+Package pdftex.def Info: energy_1.pdf  used on input line 1131.
+(pdftex.def)             Requested size: 156.1047pt x 140.55661pt.
+<energy_2.pdf, id=603, 515.9275pt x 462.72874pt>
+File: energy_2.pdf Graphic file (type pdf)
+<use energy_2.pdf>
+Package pdftex.def Info: energy_2.pdf  used on input line 1137.
+(pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1198 \end{my}
-                [9]
-<drop_1.pdf, id=564, 515.9275pt x 462.72874pt>
-File: drop_1.pdf Graphic file (type pdf)
-<use drop_1.pdf>
-Package pdftex.def Info: drop_1.pdf  used on input line 1210.
-(pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
-<drop_2.pdf, id=565, 514.92375pt x 462.72874pt>
-File: drop_2.pdf Graphic file (type pdf)
-<use drop_2.pdf>
-Package pdftex.def Info: drop_2.pdf  used on input line 1216.
-(pdftex.def)             Requested size: 156.1047pt x 140.28125pt.
-<energy_1.pdf, id=566, 513.92pt x 462.72874pt>
-File: energy_1.pdf Graphic file (type pdf)
-<use energy_1.pdf>
-Package pdftex.def Info: energy_1.pdf  used on input line 1226.
-(pdftex.def)             Requested size: 156.1047pt x 140.55661pt.
-<energy_2.pdf, id=567, 515.9275pt x 462.72874pt>
-File: energy_2.pdf Graphic file (type pdf)
-<use energy_2.pdf>
-Package pdftex.def Info: energy_2.pdf  used on input line 1232.
-(pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
-<delay_1.pdf, id=568, 515.9275pt x 463.7325pt>
+l.1143 \end{figure}
+                   \vspace{-12mm} [9]
+<delay_1.pdf, id=608, 515.9275pt x 463.7325pt>
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
-Package pdftex.def Info: delay_1.pdf  used on input line 1243.
+Package pdftex.def Info: delay_1.pdf  used on input line 1148.
 (pdftex.def)             Requested size: 156.1047pt x 140.30959pt.
-<delay_2.pdf, id=569, 515.9275pt x 462.72874pt>
+<delay_2.pdf, id=609, 515.9275pt x 462.72874pt>
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
-Package pdftex.def Info: delay_2.pdf  used on input line 1249.
+Package pdftex.def Info: delay_2.pdf  used on input line 1154.
 (pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
-<qoe_2.pdf, id=570, 515.9275pt x 462.72874pt>
+<qoe_2.pdf, id=610, 515.9275pt x 462.72874pt>
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
-Package pdftex.def Info: qoe_2.pdf  used on input line 1260.
+Package pdftex.def Info: qoe_2.pdf  used on input line 1165.
 (pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
-<qoe_1.pdf, id=571, 515.9275pt x 462.72874pt>
+<qoe_1.pdf, id=611, 515.9275pt x 462.72874pt>
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
-Package pdftex.def Info: qoe_1.pdf  used on input line 1266.
+Package pdftex.def Info: qoe_1.pdf  used on input line 1171.
 (pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1273 
+l.1178 
         [10 <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf> <./
 delay_1.pdf> <./delay_2.pdf>]
-
-LaTeX Warning: Citation `van2016deep' on page 11 undefined on input line 1274.
-
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1279.
+Package pdftex.def Info: m1.pdf  used on input line 1184.
 (pdftex.def)             Requested size: 312.20943pt x 144.2463pt.
 
-LaTeX Warning: Reference `chart02' on page 11 undefined on input line 1291.
 
-
-LaTeX Warning: Citation `van2016deep' on page 11 undefined on input line 1291.
+LaTeX Warning: Reference `chart02' on page 11 undefined on input line 1196.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1292 
+l.1197 
         [11 <./qoe_2.pdf> <./qoe_1.pdf>]pdfTeX warning (ext4): destination with
  the same identifier (name{page.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1318 
+l.1225 
         [12]
-Underfull \hbox (badness 10000) in paragraph at lines 1333--1335
+Underfull \hbox (badness 10000) in paragraph at lines 1240--1242
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1336--1337
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1338--1339
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1355--1356
+Underfull \hbox (badness 10000) in paragraph at lines 1245--1246
 
  []
 
@@ -1282,29 +1428,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1356 \end{my}
+l.1264 \end{my}
                 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1358--1359
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1358--1359
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1360--1361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1360--1361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1368--1369
+Underfull \hbox (badness 10000) in paragraph at lines 1266--1267
 
  []
 
@@ -1312,350 +1438,339 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1371 \newpage
-                [14]pdfTeX warning (ext4): destination with the same identifier
- (name{section.3}) has been already used, duplicate ignored
+l.1309 }}
+          [14]
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1313
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1373 \section{Response to Reviewer 2}
-                                       
-Underfull \hbox (badness 10000) in paragraph at lines 1376--1378
+l.1314 (
+        c) We have thoroughly reviewed the writing style, grammar, and spell...
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 1322--1323
 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Queuing-based
- []
-
-
-Underfull \hbox (badness 4686) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Online com-pu-ta-tion of-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 heterogeneous
- []
-
-
-Underfull \hbox (badness 2359) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Wireless-powered
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Computation of-fload-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not con-sider delay-
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not take user's de-mand
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Multi-agent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Computation of-fload-ing
- []
-
-
-Underfull \hbox (badness 1852) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not con-sider tasks with
- []
-
-
-Underfull \hbox (badness 2359) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not take user's de-mand
- []
-
-
-Underfull \hbox (badness 2359) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not con-sider delay-
- []
-
-
-Underfull \hbox (badness 2359) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Minimize task com-pu-ta-tion
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not take user's de-mand
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Decentralized
- []
-
-
-Underfull \hbox (badness 5622) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Optimize sys-tem cost and
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not take user's de-mand
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Queuing-based
- []
-
-
-Underfull \hbox (badness 2197) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Privacy aware com-pu-ta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Actor-critic
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not take user's de-mand
- []
-
-
-Underfull \hbox (badness 2111) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Optimize de-lay and en-ergy
- []
-
-
-Underfull \hbox (badness 1852) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Not con-sider tasks with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Queuing-based
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Queuing-based
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]|\OT1/ptm/m/n/12 Queuing-based
- []
-
-
-Overfull \hbox (9.44946pt too wide) in paragraph at lines 1422--1423
-[][]
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{section.4}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1462 ... and may incur high signaling overhead.}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{subsection.4.1}) has been already used, du
-plicate ignored
-<to be read again> 
-                   \relax 
-l.1462 ... and may incur high signaling overhead.}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{page.15}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.1462 ... and may incur high signaling overhead.}
-                                                   [15]
-
-LaTeX Warning: Citation `chen2021drl' on page 16 undefined on input line 1462.
-
-
-LaTeX Warning: Citation `chen2021drl' on page 16 undefined on input line 1462.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1462 ... and may incur high signaling overhead.}
-                                                   [16]pdfTeX warning (ext4): d
-estination with the same identifier (name{subsection.4.2}) has been already use
-d, duplicate ignored
+l.1325 \newpage
+                [16]pdfTeX warning (ext4): destination with the same identifier
+ (name{section.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1462 ... and may incur high signaling overhead.}
+l.1330 \section{Response to Reviewer 2}
+                                       
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1335
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1388 ... and may incur high signaling overhead.}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{subsection.2.1}) has been already used, du
+plicate ignored
+<to be read again> 
+                   \relax 
+l.1388 ... and may incur high signaling overhead.}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{page.17}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.1463 \end{my}
-                [17]pdfTeX warning (ext4): destination with the same identifier
- (name{page.18}) has been already used, duplicate ignored
+l.1388 ... and may incur high signaling overhead.}
+                                                   [17]pdfTeX warning (ext4): d
+estination with the same identifier (name{subsection.2.2}) has been already use
+d, duplicate ignored
 <to be read again> 
                    \relax 
-l.1520 	}
-          [18]
-Overfull \hbox (8.78362pt too wide) in paragraph at lines 1520--1520
-[]\OT1/ptm/m/it/12 Performance Eval-u-a-tion: \OT1/ptm/m/n/12 We con-duct com-p
-re-hen-sive ex-per-i-ments to eval-u-ate the QECO's
+l.1388 ... and may incur high signaling overhead.}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{page.18}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1388 ... and may incur high signaling overhead.}
+                                                   [18]pdfTeX warning (ext4): d
+estination with the same identifier (name{subsection.2.3}) has been already use
+d, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1388 ... and may incur high signaling overhead.}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Underfull \hbox (badness 4686) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Online com-pu-ta-tion of-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 heterogeneous
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Wireless-powered
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Computation of-fload-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not con-sider delay-
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Multi-agent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Computation of-fload-ing
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not con-sider tasks with
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not con-sider delay-
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Resource al-lo-ca-tion and
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Minimize task com-pu-ta-tion
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Decentralized
+ []
+
+
+Underfull \hbox (badness 5622) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Optimize sys-tem cost and
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Privacy aware com-pu-ta-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Actor-critic
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not take user's de-mand
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Optimize de-lay and en-ergy
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Not con-sider tasks with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
+[]|\OT1/ptm/m/n/12 Queuing-based
+ []
+
+
+Overfull \hbox (9.44946pt too wide) in paragraph at lines 1419--1420
+[][]
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1520 	}
-          [19]
+l.1477 	}
+          [19]pdfTeX warning (ext4): destination with the same identifier (name
+{page.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1477 	}
+          [20]
+Overfull \hbox (8.78362pt too wide) in paragraph at lines 1477--1477
+[]\OT1/ptm/m/it/12 Performance Eval-u-a-tion: \OT1/ptm/m/n/12 We con-duct com-p
+re-hen-sive ex-per-i-ments to eval-u-ate the QECO's
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1477 	}
+          [21]
 File: drop_1.pdf Graphic file (type pdf)
 <use drop_1.pdf>
-Package pdftex.def Info: drop_1.pdf  used on input line 1575.
+Package pdftex.def Info: drop_1.pdf  used on input line 1534.
 (pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
 File: drop_2.pdf Graphic file (type pdf)
 <use drop_2.pdf>
-Package pdftex.def Info: drop_2.pdf  used on input line 1581.
+Package pdftex.def Info: drop_2.pdf  used on input line 1540.
 (pdftex.def)             Requested size: 156.1047pt x 140.28125pt.
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
-Package pdftex.def Info: energy_1.pdf  used on input line 1591.
+Package pdftex.def Info: energy_1.pdf  used on input line 1550.
 (pdftex.def)             Requested size: 156.1047pt x 140.55661pt.
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
-Package pdftex.def Info: energy_2.pdf  used on input line 1597.
+Package pdftex.def Info: energy_2.pdf  used on input line 1556.
 (pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
- [20]
+ [22]
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
-Package pdftex.def Info: delay_1.pdf  used on input line 1608.
+Package pdftex.def Info: delay_1.pdf  used on input line 1567.
 (pdftex.def)             Requested size: 156.1047pt x 140.30959pt.
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
-Package pdftex.def Info: delay_2.pdf  used on input line 1614.
+Package pdftex.def Info: delay_2.pdf  used on input line 1573.
 (pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
-Package pdftex.def Info: qoe_2.pdf  used on input line 1625.
+Package pdftex.def Info: qoe_2.pdf  used on input line 1584.
 (pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
-Package pdftex.def Info: qoe_1.pdf  used on input line 1631.
+Package pdftex.def Info: qoe_1.pdf  used on input line 1590.
 (pdftex.def)             Requested size: 156.1047pt x 140.00587pt.
- [21]
-
-LaTeX Warning: Citation `van2016deep' on page 22 undefined on input line 1639.
-
+ [23]
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1644.
+Package pdftex.def Info: m1.pdf  used on input line 1603.
 (pdftex.def)             Requested size: 312.20943pt x 144.2463pt.
-
-LaTeX Warning: Reference `chart02' on page 22 undefined on input line 1656.
-
-
-LaTeX Warning: Citation `van2016deep' on page 22 undefined on input line 1656.
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 1665--1667
-
- []
-
-
-LaTeX Warning: Citation `wang2017qoe' on page 23 undefined on input line 1682.
-
-
-LaTeX Warning: Citation `wang2019intelligent' on page 23 undefined on input lin
-e 1682.
-
-
-LaTeX Warning: Citation `mehrabi2019energy' on page 23 undefined on input line 
-1682.
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 1702--1705
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1702--1705
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 1711--1712
-
- []
-
-
-Overfull \hbox (12.0pt too wide) detected at line 1729
-[][] 
- []
-
-
-Overfull \hbox (12.0pt too wide) detected at line 1729
-[][] 
- []
-
-
-LaTeX Warning: Reference `table' on page 25 undefined on input line 1746.
-
-
-LaTeX Warning: Citation `QECO' on page 25 undefined on input line 1746.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1752--1754
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1760--1761
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1624--1626
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1764--1765
+Underfull \hbox (badness 10000) in paragraph at lines 1661--1664
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1766--1767
+Underfull \hbox (badness 10000) in paragraph at lines 1661--1664
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1670--1671
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1774--1775
+Overfull \hbox (12.0pt too wide) detected at line 1688
+[][] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) detected at line 1688
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1711--1713
 
  []
 
-[26] (./Paper_Res.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1720
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1760--1761
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1768--1769
+
+ []
+
+[28] (./Paper_Res.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1663,16 +1778,16 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Paper_Res.out' has not changed.
-(rerunfilecheck)             Checksum: EDCF9F1D9CDCF8C3B72EF82A74EB7BEB;6902.
+(rerunfilecheck)             Checksum: C6D6A6D070C4350F2975A3D0A2ACDD23;7547.
  ) 
 Here is how much of TeX's memory you used:
- 14800 strings out of 478994
- 226421 string characters out of 5858183
- 569045 words of memory out of 5000000
- 31870 multiletter control sequences out of 15000+600000
- 446873 words of font info for 118 fonts, out of 8000000 for 9000
+ 14828 strings out of 478994
+ 226676 string characters out of 5858183
+ 569090 words of memory out of 5000000
+ 31883 multiletter control sequences out of 15000+600000
+ 449637 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,21n,74p,2039b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,21n,74p,1707b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm12
 .600pk>{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/loc
@@ -1692,10 +1807,10 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Paper_Res.pdf (45 pages, 825490 bytes).
+Output written on Paper_Res.pdf (49 pages, 837162 bytes).
 PDF statistics:
- 993 PDF objects out of 1000 (max. 8388607)
- 843 compressed objects within 9 object streams
- 165 named destinations out of 1000 (max. 500000)
- 347 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1069 PDF objects out of 1200 (max. 8388607)
+ 914 compressed objects within 10 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 363 words of extra memory for PDF output out of 10000 (max. 10000000)
 

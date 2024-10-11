@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  11 OCT 2024 06:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  11 OCT 2024 09:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,6 +752,12 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 ))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks30
+\AP@partial=\box68
+\AP@footins=\box69
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
 )
@@ -801,7 +807,7 @@ Package: mindflow 2021/03/17 Mindflow environment
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count346
-\output=\toks30
+\output=\toks31
 \linenoprevgraf=\count347
 \linenumbersep=\dimen292
 \linenumberwidth=\dimen293
@@ -813,7 +819,7 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \quotelinenumbersep=\dimen294
 \bframerule=\dimen295
 \bframesep=\dimen296
-\bframebox=\box68
+\bframebox=\box70
 
 
 LaTeX Warning: Command \@parboxrestore  has changed.
@@ -913,14 +919,14 @@ Package: tcolorbox 2020/10/09 version 4.42 text color boxes
 (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks31
+\pgfutil@everybye=\toks32
 \pgfutil@tempdima=\dimen297
 \pgfutil@tempdimb=\dimen298
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box69
+\pgfutil@abb=\box71
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
@@ -932,12 +938,12 @@ Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks32
-\pgfkeys@temptoks=\toks33
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks34
+\pgfkeys@tmptoks=\toks35
 ))
 \pgf@x=\dimen299
 \pgf@y=\dimen300
@@ -955,9 +961,9 @@ ode.tex
 \c@pgf@countb=\count375
 \c@pgf@countc=\count376
 \c@pgf@countd=\count377
-\t@pgf@toka=\toks35
-\t@pgf@tokb=\toks36
-\t@pgf@tokc=\toks37
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
 \pgf@sys@id@count=\count378
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
@@ -991,10 +997,10 @@ Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen309
 \pgfmath@count=\count381
-\pgfmath@box=\box70
-\pgfmath@toks=\toks38
-\pgfmath@stack@operand=\toks39
-\pgfmath@stack@operation=\toks40
+\pgfmath@box=\box72
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -1050,9 +1056,9 @@ File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfpic=\box71
-\pgf@hbox=\box72
-\pgf@layerbox@main=\box73
+\pgfpic=\box73
+\pgf@hbox=\box74
+\pgf@layerbox@main=\box75
 \pgf@picture@serial@count=\count383
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
@@ -1098,7 +1104,7 @@ File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfexternal@startupbox=\box74
+\pgfexternal@startupbox=\box76
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -1119,7 +1125,7 @@ File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodeparttextbox=\box75
+\pgfnodeparttextbox=\box77
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -1136,8 +1142,8 @@ Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
 Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks41
-\verbatim@line=\toks42
+\every@verbatim=\toks42
+\verbatim@line=\toks43
 \verbatim@in@stream=\read5
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/environ/environ.sty
@@ -1146,17 +1152,17 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/local/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box76
-\tcb@upperbox=\box77
-\tcb@lowerbox=\box78
-\tcb@phantombox=\box79
+\tcb@titlebox=\box78
+\tcb@upperbox=\box79
+\tcb@lowerbox=\box80
+\tcb@phantombox=\box81
 \c@tcbbreakpart=\count386
 \c@tcblayer=\count387
 \c@tcolorbox@number=\count388
-\tcb@temp=\box80
-\tcb@temp=\box81
 \tcb@temp=\box82
 \tcb@temp=\box83
+\tcb@temp=\box84
+\tcb@temp=\box85
 \tcb@out=\write5
 \tcb@record@out=\write6
 )
@@ -1180,8 +1186,8 @@ Package: minifp 2013/12/30 v0.96. Macros for real number operations and a stack
 \DefaultNindent=\dimen337
 \DefaultSlope=\dimen338
 \DiscardVskip=\dimen339
-\L@lbox=\box84
-\L@tbox=\box85
+\L@lbox=\box86
+\L@tbox=\box87
 \c@L@lines=\count392
 \c@L@depth=\count393
 \L@Pindent=\dimen340
@@ -1199,7 +1205,7 @@ Package: minifp 2013/12/30 v0.96. Macros for real number operations and a stack
 \LettrineWidth=\dimen352
 \LettrineHeight=\dimen353
 \LettrineDepth=\dimen354
-\Llist@everypar=\toks43
+\Llist@everypar=\toks44
 
 Loading lettrine.cfg
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lettrine/lettrine.cfg))
@@ -1245,12 +1251,12 @@ nment
 (/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count395
-\float@exts=\toks44
-\float@box=\box86
-\@float@everytoks=\toks45
-\@floatcapt=\box87
+\float@exts=\toks45
+\float@box=\box88
+\@float@everytoks=\toks46
+\@floatcapt=\box89
 )
-\@float@every@algorithm=\toks46
+\@float@every@algorithm=\toks47
 \c@algorithm=\count396
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
@@ -1284,8 +1290,8 @@ Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen355
 \pgffor@skip=\dimen356
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1305,10 +1311,10 @@ File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@lastmovetoy=\dimen363
 \tikzleveldistance=\dimen364
 \tikzsiblingdistance=\dimen365
-\tikz@figbox=\box88
-\tikz@figbox@bg=\box89
-\tikz@tempbox=\box90
-\tikz@tempbox@bg=\box91
+\tikz@figbox=\box90
+\tikz@figbox@bg=\box91
+\tikz@tempbox=\box92
+\tikz@tempbox@bg=\box93
 \tikztreelevel=\count405
 \tikznumberofchildren=\count406
 \tikznumberofcurrentchild=\count407
@@ -1332,8 +1338,8 @@ Package: textpos 2020/09/26 v1.10
 
 Package: textpos 2020/09/26 1.10, absolute positioning of text on the page
 Package textpos Info: choosing support for LaTeX3 on input line 61.
-\TP@textbox=\box92
-\TP@holdbox=\box93
+\TP@textbox=\box94
+\TP@holdbox=\box95
 \TPHorizModule=\dimen366
 \TPVertModule=\dimen367
 \TP@margin=\dimen368
@@ -1342,7 +1348,7 @@ Grid set 16 x 16 = 38.39343pt x 49.68562pt
 \TPboxrulesize=\dimen370
 \TP@ox=\dimen371
 \TP@oy=\dimen372
-\TP@tbargs=\toks49
+\TP@tbargs=\toks50
 TextBlockOrigin set to 0pt x 0pt
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 394.
@@ -1415,15 +1421,15 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count414
 \scratchdimen=\dimen373
-\scratchbox=\box94
+\scratchbox=\box96
 \nofMPsegments=\count415
 \nofMParguments=\count416
-\everyMPshowfont=\toks50
+\everyMPshowfont=\toks51
 \MPscratchCnt=\count417
 \MPscratchDim=\dimen374
 \MPnumerator=\count418
 \makeMPintoPDFobject=\count419
-\everyMPtoPDFconversion=\toks51
+\everyMPtoPDFconversion=\toks52
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1441,11 +1447,11 @@ Package: soulutf8 2019/12/15 v1.2 Permit use of UTF-8 characters in soul (HO)
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks52
-\SOUL@lasttoken=\toks53
-\SOUL@cmds=\toks54
-\SOUL@buffer=\toks55
-\SOUL@token=\toks56
+\SOUL@word=\toks53
+\SOUL@lasttoken=\toks54
+\SOUL@cmds=\toks55
+\SOUL@buffer=\toks56
+\SOUL@token=\toks57
 \SOUL@spaceskip=\skip89
 \SOUL@ttwidth=\dimen375
 \SOUL@uldp=\dimen376
@@ -1522,113 +1528,114 @@ Package lettrine.sty Info: Targeted height = 17.14496pt
 
 
 ]
-Underfull \vbox (badness 1043) has occurred while \output is active []
-
- [2]
-Overfull \hbox (1.42343pt too wide) in paragraph at lines 669--669
+Overfull \hbox (1.42343pt too wide) in paragraph at lines 658--658
 []|\T1/ptm/b/n/8 (-20) Model| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 669--669
+Underfull \hbox (badness 4531) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Online com-pu-ta-tion of-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) heterogeneous
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Wireless-powered
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Computation of-fload-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Multi-agent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Computation of-fload-ing
  []
 
 
-Overfull \hbox (7.09172pt too wide) in paragraph at lines 669--669
+Overfull \hbox (7.09172pt too wide) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (-20) POMDP| 
  []
 
 
-Underfull \hbox (badness 2384) in paragraph at lines 669--669
+Underfull \hbox (badness 2384) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Optimize sys-tem cost and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 669--669
+Underfull \hbox (badness 6542) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Actor-critic net-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Overfull \hbox (7.09172pt too wide) in paragraph at lines 669--669
+Overfull \hbox (7.09172pt too wide) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (-20) POMDP| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Overfull \hbox (7.09172pt too wide) in paragraph at lines 669--669
+Overfull \hbox (7.09172pt too wide) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (-20) POMDP| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 []|\T1/ptm/m/n/8 (+20) Queuing-based
  []
 
 
-Overfull \hbox (2.34035pt too wide) in paragraph at lines 669--670
+Overfull \hbox (2.34035pt too wide) in paragraph at lines 658--659
 [][]
  []
 
+
+Underfull \vbox (badness 1043) has occurred while \output is active []
+
+ [2]
 [3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.694 
+l.686 
       ]
 \LTGbeginlineexample=\count421
 \LTGendlineexample=\count422
@@ -1636,23 +1643,23 @@ l.694
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./queue.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<queue.pdf, id=258, 782.925pt x 277.9986pt>
+<queue.pdf, id=257, 782.925pt x 277.9986pt>
 File: queue.pdf Graphic file (type pdf)
 <use queue.pdf>
-Package pdftex.def Info: queue.pdf  used on input line 788.
+Package pdftex.def Info: queue.pdf  used on input line 774.
 (pdftex.def)             Requested size: 252.0pt x 89.47887pt.
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 819.
+(amsmath)                 on input line 805.
 
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.833 \end{alignat}
+l.819 \end{alignat}
                     <./queue.pdf>]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 877
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 863
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
@@ -1661,141 +1668,141 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./DQN.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<DQN.pdf, id=342, 902.41138pt x 529.01637pt>
+<DQN.pdf, id=347, 902.41138pt x 529.01637pt>
 File: DQN.pdf Graphic file (type pdf)
 <use DQN.pdf>
-Package pdftex.def Info: DQN.pdf  used on input line 1014.
+Package pdftex.def Info: DQN.pdf  used on input line 1000.
 (pdftex.def)             Requested size: 252.0pt x 147.72803pt.
 [7pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1055 
+l.1041 
         <./DQN.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1070.
+put line 1056.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1113.
+(hyperref)                removing `math shift' on input line 1099.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 1113.
+(hyperref)                removing `\in' on input line 1099.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1113.
+(hyperref)                removing `math shift' on input line 1099.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1171.
+(hyperref)                removing `math shift' on input line 1157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 1171.
+(hyperref)                removing `\in' on input line 1157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1171.
+(hyperref)                removing `math shift' on input line 1157.
 
 [8]pdfTeX warning (ext4): destination with the same identifier (name{equation.5
 .28}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1177 \end{alignat}
+l.1163 \end{alignat}
                     
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1193
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1179
 
  []
 
 
-Overfull \hbox (3.02156pt too wide) in paragraph at lines 1243--1245
+Overfull \hbox (3.02156pt too wide) in paragraph at lines 1229--1231
 [][]
  []
 
 [9]
-<drop_1.pdf, id=421, 515.9275pt x 462.72874pt>
+<drop_1.pdf, id=426, 515.9275pt x 462.72874pt>
 File: drop_1.pdf Graphic file (type pdf)
 <use drop_1.pdf>
-Package pdftex.def Info: drop_1.pdf  used on input line 1314.
+Package pdftex.def Info: drop_1.pdf  used on input line 1300.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
-<drop_2.pdf, id=422, 514.92375pt x 462.72874pt>
+<drop_2.pdf, id=427, 514.92375pt x 462.72874pt>
 File: drop_2.pdf Graphic file (type pdf)
 <use drop_2.pdf>
-Package pdftex.def Info: drop_2.pdf  used on input line 1320.
+Package pdftex.def Info: drop_2.pdf  used on input line 1306.
 (pdftex.def)             Requested size: 126.0pt x 113.2248pt.
-<energy_1.pdf, id=423, 513.92pt x 462.72874pt>
+<energy_1.pdf, id=428, 513.92pt x 462.72874pt>
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
-Package pdftex.def Info: energy_1.pdf  used on input line 1336.
+Package pdftex.def Info: energy_1.pdf  used on input line 1322.
 (pdftex.def)             Requested size: 126.0pt x 113.44366pt.
-<energy_2.pdf, id=424, 515.9275pt x 462.72874pt>
+<energy_2.pdf, id=429, 515.9275pt x 462.72874pt>
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
-Package pdftex.def Info: energy_2.pdf  used on input line 1342.
+Package pdftex.def Info: energy_2.pdf  used on input line 1328.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
-<delay_1.pdf, id=425, 515.9275pt x 463.7325pt>
+<delay_1.pdf, id=430, 515.9275pt x 463.7325pt>
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
-Package pdftex.def Info: delay_1.pdf  used on input line 1354.
+Package pdftex.def Info: delay_1.pdf  used on input line 1340.
 (pdftex.def)             Requested size: 126.0pt x 113.25104pt.
-<delay_2.pdf, id=426, 515.9275pt x 462.72874pt>
+<delay_2.pdf, id=431, 515.9275pt x 462.72874pt>
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
-Package pdftex.def Info: delay_2.pdf  used on input line 1360.
+Package pdftex.def Info: delay_2.pdf  used on input line 1346.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
-<qoe_2.pdf, id=427, 515.9275pt x 462.72874pt>
+<qoe_2.pdf, id=432, 515.9275pt x 462.72874pt>
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
-Package pdftex.def Info: qoe_2.pdf  used on input line 1372.
+Package pdftex.def Info: qoe_2.pdf  used on input line 1358.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
-<qoe_1.pdf, id=428, 515.9275pt x 462.72874pt>
+<qoe_1.pdf, id=433, 515.9275pt x 462.72874pt>
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
-Package pdftex.def Info: qoe_1.pdf  used on input line 1378.
+Package pdftex.def Info: qoe_1.pdf  used on input line 1364.
 (pdftex.def)             Requested size: 126.0pt x 113.0059pt.
  [10pdfTeX warning (ext4): destination with the same identifier (name{table.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1394 
+l.1380 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1394 
+l.1380 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1394 
+l.1380 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1394 
+l.1380 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1394 
+l.1380 
         <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf> <./dela
 y_1.pdf> <./delay_2.pdf> <./qoe_2.pdf> <./qoe_1.pdf>]
-<m1.pdf, id=614, 938.50626pt x 433.62pt>
+<m1.pdf, id=620, 938.50626pt x 433.62pt>
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1430.
+Package pdftex.def Info: m1.pdf  used on input line 1416.
 (pdftex.def)             Requested size: 226.79846pt x 104.7855pt.
-<m2.pdf, id=615, 512.91624pt x 369.38pt>
+<m2.pdf, id=621, 512.91624pt x 369.38pt>
 File: m2.pdf Graphic file (type pdf)
 <use m2.pdf>
-Package pdftex.def Info: m2.pdf  used on input line 1446.
+Package pdftex.def Info: m2.pdf  used on input line 1432.
 (pdftex.def)             Requested size: 126.0pt x 90.73842pt.
-<m3.pdf, id=616, 512.91624pt x 369.38pt>
+<m3.pdf, id=622, 512.91624pt x 369.38pt>
 File: m3.pdf Graphic file (type pdf)
 <use m3.pdf>
-Package pdftex.def Info: m3.pdf  used on input line 1452.
+Package pdftex.def Info: m3.pdf  used on input line 1438.
 (pdftex.def)             Requested size: 126.0pt x 90.73842pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1804,12 +1811,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1473 
+l.1459 
         <./m1.pdf>] (./Paper_Rev.bbl [12pdfTeX warning (ext4): destination with
  the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.184 
+l.185 
        <./m2.pdf> <./m3.pdf>]) [13
 
 ] (./Paper_Rev.aux
@@ -1824,11 +1831,11 @@ Package rerunfilecheck Info: File `Paper_Rev.out' has not changed.
 (rerunfilecheck)             Checksum: 313BB00E96E3C15E7E46DD3970FB237C;5186.
  ) 
 Here is how much of TeX's memory you used:
- 40854 strings out of 478994
- 793621 string characters out of 5858183
- 1258568 words of memory out of 5000000
- 56830 multiletter control sequences out of 15000+600000
- 567615 words of font info for 542 fonts, out of 8000000 for 9000
+ 40894 strings out of 478994
+ 794321 string characters out of 5858183
+ 1260728 words of memory out of 5000000
+ 56858 multiletter control sequences out of 15000+600000
+ 568065 words of font info for 546 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  94i,23n,117p,2038b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10
@@ -1859,10 +1866,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on Paper_Rev.pdf (13 pages, 1225447 bytes).
+Output written on Paper_Rev.pdf (13 pages, 1226706 bytes).
 PDF statistics:
- 827 PDF objects out of 1000 (max. 8388607)
- 642 compressed objects within 7 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 833 PDF objects out of 1000 (max. 8388607)
+ 648 compressed objects within 7 object streams
+ 135 named destinations out of 1000 (max. 500000)
  129326 words of extra memory for PDF output out of 154059 (max. 10000000)
 
