@@ -19,42 +19,42 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Done.
 You've used 46 entries,
             4855 wiz_defined-function locations,
-            1206 strings with 17823 characters,
-and the built_in function-call counts, 49672 in all, are:
-= -- 4267
-> -- 1842
-< -- 398
-+ -- 931
+            1212 strings with 17885 characters,
+and the built_in function-call counts, 50291 in all, are:
+= -- 4323
+> -- 1852
+< -- 411
++ -- 939
 - -- 448
-* -- 2988
-:= -- 7269
+* -- 3024
+:= -- 7339
 add.period$ -- 95
 call.type$ -- 46
 change.case$ -- 92
-chr.to.int$ -- 922
+chr.to.int$ -- 952
 cite$ -- 46
-duplicate$ -- 3167
-empty$ -- 3231
+duplicate$ -- 3201
+empty$ -- 3265
 format.name$ -- 522
-if$ -- 11209
+if$ -- 11358
 int.to.chr$ -- 4
 int.to.str$ -- 47
-missing$ -- 501
+missing$ -- 504
 newline$ -- 162
 num.names$ -- 138
-pop$ -- 1177
+pop$ -- 1171
 preamble$ -- 1
 purify$ -- 46
 quote$ -- 2
-skip$ -- 3529
+skip$ -- 3574
 stack$ -- 0
-substring$ -- 2305
-swap$ -- 2662
-text.length$ -- 96
+substring$ -- 2375
+swap$ -- 2719
+text.length$ -- 99
 text.prefix$ -- 0
 top$ -- 6
 type$ -- 727
 warning$ -- 0
-while$ -- 217
+while$ -- 221
 width$ -- 0
-write$ -- 579
+write$ -- 582

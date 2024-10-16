@@ -99,7 +99,7 @@ S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' \emph{Neural
 X.~Qiu, W.~Zhang, W.~Chen, and Z.~Zheng, ``Distributed and collective deep
   reinforcement learning for computation offloading: A practical perspective,''
   \emph{IEEE Transactions on Parallel and Distributed Systems}, vol.~32, no.~5,
-  pp. 1085--1101, 2020.
+  pp. 1085--1101, May 2020.
 
 \bibitem[Zhang et~al.(2023)Zhang, Shen, Tang, Yan, Qin, and
   Wang]{zhang2023multi}
@@ -177,45 +177,10 @@ N.~Zhao, Y.-C. Liang, D.~Niyato, Y.~Pei, M.~Wu, and Y.~Jiang, ``Deep
   heterogeneous cellular networks,'' \emph{IEEE Trans. Wireless Commun.},
   vol.~18, no.~11, pp. 5141--5152, Aug 2019.
 
-\bibitem[Munir et~al.(2021)Munir, Tran, Saad, and Hong]{munir2021multi}
-M.~S. Munir, N.~H. Tran, W.~Saad, and C.~S. Hong, ``Multi-agent
-  meta-reinforcement learning for self-powered and sustainable edge computing
-  systems,'' \emph{IEEE Trans. Netw. Serv. Manag.}, vol.~18, no.~3, pp.
-  3353--3374, 2021.
-
 \bibitem[Liao et~al.(2023)Liao, Lai, Yang, and Zeng]{liao2023online}
 L.~Liao, Y.~Lai, F.~Yang, and W.~Zeng, ``Online computation offloading with
   double reinforcement learning algorithm in mobile edge computing,'' \emph{J
   Parallel Distrib Comput}, vol. 171, pp. 28--39, Jan 2023.
-
-\bibitem[Wu et~al.(2024{\natexlab{c}})Wu, Chen, Shen, Xu, Zhang, Shen, and
-  Yu]{wu2024combining}
-G.~Wu, X.~Chen, Y.~Shen, Z.~Xu, H.~Zhang, S.~Shen, and S.~Yu, ``Combining
-  lyapunov optimization with actor-critic networks for privacy-aware iiot
-  computation offloading,'' \emph{IEEE Internet Things J.}, Jan 2024.
-
-\bibitem[Bolourian and Shah-Mansouri(2024)]{Bolourian-WCL24}
-M.~Bolourian and H.~Shah-Mansouri, ``Deep {Q}-learning for minimum task drop in
-  {SWIPT}-enabled mobile-edge computing,'' \emph{IEEE Wireless Commun.
-  Letters}, vol.~13, no.~3, pp. 894--898, Mar 2024.
-
-\bibitem[Huang et~al.(2021)Huang, Ye, and Zhou]{huang2021deadline}
-H.~Huang, Q.~Ye, and Y.~Zhou, ``Deadline-aware task offloading with
-  partially-observable deep reinforcement learning for multi-access edge
-  computing,'' \emph{IEEE Trans. Netw. Sci. Eng.}, vol.~9, no.~6, pp.
-  3870--3885, Sep 2021.
-
-\bibitem[Gong et~al.(2024)Gong, Yao, Wang, Li, and Guo]{gong2022edge}
-Y.~Gong, H.~Yao, J.~Wang, M.~Li, and S.~Guo, ``Edge intelligence-driven joint
-  offloading and resource allocation for future {6G} {I}ndustrial {I}nternet of
-  {T}hings,'' \emph{accepted for publication in IEEE Trans. Netw. Sci. Eng.},
-  2024.
-
-\bibitem[Wu et~al.(2023{\natexlab{b}})Wu, Xu, Zhang, Shen, and Yu]{wu2023multi}
-G.~Wu, Z.~Xu, H.~Zhang, S.~Shen, and S.~Yu, ``Multi-agent drl for joint
-  completion delay and energy consumption with queuing theory in mec-based
-  iiot,'' \emph{J. Parallel Distributed Comput.}, vol. 176, pp. 80--94, Jun
-  2023.
 
 \bibitem[Sun et~al.(2024)Sun, Li, Wang, He, Wang, and
   Leung]{sun2024hierarchical}
@@ -224,16 +189,51 @@ C.~Sun, X.~Li, C.~Wang, Q.~He, X.~Wang, and V.~C. Leung, ``Hierarchical deep
   in mobile edge-cloud computing,'' \emph{accepted for publication in IEEE
   Trans. Services Computing}, 2024.
 
-\bibitem[Tang and Wong(2020)]{9253665}
-M.~Tang and V.~W. Wong, ``Deep reinforcement learning for task offloading in
-  mobile edge computing systems,'' \emph{IEEE Trans. Mob. Comput.}, vol.~21,
-  no.~6, pp. 1985--1997, Nov 2020.
+\bibitem[Gong et~al.(2024)Gong, Yao, Wang, Li, and Guo]{gong2022edge}
+Y.~Gong, H.~Yao, J.~Wang, M.~Li, and S.~Guo, ``Edge intelligence-driven joint
+  offloading and resource allocation for future {6G} {I}ndustrial {I}nternet of
+  {T}hings,'' \emph{accepted for publication in IEEE Trans. Netw. Sci. Eng.},
+  2024.
 
 \bibitem[Gao et~al.(2023)Gao, Yang, and Dai]{gao2022large}
 Z.~Gao, L.~Yang, and Y.~Dai, ``Large-scale computation offloading using a
   multi-agent reinforcement learning in heterogeneous multi-access edge
   computing,'' \emph{IEEE Trans. Mob. Comput.}, vol.~22, no.~6, pp. 3425--3443,
   Jan 2023.
+
+\bibitem[Tang and Wong(2020)]{9253665}
+M.~Tang and V.~W. Wong, ``Deep reinforcement learning for task offloading in
+  mobile edge computing systems,'' \emph{IEEE Trans. Mob. Comput.}, vol.~21,
+  no.~6, pp. 1985--1997, Nov 2020.
+
+\bibitem[Wu et~al.(2024{\natexlab{c}})Wu, Chen, Shen, Xu, Zhang, Shen, and
+  Yu]{wu2024combining}
+G.~Wu, X.~Chen, Y.~Shen, Z.~Xu, H.~Zhang, S.~Shen, and S.~Yu, ``Combining
+  lyapunov optimization with actor-critic networks for privacy-aware iiot
+  computation offloading,'' \emph{IEEE Internet Things J.}, Jan 2024.
+
+\bibitem[Wu et~al.(2023{\natexlab{b}})Wu, Xu, Zhang, Shen, and Yu]{wu2023multi}
+G.~Wu, Z.~Xu, H.~Zhang, S.~Shen, and S.~Yu, ``Multi-agent drl for joint
+  completion delay and energy consumption with queuing theory in mec-based
+  iiot,'' \emph{J. Parallel Distributed Comput.}, vol. 176, pp. 80--94, Jun
+  2023.
+
+\bibitem[Huang et~al.(2021)Huang, Ye, and Zhou]{huang2021deadline}
+H.~Huang, Q.~Ye, and Y.~Zhou, ``Deadline-aware task offloading with
+  partially-observable deep reinforcement learning for multi-access edge
+  computing,'' \emph{IEEE Trans. Netw. Sci. Eng.}, vol.~9, no.~6, pp.
+  3870--3885, Sep 2021.
+
+\bibitem[Bolourian and Shah-Mansouri(2024)]{Bolourian-WCL24}
+M.~Bolourian and H.~Shah-Mansouri, ``Deep {Q}-learning for minimum task drop in
+  {SWIPT}-enabled mobile-edge computing,'' \emph{IEEE Wireless Commun.
+  Letters}, vol.~13, no.~3, pp. 894--898, Mar 2024.
+
+\bibitem[Munir et~al.(2021)Munir, Tran, Saad, and Hong]{munir2021multi}
+M.~S. Munir, N.~H. Tran, W.~Saad, and C.~S. Hong, ``Multi-agent
+  meta-reinforcement learning for self-powered and sustainable edge computing
+  systems,'' \emph{IEEE Trans. Netw. Serv. Manag.}, vol.~18, no.~3, pp.
+  3353--3374, 2021.
 
 \bibitem[Mao et~al.(2016)Mao, Zhang, and Letaief]{mao2016dynamic}
 Y.~Mao, J.~Zhang, and K.~B. Letaief, ``Dynamic computation offloading for
@@ -268,19 +268,19 @@ A.~Mehrabi, M.~Siekkinen, and A.~Yl{\"a}-J{\"a}{\"a}ski, ``Energy-aware qoe and
 I.~Rahmati, ``Github repository,'' \url{https://github.com/ImanRHT/QECO}, 2024,
   source code, open access.
 
-\bibitem[Konda and Tsitsiklis(1999)]{konda1999actor}
-V.~Konda and J.~Tsitsiklis, ``Actor-critic algorithms,'' \emph{Advances in
-  neural information processing systems}, vol.~12, 1999.
+\bibitem[Konda and Tsitsiklis(1999)]{NIPS1999_6449f44a}
+V.~Konda and J.~Tsitsiklis, ``Actor-critic algorithms,'' \emph{Adv Neural Inf
+  Process Syst}, vol.~12, pp. 1008--1014, Apr 1999.
 
-\bibitem[Lillicrap(2015)]{lillicrap2015continuous}
-T.~Lillicrap, ``Continuous control with deep reinforcement learning,''
-  \emph{arXiv preprint arXiv:1509.02971}, 2015.
+\bibitem[Lillicrap(2016)]{lillicrap2015continuous}
+T.~P. Lillicrap, ``Continuous control with deep reinforcement learning,''
+  \emph{4th International Conference on Learning Representations, {ICLR}}, vol.
+  abs/1509.02971, May 2016.
 
 \bibitem[Schulman et~al.(2017)Schulman, Wolski, Dhariwal, Radford, and
   Klimov]{schulman2017proximal}
 J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov, ``Proximal
-  policy optimization algorithms,'' \emph{arXiv preprint arXiv:1707.06347},
-  2017.
+  policy optimization algorithms,'' \emph{CoRR}, vol. abs/1707.06347, Jul 2017.
 
 \bibitem[Van~Hasselt et~al.(2016)Van~Hasselt, Guez, and Silver]{van2016deep}
 H.~Van~Hasselt, A.~Guez, and D.~Silver, ``Deep reinforcement learning with

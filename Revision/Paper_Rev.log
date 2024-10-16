@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  11 OCT 2024 10:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  16 OCT 2024 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1649,8 +1649,8 @@ Package amsmath Warning: Foreign command \over;
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.822 \begin{alignat}{1}
-                         <./queue.pdf>]
+l.819 \end{alignat}
+                    <./queue.pdf>]
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 863
 .
 
@@ -1669,8 +1669,9 @@ Package pdftex.def Info: DQN.pdf  used on input line 1000.
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1041 
-        <./DQN.pdf>]
+l.1040 T
+        he A\&V layer consists of two distinct dense networks referred to as...
+ <./DQN.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 1056.
 
@@ -1687,7 +1688,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1130.
 
 
-Underfull \vbox (badness 1824) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
 
@@ -1832,13 +1833,13 @@ Package rerunfilecheck Info: File `Paper_Rev.out' has not changed.
 (rerunfilecheck)             Checksum: 313BB00E96E3C15E7E46DD3970FB237C;5186.
  ) 
 Here is how much of TeX's memory you used:
- 40921 strings out of 478994
- 795071 string characters out of 5858183
- 1257276 words of memory out of 5000000
+ 40919 strings out of 478994
+ 795072 string characters out of 5858183
+ 1254802 words of memory out of 5000000
  56885 multiletter control sequences out of 15000+600000
- 568065 words of font info for 546 fonts, out of 8000000 for 9000
+ 568112 words of font info for 545 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 94i,23n,117p,2038b,1001s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,23n,117p,2038b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10
 .600pk>{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/texli
@@ -1867,7 +1868,7 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on Paper_Rev.pdf (13 pages, 1224444 bytes).
+Output written on Paper_Rev.pdf (13 pages, 1224157 bytes).
 PDF statistics:
  832 PDF objects out of 1000 (max. 8388607)
  647 compressed objects within 7 object streams

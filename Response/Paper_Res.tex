@@ -116,7 +116,7 @@ Efficient task offloading in MEC is a complex optimization challenge due to the 
 
 
 
-\textcolor{blue}{To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} hold promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives.
+\textcolor{blue}{To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} holds promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives.
 	While RL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention. 
 	QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay \cite{guo2022energy}, but also by energy consumption \cite{tang2022uav}. Albeit some existing works have investigated the trade-off between delay and energy consumption \cite{li2022joint}, they fail to properly address the user demands and fulfill QoE requirements. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs.}
 
@@ -252,8 +252,8 @@ Our main contributions are summarized as follows:
 			\begin{tabular}{ lp{3.4cm}p{4.5cm}p{5.2cm}p{1.7cm}p{3.1cm}p{4.6cm}l} 
 				\toprule
 					\textbf{Paper} & \textbf{Scenario} &  \textbf{Problem} &  \textbf{Objective} &  \textbf{Model} & \textbf{Method} &  \textbf{Drawbacks}  \\ \midrule
-					\cite{liao2023online} & Queuing-based MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a singel MEC system model  \\\midrule
-					\cite{zhou2021deep} & heterogeneous MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a singel MEC system model \\\midrule				
+					\cite{liao2023online} & Queuing-based MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a single MEC system model  \\\midrule
+					\cite{zhou2021deep} & heterogeneous MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a single MEC system model \\\midrule				
 					\cite{huang2019deep} & Wireless-powered MEC & Computation offloading and resource allocations & Maximize computation rate & MIP & DQN & Not consider delay-sensitive tasks \\\midrule
 					\cite{wu2024privacy} & MEC-based IIoT  & Joint power allocation and computation offloading  & Optimization of privacy protection and quality of service. & MDP & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
 					\cite{zhao2019deep} & MEC & User association and resource allocation & Optimize downlink utility & MDP & Multi-agent D3QN & Not consider system delay and energy consumtion \\\midrule
@@ -693,7 +693,7 @@ We use the following methods as benchmarks.
 	\item \textbf{Random Decision (RD):} In this approach, when an MD receives a new task, it randomly makes the offloading decisions and selects the offloading target if it decides to dispatch the task. %This method leverages the MD's complete computational and communication capabilities, and the computational resources allocated to it by the EN.
 	
 	
-	\item \textcolor{blue}{\textbf{DCDRL~\cite{qiu2020distributed}:} This method is a distributed optimization algorithm designed for delay-sensitive tasks in a queuing-based MEC environment, where MDs strategically interact with multiple ENs. We select DCDRL as a benchmark due to its similarity to our work. It is based on the actor-critic framework \cite{konda1999actor}, which underpins many state-of-the-art DRL algorithms, such as DDPG \cite{lillicrap2015continuous}, and PPO \cite{schulman2017proximal}}.
+	\item \textcolor{blue}{\textbf{DCDRL~\cite{qiu2020distributed}:} This method is a distributed optimization algorithm designed for delay-sensitive tasks in a queuing-based MEC environment, where MDs strategically interact with multiple ENs. We select DCDRL as a benchmark due to its similarity to our work. It is based on the actor-critic framework \cite{NIPS1999_6449f44a}, which underpins many state-of-the-art DRL algorithms, such as DDPG \cite{lillicrap2015continuous}, and PPO \cite{schulman2017proximal}}.
 	
 	
 	
@@ -793,12 +793,10 @@ There are multiple directions for future work. A complementary approach involves
 
 	
 	
-	\item \textbf{Authors}:  $_*$Iman Rahmati, $_+$Hamed Shah-Mansouri, and $_*$Ali Movaghar
+	\item \textbf{Authors}:  $^\ast$Iman Rahmati, $^\dagger$Hamed Shah-Mansouri, and $^\ast$Ali Movaghar
 	
 	
-	Department of Computer Engineering, Sharif University of Technology, Tehran, Iran
-	
-	\item \textbf{Affiliation}: $_*$ Departments of Computer Engineering,  Sharif University of Technology, Tehran, Iran, $_+$ Department of Electrical Engineering, Sharif University of Technology, Tehran, Iran.
+	\item \textbf{Affiliation}: $^\ast$ Department of Computer Engineering,  Sharif University of Technology, Tehran, Iran, \\ $^\dagger$ Department of Electrical Engineering, Sharif University of Technology, Tehran, Iran.
 	
 	\item \textbf{Paper Reference Number}: TNSE-2024-03-0468 
 	
@@ -822,11 +820,11 @@ There are multiple directions for future work. A complementary approach involves
 \textit{``(a) Lots of the studies focus on the research on resource optimisation of MEC by DRL, it is expected to survey the state-of-the-art within 3 years, and summarise it as an individual section, departing from the Section of Introduction. (b) Besides, the existing related work only has one paragraph without any discussion about the pros/cons of the previous work.''} \newline
 
 \underline{Authors' Reply}: To address the reviewer comment, we have carefully studied the recently published papers and throughly revised the related work section. To be more specific,
-\begin{itemize}
-\item a) We have included the literature review in Section II of the revised manuscript and provided a survey of the recently published state-of-the-art works.
-\item b) Furthemore, we have expanded the explanations about each related work and discussed their pros/vons.
-\end{itemize}\vspace{6mm}
-The newly added Section II of the revised manuscript is as follows. \newline
+\begin{enumerate}[]
+\item We have devoted Section II of the revised manuscript to the literature review and provided a survey of the recently published state-of-the-art works.
+\item Furthemore, we have expanded the explanations about each related work and discussed their pros/cons.
+\end{enumerate}\vspace{6mm}
+The newly added Section II of the revised manuscript is as follows. We have also included a table to provide a comprehensive comparison of the related works. \newline
 \begin{my}{1cm}{1cm}
 	\rev{\setcounter{section}{1}
 \section{Related Work}
@@ -884,8 +882,8 @@ However, these algorithms in \cite{gong2022edge}–\cite{gao2022large} require g
 			\begin{tabular}{ lp{3.4cm}p{4.5cm}p{5.2cm}p{1.7cm}p{3.1cm}p{4.6cm}l} 
 				\toprule
 				\textbf{Paper} & \textbf{Scenario} &  \textbf{Problem} &  \textbf{Objective} &  \textbf{Model} & \textbf{Method} &  \textbf{Drawbacks}  \\ \midrule
-				\cite{liao2023online} & Queuing-based MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a singel MEC system model  \\\midrule
-				\cite{zhou2021deep} & heterogeneous MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a singel MEC system model \\\midrule				
+				\cite{liao2023online} & Queuing-based MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a single MEC system model  \\\midrule
+				\cite{zhou2021deep} & heterogeneous MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a single MEC system model \\\midrule				
 				\cite{huang2019deep} & Wireless-powered MEC & Computation offloading and resource allocations & Maximize computation rate & MIP & DQN & Not consider delay-sensitive tasks \\\midrule
 				\cite{wu2024privacy} & MEC-based IIoT  & Joint power allocation and computation offloading  & Optimization of privacy protection and quality of service. & MDP & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
 				\cite{zhao2019deep} & MEC & User association and resource allocation & Optimize downlink utility & MDP & Multi-agent D3QN & Not consider system delay and energy consumtion \\\midrule
@@ -926,7 +924,7 @@ We have also revised Secion I accordingly to make it consistent with the updated
 	
 	\dots
 
-\textcolor{blue}{\,\,\,\,To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} hold promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives.
+\textcolor{blue}{\,\,\,\,To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} holds promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives.
 	While RL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention. 
 	QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay \cite{guo2022energy}, but also by energy consumption \cite{tang2022uav}. Albeit some existing works have investigated the trade-off between delay and energy consumption \cite{li2022joint}, they fail to properly address the user demands and fulfill QoE requirements. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs.} \vspace{2mm}
 
@@ -947,7 +945,7 @@ We have also revised Secion I accordingly to make it consistent with the updated
 \item \underline{Reviewer's Comment}: 
 \textit{``Please highlight what and how the proposed approach provides "high performance" to further specify the motivations and contributions. Especially, please highlight the reason why the authors design the framework by integrating LSTM. Otherwise, it will make the innovations seem weak.''} \newline
 
-\underline{Authors' Reply}: To address the reviewer’s comment, we have further specified the contributions and highlighted the role of the LSTM network and its impact on the convergence and performance of the QECO algorithm. First, to further clarify our contributions, we have revised Section I as follows.
+\underline{Authors' Reply}: To address the reviewer’s comment, we have further explained how the proposed algorithm enhances the performance of the computation offloading in MEC and specified the contributions. We have also highlighted the role of the LSTM network and its impact on the convergence and performance of the QECO algorithm. First, to further clarify our contributions, we have revised Section I as follows.
 
 		\begin{my}{1cm}{1cm}
 	\rev{
@@ -969,14 +967,13 @@ Our main contributions are summarized as follows:
 	
 	
 \end{itemize}
-
 \dots
 }}
 \end{my}
 \vspace{5mm}
 
-Second, we have extended the performance evaluation by comparing the performance of our proposed algorithm with vanilla DQN and DDQN \cite{van2016deep} to further specify the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section V of the revised manuscript.
-This figure highlights the positive effect of workload prediction by the LSTM network. This prediction contributes to improving the efficient utilization of the processing capabilities of ENs, leading to faster convergence of the QECO algorithm and achieving a higher average QoE compared to other methods. 
+Second, to highlight the impacts of the LSTM network and dueling architecture, we have extended the performance evaluation by comparing the performance of our proposed algorithm with vanilla DQN and DDQN \cite{van2016deep}. We have added Fig. 7 to Section VI of the revised manuscript.
+This figure highlights the positive effect of workload prediction by the LSTM network. This prediction contributes to improving the efficient utilization of the processing resources of ENs, leading to faster convergence of the QECO algorithm and achieving a higher average QoE compared to other methods. 
 
  
 
@@ -1009,7 +1006,7 @@ This figure highlights the positive effect of workload prediction by the LSTM ne
 \item \underline{Reviewer's Comment}: 
 \textit{``(a) In section III, why is the size of the task selected from a discrete set? Is it selected randomly or in another way? Besides, (b) the authors define the offloading indicate function as $y_{i,j}(t)$, it should be involved when modelling the Edge Execution phrase.''} \newline
 
-\underline{Authors' Reply}: (a) Task sizes are chosen from a discrete set because, in most applications, tasks have specific sizes. For instance, in image and video processing, tasks are typically divided into standardized sizes [X,XX,XXX]. Therefore, we assume that task sizes are selected randomly and uniformly from this discrete set. To address the reviewer’s comment and to provide further clarity regarding task sizes, we have revised the second paragraph of Section II as follows.
+\underline{Authors' Reply}: (a) Task sizes are chosen from a discrete set as most applications have tasks with predefined sizes. For instance, in image and video processing, tasks are typically divided into standardized sizes [X,XX,XXX]. Therefore, we assume that task sizes are selected randomly and uniformly from this discrete set. To address the reviewer’s comment and to provide further clarity regarding task sizes, we have revised the second paragraph of Section II as follows.
 
 %The task size is selected randomly from a discrete set to avoid state space complexity. To address the reviewer’s comment, we have added a mention of the random task size selection to the second paragraph of Section II, as follows:
 
@@ -1019,7 +1016,8 @@ This figure highlights the positive effect of workload prediction by the LSTM ne
 			
 			 \dots
 
-We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{blue}{The size of task \( z_i(t) \) is selected randomly and uniformly from a discrete set \( \Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\} \), reflecting the standardized task sizes commonly used in practice, where \( \theta \) represents the number of these values.} Hence, $\lambda_i(t) \in \Lambda \cup \{0\}$ to consider the case that no task has arrived. We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
+\color{black}
+We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{blue}{The size of task \( z_i(t) \) is selected randomly and uniformly from a discrete set \( \Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\} \), where \( \theta \) represents the number of these values. Note that task sizes are drawn from a discrete set since, in many applications, tasks typically come with predefined sizes. We consider, $\lambda_i(t) \in \Lambda \cup \{0\}$ to include the case that no task has arrived.} We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
 
 \dots
 
@@ -1031,14 +1029,19 @@ We define $z_i(t)$ as the index assigned to the computation task arriving at MD 
 
 \setcounter{equation}{15}
 
-(b) To address the reviewer’s comment regarding the inclusion of the indicator function $y_{i,j}(t)$, we have revised Equations 16 and 17 in Section III, and Equations 21 and 22 in Section IV of the revised manuscript, as follows:
+(b) We have considered the selected edge server and indecated offloaded task in previous version of manuscript, in Equations (16) and (17) 
+
+We need to explain whether it was correct before. Why we didn't have y before? You can say that we had considered the selected edge server before, but to make it more clear, we have included y to show the edge server selection.
+
+To address the reviewer’s comment regarding the inclusion of the indicator function $y_{i,j}(t)$, we have revised Equations (16) and (17) in Section III, and Equations (21) and (22) in Section IV of the revised manuscript, as follows:
+\setcounter{equation}{16}
 		\begin{my}{1cm}{1cm}
 	\rev{
-		{\
-\begin{alignat}{1}
-	E_i^{\text{I}}(t) = \textcolor{blue}{\sum_{\mathcal{J}} y_{i,j}(t)} D_{i,j}^{\text{E}}(t) p_i^{\text{I}} \tau, %= {\lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over \mathcal{B}_j(t) f_j^{\text{E}}} p_i^{\text{I}},
-	\label{116}
-\end{alignat}
+		{\ \color{black}
+%\begin{alignat}{1}
+%	E_{i,j}^{\text{I}}(t) = \textcolor{blue}{\sum_{\mathcal{J}} y_{i,j}(t)} D_{i,j}^{\text{E}}(t) p_i^{\text{I}} \tau, %= {\lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over \mathcal{B}_j(t) f_j^{\text{E}}} p_i^{\text{I}},
+%	\label{16}
+%\end{alignat}
 \begin{alignat}{1}
 	E_i^{\text{O}}(t) = E_i^{\text{T}}(t) + \sum_{\mathcal{J}} \textcolor{blue}{y_{i,j}(t)} E_{i,j}^{\text{E}}(t) + E_i^{\text{I}}(t).
 	\label{17}
@@ -1063,15 +1066,15 @@ We define $z_i(t)$ as the index assigned to the computation task arriving at MD 
 \textit{``(a) Some sota methods (e.g., DDQN, DDPG) are expected to be compared in the section on performance evaluation, and authors should have more discussions about the evaluation results rather than merely introducing them.  (b) Besides, I think it is better to design the evaluations with a real dataset. (c) Besides, 9\% and 6\% are not significant improvements compared to other methods.''}\newline
 
 
-\underline{Authors' Reply}: (a) To address the reviewer's comments, First, we extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed}, which is a distributed optimization algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. 
-We have added this comparison to Section V of the revised manuscript as follows: \newline 
+\underline{Authors' Reply}: (a) To address the reviewer's comments, we have extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed}, which is a distributed algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. 
+We have added this comparison to Section VI of the revised manuscript as follows: \newline 
 
 
 		\begin{my}{1cm}{1cm}
 	\rev{
 		{\
 			\color{black}
-\hspace{-10mm}  	\color{blue}\dots \\ We use the following methods as benchmarks.
+\hspace{-10mm}  \dots \\ We use the following methods as benchmarks.
 \begin{itemize}
 	
 	\item \textbf{Local Computing (LC):} \dots\vspace{1mm}
@@ -1080,10 +1083,8 @@ We have added this comparison to Section V of the revised manuscript as follows:
 	
 	\item \textbf{Random Decision (RD):} \dots\vspace{1mm}
 	
-
-	\item \textbf{DCDRL}~\cite{qiu2020distributed}: This method is a distributed optimization algorithm designed for delay-sensitive tasks in a queuing-based MEC environment, where MDs strategically interact with multiple ENs. We select DCDRL as a benchmark due to its similarity to our work. It is based on the actor-critic framework \cite{konda1999actor}, which underpins many state-of-the-art DRL algorithms, such as DDPG \cite{lillicrap2015continuous}, and PPO \cite{schulman2017proximal}.
-	
-	
+	\color{blue}
+	\item \textbf{DCDRL}~\cite{qiu2020distributed}: This method is based on the actor-critic framework \cite{NIPS1999_6449f44a}, which underpins many state-of-the-art DRL algorithms, such as DDPG \cite{lillicrap2015continuous}, and PPO \cite{schulman2017proximal}. This method is a distributed algorithm designed for delay-sensitive tasks in a queuing-based MEC environment, where MDs strategically interact with multiple ENs. We select DCDRL as a benchmark due to its similarity to our work. 
 	
 	
 	
@@ -1092,19 +1093,19 @@ We have added this comparison to Section V of the revised manuscript as follows:
 }}
 \end{my}\vspace{5mm}
 
-	\begin{my}{2cm}{2cm}
+	\begin{my}{1cm}{1cm}
 	\rev{
 		{\small
-			\noindent\hspace{-0.5mm}\cite{qiu2020distributed} Qiu, Xiaoyu and Zhang, Weikun and Chen, Wuhui and Zheng, Zibin, ``Distributed and collective deep reinforcement learning for computation offloading: A practical perspective,'' \textit{IEEE Transactions on Parallel and Distributed Systems}, vol. 32, no. 5, pp. 1085--1101, 2021.\\[10pt]
-			\cite{konda1999actor} Konda, Vijay and Tsitsiklis, John, ``Actor-critic algorithms,'' \textit{Advances in neural information processing systems.}, 1999.\\[10pt]
-			\cite{lillicrap2015continuous} Lillicrap, TP, ``Continuous control with deep reinforcement learning,'' \textit{arXiv preprint arXiv:1509.02971}, 2015.\\[10pt]
-			\cite{schulman2017proximal} Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg, ``Proximal policy optimization algorithms,'' in \textit{arXiv preprint arXiv:1707.06347}, 2017.}\\}
+			\noindent\hspace{-0.5mm}\cite{qiu2020distributed} Qiu, Xiaoyu and Zhang, Weikun and Chen, Wuhui and Zheng, Zibin, ``Distributed and collective deep reinforcement learning for computation offloading: A practical perspective,'' \textit{IEEE Transactions on Parallel and Distributed Systems}, vol. 32, no. 5, pp. 1085--1101, May 2021.\\[10pt]
+			\cite{NIPS1999_6449f44a} Konda, Vijay and Tsitsiklis, John, ``Actor-critic algorithms,'' in \textit{Advances in Neural Information Processing Systems}, The {MIT} Press, vol. 12, pp.1008--1014, Apr 1999.\\[10pt]
+			\cite{lillicrap2015continuous} Lillicrap, TP, ``Continuous control with deep reinforcement learning,'' \textit{4th International Conference on Learning Representations, {ICLR}}, vol. abs/1509.02971, May 2016.\\[10pt]
+			\cite{schulman2017proximal} Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg, ``Proximal policy optimization algorithms,'' \textit{CoRR}, vol. abs/1707.06347, Jul 2017.}\\}
 \end{my}
 
 
 
 
-We have also revised the evaluation results as bellow: 
+We have also revised the experiment results as bellow: 
 
 \setcounter{figure}{2}
 
@@ -1200,7 +1201,7 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 
 \vspace{5mm}
 
-Additionally, to address the reviewer's concern about merely introducing the results, we have revised the performance comparison Subsection in Section V, as bellow: 
+Additionally, to address the reviewer's concern about merely introducing the results, we have revised the performance comparison Subsection in Section VI, as bellow: 
 
 
 		\begin{my}{1cm}{1cm}
@@ -1217,12 +1218,18 @@ Additionally, to address the reviewer's concern about merely introducing the res
 
 \end{my}\vspace{6mm}
 
-(b)
+\newpage
+
+(b) Since DRL methods typically require data in the form of experiences or interaction sequences with an environment, there are no readily available and accessible real datasets that satisfy the core concept of training neural networks (i.e., state, action, reward, and next state) in DRL-based algorithm. We simulated an MEC environment aims to capture the interaction between mobile devices and edge servers, allowing the DRL agent to gain experiences and help generate the necessary data in the desired format for training DRL agents. based on Queuing Theory, Our simulated model provide key system performance metrics, including task delay, energy consumption, and etc, which enable the agent to evaluate each state-action value and define the mobile device's QoE. In this environment, we incorporate multiple mobile devices and edge servers to empower the DRL agents to learn and gather the necessary data for effective training. To train the MDs' neural networks, we adopt a scenario comprising 1000 episodes. Each episode contains 100 time slots, each of length 0.1 second. In each time slot, each mobile device generates computation tasks according to a task generation probability. The offloading decision for newly arrived tasks is made by the DRL agent, considering its state that includes the newly arrived task size, the queues information, the MD’s energy level, and the workload history at the ENs. The agents evaluate thair action in that sate by the mobile device's QoE that reflect the key performance metrics based on user preference. 
+
+
 
 \vspace{6mm}
 
-(c) Indeed, QECO improves the number of completed tasks by 12.2\% while at the same time reduces task delay and energy consumption by 11.7\% and 10.8\%, respectively. These together contribute to a significant improvement  in average QoE compared to \cite{qiu2020distributed}. 
-To clarify the simulation results, we have revised the Abstract of the manuscript as follows:
+(c) Indeed, QECO improves the number of completed tasks by 12.2\% while at the same time reduces task delay and energy consumption by 11.7\% and 10.8\%, respectively. These together contribute to a significant improvement  in average QoE compared to \cite{qiu2020distributed}. To clarify the improvement obtained by QECO, we have revised the abstract, Section I, and Section VI as follows.
+
+
+%To clarify the simulation results, we have revised the Abstract of the manuscript as follows:
 
 
 		\begin{my}{1cm}{1cm}
@@ -1243,7 +1250,7 @@ To clarify the simulation results, we have revised the Abstract of the manuscrip
 
 \underline{Authors' Reply}: (a) We have carefully repaced the phrase "battery level" with "energy state" throughout the revised manuscript. \newline
 
-(b) To address the reviewer’s comment, we have removed a few of outdated references and cited 13 recently published papers as follows. \newline
+(b) To address the reviewer’s comment, we have removed a few outdated references and cited 13 recently published papers as follows. \newline
 
 		\begin{my}{1cm}{1cm}
 	\rev{
@@ -1336,17 +1343,13 @@ We have provided a survey of the recently published state-of-the-art works in Se
 
 	\underline{Authors' Reply}: To address the reviewer's comment, we have carefully studied the recently published papers and revised the manuscript. 
 	To be more specific,
-	\begin{itemize}
-		\item a)
-		We have extended the literature review in Section II of the revised manuscript by providing a more comprehensive survey of the recently published state-of-the-art works and comparing their methods characteristics in Table \ref{table11}.
-		
-		\item b)  We have compared our work with more existing works and extended the performance evaluation in Section V of the revised manuscript. 
-		
-		
-	\end{itemize}
+
+		We have extended the literature review in Section II of the revised manuscript by providing a more comprehensive survey of the recently published state-of-the-art works and comparing their characteristics in Table \ref{table11}.
+		We have compared our work with more existing works and extended the performance evaluation in Section VI of the revised manuscript. 
+
 
 \vspace{6mm}
-	a) The newly added Section II of the revised manuscript is as follows. 
+ The newly added Section II of the revised manuscript is as follows. 
 	
 
 	
@@ -1398,8 +1401,8 @@ We have provided a survey of the recently published state-of-the-art works in Se
 			\begin{tabular}{ lp{3.4cm}p{4.5cm}p{5.2cm}p{1.7cm}p{3.1cm}p{4.6cm}l} 
 				\toprule
 				\textbf{Paper} & \textbf{Scenario} &  \textbf{Problem} &  \textbf{Objective} &  \textbf{Model} & \textbf{Method} &  \textbf{Drawbacks}  \\ \midrule
-				\cite{liao2023online} & Queuing-based MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a singel MEC system model  \\\midrule
-				\cite{zhou2021deep} & heterogeneous MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a singel MEC system model \\\midrule				
+				\cite{liao2023online} & Queuing-based MEC & Online computation offloading & Minimize computation delay and energy consumption & MDP & DDQN & Only for a single MEC system model  \\\midrule
+				\cite{zhou2021deep} & heterogeneous MEC & Resource allocation and computation offloading & Minimize energy consumption of the entire system & MDP & DDQN & Only for a single MEC system model \\\midrule				
 				\cite{huang2019deep} & Wireless-powered MEC & Computation offloading and resource allocations & Maximize computation rate & MIP & DQN & Not consider delay-sensitive tasks \\\midrule
 				\cite{wu2024privacy} & MEC-based IIoT  & Joint power allocation and computation offloading  & Optimization of privacy protection and quality of service. & MDP & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
 				\cite{zhao2019deep} & MEC & User association and resource allocation & Optimize downlink utility & MDP & Multi-agent D3QN & Not consider system delay and energy consumtion \\\midrule
@@ -1435,7 +1438,7 @@ We have provided a survey of the recently published state-of-the-art works in Se
 
 \vspace{6mm}
 
-We have also revised Section I accordingly to highlight the contribution further and make it consistent with the updated contents of related work. The following paragraph shows the changes we have made in Section I of the revised manuscript.
+We have also revised Section I accordingly to highlight the contributions and make it consistent with the updated contents of related work. The following paragraphs show the changes we have made in Section I of the revised manuscript.
 
 
 
@@ -1450,7 +1453,7 @@ We have also revised Section I accordingly to highlight the contribution further
 		
 		\dots
 		
-		\textcolor{blue}{\,\,\,\,To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} hold promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives.
+		\textcolor{blue}{\,\,\,\,To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} holds promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives.
 			While RL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention. 
 			QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay \cite{guo2022energy}, but also by energy consumption \cite{tang2022uav}. Albeit some existing works have investigated the trade-off between delay and energy consumption \cite{li2022joint}, they fail to properly address the user demands and fulfill QoE requirements. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs.} \vspace{2mm}
 		
@@ -1481,14 +1484,14 @@ We have also revised Section I accordingly to highlight the contribution further
 \end{my} \vspace{6mm}
 
 
-b) We extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed}, which is a distributed optimization algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. We have added this comparison to Section V of the revised manuscript as follows: 
+We extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed}, which is a distributed algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. We have added this comparison to Section VI of the revised manuscript as follows: \newline 
+
+
 \begin{my}{1cm}{1cm}
 	\rev{
 		{\
-
-	\dots 
-	
-	We use the following methods as benchmarks.
+			\color{black}
+			\hspace{-10mm}  \dots \\ We use the following methods as benchmarks.
 			\begin{itemize}
 				
 				\item \textbf{Local Computing (LC):} \dots\vspace{1mm}
@@ -1497,33 +1500,30 @@ b) We extended the evaluation of the QECO algorithm by comparing it with DCDRL \
 				
 				\item \textbf{Random Decision (RD):} \dots\vspace{1mm}
 				
-				
-				\item \textbf{DCDRL}~\cite{qiu2020distributed}: This method is a distributed optimization algorithm designed for delay-sensitive tasks in a queuing-based MEC environment, where MDs strategically interact with multiple ENs. We select DCDRL as a benchmark due to its similarity to our work. It is based on the actor-critic framework \cite{konda1999actor}, which underpins many state-of-the-art DRL algorithms, such as DDPG \cite{lillicrap2015continuous}, and PPO \cite{schulman2017proximal}.
-				
-				
+				\color{blue}
+				\item \textbf{DCDRL}~\cite{qiu2020distributed}: This method is based on the actor-critic framework \cite{NIPS1999_6449f44a}, which underpins many state-of-the-art DRL algorithms, such as DDPG \cite{lillicrap2015continuous}, and PPO \cite{schulman2017proximal}. This method is a distributed algorithm designed for delay-sensitive tasks in a queuing-based MEC environment, where MDs strategically interact with multiple ENs. We select DCDRL as a benchmark due to its similarity to our work. 
 				
 				
 				
 			\end{itemize}
-		
-\dots
 			
 	}}
 \end{my}\vspace{5mm}
 
-\begin{my}{2cm}{2cm}
+\begin{my}{1cm}{1cm}
 	\rev{
 		{\small
-			\noindent\hspace{-0.5mm}\cite{qiu2020distributed} Qiu, Xiaoyu and Zhang, Weikun and Chen, Wuhui and Zheng, Zibin, ``Distributed and collective deep reinforcement learning for computation offloading: A practical perspective,'' \textit{IEEE Transactions on Parallel and Distributed Systems}, vol. 32, no. 5, pp. 1085--1101, 2021.\\[10pt]
-			\cite{konda1999actor} Konda, Vijay and Tsitsiklis, John, ``Actor-critic algorithms,'' \textit{Advances in neural information processing systems.}, 1999.\\[10pt]
-			\cite{lillicrap2015continuous} Lillicrap, TP, ``Continuous control with deep reinforcement learning,'' \textit{arXiv preprint arXiv:1509.02971}, 2015.\\[10pt]
-			\cite{schulman2017proximal} Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg, ``Proximal policy optimization algorithms,'' in \textit{arXiv preprint arXiv:1707.06347}, 2017.}\\}
+			\noindent\hspace{-0.5mm}\cite{qiu2020distributed} Qiu, Xiaoyu and Zhang, Weikun and Chen, Wuhui and Zheng, Zibin, ``Distributed and collective deep reinforcement learning for computation offloading: A practical perspective,'' \textit{IEEE Transactions on Parallel and Distributed Systems}, vol. 32, no. 5, pp. 1085--1101, May 2021.\\[10pt]
+			\cite{NIPS1999_6449f44a} Konda, Vijay and Tsitsiklis, John, ``Actor-critic algorithms,'' in \textit{Advances in Neural Information Processing Systems}, The {MIT} Press, vol. 12, pp.1008--1014, Apr 1999.\\[10pt]
+			\cite{lillicrap2015continuous} Lillicrap, TP, ``Continuous control with deep reinforcement learning,'' \textit{4th International Conference on Learning Representations, {ICLR}}, vol. abs/1509.02971, May 2016.\\[10pt]
+			\cite{schulman2017proximal} Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg, ``Proximal policy optimization algorithms,'' \textit{CoRR}, vol. abs/1707.06347, Jul 2017.}\\}
 \end{my}
 
 
 
 
-We have also revised the evaluation results as bellow: 
+
+We have also revised the experiment results as bellow: 
 
 
 \setcounter{figure}{2}
@@ -1596,7 +1596,7 @@ We have also revised the evaluation results as bellow:
 	\label{chart444}
 \end{figure} 
 
-Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impact of Dueling DQN, Double DQN, and LSTM network techniques. We have added Fig. 7 to Section V of the revised manuscript.
+Furthermore, to enrich the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impact of Dueling DQN, Double DQN, and LSTM network techniques. We have added Fig. 7 to Section VI of the revised manuscript.
 
 \begin{figure}[H]
 	\captionsetup{name=Fig.}
@@ -1642,7 +1642,7 @@ Based on the system model, we first calculate task delay and energy consumption 
 }}
 	\end{my}\vspace{6mm}
 
-We have also revised the explanation related to Fig. 6 and Fig. 7 in Section V of the revised manuscript to further specify how the QECO algorithm improves QoE for users. The following paragraph shows the changes we have made in Section V of the revised manuscript.
+We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI of the revised manuscript to further specify how the QECO algorithm improves QoE for users. The following paragraph shows the changes we have made in Section V of the revised manuscript.
 \begin{my}{1cm}{1cm}
 	\rev{
 		{\ 
@@ -1661,7 +1661,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section V o
 
 	\item \underline{Reviewer's Comment}: 
 	\textit{``(a) What are inputs and outputs of Algorithm 2? (b) They should be added to make readers clearly understand the results.''} \\\newline
-	\underline{Authors' Reply}: (a) To address the reviewer concern about Algorithm 2, we have revised secound paragraph of Subsection (Training Process Algorithm at EN $j \in \mathcal{J})$ in Section IV to clarify the inputs and outputs of Algorithms 2.\newline
+	\underline{Authors' Reply}: (a) To address the reviewer comment, we have revised the relevant paragraph of Section IV to clarify the inputs and outputs of Algorithms 2.\newline
 	
 	\begin{my}{1cm}{1cm}
 		\rev{In particular, regarding experience $n$, the target-Q value $\hat{Q}_{i,n}^{\text{T}}$ represents the long-term QoE for action $\boldsymbol{a}_i(n)$ under state $\boldsymbol{s}_i(n)$. This value corresponds to the QoE observed in experience $n$, as well as the approximate expected upcoming QoE. 
@@ -1700,7 +1700,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section V o
 			
 			\dots
 			
-			\,\,\,\,We consider a MEC environment with 50 MDs and 5 ENs \dots The algorithm's source code is available at \cite{QECO}.
+			\,\,\,\,  The algorithm's source code is available in \cite{QECO}.
 			
 			\dots
 	}
@@ -1720,7 +1720,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section V o
 				\cite{wu2023multi} G. Wu, Z. Xu, H. Zhang, S. Shen, and S. Yu,  ``Multi-agent DRL for joint completion delay and energy consumption with queuing theory in MEC-based IIoT,'' in \textit{Journal of Parallel and Distributed Computing}, vol. 176, pp. 80–94, Jun. 2023\\[6pt]}\\}
 	\end{my}
 
-	\underline{Authors' Reply}: In response to the reviewer's comment, we have cited these works in the Related Work section and discussed their advantages and limitations. The following sentences reflect the changes made in Section II of the revised manuscript.
+	\underline{Authors' Reply}: In response to the reviewer's comment, we have cited these works in the newly added related work section (i.e., Section II) and discussed their advantages and limitations. The following sentences reflect the changes we made in Section II of the revised manuscript.
 	
 	\begin{my}{1cm}{1cm}
 		\rev{

@@ -77,8 +77,8 @@ Q.~Tang, L.~Liu, C.~Jin, J.~Wang, Z.~Liao, and Y.~Luo, ``An uav-assisted mobile
 \bibitem{li2022joint}
 Y.~Li, B.~Yang, H.~Wu, Q.~Han, C.~Chen, and X.~Guan, ``Joint offloading
   decision and resource allocation for vehicular fog-edge computing networks: A
-  contract-stackelberg approach,'' \emph{IEEE Internet of Things Journal},
-  vol.~9, no.~17, pp. 15\,969--15\,982, 2022.
+  contract-stackelberg approach,'' \emph{IEEE Internet Things J.}, vol.~9,
+  no.~17, pp. 15\,969--15\,982, 2022.
 
 \bibitem{wang2016dueling}
 Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
@@ -94,7 +94,7 @@ S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' \emph{Neural
 X.~Qiu, W.~Zhang, W.~Chen, and Z.~Zheng, ``Distributed and collective deep
   reinforcement learning for computation offloading: A practical perspective,''
   \emph{IEEE Transactions on Parallel and Distributed Systems}, vol.~32, no.~5,
-  pp. 1085--1101, 2020.
+  pp. 1085--1101, May 2020.
 
 \bibitem{zhang2023multi}
 J.~Zhang, F.~Shen, L.~Tang, F.~Yan, F.~Qin, and C.~Wang, ``A multi-agent
@@ -106,20 +106,20 @@ J.~Zhang, F.~Shen, L.~Tang, F.~Yan, F.~Qin, and C.~Wang, ``A multi-agent
 \bibitem{lin2022multi}
 S.-Y. Lin, C.-M. Huang, and T.-Y. Wu, ``Multi-access edge computing-based
   vehicle-vehicle-rsu data offloading over the multi-rsu-overlapped
-  environment,'' \emph{IEEE Open Journal of Intelligent Transportation
-  Systems}, vol.~3, pp. 7--32, 2022.
+  environment,'' \emph{IEEE Open J. Intell. Transp. Syst.}, vol.~3, pp. 7--32,
+  2022.
 
 \bibitem{wei2023many}
 Z.~Wei, B.~Li, R.~Zhang, X.~Cheng, and L.~Yang, ``Many-to-many task offloading
   in vehicular fog computing: A multi-agent deep reinforcement learning
-  approach,'' \emph{IEEE Transactions on Mobile Computing}, vol.~23, no.~3, pp.
-  2107--2122, 2023.
+  approach,'' \emph{IEEE Trans. Mob. Comput.}, vol.~23, no.~3, pp. 2107--2122,
+  2023.
 
 \bibitem{yuan2023adaptive}
 S.~Yuan, B.~Dong, H.~Lvy, H.~Liu, H.~Chen, C.~Wu, S.~Guo, Y.~Ding, and J.~Li,
   ``Adaptive incentivize for cross-silo federated learning in iiot: A
-  multi-agent reinforcement learning approach,'' \emph{IEEE Internet of Things
-  Journal}, 2023.
+  multi-agent reinforcement learning approach,'' \emph{IEEE Internet Things
+  J.}, 2023.
 
 \bibitem{huang2019deep}
 L.~Huang, S.~Bi, and Y.-J.~A. Zhang, ``Deep reinforcement learning for online
@@ -170,8 +170,8 @@ N.~Zhao, Y.-C. Liang, D.~Niyato, Y.~Pei, M.~Wu, and Y.~Jiang, ``Deep
 \bibitem{munir2021multi}
 M.~S. Munir, N.~H. Tran, W.~Saad, and C.~S. Hong, ``Multi-agent
   meta-reinforcement learning for self-powered and sustainable edge computing
-  systems,'' \emph{IEEE Transactions on Network and Service Management},
-  vol.~18, no.~3, pp. 3353--3374, 2021.
+  systems,'' \emph{IEEE Trans. Netw. Serv. Manag.}, vol.~18, no.~3, pp.
+  3353--3374, 2021.
 
 \bibitem{liao2023online}
 L.~Liao, Y.~Lai, F.~Yang, and W.~Zeng, ``Online computation offloading with
@@ -254,18 +254,18 @@ A.~Mehrabi, M.~Siekkinen, and A.~Yl{\"a}-J{\"a}{\"a}ski, ``Energy-aware qoe and
 I.~Rahmati, ``Github repository,'' \url{https://github.com/ImanRHT/QECO}, 2024,
   source code, open access.
 
-\bibitem{konda1999actor}
-V.~Konda and J.~Tsitsiklis, ``Actor-critic algorithms,'' \emph{Advances in
-  neural information processing systems}, vol.~12, 1999.
+\bibitem{NIPS1999_6449f44a}
+V.~Konda and J.~Tsitsiklis, ``Actor-critic algorithms,'' \emph{Adv Neural Inf
+  Process Syst}, vol.~12, pp. 1008--1014, Apr 1999.
 
 \bibitem{lillicrap2015continuous}
-T.~Lillicrap, ``Continuous control with deep reinforcement learning,''
-  \emph{arXiv preprint arXiv:1509.02971}, 2015.
+T.~P. Lillicrap, ``Continuous control with deep reinforcement learning,''
+  \emph{4th International Conference on Learning Representations, {ICLR}}, vol.
+  abs/1509.02971, May 2016.
 
 \bibitem{schulman2017proximal}
 J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov, ``Proximal
-  policy optimization algorithms,'' \emph{arXiv preprint arXiv:1707.06347},
-  2017.
+  policy optimization algorithms,'' \emph{CoRR}, vol. abs/1707.06347, Jul 2017.
 
 \bibitem{van2016deep}
 H.~Van~Hasselt, A.~Guez, and D.~Silver, ``Deep reinforcement learning with
