@@ -84,6 +84,11 @@ Y.~Li, B.~Yang, H.~Wu, Q.~Han, C.~Chen, and X.~Guan, ``Joint offloading
   contract-stackelberg approach,'' \emph{IEEE Internet Things J.}, vol.~9,
   no.~17, pp. 15\,969--15\,982, 2022.
 
+\bibitem[Van~Hasselt et~al.(2016)Van~Hasselt, Guez, and Silver]{van2016deep}
+H.~Van~Hasselt, A.~Guez, and D.~Silver, ``Deep reinforcement learning with
+  double q-learning,'' in \emph{Proceedings of the AAAI conference on
+  artificial intelligence}, vol.~30, no.~1, 2016.
+
 \bibitem[Wang et~al.(2016)Wang, Schaul, Hessel, Hasselt, Lanctot, and
   Freitas]{wang2016dueling}
 Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
@@ -281,10 +286,5 @@ T.~P. Lillicrap, ``Continuous control with deep reinforcement learning,''
   Klimov]{schulman2017proximal}
 J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov, ``Proximal
   policy optimization algorithms,'' \emph{CoRR}, vol. abs/1707.06347, Jul 2017.
-
-\bibitem[Van~Hasselt et~al.(2016)Van~Hasselt, Guez, and Silver]{van2016deep}
-H.~Van~Hasselt, A.~Guez, and D.~Silver, ``Deep reinforcement learning with
-  double q-learning,'' in \emph{Proceedings of the AAAI conference on
-  artificial intelligence}, vol.~30, no.~1, 2016.
 
 \end{thebibliography}
