@@ -836,26 +836,28 @@ where $\mathbbm{1} (z \in \mathbb{Z})$ is the indicator function. In particular,
 
 Additionally, we define $D_{i,j}^{\text{E}}(t)$ to represent the quantity of processing time slots allocated to task $z_{i,j}^{\text{E}}(t)$ when executed at EN $j$. This value is given by:
 \begin{alignat}{1}
-	D_{i,j}^{\text{E}}(t) = { \lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over f_j^{\text{E}} \tau /  b_j(t)}.
+	D_{i,j}^{\text{E}}(t) =  {\,\, \lambda_{i,j}^{\text{E}}(t) \rho_i(t) \,\,\, \over f_j^{\text{E}} \tau /  b_j(t)}.
 	\label{14}  
 \end{alignat}
 We also define $E_{i,j}^{\text{E}}(t)$ as the energy consumption of processing at EN $j$ in time slot $t$ by MD $i$. This can be calculated as:
 \begin{alignat}{1}
-	E_{i,j}^{\text{E}}(t) = {D_{i,j}^{\text{E}}(t)  p_j^{\text{E}} \tau \over b_j(t)},  % = { \lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over  f_j^{\text{E}}}p_j^{\text{E}} ,
+	E_{i,j}^{\text{E}}(t) =  { D_{i,j}^{\text{E}}(t)  p_j^{\text{E}} \tau \,\, \over b_j(t)},  % = { \lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over  f_j^{\text{E}}}p_j^{\text{E}} ,
 	\label{15}  
 \end{alignat}
 where $p_j^{\text{E}}$ is a constant value which denotes the energy consumption of the EN $j$'s processor when operating at full capacity. 
 
-In addition to the energy consumed by EN $j$ for task processing, we also take into account the energy consumed by the MD $i$'s user interface in the standby state while waiting for task completion at the EN $j$. We define $E_{i,j}^{\text{I}}(t)$ as the energy consumption associated with the user interface of MD $i \in \mathcal{I}$, which is given by
+In addition to the energy consumed by EN $j$ for task processing, we also take into account the energy consumed by the MD $i$'s user interface in the standby state while waiting for task completion at the EN $j$. We define $E_{i}^{\text{I}}(t)$ as the energy consumption associated with the user interface of MD $i \in \mathcal{I}$, which is given by
 \begin{alignat}{1}
-	E_{i,j}^{\text{I}}(t) =  D_{i,j}^{\text{E}}(t) p_i^{\text{I}} \tau, %= {\lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over \mathcal{B}_j(t) f_j^{\text{E}}} p_i^{\text{I}},
+	E_{i}^{\text{I}}(t) =  \textcolor{blue}{\sum_{\mathcal{J}}y_{i,j}(t)} D_{i,j}^{\text{E}}(t) p_i^{\text{I}} \tau, %= {\lambda_{i,j}^{\text{E}}(t) \rho_i(t) \over \mathcal{B}_j(t) f_j^{\text{E}}} p_i^{\text{I}},
 	\label{16}
 \end{alignat}
 where $p_i^{\text{I}}$ is the standby energy consumption of MD $i \in \mathcal{I}$.
+\textcolor{blue}{Therefore, let $E_i^{\text{O}}(t)$ denote the total energy consumption for the offloaded task $z_{i,j}^{\text{E}}(t)$ in time slot $t$, we have:}
 \begin{alignat}{1}
-	E_i^{\text{O}}(t) = E_i^{\text{T}}(t) + \sum_{\mathcal{J}} \textcolor{blue}{y_{i,j}(t)} E_{i,j}^{\text{E}}(t) + E_i^{\text{I}}(t).
+	\textcolor{blue}{E_i^{\text{O}}(t) = E_i^{\text{T}}(t) +  \textcolor{blue}{\sum_{\mathcal{J}}y_{i,j}(t) \,} E_{i,j}^{\text{E}}(t) + E_i^{\text{I}}(t)}.
 	\label{17}
 \end{alignat}
+
 
 
 
@@ -915,15 +917,20 @@ where vector $\boldsymbol{y}_i(t)=(y_{i,j}(t))_{j \in \mathcal{J}}$ represents t
 
 $\mathcal{D}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t)) = (1-x_i(t))\Big(l_i^{\text{C}}(t) - t + 1\Big)  +  x_i(t)$
 \begin{alignat}{1}
-	\;\;\;\,\bigg( \sum\limits_{\mathcal{J}} \sum\limits_{t'=t}^{T} \mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big) \textcolor{blue}{y_{i,j}(t)} \, l_{i,j}^{\text{E}}(t') - t +1\bigg),
+	\;\;\;\,\bigg( \sum\limits_{\mathcal{J}} \sum\limits_{t'=t}^{T} \mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)\, l_{i,j}^{\text{E}}(t') - t +1\bigg),
 	\label{21}  
 \end{alignat} 
 where $\mathcal{D}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t))= 0$ if task $z_i(t)$ is dropped. Correspondingly, we denote the energy consumption of task $z_i(t)$ when taking action $\boldsymbol{a}_i(t)$ in the observed state $\boldsymbol{s}_i(t)$ as $\mathcal{E}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t))$, which is: \vspace{1.7mm}
+%\begin{alignat}{1}
+%	\mathcal{E}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t)) = (1-x_i(t)) E_i^{\text{L}}(t)+ x_i(t) E_i^{\text{O}}(t).
+%	\label{22}  
+%\end{alignat}
 
 
 $\mathcal{E}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t)) = (1-x_i(t)) E_i^{\text{L}}(t)+$
 \begin{alignat}{1}
-	\hspace{0.9cm} x_i(t)\bigg( \sum\limits_{\mathcal{J}} \sum\limits_{t^{'}=t}^{T}\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big) \textcolor{blue}{y_{i,j}(t)}  E_i^{\text{O}}(t)  \bigg).
+	\hspace{1.5cm} x_i(t)\bigg( \sum\limits_{\mathcal{J}} \sum\limits_{t^{'}=t}^{T}\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)
+	  E_i^{\text{O}}(t')  \bigg).
 	\label{22}  
 \end{alignat}
 
@@ -1265,7 +1272,9 @@ We use the following methods as benchmarks.
 %\subsection{Method Comparison}
 %In this part, we first investigate the performance of the proposed DRL-based algorithm under different computation workloads in comparison to benchmark methods across several key performance metrics, including the number of completed tasks, average delay, and energy consumption in the entire system. Then, we evaluate the average QoE of users, which is a balance among these metrics with meticulous attention to users' demands.
 
- \begin{figure}[tbp]
+
+
+\begin{figure}[tbp]
 	\captionsetup{name=Fig.}
 	\begin{minipage}[b]{0.5\linewidth}
 		\centering
@@ -1304,6 +1313,7 @@ We use the following methods as benchmarks.
 	\caption{\textcolor{blue}{The overall energy consumption under different computation workloads: (a) task arrival rate; (b) the number of MDs.}}
 	\label{chart2}
 \end{figure}
+
 
 \begin{figure}[t]
 	\captionsetup{name=Fig.}
@@ -1358,6 +1368,10 @@ As shown in Fig.~\ref{chart3} (a), the QECO algorithm maintains a lower average 
 %In the following, we delve into the investigation of the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE as the task arrival rate and the number of MDs increase. This metric signifies the average advantage created by each method for MDs, including a combination of the values of the previously evaluated metrics (task completion, delay, energy consumption) according to the demands of MDs.
 
 %The average QoE comparison in Fig.~\ref{chart4} (a) indicates the superiority of the QECO algorithm in providing MDs with a better experience. By taking into account the specific demands of MDs for each key performance metric, it consistently achieves a higher average QoE across various values of arrival task rates when compared to other methods. Specifically, when the task arrival rate is moderate (i.e., 250), QECO increases the average QoE by 57\% and 33\% compared to RD and DCDRL, respectively. In Fig.~\ref{chart4} (b), As the number of MDs increases, the potential workload on the ENs also rises, leading to a decrease in the average QoE for each method (excluding LC). It can be observed that an increase in the ENs' workload leads to a reduction in the allocated computing capacity for MDs, resulting in a decrease in the average QoE. However, QECO effectively manages the uncertain load at the ENs. When the number of MDs increases to 90, it increases the average QoE by at least 29\% more than the other methods.
+
+
+
+
 
 We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. \textcolor{blue}{Fig.~\ref{chart4} (a) shows the average QoE for different values of the task arrival rate. This figure highlights the superiority of the QECO algorithm in providing MDs with an enhanced experience. At lower task arrival rates (i.e., 50-150), QECO performs optimally and maintains an average QoE of at least 0.72, while the other methods experience a steeper decline, with average QoE dropping to 0--0.54. Specifically, at a task arrival rate of 200, QECO improves the average QoE by 91.7\% compared to DCDRL in the positive average QoE range. As task arrival rates increase to 300, the average QoE significantly decreases for all methods due to increased competition for resources in the MEC system. However, QECO still maintains a positive average QoE, while other methods fall to negative values, with a decline of up to -0.17. For higher task arrival rates (i.e., 350–450), QECO experiences a negative average QoE, but it shows at least a 42.6\% and 24.6\% smaller reduction in average QoE compared to RD and DCDRL, respectively.}
 
