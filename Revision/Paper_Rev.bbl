@@ -89,8 +89,8 @@ H.~Van~Hasselt, A.~Guez, and D.~Silver, ``Deep reinforcement learning with
   double q-learning,'' in \emph{Proceedings of the AAAI conference on
   artificial intelligence}, vol.~30, no.~1, 2016.
 
-\bibitem[Wang et~al.(2016)Wang, Schaul, Hessel, Hasselt, Lanctot, and
-  Freitas]{wang2016dueling}
+\bibitem[Wang et~al.(2016{\natexlab{a}})Wang, Schaul, Hessel, Hasselt, Lanctot,
+  and Freitas]{wang2016dueling}
 Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
   ``Dueling network architectures for deep reinforcement learning,'' in
   \emph{Proc. of International Conference on Machine Learning}.\hskip 1em plus
@@ -254,9 +254,9 @@ A.~Parekh and R.~G. Gallager, ``A generalized processor sharing approach to
   flow control in integrated services networks: {The} single-node case,''
   \emph{IEEE/ACM Trans. Netw}, vol.~1, no.~3, pp. 344--357, Jun 1993.
 
-\bibitem[Wang et~al.(2017)Wang, Zhou, and Zhang]{wang2017qoe}
-Y.~Wang, W.~Zhou, and P.~Zhang, \emph{QoE Management in Wireless
-  Networks}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2017.
+\bibitem[Wang et~al.(2016{\natexlab{b}})Wang, Zhou, and Zhang]{wang2017qoe}
+Y.~Wang, W.~Zhou, and P.~Zhang, ``Qoe management in wireless networks,''
+  \emph{Springer}, pp. XII, 60, Aug 2016.
 
 \bibitem[Wang et~al.(2019)Wang, Zhang, Liu, Zhu, Pang, Sun,
   et~al.]{wang2019intelligent}
