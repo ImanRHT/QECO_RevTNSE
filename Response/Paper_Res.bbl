@@ -80,6 +80,11 @@ Y.~Li, B.~Yang, H.~Wu, Q.~Han, C.~Chen, and X.~Guan, ``Joint offloading
   contract-stackelberg approach,'' \emph{IEEE Internet Things J.}, vol.~9,
   no.~17, pp. 15\,969--15\,982, 2022.
 
+\bibitem{van2016deep}
+H.~Van~Hasselt, A.~Guez, and D.~Silver, ``Deep reinforcement learning with
+  double q-learning,'' in \emph{Proceedings of the AAAI conference on
+  artificial intelligence}, vol.~30, no.~1, 2016.
+
 \bibitem{wang2016dueling}
 Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
   ``Dueling network architectures for deep reinforcement learning,'' in
@@ -90,11 +95,17 @@ Z.~Wang, T.~Schaul, M.~Hessel, H.~Hasselt, M.~Lanctot, and N.~Freitas,
 S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' \emph{Neural
   Comput}, vol.~9, no.~8, pp. 1735--1780, Sep 1997.
 
+\bibitem{yang2018distributed}
+L.~Yang, H.~Zhang, X.~Li, H.~Ji, and V.~C. Leung, ``A distributed computation
+  offloading strategy in small-cell networks integrated with mobile edge
+  computing,'' \emph{IEEE ACM Trans. Netw.}, vol.~26, no.~6, pp. 2762--2773,
+  Dec 2018.
+
 \bibitem{qiu2020distributed}
 X.~Qiu, W.~Zhang, W.~Chen, and Z.~Zheng, ``Distributed and collective deep
   reinforcement learning for computation offloading: A practical perspective,''
-  \emph{IEEE Transactions on Parallel and Distributed Systems}, vol.~32, no.~5,
-  pp. 1085--1101, May 2020.
+  \emph{IEEE Trans. Parallel Distrib. Syst.}, vol.~32, no.~5, pp. 1085--1101,
+  May 2020.
 
 \bibitem{zhang2023multi}
 J.~Zhang, F.~Shen, L.~Tang, F.~Yan, F.~Qin, and C.~Wang, ``A multi-agent
@@ -147,13 +158,12 @@ H.~Zhou, K.~Jiang, X.~Liu, X.~Li, and V.~C. Leung, ``Deep reinforcement
 \bibitem{chen2021drl}
 J.~Chen, H.~Xing, Z.~Xiao, L.~Xu, and T.~Tao, ``A drl agent for jointly
   optimizing computation offloading and resource allocation in mec,''
-  \emph{IEEE Internet of Things Journal}, vol.~8, no.~24, pp. 17\,508--17\,524,
-  2021.
+  \emph{IEEE Internet Things J}, vol.~8, no.~24, pp. 17\,508--17\,524, 2021.
 
 \bibitem{wu2024privacy}
 G.~Wu, X.~Chen, Z.~Gao, H.~Zhang, S.~Yu, and S.~Shen, ``Privacy-preserving
   offloading scheme in multi-access mobile edge computing based on madrl,''
-  \emph{J. Parallel Distributed Comput.}, vol. 183, p. 104775, Jan 2024.
+  \emph{J. Parallel Distrib. Comput.}, vol. 183, p. 104775, Jan 2024.
 
 \bibitem{dai2020edge}
 Y.~Dai, K.~Zhang, S.~Maharjan, and Y.~Zhang, ``Edge intelligence for
@@ -175,8 +185,8 @@ M.~S. Munir, N.~H. Tran, W.~Saad, and C.~S. Hong, ``Multi-agent
 
 \bibitem{liao2023online}
 L.~Liao, Y.~Lai, F.~Yang, and W.~Zeng, ``Online computation offloading with
-  double reinforcement learning algorithm in mobile edge computing,'' \emph{J
-  Parallel Distrib Comput}, vol. 171, pp. 28--39, Jan 2023.
+  double reinforcement learning algorithm in mobile edge computing,'' \emph{J.
+  Parallel Distrib. Comput.}, vol. 171, pp. 28--39, Jan 2023.
 
 \bibitem{wu2024combining}
 G.~Wu, X.~Chen, Y.~Shen, Z.~Xu, H.~Zhang, S.~Shen, and S.~Yu, ``Combining
@@ -203,8 +213,7 @@ Y.~Gong, H.~Yao, J.~Wang, M.~Li, and S.~Guo, ``Edge intelligence-driven joint
 \bibitem{wu2023multi}
 G.~Wu, Z.~Xu, H.~Zhang, S.~Shen, and S.~Yu, ``Multi-agent drl for joint
   completion delay and energy consumption with queuing theory in mec-based
-  iiot,'' \emph{J. Parallel Distributed Comput.}, vol. 176, pp. 80--94, Jun
-  2023.
+  iiot,'' \emph{J. Parallel Distrib. Comput.}, vol. 176, pp. 80--94, Jun 2023.
 
 \bibitem{sun2024hierarchical}
 C.~Sun, X.~Li, C.~Wang, Q.~He, X.~Wang, and V.~C. Leung, ``Hierarchical deep
@@ -266,10 +275,5 @@ T.~P. Lillicrap, ``Continuous control with deep reinforcement learning,''
 \bibitem{schulman2017proximal}
 J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov, ``Proximal
   policy optimization algorithms,'' \emph{CoRR}, vol. abs/1707.06347, Jul 2017.
-
-\bibitem{van2016deep}
-H.~Van~Hasselt, A.~Guez, and D.~Silver, ``Deep reinforcement learning with
-  double q-learning,'' in \emph{Proceedings of the AAAI conference on
-  artificial intelligence}, vol.~30, no.~1, 2016.
 
 \end{thebibliography}
