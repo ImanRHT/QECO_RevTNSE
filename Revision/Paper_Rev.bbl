@@ -258,20 +258,20 @@ A.~Parekh and R.~G. Gallager, ``A generalized processor sharing approach to
 Y.~Wang, W.~Zhou, and P.~Zhang, ``Qoe management in wireless networks,''
   \emph{Springer}, pp. XII, 60, Aug 2016.
 
-\bibitem[Wang et~al.(2019)Wang, Zhang, Liu, Zhu, Pang, Sun,
-  et~al.]{wang2019intelligent}
-F.~Wang, C.~Zhang, J.~Liu, Y.~Zhu, H.~Pang, L.~Sun \emph{et~al.}, ``Intelligent
+\bibitem[Wang et~al.(2019)Wang, Zhang, Liu, Zhu, Pang, and
+  Sun]{wang2019intelligent}
+F.~Wang, C.~Zhang, J.~Liu, Y.~Zhu, H.~Pang, and L.~Sun, ``Intelligent
   edge-assisted crowdcast with deep reinforcement learning for personalized
   qoe,'' in \emph{IEEE INFOCOM 2019-IEEE Conference on Computer
-  Communications}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2019, pp.
+  Communications}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, May 2019, pp.
   910--918.
 
 \bibitem[Mehrabi et~al.(2019)Mehrabi, Siekkinen, and
   Yl{\"a}-J{\"a}{\"a}ski]{mehrabi2019energy}
 A.~Mehrabi, M.~Siekkinen, and A.~Yl{\"a}-J{\"a}{\"a}ski, ``Energy-aware qoe and
   backhaul traffic optimization in green edge adaptive mobile video
-  streaming,'' \emph{IEEE Transactions on Green Communications and Networking},
-  vol.~3, no.~3, pp. 828--839, 2019.
+  streaming,'' \emph{IEEE trans. green commun. netw.}, vol.~3, no.~3, pp.
+  828--839, Sep 2019.
 
 \bibitem[Rahmati(2024)]{QECO}
 I.~Rahmati, ``Github repository,'' \url{https://github.com/ImanRHT/QECO}, 2024,

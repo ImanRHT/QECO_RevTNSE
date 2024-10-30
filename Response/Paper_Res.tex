@@ -733,7 +733,7 @@ There are multiple directions for future work. A complementary approach involves
 	\item \textbf{Authors}:  $^\ast$Iman Rahmati, $^\dagger$Hamed Shah-Mansouri, and $^\ast$Ali Movaghar
 	
 	
-	\item \textbf{Affiliation}: $^\ast$ Department of Computer Engineering,  Sharif University of Technology, Tehran, Iran, \\ $^\dagger$ Department of Electrical Engineering, Sharif University of Technology, Tehran, Iran.
+	\item \textbf{Affiliation}: $^\ast$Department of Computer Engineering,  Sharif University of Technology, Tehran, Iran, \\ $^\dagger$Department of Electrical Engineering, Sharif University of Technology, Tehran, Iran.
 	
 	\item \textbf{Paper Reference Number}: TNSE-2024-03-0468 
 	
@@ -759,7 +759,7 @@ There are multiple directions for future work. A complementary approach involves
 \underline{Authors' Reply}: To address the reviewer comment, we have carefully studied the recently published papers and throughly revised the related work section. To be more specific,
 \begin{enumerate}[]
 \item We have devoted Section II of the revised manuscript to the literature review and provided a survey of the recently published state-of-the-art works.
-\item Furthemore, we have expanded the explanations about each related work and discussed their pros/cons.
+\item Furthemore, we have expanded the explanations about each related work and discussed its pros/cons.
 \end{enumerate}\vspace{6mm}
 The newly added Section II of the revised manuscript is as follows. We have also included a table to provide a comprehensive comparison of the related works. \newline
 \begin{my}{1cm}{1cm}
@@ -887,7 +887,7 @@ QECO &  Queuing-based MEC &  Computation offloading & Maximize the QoE of each M
 	
 	\item D3QN: By integrating both Double Q-learning and Dueling Network Architectures, D3QN overcomes overestimation bias in action-value predictions and accurately identifies the relative importance of states and actions. This improves the model's ability to make accurate predictions, providing a foundation for enhanced offloading strategies.\vspace{2mm}
 	
-	\item LSTM: Incorporating LSTM networks allows the model to continuously estimate dynamic workloads at edge servers. This feature is crucial for dealing with limited global information and adapting to an uncertain environment. By predicting the future workload of edge servers, mobile devices can effectively adjust their offloading strategies to achieve higher QoE.\vspace{2mm}
+	\item LSTM: Incorporating LSTM networks allows the model to continuously estimate dynamic workloads at edge servers. This is crucial for dealing with limited global information and adapting to the uncertain MEC environment with multiple MDs and ENs. By predicting the future workload of edge servers, MDs can effectively adjust their offloading strategies to achieve higher QoE.\vspace{2mm}
 	
 \end{itemize}
 
@@ -895,7 +895,7 @@ QECO &  Queuing-based MEC &  Computation offloading & Maximize the QoE of each M
 
 
 
-To address the reviewer’s comment, we have further explained how the proposed algorithm enhances the performance of the computation offloading in MEC and specified the contributions. We have also highlighted the role of the LSTM network and its impact on the convergence and performance of the QECO algorithm. First, to further clarify our contributions, we have revised Section I as follows.
+To address the reviewer’s comment, we have further explained how the proposed algorithm enhances the performance of the computation offloading in MEC and specified our contributions. We have also highlighted the role of the LSTM network and its impact on the convergence and performance of the QECO algorithm. First, to further clarify our contributions, we have revised Section I as follows.
 
 		\begin{my}{1cm}{1cm}
 	\rev{
@@ -1121,7 +1121,7 @@ We have also revised the experiment results as bellow:
 	\label{chart44}
 \end{figure} 
 
-Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section V of the revised manuscript.
+Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section VI of the revised manuscript.
 
 \begin{figure}[H]
 	\captionsetup{name=Fig.}
@@ -1174,7 +1174,9 @@ Additionally, to address the reviewer's concern about merely introducing the res
 
 
 
-\,\,\,\, To capture the interactions between agents and the environment, we carefully simulated an MEC system that allows the DRL agents to gain experience and generate the data required in the proper format for training. As the agent interacts with the environment, it generates new data at each time step, using the system’s feedback (e.g., QoE) to adjust its actions. As mentioned in Section III of the revised manuscript, based on queuing theory, our simulated model provides key system performance metrics (e.g., task delay, energy consumption, etc.), which enable the agent to determine the mobile device's QoE and evaluate each state-action advantage value.\vspace{2mm}
+\,\,\,\, To capture the interactions between agents and the environment, we carefully simulated an MEC system that allows the DRL agents to gain experience and generate the data required in the proper format for training. As the agent interacts with the environment, it generates new data at each time step, using the system’s feedback (e.g., QoE) to adjust its actions. 
+
+%As mentioned in Section III of the revised manuscript, based on queuing theory, our simulated model provides key system performance metrics (e.g., task delay, energy consumption, etc.), which enable the agent to determine the mobile device's QoE and evaluate each state-action advantage value.\vspace{2mm}
 
 
 
@@ -1187,7 +1189,7 @@ Additionally, to address the reviewer's concern about merely introducing the res
 
 \vspace{6mm}
 
-(c) Indeed, QECO improves the number of completed tasks by 14.4\% while at the same time reduces task delay and energy consumption by 9.2\% and 6.3\%, respectively. These together contribute to a significant improvement by 37.1\% in average QoE compared to \cite{yang2018distributed}. To clarify the improvement obtained by QECO, we have revised the abstract, Section I, and Section VI as follows.
+(c) Indeed, compared to \cite{yang2018distributed}, QECO improves the number of completed tasks by 14.4\% while at the same time reduces task delay and energy consumption by 9.2\% and 6.3\%, respectively. These together contribute to a significant improvement of 37.1\% in average QoE compared to \cite{yang2018distributed}. To clarify the improvement obtained by QECO, we have revised the abstract, Section I, and Section VI as follows.
 
 
 %To clarify the simulation results, we have revised the Abstract of the manuscript as follows:
@@ -1208,7 +1210,7 @@ Additionally, to address the reviewer's concern about merely introducing the res
 \item \underline{Reviewer's Comment}: 
 \textit{``Other concerns are also expected to be addressed: (a) be careful to use words like "battery level" to express the energy consumption, because some of the energy is provided by the wired line power. (b) Most of the references are out of 3 years, please investigate more studies published in recent years. (c) The authors should thoroughly check the writing style, grammar, and spelling to enhance the paper's clarity, conciseness, and overall impact.}''\newline
 
-\underline{Authors' Reply}: (a) We have carefully repaced the phrase "battery level" with "energy level" throughout the revised manuscript. \newline
+\underline{Authors' Reply}: (a) We have avoided using "battery level" to express the energy consumption and carefully repaced the phrase "battery level" with "energy level" throughout the revised manuscript. \newline
 
 (b) To address the reviewer’s comment, we have removed a few outdated references and cited 13 recently published papers as follows. \newline
 
@@ -1301,15 +1303,15 @@ We have provided a survey of the recently published state-of-the-art works in Se
 \begin{enumerate}
 	
 	\item \underline{Reviewer's Comment}: 
-	\textit{``The authors should provide a comparative table to highlight their contributions. Specially, the authors should compare their method with other references on computation task offloading cited in the paper, including aspects such as scenarios, methods, advances, drawbacks, and so on.''} \newline
+	\textit{``(a) The authors should provide a comparative table to highlight their contributions. (b) Specially, the authors should compare their method with other references on computation task offloading cited in the paper, including aspects such as scenarios, methods, advances, drawbacks, and so on.''} \newline
 
-	\underline{Authors' Reply}: To address the reviewer's comment, we have carefully studied the recently published papers and revised the manuscript. 
+	\underline{Authors' Reply}: (a) To address the reviewer's comment, we have carefully studied the recently published papers and revised the manuscript accordingly. 
 	To be more specific, we have extended the literature review in Section II of the revised manuscript by providing a more comprehensive survey of the recently published state-of-the-art works and comparing their characteristics in Table \ref{table11}.
 	We have also compared our work with more existing works and extended the performance evaluation in Section VI of the revised manuscript. 
 
 
 \vspace{3mm}
- The newly added Section II of the revised manuscript is as follows. 
+ The newly added Section II of the revised manuscript is as follows. As suggested by the reviewer, we have also included Table I that summarizes the existing works.
 	
 
 	
@@ -1441,7 +1443,7 @@ We have also revised Section I accordingly to highlight the contributions and ma
 \end{my}\vspace{6mm}
 
 
-We have extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed}, which is a distributed algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. We have added this comparison to Section VI of the revised manuscript as follows: 
+We have extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed} in addition to POGA \cite{yang2018distributed}. DCDRL is a distributed algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. We have added this comparison to Section VI of the revised manuscript as follows: 
 \begin{my}{1cm}{1cm}
 	\rev{
 		{\
@@ -1577,7 +1579,7 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 	\item \underline{Reviewer's Comment}: 
 	\textit{``I think more explanations should be added for the QoE function. How can the defined function reflect QoE?''} \newline
 	
-	\underline{Authors' Reply}: Given the importance of evaluating an agent's actions in DRL-based computation offloading approaches, we define the QoE maximization problem by considering several key performance factors. QoE is a time-varying performance measure that reflects user satisfaction and is influenced by more than just delay or energy consumption. On the other hand, investigating the trade-off between delay and energy consumption may not adequately address user demands and meet QoE requirements. To capture the agent’s personalized QoE needs, we designed an adaptive trade-off between task completion and cost reduction. In this model, the associated cost is a weighted sum of completion delay and energy consumption, with the weights dynamically adjusting based on the MD's preferences.\vspace{2mm}
+	\underline{Authors' Reply}: Given the importance of evaluating an agent's action in DRL-based computation offloading approaches, we define the QoE maximization problem by considering several key performance factors. QoE is a time-varying performance measure that reflects user satisfaction and is influenced by more than just delay or energy consumption. On the other hand, investigating the trade-off between delay and energy consumption may not adequately address user demands and meet QoE requirements. To capture the agent’s personalized QoE needs, we designed an adaptive trade-off between task completion and cost reduction. In this model, the associated cost is a weighted sum of delay and energy consumption, with the weights dynamically adjusted based on the MD's preferences.\vspace{2mm}
 	
 	To address the reviewer's comments, we have further explained the QoE function and revised Section IV as follows.
 	
@@ -1609,7 +1611,7 @@ Based on the system model, we first calculate task delay and energy consumption 
 			\cite{mehrabi2019energy} Mehrabi, Abbas and Siekkinen, Matti and Yl{\"a}-J{\"a}{\"a}ski, Antti, ``Energy-aware QoE and backhaul traffic optimization in green edge adaptive mobile video streaming,'' \textit{ IEEE trans. green commun. netw.}, vol. 3, no. 3, pp. 828--839, Sep 2019.}\\}
 \end{my}\vspace{6mm}
 
-We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI of the revised manuscript to further specify how the QECO algorithm improves QoE for users. The following paragraph shows the changes we have made in Section VI of the revised manuscript.
+We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI of the revised manuscript to further specify how the QECO algorithm improves QoE of users. The following paragraph shows the changes we have made in Section VI of the revised manuscript.
 		\begin{my}{1cm}{1cm}
 	\rev{
 		{\ 
@@ -1668,7 +1670,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI 
 			
 			\dots
 			
-			\,\,\,\,  The algorithm's source code is available in \cite{QECO}.
+			\,\,\,\, The algorithm's source code is available at \cite{QECO}
 
 	}
 	\end{my} \vspace{6mm}
@@ -1687,7 +1689,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI 
 				\cite{wu2023multi} G. Wu, Z. Xu, H. Zhang, S. Shen, and S. Yu,  ``Multi-agent DRL for joint completion delay and energy consumption with queuing theory in MEC-based IIoT,'' in \textit{Journal of Parallel and Distributed Computing}, vol. 176, pp. 80–94, Jun. 2023\\[6pt]}\\}
 	\end{my}
 
-	\underline{Authors' Reply}: In response to the reviewer's comment, we have cited these works in the newly added related work section (i.e., Section II) and discussed their advantages and limitations. The following sentences reflect the changes we made in Section II of the revised manuscript.
+	\underline{Authors' Reply}: In response to the reviewer's comment, we have cited these works in the newly added related work section (i.e., Section II) and discussed their strengths and limitations. The following sentences reflect the changes we made in Section II of the revised manuscript.
 	
 	\begin{my}{1cm}{1cm}
 		\rev{
