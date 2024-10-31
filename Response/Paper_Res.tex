@@ -983,8 +983,12 @@ We define $z_i(t)$ as the index assigned to the computation task arriving at MD 
 
 \setcounter{equation}{15}
 
-(b) Please note that for any queue in the system model, we assume that once a task is completed within a time slot, the next task in the queue will begin processing at the start of the next time slot. Besides, we assume that during each time slot, a mobile device either receives a new task or does not, considering the small duration of each time slot ($\tau = 0.1$ seconds). Based on these assumptions, in the previous version of the manuscript, we utilized the indicator function $\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)$ in Equations (21) and (22) to indicate edge server selection.
-However, to address the reviewer’s comment and make the edge server selection more clear, we have included $y_{i,j}(t)$ into Equations (16) and (17) in Section III of the revised manuscript, as follows:
+(b) Please note that in the original version of the manuscript, we utilized the indicator function $\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)$ in Equations (21) and (22) to indicate edge server selection. Therefore, there was no need to include offloading indicator $y_{i,j}(t)$. However, to address the reviewer’s comment and make the edge server selection more clear, we have included $y_{i,j}(t)$ into Equations (16) and (17) in Section III of the revised manuscript, as follows:
+
+
+
+%Please note that for any queue in the system model, we assume that once a task is completed within a time slot, the next task in the queue will begin processing at the start of the next time slot. Besides, we assume that during each time slot, a mobile device either receives a new task or does not, considering the small duration of each time slot ($\tau = 0.1$ seconds). Based on these assumptions, in the previous version of the manuscript, we utilized the indicator function $\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)$ in Equations (21) and (22) to indicate edge server selection.
+
 
 \setcounter{equation}{15}
 		\begin{my}{1cm}{1cm}
