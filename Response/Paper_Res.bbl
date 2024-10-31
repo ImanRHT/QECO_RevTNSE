@@ -232,6 +232,23 @@ Z.~Gao, L.~Yang, and Y.~Dai, ``Large-scale computation offloading using a
   computing,'' \emph{IEEE Trans. Mob. Comput.}, vol.~22, no.~6, pp. 3425--3443,
   Jan 2023.
 
+\bibitem{wang2020intelligent}
+F.~Wang, F.~Wang, J.~Liu, R.~Shea, and L.~Sun, ``Intelligent video caching at
+  network edge: A multi-agent deep reinforcement learning approach,'' in
+  \emph{IEEE INFOCOM 2020-IEEE Conference on Computer Communications}, Jul
+  2020, pp. 2499--2508.
+
+\bibitem{zhang2019toward}
+C.~Zhang, H.~Pang, J.~Liu, S.~Tang, R.~Zhang, D.~Wang, and L.~Sun, ``Toward
+  edge-assisted video content intelligent caching with long short-term memory
+  learning,'' \emph{IEEE access}, vol.~7, pp. 152\,832--152\,846, Oct 2019.
+
+\bibitem{allahham2022multi}
+M.~S. Allahham, A.~A. Abdellatif, N.~Mhaisen, A.~Mohamed, A.~Erbad, and
+  M.~Guizani, ``Multi-agent reinforcement learning for network selection and
+  resource allocation in heterogeneous multi-rat networks,'' \emph{IEEE Trans.
+  Cogn. Commun. Netw.}, vol.~8, no.~2, pp. 1287--1300, Jun 2022.
+
 \bibitem{mao2016dynamic}
 Y.~Mao, J.~Zhang, and K.~B. Letaief, ``Dynamic computation offloading for
   mobile-edge computing with energy harvesting devices,'' \emph{IEEE J. Sel.

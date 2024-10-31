@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  30 OCT 2024 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  31 OCT 2024 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1557,7 +1557,7 @@ l.668
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./queue.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<queue.pdf, id=261, 782.925pt x 277.9986pt>
+<queue.pdf, id=263, 782.925pt x 277.9986pt>
 File: queue.pdf Graphic file (type pdf)
 <use queue.pdf>
 Package pdftex.def Info: queue.pdf  used on input line 767.
@@ -1582,7 +1582,7 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./DQN.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<DQN.pdf, id=350, 902.41138pt x 529.01637pt>
+<DQN.pdf, id=355, 902.41138pt x 529.01637pt>
 File: DQN.pdf Graphic file (type pdf)
 <use DQN.pdf>
 Package pdftex.def Info: DQN.pdf  used on input line 994.
@@ -1637,32 +1637,32 @@ Overfull \hbox (3.02156pt too wide) in paragraph at lines 1214--1216
  []
 
 [9]
-<drop_1.pdf, id=430, 451.6875pt x 436.63126pt>
+<drop_1.pdf, id=435, 451.6875pt x 436.63126pt>
 File: drop_1.pdf Graphic file (type pdf)
 <use drop_1.pdf>
 Package pdftex.def Info: drop_1.pdf  used on input line 1300.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<drop_2.pdf, id=431, 451.6875pt x 436.63126pt>
+<drop_2.pdf, id=436, 451.6875pt x 436.63126pt>
 File: drop_2.pdf Graphic file (type pdf)
 <use drop_2.pdf>
 Package pdftex.def Info: drop_2.pdf  used on input line 1306.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<energy_1.pdf, id=432, 451.6875pt x 437.635pt>
+<energy_1.pdf, id=437, 451.6875pt x 437.635pt>
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
 Package pdftex.def Info: energy_1.pdf  used on input line 1322.
 (pdftex.def)             Requested size: 126.0pt x 122.07619pt.
-<energy_2.pdf, id=433, 450.68375pt x 436.63126pt>
+<energy_2.pdf, id=438, 450.68375pt x 436.63126pt>
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
 Package pdftex.def Info: energy_2.pdf  used on input line 1328.
 (pdftex.def)             Requested size: 126.0pt x 122.06937pt.
-<delay_1.pdf, id=434, 451.6875pt x 436.63126pt>
+<delay_1.pdf, id=439, 451.6875pt x 436.63126pt>
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
 Package pdftex.def Info: delay_1.pdf  used on input line 1341.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<delay_2.pdf, id=435, 449.68pt x 436.63126pt>
+<delay_2.pdf, id=440, 449.68pt x 436.63126pt>
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
 Package pdftex.def Info: delay_2.pdf  used on input line 1347.
@@ -1689,27 +1689,27 @@ l.1367
 l.1367 
         <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf> <./dela
 y_1.pdf> <./delay_2.pdf>]
-<qoe_1.pdf, id=541, 453.695pt x 436.63126pt>
+<qoe_1.pdf, id=546, 453.695pt x 436.63126pt>
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
 Package pdftex.def Info: qoe_1.pdf  used on input line 1375.
 (pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<qoe_2.pdf, id=542, 453.695pt x 436.63126pt>
+<qoe_2.pdf, id=547, 453.695pt x 436.63126pt>
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
 Package pdftex.def Info: qoe_2.pdf  used on input line 1381.
 (pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<m1.pdf, id=545, 950.55125pt x 506.89375pt>
+<m1.pdf, id=550, 950.55125pt x 506.89375pt>
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
 Package pdftex.def Info: m1.pdf  used on input line 1408.
 (pdftex.def)             Requested size: 229.32092pt x 122.28348pt.
-<m2.pdf, id=546, 505.89pt x 433.62pt>
+<m2.pdf, id=551, 505.89pt x 433.62pt>
 File: m2.pdf Graphic file (type pdf)
 <use m2.pdf>
 Package pdftex.def Info: m2.pdf  used on input line 1424.
 (pdftex.def)             Requested size: 126.0pt x 108.00111pt.
-<m3.pdf, id=547, 505.89pt x 433.62pt>
+<m3.pdf, id=552, 505.89pt x 433.62pt>
 File: m3.pdf Graphic file (type pdf)
 <use m3.pdf>
 Package pdftex.def Info: m3.pdf  used on input line 1430.
@@ -1730,18 +1730,11 @@ l.1444
                                                   
 l.1444 
         <./qoe_1.pdf> <./qoe_2.pdf> <./m1.pdf> <./m2.pdf> <./m3.pdf>]
-(./Paper_Rev.bbl [12])
-Overfull \vbox (696.0pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (696.0pt too high) has occurred while \output is active []
-
- [13]
-(./Paper_Rev.aux * soulpos - computing points - it may take a few seconds *
+(./Paper_Rev.bbl [12]) [13] (./Paper_Rev.aux
+* soulpos - computing points - it may take a few seconds *
 \openout3 = `Paper_Rev.upb'.
 
-
-(./Paper_Rev.upa))
+ (./Paper_Rev.upa))
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1749,11 +1742,11 @@ Package rerunfilecheck Info: File `Paper_Rev.out' has not changed.
 (rerunfilecheck)             Checksum: 313BB00E96E3C15E7E46DD3970FB237C;5186.
  ) 
 Here is how much of TeX's memory you used:
- 40909 strings out of 478994
- 795052 string characters out of 5858183
- 1257934 words of memory out of 5000000
- 56888 multiletter control sequences out of 15000+600000
- 567288 words of font info for 535 fonts, out of 8000000 for 9000
+ 40900 strings out of 478994
+ 794647 string characters out of 5858183
+ 1258042 words of memory out of 5000000
+ 56870 multiletter control sequences out of 15000+600000
+ 567643 words of font info for 539 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  94i,23n,117p,2038b,989s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10
@@ -1784,10 +1777,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on Paper_Rev.pdf (13 pages, 1255924 bytes).
+Output written on Paper_Rev.pdf (13 pages, 1256950 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 600 compressed objects within 6 object streams
- 137 named destinations out of 1000 (max. 500000)
+ 795 PDF objects out of 1000 (max. 8388607)
+ 606 compressed objects within 7 object streams
+ 140 named destinations out of 1000 (max. 500000)
  129326 words of extra memory for PDF output out of 154059 (max. 10000000)
 
