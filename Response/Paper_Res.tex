@@ -1174,23 +1174,37 @@ Additionally, to address the reviewer's concern about merely introducing the res
 
 
 
-(b) We appreciate the reviewer’s suggestion regarding the use of a real dataset for evaluation. Since DRL methods typically rely on data in the form of experience or interaction sequences with an environment, there are no readily available real-world datasets that provide the necessary elements for training DRL algorithms (i.e., state, action, reward, and next state). These interactions involve numerous variables and varying application demands, which are rarely captured in publicly available datasets. Capturing real-world interactions between mobile devices and edge servers would require continuous data collection over an extended period to account for the variability in these factors. Besides, ensuring that the dataset covers all possible scenarios, including rare edge cases, is challenging.\vspace{2mm}
-
-
-
-
-
-\,\,\,\, To capture the interactions between agents and the environment, we carefully simulated an MEC system that allows the DRL agents to gain experience and generate the data required in the proper format for training. As the agent interacts with the environment, it generates new data at each time step, using the system’s feedback (e.g., QoE) to adjust its actions. 
+(b) We appreciate the reviewer’s suggestion regarding the use of a real dataset for evaluation. Since DRL methods typically rely on data in the form of experience or interaction sequences with an environment, there are no readily available real-world datasets that provide the necessary elements for training DRL algorithms (i.e., state, action, reward, and next state). These interactions involve numerous variables and varying application demands, which are rarely captured in publicly available datasets. Capturing real-world interactions between mobile devices and edge servers would require continuous data collection over an extended period to account for the variability in these factors. Besides, ensuring that the dataset covers all possible scenarios, including rare edge cases, is challenging. To capture the interactions between agents and the environment, we carefully simulated an MEC system that allows the DRL agents to gain experience and generate the data required in the proper format for training. As the agent interacts with the environment, it generates new data at each time step, using the system’s feedback (e.g., QoE) to adjust its actions. \vspace{3mm}
 
 %As mentioned in Section III of the revised manuscript, based on queuing theory, our simulated model provides key system performance metrics (e.g., task delay, energy consumption, etc.), which enable the agent to determine the mobile device's QoE and evaluate each state-action advantage value.\vspace{2mm}
 
 
 
-\,\,\,\, For data generation, we adopt a scenario comprising 1,000 episodes. Each episode contains 100 time slots. During each time slot, mobile devices generate computation tasks based on a probabilistic task generation model. The DRL agents make offloading decisions for newly arrived tasks based on their state, which includes information such as task size, queue lengths, the mobile device’s energy level, and the workload history at the edge nodes. The agent evaluates the impact of its actions on the state by assessing the mobile device's QoE, which reflects key performance metrics based on user preferences. The system then transitions to the next state, enabling mobile devices to accumulate the necessary experience through interactions with the MEC environment. As detailed in Section IV-B, these experiences are stored in the replay buffer, creating a rich, continuously growing dataset that represents the diverse conditions and scenarios the agent encounters during computation offloading in MEC.\vspace{2mm}
-
-\,\,\,\, This dynamic, self-generated dataset, by continuous simulation, allows the agent to accumulate a vast and diverse set of training data, representing various interaction sequences between mobile devices and edge servers and ensuring the DRL agent learns optimal strategies for computation offloading.
 
 
+\,\,\,\, For data generation, we adopt a scenario comprising 1,000 episodes. Each episode contains 100 time slots. During each time slot, mobile devices generate computation tasks based on a probabilistic task generation model. The DRL agents make offloading decisions for newly arrived tasks based on their state, which includes information such as task size, queue lengths, the mobile device’s energy level, and the workload history at the edge nodes. The agent evaluates the impact of its actions on the state by assessing the mobile device's QoE, which reflects key performance metrics based on user preferences. The system then transitions to the next state, enabling mobile devices to accumulate the necessary experience through interactions with the MEC environment. As detailed in Section IV-B, these experiences are stored in the replay buffer, creating a rich, continuously growing dataset that represents the diverse conditions and scenarios the agent encounters during computation offloading in MEC. This dynamic, self-generated dataset, by continuous simulation, allows the agent to accumulate a vast and diverse set of training data, representing various interaction sequences between mobile devices and edge servers and ensuring the DRL agent learns optimal strategies for computation offloading.\vspace{2mm}
+
+
+In response to the reviewer’s comment, we have revised Section VI-A of the revised manuscript to provide further clarity in data generation processes as follows.
+
+\setcounter{subsection}{0}
+\setcounter{table}{0}
+		\begin{my}{1cm}{1cm}
+	\rev{
+		{\ 
+			
+			\dots \color{black} \vspace{-4mm}
+			
+\subsection{Simulation Setup}
+\,\,\,\, We consider a MEC environment with 50 MDs and 5 ENs, similar to \cite{9253665}. We also follow the model presented in \cite{zhou2021deep} to determine the energy consumption. All the parameters are given in Table II. \textcolor{red}{Since there is no real dataset due to the challenges of capturing representative samples over extended periods, we use a simulated MEC system that enables DRL agents to continuously gather experience and improve their performance based on system feedback (e.g., QoE).} To train the MDs' neural networks, we adopt a scenario comprising 1000 episodes. Each episode contains 100 time slots, each of length 0.1 second. The QECO algorithm incorporates real-time experience into its training process to continuously enhance the offloading strategy. Specifically, we employ a batch size of 16, maintain a fixed learning rate of 0.001, and set the discount factor $\gamma$ to 0.9. The probability of random exploration gradually decreases from an initial value 1, progressively approaching 0.01, all of which is facilitated by an RMSProp optimizer. \textcolor{blue}{The algorithm's source code is available at \cite{QECO}}. 
+
+
+\color{blue}
+\dots 
+
+}}
+
+\end{my}
 
 
 \vspace{6mm}
