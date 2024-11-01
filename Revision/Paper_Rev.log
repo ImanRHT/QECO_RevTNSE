@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  31 OCT 2024 18:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  1 NOV 2024 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1621,62 +1621,54 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1151.
 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.5.28
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1157 \end{alignat}
-                    
+
 Underfull \hbox (badness 10000) in paragraph at lines 1171--1173
 
  []
 
 
-Overfull \hbox (3.02156pt too wide) in paragraph at lines 1214--1216
+Overfull \hbox (3.02156pt too wide) in paragraph at lines 1207--1209
 [][]
  []
 
-[9]
-<drop_1.pdf, id=434, 451.6875pt x 436.63126pt>
+[9pdfTeX warning (ext4): destination with the same identifier (name{table.2}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1221 	
+        ]
+<drop_1.pdf, id=436, 451.6875pt x 436.63126pt>
 File: drop_1.pdf Graphic file (type pdf)
 <use drop_1.pdf>
 Package pdftex.def Info: drop_1.pdf  used on input line 1301.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<drop_2.pdf, id=435, 451.6875pt x 436.63126pt>
+<drop_2.pdf, id=437, 451.6875pt x 436.63126pt>
 File: drop_2.pdf Graphic file (type pdf)
 <use drop_2.pdf>
 Package pdftex.def Info: drop_2.pdf  used on input line 1307.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<energy_1.pdf, id=436, 451.6875pt x 437.635pt>
+<energy_1.pdf, id=438, 451.6875pt x 437.635pt>
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
 Package pdftex.def Info: energy_1.pdf  used on input line 1323.
 (pdftex.def)             Requested size: 126.0pt x 122.07619pt.
-<energy_2.pdf, id=437, 450.68375pt x 436.63126pt>
+<energy_2.pdf, id=439, 450.68375pt x 436.63126pt>
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
 Package pdftex.def Info: energy_2.pdf  used on input line 1329.
 (pdftex.def)             Requested size: 126.0pt x 122.06937pt.
-<delay_1.pdf, id=438, 451.6875pt x 436.63126pt>
+<delay_1.pdf, id=440, 451.6875pt x 436.63126pt>
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
 Package pdftex.def Info: delay_1.pdf  used on input line 1342.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<delay_2.pdf, id=439, 449.68pt x 436.63126pt>
+<delay_2.pdf, id=441, 449.68pt x 436.63126pt>
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
 Package pdftex.def Info: delay_2.pdf  used on input line 1348.
 (pdftex.def)             Requested size: 126.0pt x 122.34253pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10pdfTeX warning (ext4): destination with the same identifier (name{table.2})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.1368 
-       pdfTeX warning (ext4): destination with the same identifier (name{figure
-.3}) has been already used, duplicate ignored
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
+) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.1368 
@@ -1692,27 +1684,27 @@ l.1368
 l.1368 
         <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf> <./dela
 y_1.pdf> <./delay_2.pdf>]
-<qoe_1.pdf, id=546, 453.695pt x 436.63126pt>
+<qoe_1.pdf, id=547, 453.695pt x 436.63126pt>
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
 Package pdftex.def Info: qoe_1.pdf  used on input line 1376.
 (pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<qoe_2.pdf, id=547, 453.695pt x 436.63126pt>
+<qoe_2.pdf, id=548, 453.695pt x 436.63126pt>
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
 Package pdftex.def Info: qoe_2.pdf  used on input line 1382.
 (pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<m1.pdf, id=550, 950.55125pt x 506.89375pt>
+<m1.pdf, id=551, 950.55125pt x 506.89375pt>
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
 Package pdftex.def Info: m1.pdf  used on input line 1409.
 (pdftex.def)             Requested size: 229.32092pt x 122.28348pt.
-<m2.pdf, id=551, 505.89pt x 433.62pt>
+<m2.pdf, id=552, 505.89pt x 433.62pt>
 File: m2.pdf Graphic file (type pdf)
 <use m2.pdf>
 Package pdftex.def Info: m2.pdf  used on input line 1425.
 (pdftex.def)             Requested size: 126.0pt x 108.00111pt.
-<m3.pdf, id=552, 505.89pt x 433.62pt>
+<m3.pdf, id=553, 505.89pt x 433.62pt>
 File: m3.pdf Graphic file (type pdf)
 <use m3.pdf>
 Package pdftex.def Info: m3.pdf  used on input line 1431.
@@ -1745,13 +1737,13 @@ Package rerunfilecheck Info: File `Paper_Rev.out' has not changed.
 (rerunfilecheck)             Checksum: 313BB00E96E3C15E7E46DD3970FB237C;5186.
  ) 
 Here is how much of TeX's memory you used:
- 40900 strings out of 478994
- 794647 string characters out of 5858183
- 1257336 words of memory out of 5000000
+ 40901 strings out of 478994
+ 794660 string characters out of 5858183
+ 1257599 words of memory out of 5000000
  56870 multiletter control sequences out of 15000+600000
  567643 words of font info for 539 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 94i,23n,117p,2038b,985s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,23n,117p,2038b,987s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10
 .600pk>{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/texli
@@ -1780,10 +1772,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on Paper_Rev.pdf (13 pages, 1257094 bytes).
+Output written on Paper_Rev.pdf (13 pages, 1257177 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 606 compressed objects within 7 object streams
- 140 named destinations out of 1000 (max. 500000)
+ 796 PDF objects out of 1000 (max. 8388607)
+ 607 compressed objects within 7 object streams
+ 141 named destinations out of 1000 (max. 500000)
  129326 words of extra memory for PDF output out of 154059 (max. 10000000)
 

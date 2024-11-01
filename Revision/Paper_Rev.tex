@@ -1137,9 +1137,9 @@ In the next time slot $t+1$, MD $i$ observes the state $\mathcal{S}_i(t+1)$. How
 
 $\mathcal{F}_i^t =\bigg \{ t' \bigg|\; t' \leq t,\; \lambda_i(t')>0, \; (1 - x_i(t')) \; l_i^{\text{C}}(t') \; + $ \vspace{-3mm}
 \begin{equation}
-	\hspace{10mm} x_i(t')\sum\limits_{\mathcal{J}} \sum\limits_{n= t'}^{t}\mathbbm{1}(z_{i,j}^{\text{E}}(n)=z_i(t'))  \; \textcolor{blue}{y_{i,j}(x)} \, l_{i,j}^{\text{E}}(n) = t \bigg\}.
-	\label{27}  
-	\nonumber
+	\hspace{12mm} x_i(t')\sum\limits_{\mathcal{J}} \sum\limits_{n= t'}^{t}\mathbbm{1}(z_{i,j}^{\text{E}}(n)=z_i(t'))   l_{i,j}^{\text{E}}(n) = t \bigg\}.
+	\label{28}  
+	%\nonumber
 \end{equation}
 Therefore, MD $i$ observes a set of QoEs $\{\boldsymbol{q}_i(t') \mid t' \in \mathcal{F}_i^t\}$ at the beginning of time slot $t+1$, where the set $\mathcal{F}_i^t$ for some $i \in \mathcal{I}$ can be empty. Subsequently, MD $i$ sends its experience $(\boldsymbol{s}_i(t), \boldsymbol{a}_i(t), \boldsymbol{q}_i(t), \boldsymbol{s}_i(t+1))$ to EN $j_i$ for each task $z_i(t')$ in $t' \in \mathcal{F}_i^t$.
 
@@ -1153,12 +1153,12 @@ Upon initializing the replay buffer $\mathcal{M}_i$ with the neural networks $\t
 The EN randomly selects a sample collection of experiences from the replay buffer, denoted as $\mathcal{N}$. For each experience $n \in \mathcal{N}$, it calculates the value of $	\hat{Q}^{\text{T}}_{i,n}$. This value represents the QoE in experience $n$ and includes a discounted Q-value of the action anticipated to be taken in the subsequent state of experience $n$, according to the network $\textit{Net}^\text{T}_i$, given by
 \begin{alignat}{1}
 	\hat{Q}_{i,n}^{\text{T}} = \boldsymbol{q}_i(n) + \gamma Q_i^{\text{T}}(\boldsymbol{s}_i(n+1)), \tilde{\boldsymbol{a}}_n; \theta_i^{\text{T}}),
-	\label{28}  
+	\label{29}  
 \end{alignat}  
 where $\tilde{\boldsymbol{a}}_n$ denotes the optimal action for the state $\boldsymbol{s}_i(n+1)$ based on its highest Q-value under $\textit{Net}_i^{\text{E}}$, as given by:
 \begin{alignat}{1}
 	\tilde{\boldsymbol{a}}_n = \text{arg} \; \max_{\boldsymbol{a} \in \mathcal{A}} \; Q_i^{\text{E}}(\boldsymbol{s}_i(n+1), \boldsymbol{a}; \theta_i^{\text{E}}).
-	\label{29}  
+	\label{30}  
 \end{alignat} 
 In particular, regarding experience $n$, the target-Q value $\hat{Q}_{i,n}^{\text{T}}$ represents the long-term QoE for action $\boldsymbol{a}_i(n)$ under state $\boldsymbol{s}_i(n)$. This value corresponds to the QoE observed in experience $n$, as well as the approximate expected upcoming QoE. %based on $\textit{Net}_i^{\text{T}}_i$, i.e., $\gamma Q_i^{\text{T}}(\mathcal{S}_i(i+1)), \mathcal{A}_i^{\text{N}}; \theta_i^{\text{T}})$
 %Based on the set $\mathcal{N}$, the EN trains the MD's neural network using previous sample experiences. Simultaneously, it updates $\theta^{\text{E}}_i$ in $\textit{Net}_i^{\text{E}}$ and computes vector $\hat{\mathbf{Q}}_i^{\text{T}} = (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$. The key idea of updating $\textit{Net}_i^{\text{E}}$ is to minimize the disparity in Q-values between $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$, as indicated by the following loss function:
@@ -1167,7 +1167,7 @@ In particular, regarding experience $n$, the target-Q value $\hat{Q}_{i,n}^{\tex
 	
 \begin{alignat}{1}
 	\hspace{-2mm}L(\theta_i^{\text{E}},\hat{\mathbf{Q}}_i^{\text{T}}) = {1 \over |\mathcal{N}| }\hspace{-1mm} \sum\limits_{n \in \mathcal{N}} \bigg(Q_i^{\text{E}}(\boldsymbol{s}_i(n) , \boldsymbol{a}_i(n); \theta_i^{\text{E}} ) -   \hat{Q}^{\text{T}}_{i,n}  \bigg)^2.
-	\label{30}  
+	\label{31}  
 \end{alignat}  
 In every \textit{ReplaceThreshold} iterations, the update of $\textit{Net}_i^{\text{T}}$ will involve duplicating the parameters from $\textit{Net}_i^{\text{E}}$ ($\theta_i^{T} = \theta_i^{E}$). The objective is to consistently update the network parameter $\theta_i^{T}$ in $\textit{Net}_i^{\text{T}}$, which enhances the approximation of the long-term QoE when computing the target Q-values in \eqref{28}.\\
 
@@ -1177,13 +1177,6 @@ In every \textit{ReplaceThreshold} iterations, the update of $\textit{Net}_i^{\t
 The computational complexity of the QECO algorithm is determined by the number of experiences required to discover the optimal offloading policy. Each experience involves backpropagation for training, which has a computational complexity of $\mathcal{O}(C)$, where $C$ represents the number of multiplication operations in the neural network. During each training round triggered by the arrival of a new task, a sample collection of experiences of size $|\mathcal{N}|$ is utilized from the replay buffer. Since the training process encompasses $N^{\text{ep}}$ episodes and there are $K$ expected tasks in each episode, the computational complexity of the proposed algorithm is $\mathcal{O}(N^{\text{ep}}K|\mathcal{N}|C$), which is polynomial. Given the integration of neural networks for function approximation, the convergence guarantee of the DRL algorithm remains an open problem. In this work, we will empirically evaluate the convergence of the proposed algorithm in Section \ref{section:2}.
 
 %Regarding the convergence, as mentioned in many existing works (e.g., [29]), the convergence guarantee of a DRL algorithm is still an open problem. Despite the fact that the convergence of a reinforcement learning algorithm can be proven, a DRL algorithm requires function approximation (e.g., the approximation of the Q-values in deep Q-learning algorithm) using neural networks, under which the convergence may no longer be guaranteed. In this work, we empirically evaluate the convergence performance of the proposed algorithm in Section 5.1.
-
-
-
-\section{Performance Evaluation}\label{section:VI}
-In this section, we first present the simulation setup and training configuration. \textcolor{red}{We then illustrate the convergence of the proposed DRL-based QECO algorithm, and evaluate its performance in comparison to three baseline schemes in addition to the existing state-of-the-art works~\cite{yang2018distributed},~\cite{qiu2020distributed}.}
-
-%We begin by presenting the simulation setting and training configuration, followed by the evaluation of QECO algorithm under multiple key performance metrics in comparison to benchmark methods.
 
 \begin{table}
 	\renewcommand{\arraystretch}{1.2}
@@ -1214,6 +1207,13 @@ In this section, we first present the simulation setup and training configuratio
 	\end{tabular}}
 	\label{table}
 \end{table} 
+
+
+\section{Performance Evaluation}\label{section:VI}
+In this section, we first present the simulation setup and training configuration. \textcolor{red}{We then illustrate the convergence of the proposed DRL-based QECO algorithm, and evaluate its performance in comparison to three baseline schemes in addition to the existing state-of-the-art works~\cite{yang2018distributed},~\cite{qiu2020distributed}.}
+
+%We begin by presenting the simulation setting and training configuration, followed by the evaluation of QECO algorithm under multiple key performance metrics in comparison to benchmark methods.
+
 
 
 \subsection{Simulation Setup}
