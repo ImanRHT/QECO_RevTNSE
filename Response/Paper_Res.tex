@@ -929,7 +929,7 @@ Our main contributions are summarized as follows:
 \end{my}
 \vspace{5mm}
 
-Second, to highlight the impacts of the LSTM network and dueling architecture, we have extended the performance evaluation by comparing the performance of our proposed algorithm with vanilla DQN and DDQN \cite{van2016deep}. We have added Fig. 7 to Section VI of the revised manuscript.
+Second, to highlight the impacts of the LSTM network and dueling architecture, we have extended the performance evaluation by comparing the performance of our proposed algorithm with two baseline schemes, vanilla DQN and DDQN \cite{van2016deep}. We have added Fig. 7 to Section VI of the revised manuscript.
 This figure highlights the positive effect of workload prediction by the LSTM network. This prediction contributes to improving the efficient utilization of the processing resources of ENs, leading to faster convergence of the QECO algorithm and achieving a higher average QoE compared to other methods. 
 
  
@@ -1128,7 +1128,7 @@ We have also revised the experiment results as bellow:
 	\label{chart44}
 \end{figure} 
 
-Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section VI of the revised manuscript.
+Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with two baseline schemes, vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section VI of the revised manuscript.
 
 \begin{figure}[H]
 	\captionsetup{name=Fig.}
@@ -1637,7 +1637,7 @@ We have also revised the experiment results as bellow:
 	\label{chart44}
 \end{figure} 
 
-Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section VI of the revised manuscript.
+Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with two baseline schemes, vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section VI of the revised manuscript.
 
 \begin{figure}[H]
 	\captionsetup{name=Fig.}
@@ -1737,7 +1737,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI 
 
 \begin{my}{0.5cm}{0.5cm}	
 \rev{\begin{minipage}[b]{0.87\textwidth} 
-	\begin{algorithm}[H] \caption{QECO Algorithm (Training Process)}\label{alg:cap2} \centering 
+	\begin{algorithm}[H] \caption{Offloading Decision Algorithm at MD $i \in \mathcal{I}$}\label{alg:cap2} \centering 
 		\begin{algorithmic}[1] \renewcommand{\algorithmicrequire}{\textbf{\textcolor{blue}{Input:}}} \renewcommand{\algorithmicensure}{\textbf{\textcolor{blue}{Output:}}} \Require \textcolor{blue}{experience $(\boldsymbol{s}_i(t), \boldsymbol{a}_i(t), \boldsymbol{q}_i(t), \boldsymbol{s}_i(t+1))$ from MD $i \in \mathcal{I}$} \Ensure \textcolor{blue}{parameter vector $\theta_i^{\text{E}}$} 
 	\end{algorithmic} 
 \end{algorithm} 
@@ -1745,7 +1745,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI 
 \vspace{5mm}
 
 \begin{minipage}[b]{0.87\textwidth} 
-	\begin{algorithm}[H] \caption{QECO Algorithm (Offloading Decision)}\label{alg:cap2} \centering 
+	\begin{algorithm}[H] \caption{Training Process Algorithm at EN $j \in \mathcal{J}$}\label{alg:cap2} \centering 
 		\begin{algorithmic}[1] \renewcommand{\algorithmicrequire}{\textbf{Input:}} \renewcommand{\algorithmicensure}{\textbf{Output:}}\Require state space $\mathcal{S}$, action space $\mathcal{A}$
 			\Ensure MD $i \in \mathcal{I}$ experience  \textcolor{blue}{ $(\hspace{-0.2mm}\boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.3mm}+\hspace{-0.3mm}\hspace{-0.2mm}1\hspace{-0.2mm}\hspace{-0.2mm})\hspace{-0.2mm})$}
 		\end{algorithmic} 
