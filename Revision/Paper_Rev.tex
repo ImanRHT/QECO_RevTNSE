@@ -938,7 +938,7 @@ In addition to the energy consumed by EN $j$ for task processing, we also take i
 		\textcolor{purple}{E_{i}^{\text{I}}(t) =  \sum_{j \in \mathcal{J}}y_{i,j}(t) D_{i,j}^{\text{E}}(t) p_i^{\text{I}} \tau, }
 	\label{16}
 \end{alignat}
-where $p_i^{\text{I}}$ is the standby energy consumption of MD $i \in \mathcal{I}$.  \textcolor{red}{Recall that $y_{i,j}(t)$ is ..... Moreover, among all $j \in \mathcal{J}$, $y_{i,j}=1$ only for one $j$ which is the corresponding EN.}
+where $p_i^{\text{I}}$ is the standby energy consumption of MD $i \in \mathcal{I}$.  \textcolor{blue}{Recall that $y_{i,j}(t)$ is the offloading indicate function. Moreover, among all $j \in \mathcal{J}$, $y_{i,j}=1$ only for one $j$ which is the corresponding EN.}
 
 %\textcolor{red}{We also denote the total energy consumption for the offloaded task $z_{i,j}^{\text{E}}(t)$ in time slot $t$ as $E^{\text{O}}_i(t)$, which is,}
 %\begin{alignat}{1}
@@ -964,7 +964,7 @@ A state in our MDP represents a conceptual space that comprehensively describes 
 	\label{18}
 \end{alignat}
 where vector $\boldsymbol{\eta}_i^{\text{E}}(t-1) = (\eta_{i,j}^{\text{E}}(t-1))_{j \in \mathcal{J}}$ represents the queues length of MD $i$ in ENs at the previous time slot and is computed by the MD according to \eqref{10}. 
-\textcolor{red}{Since MDs are assumed to be battery-operated, their operation modes are aligned with those of real-world devices. Let $\phi_i(t)$ represent the \textcolor{blue}{battery level percentage of MD $i$} at time slot $t$, where $\phi_i(t)$ is selected from the discrete set $\Phi = {\phi_1, \phi_2, \phi_3}$, corresponding to ultra power-saving, power-saving, and performance modes, respectively.}
+\textcolor{red}{Since MDs are assumed to be battery-operated, their operation modes are aligned with those of real-world devices. Let $\phi_i(t)$ represent the \textcolor{blue}{battery level percentage of MD $i$} at time slot $t$, where $\phi_i(t)$ is selected from the discrete set $\Phi = \{\phi_1, \phi_2, \phi_3\}$, corresponding to ultra power-saving, power-saving, and performance modes, respectively.}
 
 In addition, to predict future EN workloads, we define the matrix $\mathcal{H}(t)$ as historical data, indicating the number of active queues for all ENs. This data is recorded over $T^{\text{s}}$ time slots, ranging from $t\hspace{-0.4mm}-\hspace{-0.4mm}T^{\text{s}}$ to $t\hspace{-0.4mm}-\hspace{-0.4mm}1$, in $T^{\text{s}}\hspace{-0.4mm}\times \hspace{-0.4mm} J$ matrix. For EN $j$ workload history at $i^{th}$ time slot from $T^{\text{s}}-t$, we define $h_{i,j}(t)$ as:
 \begin{alignat}{1}
@@ -1020,7 +1020,7 @@ where $\mathcal{D}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t))= 0$ if task $z_i(t
 
 \textcolor{purple}{$\mathcal{E}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t)) = (1-x_i(t)) E_i^{\text{L}}(t)+x_i(t) \bigg( E_i^{\text{T}}(t) + $
 \begin{alignat}{1}
-	\hspace{1cm} +   E_i^{\text{I}}(t) +  \sum\limits_{j \in \mathcal{J}}  \sum\limits_{t^{'}=t}^{T}\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)
+	\hspace{1.2cm}    E_i^{\text{I}}(t) +  \sum\limits_{j \in \mathcal{J}}  \sum\limits_{t^{'}=t}^{T}\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)
 	  E_{i,j}^{\text{E}}(t')\bigg).
 	\label{22}  
 \end{alignat}}
