@@ -917,11 +917,10 @@ The newly added Section II of the revised manuscript is as follows. We have also
 \item \underline{Reviewer's Comment}: 
 \textit{``Please highlight what and how the proposed approach provides "high performance" to further specify the motivations and contributions. Especially, please highlight the reason why the authors design the framework by integrating LSTM. Otherwise, it will make the innovations seem weak.''} \newline
 
-\underline{Authors' Reply}: The proposed approach is designed to balance and prioritize QoE factors based on individual mobile device requirements while considering the dynamic workloads at the edge servers. The QECO algorithm captures the dynamics of the MEC environment by integrating the Dueling Double Deep Q-Network (D3QN) model with Long Short-Term Memory (LSTM) networks. These algorithms address the QoE maximization problem by efficiently utilizing resources from both mobile devices and edge servers.
-
+\underline{Authors' Reply}: The proposed approach is designed to balance and prioritize QoE factors based on individual mobile device (MD) requirements while considering the dynamic workloads at the edge nodes (ENs). The QECO algorithm captures the dynamics of the MEC environment by integrating the Dueling Double Deep Q-Network (D3QN) model with Long Short-Term Memory (LSTM) networks. These algorithms address the QoE maximization problem by efficiently utilizing resources from both MDs and ENs.
 \begin{itemize}
 	
-	\item D3QN: By integrating both Double Q-learning and Dueling Network Architectures, D3QN overcomes overestimation bias in action-value predictions and accurately identifies the relative importance of states and actions. This improves the model's ability to make accurate predictions, providing a foundation for enhanced offloading strategies.\vspace{2mm}
+	\item D3QN: By integrating both double Q-learning and dueling network architectures, D3QN overcomes overestimation bias in action-value predictions and accurately identifies the relative importance of states and actions. This improves the model's ability to make accurate predictions, providing a foundation for enhanced offloading strategies.\vspace{2mm}
 	
 	\item LSTM: Incorporating LSTM networks allows the model to continuously estimate dynamic workloads at edge servers. This is crucial for dealing with limited global information and adapting to the uncertain MEC environment with multiple MDs and ENs. By predicting the future workload of edge servers, MDs can effectively adjust their offloading strategies to achieve higher QoE.\vspace{2mm}
 	
@@ -1018,7 +1017,7 @@ We define $z_i(t)$ as the index assigned to the computation task arriving at MD 
 
 \setcounter{equation}{13}
 
-(b) Please note that in the original version of the manuscript, we utilized the indicator function $\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)$ in Equations (21) and (22) to indicate edge server selection. Therefore, there was no need to include offloading indicator $y_{i,j}(t)$. However, to address the reviewer’s comment and make the edge server selection more clear, we have revised Equations (14), (15), (16), and (21) in Section III of the revised manuscript, as follows:\vspace{-7mm}
+(b) Please note that in the original version of the manuscript, we utilized the indicator function $\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)$ in Equations (21) and (22) to indicate edge server selection. Therefore, there was no need to include offloading indicator $y_{i,j}(t)$. However, to address the reviewer’s comment and make the edge server selection more clear, we have revised Equations (14), (15), (16), and (21) in Section III of the revised manuscript, as follows.\vspace{-7mm}
 %Please note that for any queue in the system model, we assume that once a task is completed within a time slot, the next task in the queue will begin processing at the start of the next time slot. Besides, we assume that during each time slot, a mobile device either receives a new task or does not, considering the small duration of each time slot ($\tau = 0.1$ seconds). Based on these assumptions, in the previous version of the manuscript, we utilized the indicator function $\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)$ in Equations (21) and (22) to indicate edge server selection.
 		\begin{my}{1cm}{1cm}
 	\rev{
@@ -1047,7 +1046,7 @@ $\mathcal{E}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t)) = $
 }}
 \end{my} \vspace{3mm}
 
-We have also mentioned the offloading indicated function $y_{i,j}(t)$ explanation in the last paragraph of Section III of the revised manuscript as follows 
+We have also clarified the offloading indicated function $y_{i,j}(t)$ in the last paragraph of Section III of the revised manuscript as follows.
 		\begin{my}{1cm}{1cm}
 	\rev{
 		{\ 
@@ -1228,7 +1227,7 @@ Additionally, to address the reviewer's concern about merely introducing the res
 
 
 
-\,\,\,\, For data generation, we adopt a scenario comprising 1,000 episodes. Each episode contains 100 time slots. During each time slot, mobile devices generate computation tasks based on a probabilistic task generation model. The DRL agents make offloading decisions for newly arrived tasks based on their state, which includes information such as task size, queue lengths, the mobile device’s energy level, and the workload history at the edge nodes. The agent evaluates the impact of its actions on the state by assessing the mobile device's QoE, which reflects key performance metrics based on user preferences. The system then transitions to the next state, enabling mobile devices to accumulate the necessary experience through interactions with the MEC environment. As detailed in Section IV-B, these experiences are stored in the replay buffer, creating a rich, continuously growing dataset that represents the diverse conditions and scenarios the agent encounters during computation offloading in MEC. This dynamic, self-generated dataset, by continuous simulation, allows the agent to accumulate a vast and diverse set of training data, representing various interaction sequences between mobile devices and edge servers and ensuring the DRL agent learns optimal strategies for computation offloading.\vspace{2mm}
+\,\,\,\, For data generation, we adopt a scenario comprising 1,000 episodes. Each episode contains 100 time slots. During each time slot, mobile devices generate computation tasks based on a probabilistic task generation model. The DRL agents make offloading decisions for newly arrived tasks based on their state, which includes information such as task size, queue lengths, the mobile device’s energy level, and the workload history at the edge nodes. The agent evaluates the impact of its actions on the state by assessing the mobile device's QoE, which reflects key performance metrics based on user preferences. The system then transitions to the next state, enabling mobile devices to accumulate the necessary experience through interactions with the MEC environment. As detailed in Section IV-B, these experiences are stored in the replay buffer, creating a rich, continuously growing dataset that represents the diverse conditions and scenarios the agent encounters during computation offloading in MEC. This dynamic and self-generated dataset allows the agent to accumulate a vast and diverse set of training data, representing various interaction sequences between mobile devices and edge servers and ensuring that the DRL agent learns optimal strategies for computation offloading.\vspace{2mm}
 
 
 In response to the reviewer’s comment, we have revised Section VI-A of the revised manuscript to provide further clarity in data generation processes as follows.
@@ -1272,7 +1271,7 @@ In response to the reviewer’s comment, we have revised Section VI-A of the rev
 
 \end{my}\vspace{6mm}
 
-We have also revised Section I and Section VI of the revised manuscript to clarify the QECO's improvement, as mentioned in our response to the Reviewer's Comment 2 and 4, respectively.
+We have also revised Section I and Section VI of the revised manuscript to clarify the QECO's improvement, as mentioned in our response to the Reviewer's Comments 2 and 4, respectively.
 
 
 
@@ -1284,9 +1283,9 @@ We have also revised Section I and Section VI of the revised manuscript to clari
 \vspace{5mm}
 
 \item \underline{Reviewer's Comment}: 
-\textit{``Other concerns are also expected to be addressed: (a) be careful to use words like "battery level" to express the energy consumption, because some of the energy is provided by the wired line power. (b) Most of the references are out of 3 years, please investigate more studies published in recent years. (c) The authors should thoroughly check the writing style, grammar, and spelling to enhance the paper's clarity, conciseness, and overall impact.}''\newline
+\textit{``Other concerns are also expected to be addressed: (a) be careful to use words like "battery level" to express the energy consumption, because some of the energy is provided by the wired line power. (b) Most of the references are out of 3 years, please investigate more studies published in recent years. (c) The authors should thoroughly check the writing style, grammar, and spelling to enhance the paper's clarity, conciseness, and overall impact.}\newline
 
-\underline{Authors' Reply}: (a) We have avoided using "battery level" to express the energy consumption and carefully repaced the phrase "battery level" with "energy level of the battery" throughout the revised manuscript. We have also revised the explanation of MD operation modes in Section IV of the revised manuscript as follows. 
+\underline{Authors' Reply}: (a) We have avoided using "battery level" to express the energy consumption and carefully replaced the phrase "battery level" with "energy level of the battery" throughout the revised manuscript. We have also revised the explanation of MD operation modes in Section IV of the revised manuscript as follows. 
 
 		\begin{my}{1cm}{1cm}
 	\rev{
@@ -1402,7 +1401,7 @@ We have provided a survey of the recently published state-of-the-art works in Se
 
 
 \vspace{3mm}
- The newly added Section II of the revised manuscript is as follows. As suggested by the reviewer, we have also included Table I that summarizes the existing works.
+ The newly added Section II of the revised manuscript is as follows. As suggested by the reviewer, we have also included Table \ref{table11} that summarizes the existing works.
 	
 \begin{my}{1cm}{1cm}
 	\rev{\setcounter{section}{1}
@@ -1480,7 +1479,7 @@ We have provided a survey of the recently published state-of-the-art works in Se
 						QECO  &  Computation offloading & Maximize the QoE of each MD individually & D3QN + LSTM & \\
 						\toprule
 				\end{tabular}}
-				\label{table1}}
+				\label{table11}}
 		\end{table*}
 		\subsection{Analysis and Motivation}
 		\,\,\,\,
@@ -1567,7 +1566,7 @@ We have also revised Section I accordingly to highlight the contributions and ma
 \end{my}\vspace{6mm}
 
 
-We have extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed} in addition to POGA \cite{yang2018distributed}. DCDRL is a distributed algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. We have added this comparison to Section VI of the revised manuscript as follows: 
+b) We have extended the evaluation of the QECO algorithm by comparing it with DCDRL \cite{qiu2020distributed} in addition to POGA \cite{yang2018distributed}. DCDRL is a distributed algorithm for delay-sensitive tasks based on the actor-critic framework. This is the foundation for many state-of-the-art DRL algorithms, including DDPG and PPO. We have added this comparison to Section VI of the revised manuscript as follows: 
 \begin{my}{1cm}{1cm}
 	\rev{
 		{\
@@ -1753,7 +1752,7 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI 
 
 	\item \underline{Reviewer's Comment}: 
 	\textit{``(a) What are inputs and outputs of Algorithm 2? (b) They should be added to make readers clearly understand the results.''} \\\newline
-	\underline{Authors' Reply}: (a) To address the reviewer comment, we have revised the relevant paragraph of Section V to clarify the inputs and outputs of Algorithms 2.\newline
+	\underline{Authors' Reply}: (a) To address the reviewer comment, we have revised Algorithms 1 and 2 and the relevant paragraph of Section V to clarify the inputs and outputs of algorithms.\newline
 	
 	\begin{my}{1cm}{1cm} 
 		\rev{
@@ -1804,18 +1803,23 @@ We have also revised the explanation related to Fig. 6 and Fig. 7 in Section VI 
 	}
 	\end{my} \vspace{6mm}
 
+		\begin{my}{1cm}{1cm}
+	\rev{
+		{\small
+			\noindent\hspace{-0.5mm}\cite{QECO} I. Rahmati, ``QECO source code GitHub repository,'' \url{https://github.com/ImanRHT/QECO}, 2024.\\[6pt]}\\}
+\end{my}
 
 
 
 	\item \underline{Reviewer's Comment}: 
 	\textit{``The following references closely related to the current work should be discussed or compared with the current work for completeness.''} \newline
 		\begin{my}{1cm}{1cm}
-		\rev{
+		\rev{ 
 			{\small
-				\noindent\hspace{-0.5mm}\cite{wu2023computation} G. Wu, H. Wang, H. Zhang, Y. Zhao, S. Yu, and S. Shen, ``Computation offloading method using stochastic games for software-defined-network-based multiagent mobile edge computing,'' \textit{IEEE Internet of Things Journal}, vol. 10, no. 20, pp. 17620–17634, Oct. 2023.\\[6pt]
-				\cite{wu2024privacy} G. Wu, X. Chen, Z. Gao, H. Zhang, S. Yu, and S. Shen, ``Privacy-preserving offloading scheme in multi-access mobile edge computing based on MADRL,'' \textit{Journal of Parallel and Distributed Computing}, vol. 10, no. 1, pp. 451--460, Mar. 2022.\\[6pt]
-				\cite{wu2024combining}  G. Wu, X. Chen, Y. Shen, Z. Xu, H. Zhang, S. Shen, and S. Yu,``Combining Lyapunov optimization with Actor-Critic networks for privacy-aware IIoT computation offloading,'' in \textit{IEEE Internet of Things Journal}, 2024, Early Access\\[6pt]
-				\cite{wu2023multi} G. Wu, Z. Xu, H. Zhang, S. Shen, and S. Yu,  ``Multi-agent DRL for joint completion delay and energy consumption with queuing theory in MEC-based IIoT,'' in \textit{Journal of Parallel and Distributed Computing}, vol. 176, pp. 80–94, Jun. 2023\\[6pt]}\\}
+				\noindent\hspace{-1.8mm} \cite{wu2023computation} \textcolor{black}{G. Wu, H. Wang, H. Zhang, Y. Zhao, S. Yu, and S. Shen, ``Computation offloading method using stochastic games for software-defined-network-based multiagent mobile edge computing,'' \textit{IEEE Internet of Things Journal}, vol. 10, no. 20, pp. 17620–17634, Oct. 2023.}\\[6pt]
+				\cite{wu2024privacy} \textcolor{black}{G. Wu, X. Chen, Z. Gao, H. Zhang, S. Yu, and S. Shen, ``Privacy-preserving offloading scheme in multi-access mobile edge computing based on MADRL,'' \textit{Journal of Parallel and Distributed Computing}, vol. 10, no. 1, pp. 451--460, Mar. 2022.}\\[6pt]
+				\cite{wu2024combining}  \textcolor{black}{G. Wu, X. Chen, Y. Shen, Z. Xu, H. Zhang, S. Shen, and S. Yu,``Combining Lyapunov optimization with Actor-Critic networks for privacy-aware IIoT computation offloading,'' in \textit{IEEE Internet of Things Journal}, 2024, Early Access.}\\[6pt]
+				\cite{wu2023multi} \textcolor{black}{G. Wu, Z. Xu, H. Zhang, S. Shen, and S. Yu,  ``Multi-agent DRL for joint completion delay and energy consumption with queuing theory in MEC-based IIoT,'' in \textit{Journal of Parallel and Distributed Computing}, vol. 176, pp. 80–94, Jun. 2023.}\\[6pt]}\\}
 	\end{my}
 
 	\underline{Authors' Reply}: In response to the reviewer's comment, we have cited these works in the newly added related work section (i.e., Section II) and discussed their strengths and limitations. The following sentences reflect the changes we made in Section II of the revised manuscript. \vspace{5mm}

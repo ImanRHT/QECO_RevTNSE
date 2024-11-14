@@ -181,7 +181,7 @@ H.~Zhou, K.~Jiang, X.~Liu, X.~Li, and V.~C. Leung, ``Deep reinforcement
   Liu]{wang2020reinforcement}
 D.~Wang, X.~Tian, H.~Cui, and Z.~Liu, ``Reinforcement learning-based joint task
   offloading and migration schemes optimization in mobility-aware mec
-  network,'' \emph{China Commun.}, vol.~17, no.~8, pp. 31--44, 2020.
+  network,'' \emph{China Commun.}, vol.~17, no.~8, pp. 31--44, Aug 2020.
 
 \bibitem[Zhao et~al.(2019)Zhao, Liang, Niyato, Pei, Wu, and
   Jiang]{zhao2019deep}
@@ -319,8 +319,8 @@ A.~Mehrabi, M.~Siekkinen, and A.~Yl{\"a}-J{\"a}{\"a}ski, ``Energy-aware qoe and
   828--839, Sep 2019.
 
 \bibitem[Rahmati(2024)]{QECO}
-I.~Rahmati, ``Github repository,'' \url{https://github.com/ImanRHT/QECO}, 2024,
-  source code, open access.
+I.~Rahmati, ``\text{QECO source code GitHub repository},''
+  \url{https://github.com/ImanRHT/QECO}, 2024.
 
 \bibitem[Konda and Tsitsiklis(1999)]{NIPS1999_6449f44a}
 V.~Konda and J.~Tsitsiklis, ``Actor-critic algorithms,'' \emph{Adv Neural Inf
