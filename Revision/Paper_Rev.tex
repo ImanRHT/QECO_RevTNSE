@@ -601,7 +601,7 @@ There are two primary categories of related research in resource management for 
 \subsubsection{Single-Objective Optimization} 
 Recent research has extensively explored single-objective optimization in the context of MEC, focusing on optimizing a single objective, such as delay or energy consumption. 
 Given the dynamic nature of MEC systems, in \cite{li2022integrated} the authors proposed an integrated optimization framework, which leverages past experience and model knowledge to enable fast and resilient real-time offloading control. 
-Li \textit{et al.} in \cite{li2020joint} introduced a DRL-based delay-optimal offloading strategy that employs a DQN to learn offloading decisions autonomously. 
+%Li \textit{et al.} in \cite{li2020joint} introduced a DRL-based delay-optimal offloading strategy that employs a DQN to learn offloading decisions autonomously. 
 To minimize total delay and reduce mobile vehicle task waiting time, Tang \textit{et al.} in \cite{tang2022double} developed a dynamic offloading model for multiple mobile vehicles, segmenting tasks into sequential subtasks for more precise offloading decisions.
 Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources.
 To minimize energy consumption, Munir \textit{et al.} \cite{munir2021multi} developed a semi-distributed approach using a multi-agent RL framework for self-powered MEC. 
@@ -661,26 +661,29 @@ Tang \textit{et al.} in \cite{9253665} investigated the task offloading problem 
  			\begin{tabular}{ lp{4cm}p{4.6cm}p{2cm}p{4.7cm}l} 
  				\toprule
  				\textbf{Paper}  &  \textbf{Problem} &  \textbf{Objective} & \textbf{Method} &  \textbf{Limitation}  \\ \midrule
- 				\cite{li2022integrated} & Online computation offloading & Minimize computation delay & Actor-critic network & Not consider system energy consumtion \\ \midrule
- 				\cite{li2020joint} & Caching and computation offloading & Minimize delay of the whole system &  Multi-agent DQN & Not consider system energy consumtion \\ \midrule
- 				\cite{tang2022double}  & Computation offloading & Minimize total delay & DDQN & Not consider system energy consumtion \\ \midrule
+ 				\cite{li2022integrated} & Online computation offloading & Minimize computation delay & Actor-critic network & Overlooking energy consumtion \\ \midrule
+ 				\cite{li2020joint} & Caching and computation offloading & Minimize total system delay &  Multi-agent DQN & Not consider system energy consumtion \\ \midrule
+ 				\cite{tang2022double}  & Computation offloading & Minimize total system delay & DDQN & Not consider system energy consumtion \\ \midrule
  				\cite{wang2020reinforcement} & Mobility aware computation offloading & Minimize energy consumtion & Q-learning & Not consider computation delay\\ \midrule
- 				\cite{liu2021learn}  & Resource allocation and computation offloading & Minimize execution cost  & Multi-agent actor-critic network &  Not consider delay-sensitive tasks \\\midrule
- 				\cite{wu2023computation}   & Stochastic game-based resource allocation & Minimize energy consumption and processing delay & Multi-agent RL & Not consider tasks with maximum delay tolerance\\\midrule
- 				\cite{zhou2021deep} & Resource allocation and computation offloading & Minimize energy consumption of the entire system & DDQN & Only for a single MEC system model \\\midrule				
+ 				\cite{liu2021learn}  & Resource allocation and computation offloading & Minimize computation cost  & Multi-agent actor-critic network &  Not consider delay-sensitive tasks \\\midrule
+ 				\cite{wu2023computation}   & Stochastic game-based resource allocation & Minimize computation delay and energy
+consumption & Multi-agent RL & Not consider tasks with maximum delay tolerance\\\midrule
+ 				\cite{zhou2021deep} & Resource allocation and computation offloading & Minimize total energy consumption & DDQN & Limited to a single edge server \\\midrule				
  				%\cite{huang2019deep} & Wireless-powered MEC & Computation offloading and resource allocations & Maximize computation rate & MIP & DQN & Not consider delay-sensitive tasks \\\midrule
- 				\cite{wu2024privacy} & Joint power allocation and computation offloading  & Optimization of privacy protection and quality of service.  & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
+ 				\cite{wu2024privacy} & Joint power allocation and computation offloading  & Optimize quality of service  & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
  				\cite{dai2020edge} & Resource allocation and computation offloading & Minimize energy consumption & DDPG & Not take user's demand into consideration \\\midrule
  				\cite{zhao2019deep} & User association and resource allocation & Optimize downlink utility  & Multi-agent D3QN & Not consider system delay and energy consumtion \\\midrule
  				\cite{liao2023online}  & Online computation offloading & Minimize computation delay and energy consumption & DDQN & Only for a single MEC system model  \\\midrule
  				\cite{wu2024combining}   & Privacy aware computation offloading & Optimization of computation rate and energy consumption  & Actor-critic network  & Not take user's demand into consideration \\\midrule
- 				\cite{Bolourian-WCL24}  & Energy harvesting  computation offloading & Minimize drop rate and energy consumption.  & DQN & Not consider computation delay  \\\midrule
- 				\cite{huang2021deadline}  & Computation offloading & Optimize drop rate and energy consumption & DDPG & Not consider computation delay \\ \midrule
- 				\cite{gong2022edge} & Resource allocation and computation offloading & Minimize task computation delay and energy consumption  & DRL & Not take user's demand into consideration\\\midrule
- 				\cite{sun2024hierarchical} & Computation offloading and service caching & Minimize average service delay & Hierarchical DRL & Not consider system energy consumtion \\\midrule
- 				\cite{wu2023multi}  & Computation offloading & Optimize delay and energy consumption  & Multi-agent PPO&  Not consider tasks with maximum delay tolerance \\\midrule
+ 				\cite{Bolourian-WCL24}  & Energy harvesting  computation offloading & Minimize drop rate and energy consumption.  & DQN & Does not account for computation delay  \\\midrule
+ 				\cite{huang2021deadline}  & Computation offloading & Minimize drop rate and energy consumption & DDPG & Not consider computation delay \\ \midrule
+ 				\cite{gong2022edge} & Resource allocation and computation offloading & Minimize computation delay and energy
+consumption & DRL & Not take user's demand into consideration\\\midrule
+ 				\cite{sun2024hierarchical} & Computation offloading and service caching & Minimize average delay & Hierarchical DRL & Not consider system energy consumtion \\\midrule
+ 				\cite{wu2023multi}  & Computation offloading & Minimize computation delay and energy
+consumption  & Multi-agent PPO&  Not consider tasks with maximum delay tolerance \\\midrule
  				\cite{9253665}  &  Computation offloading & Minimize drop rate and computation delay.  & D3QN + LSTM & Not consider system energy consumtion\\\midrule
- 				\cite{gao2022large}  & Decentralized computation offloading & Optimize system cost and completion rates  & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
+ 				\cite{gao2022large}  & Decentralized computation offloading & Optimize system cost and computation rates  & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
  				QECO  &  Computation offloading & Maximize the QoE of each MD individually & D3QN + LSTM & \\
  				\toprule
  		\end{tabular}}
@@ -820,7 +823,7 @@ We investigate a MEC system consisting of a set of MDs denoted by $\mathcal{I} =
 
 
 
-We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{blue}{The size of task \( z_i(t) \) is selected randomly and uniformly from a discrete set \( \Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\} \), where \( \theta \) represents the number of these values. Note that task sizes are drawn from a discrete set since, in many applications, tasks typically come with predefined sizes,~\cite{wang2020intelligent},~\cite{zhang2019toward},~\cite{allahham2022multi}. We consider $\lambda_i(t) \in \Lambda \cup \{0\}$ to include the case that no task has arrived.} We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
+We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{red}{The size of task \( z_i(t) \) is selected randomly and uniformly from a discrete set \( \Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\} \), where \( \theta \) represents the number of these values. Note that task sizes are drawn from a discrete set since, in many applications, tasks typically come with predefined sizes,~\cite{wang2020intelligent},~\cite{zhang2019toward}. We consider $\lambda_i(t) \in \Lambda \cup \{0\}$ to include the case that no task has arrived.} We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
 %At the beginning of time slot $t \in \mathcal{T}$, if MD $i \in \mathcal{I}$ has a newly arrived task, we define $z_i(t)$ as the unique index assigned to that task. Let $\lambda_i(t)$ be the number of newly arrived bits at the beginning of time slot $t \in \mathcal{T}$. If a new task $z_i(t)$ exists at the start of time slot $t$, then $\lambda_i(t)$ is equal to the size of task $z_i(t)$. Otherwise, $\lambda_i(t) = 0$. We consider $\rho_i(t)$ to represent the processing density of task $z_i(t)$, indicating the number of CPU cycles required to process a unit of the task.
 
 We define two binary variables, $x_i(t)$ and $y_{i,j}(t)$ for $i \in \mathcal{I}$ and $j \in \mathcal{J}$ to determine the offloading decision and offloading target, respectively. Specifically, $x_i(t)$ indicates whether task $z_i(t)$ is assigned to the computation queue ($x_i(t) = 0$) or to the transmission queue ($x_i(t) = 1$), and $y_{i,j}(t)$ indicates whether task $z_i(t)$ is offloaded to EN $j \in \mathcal{J}$. If the task is dispatched to EN $j$, we set $y_{i,j}(t) = 1$; otherwise, $y_{i,j}(t) = 0$.
@@ -943,7 +946,8 @@ In addition to the energy consumed by EN $j$ for task processing, we also take i
 		\textcolor{blue}{E_{i}^{\text{I}}(t) =  \sum_{j \in \mathcal{J}}y_{i,j}(t) D_{i,j}^{\text{E}}(t) p_i^{\text{I}} \tau, }
 	\label{16}
 \end{alignat}
-where $p_i^{\text{I}}$ is the standby energy consumption of MD $i \in \mathcal{I}$.  \textcolor{blue}{Recall that $y_{i,j}(t)$ is the offloading indicate function. Moreover, among all $j \in \mathcal{J}$, $y_{i,j}=1$ only for one $j$ which is the corresponding EN.}
+where $p_i^{\text{I}}$ is the standby energy consumption of MD $i \in \mathcal{I}$.  
+\textcolor{red}{Recall that $y_{i,j}(t)$ is the binary offloading indicator. Moreover, among all $j \in \mathcal{J}$, $y_{i,j}=1$ only for one $j$ which is the corresponding EN.}
 
 %\textcolor{blue}{We also denote the total energy consumption for the offloaded task $z_{i,j}^{\text{E}}(t)$ in time slot $t$ as $E^{\text{O}}_i(t)$, which is,}
 %\begin{alignat}{1}
@@ -1237,7 +1241,7 @@ where $\tilde{\boldsymbol{a}}_n$ denotes the optimal action for the state $\bold
 \end{alignat} 
 In particular, regarding experience $n$, the target-Q value $\hat{Q}_{i,n}^{\text{T}}$ represents the long-term QoE for action $\boldsymbol{a}_i(n)$ under state $\boldsymbol{s}_i(n)$. This value corresponds to the QoE observed in experience $n$, as well as the approximate expected upcoming QoE. %based on $\textit{Net}_i^{\text{T}}_i$, i.e., $\gamma Q_i^{\text{T}}(\mathcal{S}_i(i+1)), \mathcal{A}_i^{\text{N}}; \theta_i^{\text{T}})$
 %Based on the set $\mathcal{N}$, the EN trains the MD's neural network using previous sample experiences. Simultaneously, it updates $\theta^{\text{E}}_i$ in $\textit{Net}_i^{\text{E}}$ and computes vector $\hat{\mathbf{Q}}_i^{\text{T}} = (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$. The key idea of updating $\textit{Net}_i^{\text{E}}$ is to minimize the disparity in Q-values between $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$, as indicated by the following loss function:
-\textcolor{blue}{Based on the set $\mathcal{N}$, the EN computes the vector $\hat{\mathbf{Q}}_i^{\text{T}} = (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$ and trains the MD's neural network (steps 11-21 of Algorithm~\ref{alg:cap2}) to update the parameter vector $\theta^{\text{E}}_i$ in $\textit{Net}_i^{\text{E}}$ for the next MD's \textit{UpdateRequest}.} The key idea of updating $\textit{Net}_i^{\text{E}}$ is to minimize the disparity in Q-values between $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$, as indicated by the following loss function:
+\textcolor{red}{Based on the set $\mathcal{N}$, the EN computes the vector $\hat{\mathbf{Q}}_i^{\text{T}} = (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$ and trains the MD's neural network (Lines 11-21 of Algorithm~\ref{alg:cap2}) to update the parameter vector $\theta^{\text{E}}_i$ in $\textit{Net}_i^{\text{E}}$ for the next MD's \textit{UpdateRequest}.} The key idea of updating $\textit{Net}_i^{\text{E}}$ is to minimize the disparity in Q-values between $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$, as indicated by the following loss function:
 \begin{alignat}{1}
 	\hspace{-2mm}L(\theta_i^{\text{E}},\hat{\mathbf{Q}}_i^{\text{T}}) = {1 \over |\mathcal{N}| }\hspace{-1mm} \sum\limits_{n \in \mathcal{N}} \bigg(Q_i^{\text{E}}(\boldsymbol{s}_i(n) , \boldsymbol{a}_i(n); \theta_i^{\text{E}} ) -   \hat{Q}^{\text{T}}_{i,n}  \bigg)^2.
 	\label{31}  

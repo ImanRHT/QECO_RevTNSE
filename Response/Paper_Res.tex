@@ -1052,7 +1052,7 @@ We have also clarified the offloading indicated function $y_{i,j}(t)$ in the las
 		{\ 
 \dots 
 
-Recall that $y_{i,j}(t)$ is the offloading indicate function. Moreover, among all $j \in \mathcal{J}$, $y_{i,j}=1$ only for one $j$ which is the corresponding EN.
+Recall that $y_{i,j}(t)$ is the binary offloading indicator. Moreover, among all $j \in \mathcal{J}$, $y_{i,j}=1$ only for one $j$ which is the corresponding EN.
 }}
 \end{my}\vspace{5mm}
 
@@ -1181,8 +1181,12 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 	\vspace*{-3mm}
 	\caption{\textcolor{blue}{The convergence of the average QoE across episodes under different DQN-based methods.}}
 	\vspace*{-3mm}
-	\label{chart111}
+	\label{chartC0}
 \end{figure}
+
+We have also added the following paragraph in Section V of the revised manuscript to explain the results of the comparison in Fig.~\ref{chartC0}.
+
+
 		\begin{my}{1cm}{1cm}
 	\rev{
 		{\ 
@@ -1190,7 +1194,7 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 			\dots 
 
 
-\,\,\,\,We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart111} and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart111}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs. \\\dots }}
+\,\,\,\,We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chartC0} and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chartC0}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs. \\\dots }}
 
 \end{my}
 
@@ -1671,7 +1675,7 @@ We have also revised the experiment results as bellow:
 	\label{chart44}
 \end{figure} 
 
-Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with two baseline schemes, vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impacts of the LSTM network and dueling architecture. We have added Fig. 7 to Section VI of the revised manuscript.
+Furthermore, to enhance the evaluation of our work, we have extended the performance analysis by comparing QECO with two baseline schemes, vanilla DQN and DDQN \cite{van2016deep}. This comparison illustrates the impacts of the LSTM network and dueling architecture. We have added Fig.~\ref{chartC1} to Section VI of the revised manuscript.
 
 \begin{figure}[H]
 	\captionsetup{name=Fig.}
@@ -1680,16 +1684,17 @@ Furthermore, to enhance the evaluation of our work, we have extended the perform
 	\vspace*{-3mm}
 	\caption{\textcolor{blue}{The convergence of the average QoE across episodes under different DQN-based methods.}}
 	\vspace*{-3mm}
-	\label{chart111}
+	\label{chartC1}
 \end{figure}
+
+We have also added the following paragraph in Section V of the revised manuscript to explain the results of the comparison in Fig.~\ref{chartC1}.
 \begin{my}{1cm}{1cm}
 	\rev{
 		{\ 
-			
 			\dots 
 			
 			
-			\,\,\,\,We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart111} and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart111}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs. \\\dots }}
+			\,\,\,\,We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chartC1} and Fig. 8. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chartC1}, as the episodes progress, the MD's network learns efficient policies, ultimately stabilizing as it approaches convergence. Specifically, the DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. The QECO algorithm demonstrates the faster convergence while achieves a higher average QoE than the other methods. underscore the beneficial impact of workload prediction by the LSTM network and highlight its effectiveness in efficiently utilizing the processing capabilities of  MDs and ENs. \\\dots }}
 	
 \end{my}
 
