@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  15 NOV 2024 23:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  15 NOV 2024 23:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1035,7 +1035,7 @@ File: m1.pdf Graphic file (type pdf)
 Package pdftex.def Info: m1.pdf  used on input line 978.
 (pdftex.def)             Requested size: 312.20943pt x 166.48653pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 996--998
+Underfull \hbox (badness 10000) in paragraph at lines 997--999
 
  []
 
@@ -1043,97 +1043,97 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1001 		\begin{my}{1cm}{1cm}
+l.1002 		\begin{my}{1cm}{1cm}
                               [8 <./m1.pdf>]pdfTeX warning (ext4): destination 
 with the same identifier (name{page.9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.1060 \item \underline
-                       {Reviewer's Comment}: [9]
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1062
+l.1057 }}
+          [9]
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1063
 
  []
 
-<drop_1.pdf, id=673, 451.6875pt x 436.63126pt>
+<drop_1.pdf, id=674, 451.6875pt x 436.63126pt>
 File: drop_1.pdf Graphic file (type pdf)
 <use drop_1.pdf>
-Package pdftex.def Info: drop_1.pdf  used on input line 1111.
+Package pdftex.def Info: drop_1.pdf  used on input line 1112.
 (pdftex.def)             Requested size: 156.1047pt x 150.90443pt.
-<drop_2.pdf, id=674, 451.6875pt x 436.63126pt>
+<drop_2.pdf, id=675, 451.6875pt x 436.63126pt>
 File: drop_2.pdf Graphic file (type pdf)
 <use drop_2.pdf>
-Package pdftex.def Info: drop_2.pdf  used on input line 1117.
+Package pdftex.def Info: drop_2.pdf  used on input line 1118.
 (pdftex.def)             Requested size: 156.1047pt x 150.90443pt.
-<energy_1.pdf, id=675, 451.6875pt x 437.635pt>
+<energy_1.pdf, id=676, 451.6875pt x 437.635pt>
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
-Package pdftex.def Info: energy_1.pdf  used on input line 1127.
+Package pdftex.def Info: energy_1.pdf  used on input line 1128.
 (pdftex.def)             Requested size: 156.1047pt x 151.25134pt.
-<energy_2.pdf, id=676, 450.68375pt x 436.63126pt>
+<energy_2.pdf, id=677, 450.68375pt x 436.63126pt>
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
-Package pdftex.def Info: energy_2.pdf  used on input line 1133.
+Package pdftex.def Info: energy_2.pdf  used on input line 1134.
 (pdftex.def)             Requested size: 156.1047pt x 151.23756pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1139 \end{figure}
+l.1140 \end{figure}
                    \vspace{-8mm} [10]
-<delay_1.pdf, id=681, 451.6875pt x 436.63126pt>
+<delay_1.pdf, id=682, 451.6875pt x 436.63126pt>
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
-Package pdftex.def Info: delay_1.pdf  used on input line 1144.
+Package pdftex.def Info: delay_1.pdf  used on input line 1145.
 (pdftex.def)             Requested size: 156.1047pt x 150.90443pt.
-<delay_2.pdf, id=682, 449.68pt x 436.63126pt>
+<delay_2.pdf, id=683, 449.68pt x 436.63126pt>
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
-Package pdftex.def Info: delay_2.pdf  used on input line 1150.
+Package pdftex.def Info: delay_2.pdf  used on input line 1151.
 (pdftex.def)             Requested size: 156.1047pt x 151.57068pt.
-<qoe_2.pdf, id=683, 453.695pt x 436.63126pt>
+<qoe_2.pdf, id=684, 453.695pt x 436.63126pt>
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
-Package pdftex.def Info: qoe_2.pdf  used on input line 1161.
+Package pdftex.def Info: qoe_2.pdf  used on input line 1162.
 (pdftex.def)             Requested size: 156.1047pt x 150.23154pt.
-<qoe_1.pdf, id=684, 453.695pt x 436.63126pt>
+<qoe_1.pdf, id=685, 453.695pt x 436.63126pt>
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
-Package pdftex.def Info: qoe_1.pdf  used on input line 1167.
+Package pdftex.def Info: qoe_1.pdf  used on input line 1168.
 (pdftex.def)             Requested size: 156.1047pt x 150.23154pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1174 
+l.1175 
         [11 <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf> <./
 delay_1.pdf> <./delay_2.pdf>]
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1180.
+Package pdftex.def Info: m1.pdf  used on input line 1181.
 (pdftex.def)             Requested size: 312.20943pt x 166.48653pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1198 
+l.1199 
         [12 <./qoe_2.pdf> <./qoe_1.pdf>]pdfTeX warning (ext4): destination with
  the same identifier (name{page.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1218 
+l.1219 
         [13]pdfTeX warning (ext4): destination with the same identifier (name{s
 ubsection.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1254 }}
+l.1255 }}
          pdfTeX warning (ext4): destination with the same identifier (name{page
 .14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1254 }}
+l.1255 }}
           [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1289--1291
+Underfull \hbox (badness 10000) in paragraph at lines 1290--1292
 
  []
 
@@ -1141,9 +1141,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1301 \end{my}
+l.1302 \end{my}
                \vspace{6mm} [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1303--1304
+Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
 
  []
 
@@ -1151,9 +1151,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1326 \end{my}
+l.1327 \end{my}
                 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1330--1331
+Underfull \hbox (badness 10000) in paragraph at lines 1331--1332
 
  []
 
@@ -1161,9 +1161,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1375 }}
+l.1376 }}
           [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1379
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1380
 
  []
 
@@ -1171,10 +1171,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1380 (
+l.1381 (
         c) We have thoroughly reviewed the writing style, grammar, and spell...
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
 
  []
 
@@ -1182,9 +1182,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1396 \section{Response to Reviewer 2}
+l.1397 \section{Response to Reviewer 2}
                                        
-Underfull \hbox (badness 10000) in paragraph at lines 1399--1401
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1402
 
  []
 
@@ -1192,19 +1192,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
          pdfTeX warning (ext4): destination with the same identifier (name{subs
 ection.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
          pdfTeX warning (ext4): destination with the same identifier (name{subs
 ubsection.2.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
          
-Overfull \hbox (10.99704pt too wide) in paragraph at lines 1506--1506
+Overfull \hbox (10.99704pt too wide) in paragraph at lines 1507--1507
  \OT1/ptm/m/it/12 1) Single-Objective Op-ti-miza-tion: [][][] \OT1/ptm/m/n/12 R
 e-cent re-search has ex-ten-sively ex-plored single-objective
  []
@@ -1213,29 +1213,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
           [19]pdfTeX warning (ext4): destination with the same identifier (name
 {subsubsection.2.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
          pdfTeX warning (ext4): destination with the same identifier (name{page
 .20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
           [20]
-Underfull \hbox (badness 1430) in paragraph at lines 1506--1506
+Underfull \hbox (badness 1430) in paragraph at lines 1507--1507
 []|\OT1/ptm/m/n/12 Minimize drop rate and en-ergy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1506--1506
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1507
 []|\OT1/ptm/m/n/12 Computation of-fload-ing and ser-vice
  []
 
 
-Overfull \hbox (2.60796pt too wide) in paragraph at lines 1506--1506
+Overfull \hbox (2.60796pt too wide) in paragraph at lines 1507--1507
 [][]
  []
 
@@ -1243,118 +1243,118 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
          pdfTeX warning (ext4): destination with the same identifier (name{subs
 ubsection.2.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
          pdfTeX warning (ext4): destination with the same identifier (name{page
 .21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
           [21]pdfTeX warning (ext4): destination with the same identifier (name
 {page.22}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
           [22]pdfTeX warning (ext4): destination with the same identifier (name
 {subsubsection.2.2.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1506 	}
+l.1507 	}
           [23] [24] [25]
 File: drop_1.pdf Graphic file (type pdf)
 <use drop_1.pdf>
-Package pdftex.def Info: drop_1.pdf  used on input line 1614.
+Package pdftex.def Info: drop_1.pdf  used on input line 1615.
 (pdftex.def)             Requested size: 156.1047pt x 150.90443pt.
 File: drop_2.pdf Graphic file (type pdf)
 <use drop_2.pdf>
-Package pdftex.def Info: drop_2.pdf  used on input line 1620.
+Package pdftex.def Info: drop_2.pdf  used on input line 1621.
 (pdftex.def)             Requested size: 156.1047pt x 150.90443pt.
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
-Package pdftex.def Info: energy_1.pdf  used on input line 1630.
+Package pdftex.def Info: energy_1.pdf  used on input line 1631.
 (pdftex.def)             Requested size: 156.1047pt x 151.25134pt.
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
-Package pdftex.def Info: energy_2.pdf  used on input line 1636.
+Package pdftex.def Info: energy_2.pdf  used on input line 1637.
 (pdftex.def)             Requested size: 156.1047pt x 151.23756pt.
  [26]
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
-Package pdftex.def Info: delay_1.pdf  used on input line 1647.
+Package pdftex.def Info: delay_1.pdf  used on input line 1648.
 (pdftex.def)             Requested size: 156.1047pt x 150.90443pt.
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
-Package pdftex.def Info: delay_2.pdf  used on input line 1653.
+Package pdftex.def Info: delay_2.pdf  used on input line 1654.
 (pdftex.def)             Requested size: 156.1047pt x 151.57068pt.
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
-Package pdftex.def Info: qoe_2.pdf  used on input line 1664.
+Package pdftex.def Info: qoe_2.pdf  used on input line 1665.
 (pdftex.def)             Requested size: 156.1047pt x 150.23154pt.
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
-Package pdftex.def Info: qoe_1.pdf  used on input line 1670.
+Package pdftex.def Info: qoe_1.pdf  used on input line 1671.
 (pdftex.def)             Requested size: 156.1047pt x 150.23154pt.
  [27]
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1683.
+Package pdftex.def Info: m1.pdf  used on input line 1684.
 (pdftex.def)             Requested size: 312.20943pt x 166.48653pt.
  [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1708
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1709
 
  []
 
 [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1758--1761
+Underfull \hbox (badness 10000) in paragraph at lines 1759--1762
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1758--1761
+Underfull \hbox (badness 10000) in paragraph at lines 1759--1762
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1774--1775
+Underfull \hbox (badness 10000) in paragraph at lines 1775--1776
 
  []
 
 
-Overfull \hbox (12.0pt too wide) detected at line 1792
+Overfull \hbox (12.0pt too wide) detected at line 1793
 [][] 
  []
 
 
-Overfull \hbox (12.0pt too wide) detected at line 1792
+Overfull \hbox (12.0pt too wide) detected at line 1793
 [][] 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1814--1815
+Underfull \hbox (badness 10000) in paragraph at lines 1815--1816
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1819--1821
+Underfull \hbox (badness 10000) in paragraph at lines 1820--1822
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1827--1828
+Underfull \hbox (badness 10000) in paragraph at lines 1828--1829
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1864--1865
+Underfull \hbox (badness 10000) in paragraph at lines 1865--1866
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1872--1873
+Underfull \hbox (badness 10000) in paragraph at lines 1873--1874
 
  []
 
@@ -1395,10 +1395,10 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Paper_Res.pdf (55 pages, 883757 bytes).
+Output written on Paper_Res.pdf (55 pages, 884066 bytes).
 PDF statistics:
- 1159 PDF objects out of 1200 (max. 8388607)
- 994 compressed objects within 10 object streams
+ 1160 PDF objects out of 1200 (max. 8388607)
+ 995 compressed objects within 10 object streams
  188 named destinations out of 1000 (max. 500000)
  443 words of extra memory for PDF output out of 10000 (max. 10000000)
 
