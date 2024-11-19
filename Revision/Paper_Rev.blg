@@ -9,7 +9,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: paper.bib
 Warning--I'm ignoring wang2017qoe's extra "year" field
---line 148 of file paper.bib
+--line 163 of file paper.bib
 -- IEEEtranN.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -19,45 +19,45 @@ Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 
 Done.
-You've used 51 entries,
+You've used 49 entries,
             4855 wiz_defined-function locations,
-            1238 strings with 18949 characters,
-and the built_in function-call counts, 57376 in all, are:
-= -- 4923
-> -- 2105
-< -- 485
-+ -- 1075
-- -- 506
-* -- 3465
-:= -- 8302
-add.period$ -- 105
-call.type$ -- 51
-change.case$ -- 102
-chr.to.int$ -- 1133
-cite$ -- 51
-duplicate$ -- 3632
-empty$ -- 3705
-format.name$ -- 584
-if$ -- 12975
+            1229 strings with 18395 characters,
+and the built_in function-call counts, 55511 in all, are:
+= -- 4786
+> -- 1999
+< -- 480
++ -- 1029
+- -- 478
+* -- 3346
+:= -- 8020
+add.period$ -- 100
+call.type$ -- 49
+change.case$ -- 98
+chr.to.int$ -- 1119
+cite$ -- 49
+duplicate$ -- 3512
+empty$ -- 3568
+format.name$ -- 552
+if$ -- 12560
 int.to.chr$ -- 8
-int.to.str$ -- 52
-missing$ -- 567
-newline$ -- 177
-num.names$ -- 153
-pop$ -- 1312
+int.to.str$ -- 50
+missing$ -- 542
+newline$ -- 171
+num.names$ -- 147
+pop$ -- 1237
 preamble$ -- 1
-purify$ -- 51
+purify$ -- 49
 quote$ -- 2
-skip$ -- 4053
+skip$ -- 3930
 stack$ -- 0
-substring$ -- 2826
-swap$ -- 3141
-text.length$ -- 113
+substring$ -- 2792
+swap$ -- 3065
+text.length$ -- 112
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 815
+type$ -- 783
 warning$ -- 0
-while$ -- 254
+while$ -- 246
 width$ -- 0
-write$ -- 646
+write$ -- 625
 (There was 1 warning)
