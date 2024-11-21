@@ -546,7 +546,7 @@ Mobile edge computing, computation task offloading, quality of experience, deep 
 
 \section{Introduction} 
 
-\lettrine{M}{ \,OBILE} edge computing (MEC) \cite{mao2017survey} has emerged as a promising technological solution to overcome the challenges faced by mobile devices (MDs) when performing high computational tasks, such as real-time data processing and artificial intelligence applications \cite{zhou2019edge} \cite{yousefpour2019all}. In spite of the MDs' technological advancements, their limited computing power and \textcolor{blue}{energy} may lead to task drops, processing delays, and an overall poor user experience. By offloading intensive tasks to nearby edge nodes (ENs), MEC effectively empowers computation capability and reduces the delay and energy consumption. This improvement enhances the users' quality of experience (QoE), especially for time-sensitive computation tasks \cite{TNSE-QOE-24} \cite{ shah2018hierarchical}. 
+\lettrine{M}{ \,OBILE} edge computing (MEC) \cite{mao2017survey} has emerged as a promising technological solution to overcome the challenges faced by mobile devices (MDs) when performing high computational tasks, such as real-time data processing and artificial intelligence applications \cite{zhou2019edge} \cite{yousefpour2019all}. In spite of the MDs' technological advancements, their limited computing power and \textcolor{blue}{energy} may lead to task drops, processing delays, and an overall poor user experience. By offloading intensive tasks to nearby edge nodes (ENs), MEC effectively empowers computation capability and reduces the delay and energy consumption. This improvement enhances the users' quality of experience (QoE), especially for time-sensitive computation tasks \cite{TNSE-QOE-24} \cite{shah2018hierarchical}. 
 
 Efficient task offloading in MEC is a complex optimization challenge due to the dynamic nature of the network and the variety of MDs and servers involved \cite{jiang2019toward} \cite{TNSE-WU-24}. In particular, determining the optimal offloading strategy, scheduling the tasks, and selecting the most suitable EN for task offloading are the main challenges that demand careful consideration. \textcolor{blue}{In addition to the dynamic network changes, the uncertain requirements and sensitive latency properties of computation tasks pose nontrivial challenges that can significantly impact the MEC systems.}
 
@@ -701,29 +701,37 @@ To effectively tackle the challenges of MEC arising from the ever-changing natur
 
 
 For time-sensitive applications, minimizing task delay is the primary optimization objective, driving the development of delay-optimal approaches in MEC. 
+To solve the delay minimization problem in MEC environment, Zhang \textit{et al.} in \cite{zhang2023offline} proposed an offline RL-based computation offloading algorithm, where the problem is modeled as a repeated game between two agents.
+Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources. Liu \textit{et al.} in \cite{liu2022deep} formulated the problem as MDP and proposed DRL-based approaches to minimaze both communication and computation delay in MEC.
 To minimize total delay and reduce mobile vehicle task waiting time, Tang \textit{et al.} in \cite{tang2022double} developed a dynamic offloading model for multiple mobile vehicles, segmenting tasks into sequential subtasks for more precise offloading decisions.
-Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources. In \cite{li2022integrated} the authors proposed an integrated optimization framework, which leverages past experience and model knowledge to enable fast and resilient real-time offloading control. However, delay-optimal approaches often sacrifice other key performance metrics, such as computation rate and energy consumption, to achieve their goal. 
-
+ Li \textit{et al.} in \cite{li2022integrated} proposed an integrated optimization framework, which leverages past experience and model knowledge to enable fast and resilient real-time offloading control. 
+In \cite{wei2023many}, the authors investigated deadline-constraiend for time-sensetive tasks in vehicular MEC network and proposed a multi agent RL-based computation offloading algorithm based on POMDP to addresses jointly delay and computation rate optimazation. However, delay-optimal approaches~\cite{zhang2023offline}--\cite{wei2023many} often sacrifice other key performance metrics and may cause greater energy consumption or reduce the overall computation capacity, to achieve their goal.  
+  %\cite{zheng2023drl} \cite{xue2023joint} 
 
 
 For energy-constrained MEC systems, reducing energy consumption becomes a key objective, motivating the creation of energy-efficient approaches. 
 To minimize energy consumption, Munir \textit{et al.} \cite{munir2021multi} developed a semi-distributed approach using a multi-agent RL framework for self-powered MEC. 
 Zhou \textit{et al.} in \cite{zhou2021deep} proposed a Q-learning approach, which is an extension of RL to achieve optimal resource allocation strategies and computation offloading.
-In \cite{zhao2019deep}, Zhao \textit{et al.} proposed a computation offloading algorithm based on DRL, which addresses the competition for wireless channels to optimize long-term downlink utility.
 Dai \textit{et al.} in \cite{dai2020edge} introduced the integration of action refinement into DRL and designed an algorithm based on deep deterministic policy gradient (DDPG) to optimize resource allocation and computation offloading concurrently. 
+%%In \cite{zhao2019deep}, Zhao \textit{et al.} proposed a computation offloading algorithm based on DRL, which addresses the competition for wireless channels to optimize long-term downlink utility.
 To ensure that minimizing energy consumption does not lead to a reduction in the system's computing rate, some researches have expanded their work by incorporating the maximum tolerable delay for task models.
- To address the privacy-aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} modeled the problem as an MDP and proposed a DQN-based method to optimize the computation rate and energy consumption in a queuing-based IIoT network. 
+In \cite{chouikhi2023energy}, Chouikhi \textit{et al.} proposed a computation offloading approach based on DRL to minimize long-term energy consumption and maximize the number of tasks completed before their tolerant deadlines.
+To address the privacy-aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} modeled the problem as an MDP and proposed a DQN-based method to optimize the computation rate and energy consumption in a queuing-based IIoT network. 
 Huang \textit{et al.} in \cite{huang2021deadline} proposed a DRL-based method based on a partially observable MDP (POMDP), which guarantees the deadlines of real-time tasks while minimizing the total energy consumption of MDs. This algorithm effectively tackles the challenges of dynamic resource allocation in large-scale heterogeneous networks. 
-However, energy-efficient approaches, even when considering deadline constraints, do not adequately address the complexities of time-sensitive applications, particularly in scenarios where reducing delay can have significant effects on the user's QoE.
+However, energy-efficient approaches~\cite{munir2021multi}--\cite{huang2021deadline}, even when considering deadline constraints~\cite{wu2024combining}--\cite{huang2021deadline}, do not adequately address the complexities of time-sensitive applications, where reducing delay can have significant effects on the user's QoE. Particularly, saving transmission energy consumption may reduce the transmission power of MDs and lead to poor performance for real-time applications. 
 
 
 
-To address time-sensitive applications in energy-constrained MEC systems, striking a trade-off between delay and energy is the primary optimization objective.
+
+
+
+
+To address time-sensitive applications in energy-constrained MEC systems, solving the relationship between delay and energy consumption is the primary optimization objective.
 Liao \textit{et al.} in \cite{liao2023online} introduced a double DQN (DDQN)-based algorithm for performing online computation offloading in MEC. This algorithm optimizes transmission power and scheduling of CPU frequency when minimizing both task computation delay and energy consumption. 
 To optimize delay and energy consumption, Wu \textit{et al.} in \cite{wu2023multi} investigated the computation offloading problem in a queuing-based MEC IIoT system. They modeled the problem as a POMDP and proposed a multi-agent proximal policy optimization (PPO)-based method to obtain the optimal offloading strategy in dynamic environments. 
  Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the IIoT systems to jointly optimize task offloading and resource allocation to achieve lower energy consumption and decreased task delay.
  Liu \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL, which can generate interactive information along with resource decisions. 
- Although delay-energy trade-off approaches effectively address time-sensitive tasks, they fail to support tasks with processing deadlines. This is challenging to address, as processing deadlines impact the load dynamics at the ENs, which in turn affect the delay of offloaded tasks.
+ Although delay-energy trade-off approaches effectively address time-sensitive tasks, they are not suitable for applications with strict requirements on delay or energy consumption. This is challenging to address, as processing deadlines impact the load dynamics at the ENs, which in turn affect the delay of offloaded tasks.
 
 
  
@@ -766,7 +774,7 @@ Certain studies such as \cite{sun2024hierarchical}, \cite{gong2022edge}-\cite{ga
  		\captionsetup{name=TABLE}
  		\caption{Comparison of Related Works}
  		\scalebox{1}{%
- 			\begin{tabular}{ lp{4cm}p{4.6cm}p{2cm}p{4.7cm}l} 
+ 			\begin{tabular}{ lp{5.4cm}p{4cm}p{2cm}p{4cm}l} 
  				\toprule
  				\textbf{Paper}  &  \textbf{Problem} &  \textbf{Objective} & \textbf{Method} &  \textbf{Limitation}  \\ \midrule
  				\cite{li2022integrated} & Online computation offloading & Minimize computation delay & Actor-critic network & Overlooking energy consumtion \\ \midrule
@@ -778,7 +786,7 @@ Certain studies such as \cite{sun2024hierarchical}, \cite{gong2022edge}-\cite{ga
 consumption & Multi-agent RL & Not consider tasks with maximum delay tolerance\\\midrule
  				\cite{zhou2021deep} & Resource allocation and computation offloading & Minimize total energy consumption & DDQN & Limited to a single edge server \\\midrule				
  				%\cite{huang2019deep} & Wireless-powered MEC & Computation offloading and resource allocations & Maximize computation rate & MIP & DQN & Not consider delay-sensitive tasks \\\midrule
- 				\cite{wu2024privacy} & Joint power allocation and computation offloading  & Optimize quality of service  & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
+ 				\cite{wu2024privacy} &  power allocation and computation offloading  & Optimize quality of service  & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
  				\cite{dai2020edge} & Resource allocation and computation offloading & Minimize energy consumption & DDPG & Not take user's demand into consideration \\\midrule
  				\cite{zhao2019deep} & User association and resource allocation & Optimize downlink utility  & Multi-agent D3QN & Not consider system delay and energy consumtion \\\midrule
  				\cite{liao2023online}  & Online computation offloading & Minimize computation delay and energy consumption & DDQN & Only for a single MEC system model  \\\midrule
