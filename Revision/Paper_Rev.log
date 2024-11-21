@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  21 NOV 2024 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  22 NOV 2024 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1529,103 +1529,104 @@ Package lettrine.sty Info: Targeted height = 17.14496pt
 
 ]
 [2]
-Underfull \hbox (badness 6542) in paragraph at lines 806--806
+Underfull \hbox (badness 6542) in paragraph at lines 808--808
 []|\T1/ptm/m/n/8 (+20) Actor-critic net-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 806--806
+Underfull \hbox (badness 10000) in paragraph at lines 808--808
 []|\T1/ptm/m/n/8 (+20) Multi-agent
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 806--806
+Underfull \hbox (badness 6542) in paragraph at lines 808--808
 []|\T1/ptm/m/n/8 (+20) Actor-critic net-
  []
 
 
-Overfull \hbox (3.94812pt too wide) in paragraph at lines 806--807
+Overfull \hbox (3.94812pt too wide) in paragraph at lines 808--809
 [][]
  []
 
 \LTGbeginlineexample=\count421
 \LTGendlineexample=\count422
 [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./queue.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<queue.pdf, id=260, 782.925pt x 277.9986pt>
+<queue.pdf, id=269, 782.925pt x 277.9986pt>
 File: queue.pdf Graphic file (type pdf)
 <use queue.pdf>
-Package pdftex.def Info: queue.pdf  used on input line 953.
+Package pdftex.def Info: queue.pdf  used on input line 955.
 (pdftex.def)             Requested size: 252.0pt x 89.47887pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
-has been already used, duplicate ignored
+[4pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.966 \end{alignat}
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{figure.1}) has been already used, duplicate ignored
+l.965 \begin{alignat}{1}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.966 \end{alignat}
-                    <./queue.pdf>]
+l.965 \begin{alignat}{1}
+                         <./queue.pdf>]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 976.
+(amsmath)                 on input line 978.
 
+[5]
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 103
-4.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+6.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [5] [6]
+) [6]
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./DQN.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<DQN.pdf, id=341, 902.41138pt x 529.01637pt>
+<DQN.pdf, id=352, 902.41138pt x 529.01637pt>
 File: DQN.pdf Graphic file (type pdf)
 <use DQN.pdf>
-Package pdftex.def Info: DQN.pdf  used on input line 1191.
+Package pdftex.def Info: DQN.pdf  used on input line 1193.
 (pdftex.def)             Requested size: 252.0pt x 147.72803pt.
 [7pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1202 
+l.1204 
         <./DQN.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1247.
+put line 1249.
  [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1321.
+(hyperref)                removing `math shift' on input line 1323.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 1321.
+(hyperref)                removing `\in' on input line 1323.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1321.
+(hyperref)                removing `math shift' on input line 1323.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1348.
+(hyperref)                removing `math shift' on input line 1350.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 1348.
+(hyperref)                removing `\in' on input line 1350.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1348.
+(hyperref)                removing `math shift' on input line 1350.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1368
+Underfull \hbox (badness 10000) in paragraph at lines 1368--1370
 
  []
 
@@ -1633,93 +1634,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 1366--1368
 27}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1368 
+l.1370 
        ]
-Overfull \hbox (1.61066pt too wide) in paragraph at lines 1402--1404
+Overfull \hbox (1.61066pt too wide) in paragraph at lines 1404--1406
 [][]
  []
 
-<drop_1.pdf, id=426, 451.6875pt x 436.63126pt>
+<drop_1.pdf, id=436, 451.6875pt x 436.63126pt>
 File: drop_1.pdf Graphic file (type pdf)
 <use drop_1.pdf>
-Package pdftex.def Info: drop_1.pdf  used on input line 1469.
+Package pdftex.def Info: drop_1.pdf  used on input line 1471.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<drop_2.pdf, id=427, 451.6875pt x 436.63126pt>
+<drop_2.pdf, id=437, 451.6875pt x 436.63126pt>
 File: drop_2.pdf Graphic file (type pdf)
 <use drop_2.pdf>
-Package pdftex.def Info: drop_2.pdf  used on input line 1475.
+Package pdftex.def Info: drop_2.pdf  used on input line 1477.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<energy_1.pdf, id=428, 451.6875pt x 437.635pt>
+<energy_1.pdf, id=438, 451.6875pt x 437.635pt>
 File: energy_1.pdf Graphic file (type pdf)
 <use energy_1.pdf>
-Package pdftex.def Info: energy_1.pdf  used on input line 1491.
+Package pdftex.def Info: energy_1.pdf  used on input line 1493.
 (pdftex.def)             Requested size: 126.0pt x 122.07619pt.
-<energy_2.pdf, id=429, 450.68375pt x 436.63126pt>
+<energy_2.pdf, id=439, 450.68375pt x 436.63126pt>
 File: energy_2.pdf Graphic file (type pdf)
 <use energy_2.pdf>
-Package pdftex.def Info: energy_2.pdf  used on input line 1497.
+Package pdftex.def Info: energy_2.pdf  used on input line 1499.
 (pdftex.def)             Requested size: 126.0pt x 122.06937pt.
-<delay_1.pdf, id=430, 451.6875pt x 436.63126pt>
+<delay_1.pdf, id=440, 451.6875pt x 436.63126pt>
 File: delay_1.pdf Graphic file (type pdf)
 <use delay_1.pdf>
-Package pdftex.def Info: delay_1.pdf  used on input line 1509.
+Package pdftex.def Info: delay_1.pdf  used on input line 1511.
 (pdftex.def)             Requested size: 126.0pt x 121.7962pt.
-<delay_2.pdf, id=431, 449.68pt x 436.63126pt>
+<delay_2.pdf, id=441, 449.68pt x 436.63126pt>
 File: delay_2.pdf Graphic file (type pdf)
 <use delay_2.pdf>
-Package pdftex.def Info: delay_2.pdf  used on input line 1515.
+Package pdftex.def Info: delay_2.pdf  used on input line 1517.
 (pdftex.def)             Requested size: 126.0pt x 122.34253pt.
-<qoe_1.pdf, id=432, 453.695pt x 436.63126pt>
+<qoe_1.pdf, id=442, 453.695pt x 436.63126pt>
 File: qoe_1.pdf Graphic file (type pdf)
 <use qoe_1.pdf>
-Package pdftex.def Info: qoe_1.pdf  used on input line 1527.
+Package pdftex.def Info: qoe_1.pdf  used on input line 1529.
 (pdftex.def)             Requested size: 126.0pt x 121.25655pt.
-<qoe_2.pdf, id=433, 453.695pt x 436.63126pt>
+<qoe_2.pdf, id=443, 453.695pt x 436.63126pt>
 File: qoe_2.pdf Graphic file (type pdf)
 <use qoe_2.pdf>
-Package pdftex.def Info: qoe_2.pdf  used on input line 1533.
+Package pdftex.def Info: qoe_2.pdf  used on input line 1535.
 (pdftex.def)             Requested size: 126.0pt x 121.25655pt.
 [10pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1577 
+l.1579 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1577 
+l.1579 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1577 
+l.1579 
         <./drop_1.pdf> <./drop_2.pdf> <./energy_1.pdf> <./energy_2.pdf>]
 [11pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1604 
+l.1606 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1604 
+l.1606 
         <./delay_1.pdf> <./delay_2.pdf> <./qoe_1.pdf> <./qoe_2.pdf>]
-<m1.pdf, id=572, 950.55125pt x 506.89375pt>
+<m1.pdf, id=582, 950.55125pt x 506.89375pt>
 File: m1.pdf Graphic file (type pdf)
 <use m1.pdf>
-Package pdftex.def Info: m1.pdf  used on input line 1608.
+Package pdftex.def Info: m1.pdf  used on input line 1610.
 (pdftex.def)             Requested size: 229.32092pt x 122.28348pt.
-<m2.pdf, id=573, 505.89pt x 433.62pt>
+<m2.pdf, id=583, 505.89pt x 433.62pt>
 File: m2.pdf Graphic file (type pdf)
 <use m2.pdf>
-Package pdftex.def Info: m2.pdf  used on input line 1624.
+Package pdftex.def Info: m2.pdf  used on input line 1626.
 (pdftex.def)             Requested size: 126.0pt x 108.00111pt.
-<m3.pdf, id=574, 505.89pt x 433.62pt>
+<m3.pdf, id=584, 505.89pt x 433.62pt>
 File: m3.pdf Graphic file (type pdf)
 <use m3.pdf>
-Package pdftex.def Info: m3.pdf  used on input line 1630.
+Package pdftex.def Info: m3.pdf  used on input line 1632.
 (pdftex.def)             Requested size: 126.0pt x 108.00111pt.
 
 (./Paper_Rev.bbl [12pdfTeX warning (ext4): destination with the same identifier
@@ -1732,7 +1733,13 @@ l.70
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.70 
-      <./m1.pdf> <./m2.pdf> <./m3.pdf>]) [13] (./Paper_Rev.aux)
+      <./m1.pdf> <./m2.pdf> <./m3.pdf>] [13]) [14
+
+] (./Paper_Rev.aux
+* soulpos - computing points - it may take a few seconds *
+\openout3 = `Paper_Rev.upb'.
+
+ (./Paper_Rev.upa))
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1740,13 +1747,13 @@ Package rerunfilecheck Info: File `Paper_Rev.out' has not changed.
 (rerunfilecheck)             Checksum: B9194C00E99ADF8B1B2C3C593D43EFD6;4323.
  ) 
 Here is how much of TeX's memory you used:
- 40897 strings out of 478994
- 794616 string characters out of 5858183
- 1259732 words of memory out of 5000000
- 56867 multiletter control sequences out of 15000+600000
- 568752 words of font info for 542 fonts, out of 8000000 for 9000
+ 40926 strings out of 478994
+ 794936 string characters out of 5858183
+ 1260640 words of memory out of 5000000
+ 56871 multiletter control sequences out of 15000+600000
+ 570232 words of font info for 556 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 94i,23n,117p,2038b,957s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,23n,117p,2038b,1045s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/iman/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10
 .600pk>{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/texli
@@ -1775,10 +1782,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on Paper_Rev.pdf (13 pages, 1257540 bytes).
+Output written on Paper_Rev.pdf (14 pages, 1258796 bytes).
 PDF statistics:
- 787 PDF objects out of 1000 (max. 8388607)
- 599 compressed objects within 6 object streams
- 137 named destinations out of 1000 (max. 500000)
+ 803 PDF objects out of 1000 (max. 8388607)
+ 613 compressed objects within 7 object streams
+ 139 named destinations out of 1000 (max. 500000)
  131350 words of extra memory for PDF output out of 154059 (max. 10000000)
 
