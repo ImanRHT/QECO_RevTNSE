@@ -109,6 +109,12 @@
 \definecolor{eclipseKeywords}{RGB}{127,0,85}
 \colorlet{numb}{magenta!60!black}
 
+
+\usepackage{multirow}
+
+
+\renewcommand{\arraystretch}{1.2}
+
 % JSON definition
 % Source: https://tex.stackexchange.com/a/433961/9075
 
@@ -393,6 +399,11 @@
 	linkcolor = {blue},
 }
 
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
 
 
 \begin{document}
@@ -463,7 +474,7 @@
 \fi
 
 \begin{abstract}
-In the realm of mobile edge computing (MEC), efficient computation task offloading plays a pivotal role in ensuring a seamless quality of experience (QoE) for users. Maintaining a high QoE is paramount in today's interconnected world, where users demand reliable services. This challenge stands as one of the most primary key factors contributing to handling dynamic and uncertain mobile environment. In this study, we delve into computation offloading in MEC systems, where strict task processing deadlines and energy constraints can adversely affect the system performance. We formulate the computation task offloading problem as a Markov decision process (MDP) to maximize the long-term QoE of each user individually. We propose a distributed QoE-oriented computation offloading (QECO) algorithm based on deep reinforcement learning (DRL) that empowers mobile devices to make their offloading decisions without requiring knowledge of decisions made by other devices. Through numerical studies, we evaluate the performance of QECO. \textcolor{red}{
+In the realm of mobile edge computing (MEC), efficient computation task offloading plays a pivotal role in ensuring a seamless quality of experience (QoE) for users. Maintaining a high QoE is paramount in today's interconnected world, where users demand reliable services. This challenge stands as one of the most primary key factors contributing to handling dynamic and uncertain mobile environment. In this study, we delve into computation offloading in MEC systems, where strict task processing deadlines and energy constraints can adversely affect the system performance. We formulate the computation task offloading problem as a Markov decision process (MDP) to maximize the long-term QoE of each user individually. We propose a distributed QoE-oriented computation offloading (QECO) algorithm based on deep reinforcement learning (DRL) that empowers mobile devices to make their offloading decisions without requiring knowledge of decisions made by other devices. Through numerical studies, we evaluate the performance of QECO. \textcolor{blue}{
 	Simulation results reveal that compared to the state-of-the-art existing works, QECO increases the number of completed tasks by up to 14.4\%, while simultaneously reducing task delay and energy consumption by 9.2\% and 6.3\%, respectively. Together, these improvements result in a significant average QoE enhancement of 37.1\%. This substantial improvement is achieved by accurately accounting for user dynamics and edge server workloads when making intelligent offloading decisions. This highlights QECO's effectiveness in enhancing users' experience in MEC systems.}
 
 %\textcolor{blue}{Simulation results reveal that compared to the state-of-the-art existing work, QECO increases the number of completed tasks by 11.2\%\,--\,14.4\%, while simultaneously reducing task delay and energy consumption by 11.7\%\,--\,9.2\% and 9.8\%\,--\,6.3\%, respectively. Together, these improvements align with user preferences, resulting in a significant average QoE enhancement of at least 29.8\%\,--\,37.1\% compared to several existing algorithms.}
@@ -538,11 +549,11 @@ Mobile edge computing, computation task offloading, quality of experience, deep 
  
  %Inspired by existing studies, we delve into the challenge of computation task offloading in MEC systems, where the presence of strict task processing deadlines and energy constraints can adversely affect system performance and cause task delays. We proposes a decentralized offloading algorithm that empowers MDs to make intelligent decisions about offloading. The primary focus of our research is on the partial STO problem, where tasks can be fragmented into smaller sub-tasks, and the workloads at ENs can fluctuate dynamically and unpredictably. Our primary objective is to enhance the users' QoE individually. To define the problem, we have formulated the energy constraint MEC system as a Markov decision process (MDP) problem. To solve the MDP problems, Reinforcement Learning provides a range of solution methods such as dynamic programming, Monte Carlo methods, and temporal-difference learning. To deal with the Curse of Dimensions, modern Reinforcement Learning methods apply nonlinear function approximation, such as deep Q-network (DQN), to solve the problem with large state and action spaces. In our proposed approach, we leverage deep Q-learning \cite{mnih2015human}, a model-free DRL technique that enables agents to make informed decisions based on local observations without explicit knowledge of the system's dynamics and modeling. Compared to other researches, our approach provides a more realistic MEC scenario and a promising solution to the challenging problem of task offloading with strict deadline constraints. The proposed algorithm, by only utilizing locally observed information, allows each MD to determine the offloading decision in a decentralized manner. 
 
-\begin{textblock}{22}(1,0.5)
-	\vspace{-9mm}
-	\noindent \small \hspace{-8mm} 
-	This paper has undergone Revision by IEEE Transactions on Network Science and Engineering (TNSE) on Sep. 4, 2024, [ManuscriptID: TNSE-2024-03-0468]. 
-\end{textblock}
+%\begin{textblock}{22}(1,0.5)
+%	\vspace{-9mm}
+%	\noindent \small \hspace{-8mm} 
+%	This paper has undergone Revision by IEEE Transactions on Network Science and Engineering (TNSE) on Sep. 4, 2024, [ManuscriptID: TNSE-2024-03-0468]. 
+%\end{textblock}
 
 \section{Introduction} 
 
@@ -555,25 +566,26 @@ Efficient task offloading in MEC is a complex optimization challenge due to the 
 %To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} holds promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives. While RL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention. QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay \cite{guo2022energy}, but also by energy consumption \cite{tang2022uav}. Albeit some existing works have investigated the trade-off between delay and energy consumption \cite{li2022joint}, they fail to properly address the user demands and fulfill QoE requirements. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs.
 
 
-To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} holds promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives. \textcolor{red}{However, the traditional RL methods are not efficient in handling environments with high-dimensional state  spaces. Deep reinforcement learning (DRL) combines  traditional RL  with  deep  neural  networks  to  intelligently respond to the unknown and dynamic system when addressing the limitations of RL-based algorithms. Despite these advancements, task offloading still faces significant challenges in real-world scenarios with multiple MDs and ENs. In such scenarios, it is essential for MDs to make offloading decisions independently  without prior knowledge of other MDs’ tasks and offloading models. However,  existing works fail to adequately address this challenge. In addition, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay \cite{guo2022energy}, but also by energy consumption \cite{tang2022uav}. Albeit some existing works have investigated the trade-off between delay and energy consumption \cite{li2022joint}, they fail to properly estimate the QoE value and address the users' requirements. Although deep Q-networks (DQN) offer a valuable tool, a more comprehensive approach is required to accurately estimate the QoE while addressing the aforementioned challenges in practical scenarios where global information is limited.}
-
-
+To cope with the dynamic nature of the network, recent research has proposed several task offloading algorithms using machine learning methods. In particular, reinforcement learning (RL) \cite{mnih2015human} holds promises to determine optimal decision-making policies by capturing the dynamics of environments and learning strategies for accomplishing long-term objectives. \textcolor{blue}{However, the traditional RL methods are not efficient in handling environments with high-dimensional state  spaces. Deep reinforcement learning (DRL) combines  traditional RL  with  deep  neural  networks  to  intelligently respond to the unknown and dynamic system when addressing the limitations of RL-based algorithms. Despite these advancements, task offloading still faces significant challenges in real-world scenarios with multiple MDs and ENs. In such scenarios, it is essential for MDs to make offloading decisions independently  without prior knowledge of other MDs’ tasks and offloading models. However, existing works fail to adequately address this challenge. In addition, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay, but also by energy consumption. Albeit some existing works have investigated the trade-off between delay and energy consumption, they fail to properly estimate the QoE value and address the users' requirements. Although deep Q-networks (DQN) offer a valuable tool, a more comprehensive approach is required to accurately estimate the QoE while addressing the aforementioned challenges in practical scenarios where global information is limited.}
+%delay \cite{guo2022energy}
+%energy consumption \cite{tang2022uav}
+%trade-off between delay and energy consumption \cite{li2022joint}
 
     	
-In this study, we delve into the computation task offloading problem in MEC systems, where strict task processing deadlines and energy constraints can adversely affect the system performance.   \textcolor{red}{We propose a distributed QoE-oriented computation offloading (QECO) algorithm to efficiently handle task offloading under uncertain loads at ENs.} This algorithm empowers MDs to make offloading decisions utilizing only locally observed information, such as task size, queue details, battery status, and historical workloads at the ENs. 
+In this study, we delve into the computation task offloading problem in MEC systems, where strict task processing deadlines and energy constraints can adversely affect the system performance.   \textcolor{blue}{We propose a distributed QoE-oriented computation offloading (QECO) algorithm to efficiently handle task offloading under uncertain loads at ENs.} This algorithm empowers MDs to make offloading decisions utilizing only locally observed information, such as task size, queue details, battery status, and historical workloads at the ENs. 
   \textcolor{blue}{To capture the dynamic nature of the MEC environment, we employ the dueling double deep Q-network (D3QN), which is a refined improvement over standard DQN model. By integrating both double Q-learning \cite{van2016deep} and dueling network architectures \cite{wang2016dueling}, D3QN reduces overestimation bias in action-value predictions and more accurately distinguishes the relative importance of states and actions. We also incorporate long short-term memory (LSTM) \cite{hochreiter1997long} into our D3QN model to continuously estimate dynamic workloads at ENs. This enables MDs to effectively handle the uncertainty of the MEC environment, where global information is limited, and proactively adjust the offloading strategies to improve their long-term QoE estimation.} By adopting the appropriate policy based on each MD’s specific requirements at any given time, the QECO algorithm significantly improves the QoE for individual users. 
 
 Our main contributions are summarized as follows:
 
 \begin{itemize}
-	\item \textit{Task Offloading Problem in the MEC System:} \textcolor{red}{ We consider queuing systems for MDs and ENs and formulate the task offloading problem taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). We aim to maximize the long-term QoE, which reflects the task completion rate, task delay, and energy consumption of MDs. Our problem formulation effectively utilizes the resources and properly handles the dynamic fluctuations of workload at ENs. }
+	\item \textit{Task Offloading Problem in the MEC System:} \textcolor{blue}{ We consider queuing systems for MDs and ENs and formulate the task offloading problem taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). We aim to maximize the long-term QoE, which reflects the task completion rate, task delay, and energy consumption of MDs. Our problem formulation effectively utilizes the resources and properly handles the dynamic fluctuations of workload at ENs. }
 	%We formulate the task offloading problem in queuing-based MEC as an MDP for time-sensitive tasks, taking into account the time-varying system environments (e.g., the arrival of new tasks, and the computational requirement of each task). Given task completion, task delay, and energy consumption as the QoE requirements of MDs, this approach concentrates on maximizing the long-term QoE, by effectively utilizing the resources and properly handling the dynamic nature of workload at ENs.
 	
 	 
 	 
 	 \item \textit{DRL-based Offloading Algorithm:} \textcolor{blue}{To solve the problem of long-term QoE maximization in highly dynamic mobile environments, we propose the QECO algorithm based on DRL, which empowers each MD to make offloading decisions independently, without prior knowledge of other MDs' tasks and offloading models. Focusing on the MD's QoE preference, our approach leverages D3QN and LSTM to prioritize and strike an appropriate balance between QoE factors while accounting for workload uncertainty at the ENs. QECO empowers MDs to anticipate the EN's load level over time, leading to more accurate offloading strategies.} We also analyze the training convergence and computational complexity of the proposed algorithm.
 
-	\item \textit{Performance Evaluation:} \textcolor{red}{We conduct comprehensive experiments to evaluate QECO’s performance and its training convergence against baseline schemes as well as two state-of-the-art existing works. The results demonstrate that our algorithm effectively utilizes the computing resources while taking the dynamic workloads at ENs into consideration. In particular, QECO converges more quickly than vanilla DQN and DDQN methods. QECO also improves average QoE by 37.1\% and 29.8\% compared to the potential game-based offloading algorithm (PGOA)~\cite{yang2018distributed} and distributed and collective DRL-based offloading algorithm (DCDRL)~\cite{qiu2020distributed}, respectively.}
+	\item \textit{Performance Evaluation:} \textcolor{blue}{We conduct comprehensive experiments to evaluate QECO’s performance and its training convergence against baseline schemes as well as two state-of-the-art existing works. The results demonstrate that our algorithm effectively utilizes the computing resources while taking the dynamic workloads at ENs into consideration. In particular, QECO converges more quickly than vanilla DQN and DDQN methods. QECO also improves average QoE by 37.1\% and 29.8\% compared to the potential game-based offloading algorithm (PGOA)~\cite{yang2018distributed} and distributed and collective DRL-based offloading algorithm (DCDRL)~\cite{qiu2020distributed}, respectively.}
 	
 	
 	
@@ -693,78 +705,102 @@ The structure of this paper is as follows.  \textcolor{blue}{Section~\ref{sectio
 
 
 
-\color{black}
+\color{blue}
 \section{Related Work}
 \label{section:II}
 
+
+
 To effectively tackle the challenges of MEC arising from the ever-changing nature of networks, recent research highlights the effectiveness of RL in adapting to environmental changes and learning optimal strategies. In this section, we explore the current RL-based state-of-the-art works and discuss their strengths and limitations. Table~\ref{table1} provides an intuitive comparison of these works.
+
+\begin{table*}[tbp]\textcolor{blue}{
+		\renewcommand{\arraystretch}{1}
+		\captionsetup{name=TABLE}
+		\caption{Comparison of Related Works}
+		\scalebox{1.05}{
+			\begin{tabular}{ lp{4.4cm}p{0.5cm}p{0.6cm}p{0.4cm}p{0.8cm}p{2.2cm}p{3.7cm}l} 
+				\toprule
+				\multirow{2}{*}{{\textbf{Paper}}}&\multirow{2}{*}{{\textbf{Problem}}} &\multicolumn{4}{@{}l@{}}{\textbf{Optimization target}}&\multirow{2}{*}{{\textbf{Method}}} & \multirow{2}{*}{{\textbf{Limitation}}}   \\ \cmidrule{3-6}
+				&&Delay&Energy& Drop& QoE &&&\vspace{1mm}  \\ 							\toprule
+				\cite{zhang2023offline}  & Computation offloading &  \centering \cmark & \centering \xmark&  \centering \xmark&  \centering \xmark& Offline RL & \multirow{6}{*}{\shortstack[l]{Overlooking energy consumption; \\Not suitable for energy-constrained\\ MEC; May cause greater energy \\consumption or reduce the overall\\ system capacity.}} \\ \cmidrule{1-7}
+				\cite{sun2024hierarchical}  & Joint offloading and service caching & \centering \cmark & \centering \xmark&  \centering \xmark&  \centering \xmark& Hierarchical DRL &   \\ \cmidrule{1-7}%\midrule
+				\cite{liu2022deep} & Computation offloading  &  \centering \cmark &  \centering \xmark &  \centering \xmark&  \centering \xmark& DQN, DDPG&    \\  \cmidrule{1-7}
+				\cite{tang2022double} & Computation offloading &  \centering \cmark & \centering \xmark&  \centering \xmark&  \centering \xmark& DDQN &   \\  \cmidrule{1-7}
+				\cite{li2022integrated} &  Online computation offloading &  \centering \cmark & \centering \xmark&  \centering \xmark&  \centering \xmark& AC network&   \\  \cmidrule{1-7}
+				\cite{wei2023many} & Computation offloading  &  \centering \cmark & \centering \xmark&  \centering \cmark&\centering\xmark & AC network  &&\vspace{1mm}  \\  								\toprule
+				\cite{munir2021multi}  & Computation offloading & \centering\xmark &\centering\cmark&\centering \xmark& \centering\xmark& Multi-agent RL & \multirow{5}{*}{\shortstack[l]{Do not account for time-sensetive\\ applications; Saving transmission \\energy consumption may reduce \\the transmission power of MDs.}}  \\ \cmidrule{1-7}
+				\cite{zhou2021deep}  & Joint offloading and resource allocation & \centering\xmark &\centering\cmark& \centering\xmark& \centering\xmark& DDQN &   \\ \cmidrule{1-7}%\midrule
+				\cite{dai2020edge} & Joint offloading and resource allocation & \centering\xmark &\centering\cmark& \centering\xmark&\centering\xmark& DDPG &   \\  \cmidrule{1-7}
+				\cite{chouikhi2023energy} & Computation offloading & \centering\xmark &\centering\cmark&\centering \cmark&\centering\xmark& DRL &   \\  \cmidrule{1-7}
+				\cite{wu2024combining} & Privacy aware computation offloading &\centering \xmark &\centering\cmark&\centering \cmark&\centering\xmark&AC network && \vspace{1mm}  \\  	\toprule
+				\cite{huang2021deadline} & Computation offloading  & \centering\cmark &\centering\cmark& \centering\xmark&\centering\xmark& DDPG&\multirow{6}{*}{\shortstack[l]{Not suitable for applications with \\strict delay requirements, as \\processing deadlines influence the \\load dynamics at the ENs, impacting \\the delay of offloaded tasks. }} \\  			 \cmidrule{1-7}
+				\cite{liao2023online} & Online computation offloading & \centering\cmark &\centering\cmark& \centering\xmark& \centering\xmark&DDQN& \\  			 \cmidrule{1-7}
+				\cite{wu2023multi} & Computation offloading & \centering\cmark &\centering\cmark& \centering\xmark&\centering\xmark& Multi-agent PPO&  \\  			 \cmidrule{1-7}
+				\cite{gong2022edge} & Joint offloading and resource allocation & \centering\cmark &\centering\cmark& \centering\xmark&\centering\xmark& DRL &   \\  			 \cmidrule{1-7}
+				\cite{liu2021learn}  &  Joint offloading and resource allocation  & \centering\cmark &\centering\cmark& \centering\xmark&\centering\xmark & Multi-agent AC &   \\  \cmidrule{1-7}
+				\cite{she2024efficient} & Computation offloading & \centering\cmark &\centering\cmark& \centering\xmark&\centering\xmark& Multi-agent DDPG &&\vspace{1mm}    \\  						\toprule
+				\cite{gao2022large} & Computation offloading & \centering\cmark &\centering\cmark& \centering\cmark& \centering\xmark& Multi-agent AC&\multirow{5}{*}{\shortstack[l]{Overlooking personalized QoE; \\Treating all MDs uniformly in\\ performance optimization fails to \\address the user satisfaction.}}  \\  			 \cmidrule{1-7}
+				\cite{wu2024privacy} &Joint offloading and power allocation & \centering\cmark &\centering\cmark& \centering\cmark&\centering\xmark& Multi-agent AC  &   \\  			 \cmidrule{1-7}
+				\cite{Bolourian-WCL24} & Energy harvesting offloading & \centering\cmark &\centering\cmark& \centering\cmark&\centering\xmark& DQN&   \\  			 \cmidrule{1-7}
+				\cite{chen2021drl} & Joint offloading and resource allocation& \centering\cmark &\centering\cmark& \centering\cmark&\centering\xmark& DDPG &   \\  			 \cmidrule{1-7}
+				\cite{wu2023computation} &Stochastic game resource allocation & \centering\cmark &\centering\cmark&\centering\cmark& \centering\xmark& Multi-agent RL & &\vspace{1mm}  \\  										\toprule
+				QECO & QoE-oriented computation offloading  & \centering\cmark &\centering\cmark& \centering\cmark&\centering\cmark& D3QN + LSTM &&\vspace{1mm} 	 		  \\
+				\toprule
+		\end{tabular}}
+		\label{table1}}
+\end{table*}
 
 
 For time-sensitive applications, minimizing task delay is the primary optimization objective, driving the development of delay-optimal approaches in MEC. 
 To solve the delay minimization problem in MEC environment, Zhang \textit{et al.} in \cite{zhang2023offline} proposed an offline RL-based computation offloading algorithm, where the problem is modeled as a repeated game between two agents.
-Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources. Liu \textit{et al.} in \cite{liu2022deep} formulated the problem as MDP and proposed DRL-based approaches to minimaze both communication and computation delay in MEC.
+Sun \textit{et al.} in \cite{sun2024hierarchical} explored both computation offloading and service caching problems in MEC. They formulated an optimization problem that aims to minimize the long-term average service delay. They then proposed a hierarchical DRL framework, which effectively handles both problems under heterogeneous resources. Liu \textit{et al.} in \cite{liu2022deep} formulated the problem as MDP and proposed DRL-based approaches to minimize both communication and computation delay in MEC.
 To minimize total delay and reduce mobile vehicle task waiting time, Tang \textit{et al.} in \cite{tang2022double} developed a dynamic offloading model for multiple mobile vehicles, segmenting tasks into sequential subtasks for more precise offloading decisions.
- Li \textit{et al.} in \cite{li2022integrated} proposed an integrated optimization framework, which leverages past experience and model knowledge to enable fast and resilient real-time offloading control. 
-In \cite{wei2023many}, the authors investigated deadline-constraiend for time-sensetive tasks in vehicular MEC network and proposed a multi agent RL-based computation offloading algorithm based on POMDP to addresses jointly delay and computation rate optimazation. However, delay-optimal approaches~\cite{zhang2023offline}--\cite{wei2023many} often sacrifice other key performance metrics and may cause greater energy consumption or reduce the overall computation capacity, to achieve their goal.  
-  %\cite{zheng2023drl} \cite{xue2023joint} 
+Li \textit{et al.} in \cite{li2022integrated} proposed an integrated optimization framework, which leverages past experience and model knowledge to enable fast and resilient real-time offloading control. 
+In \cite{wei2023many}, the authors investigated deadline-constrained time-sensitive tasks in vehicular MEC networks and proposed a multi-agent RL-based computation offloading algorithm based on POMDP to address joint delay and computation rate optimization. However, delay-optimal approaches~\cite{zhang2023offline}--\cite{wei2023many} often sacrifice other key performance metrics and may cause greater energy consumption or reduce the overall computation capacity, to achieve their~goal. 
 
-
+%\cite{zheng2023drl} \cite{xue2023joint}
 For energy-constrained MEC systems, reducing energy consumption becomes a key objective, motivating the creation of energy-efficient approaches. 
 Munir \textit{et al.} \cite{munir2021multi}  investigated an energy dispatch problem of a self-powered wireless network with MEC capabilities and developed a semi-distributed approach using a multi-agent RL framework to minimize energy consumption.
 Zhou \textit{et al.} in \cite{zhou2021deep} proposed a Q-learning approach, which is an extension of RL to achieve optimal resource allocation strategies and computation offloading.
 Dai \textit{et al.} in \cite{dai2020edge} introduced the integration of action refinement into DRL and designed an algorithm based on deep deterministic policy gradient (DDPG) to optimize resource allocation and computation offloading concurrently. 
 %%In \cite{zhao2019deep}, Zhao \textit{et al.} proposed a computation offloading algorithm based on DRL, which addresses the competition for wireless channels to optimize long-term downlink utility.
-To ensure that minimizing energy consumption does not lead to a reduction in the system's computing rate, researches have expanded their work by incorporating the maximum tolerable delay for task models.
+To ensure that minimizing energy consumption does not lead to a reduction in the system's computing rate, researchers have expanded their work by incorporating the maximum tolerable delay for task models.
 In \cite{chouikhi2023energy}, Chouikhi \textit{et al.} proposed a computation offloading approach based on DRL to minimize long-term energy consumption and maximize the number of tasks completed before their tolerant deadlines.
 To address the privacy-aware computation offloading problem, Wu \textit{et al.} in \cite{wu2024combining} modeled the problem as an MDP and proposed a DQN-based method to optimize the computation rate and energy consumption in a queuing-based IIoT network. 
 Huang \textit{et al.} in \cite{huang2021deadline} proposed a DRL-based method based on a partially observable MDP (POMDP), which guarantees the deadlines of real-time tasks while minimizing the total energy consumption of MDs. This algorithm effectively tackles the challenges of dynamic resource allocation in large-scale heterogeneous networks. 
 However, energy-efficient approaches~\cite{munir2021multi}--\cite{huang2021deadline}, even when considering deadline constraints, do not adequately address the complexities of time-sensitive applications, where reducing delay can have significant effects on the user's QoE. Particularly, saving transmission energy consumption may reduce the transmission power of MDs and lead to poor performance for real-time applications. 
 
-
-
-
-
-
-
-
-
 To address time-sensitive applications in energy-constrained MEC systems, solving the relationship between delay and energy consumption is the primary optimization objective.
 Liao \textit{et al.} in \cite{liao2023online} introduced a double DQN (DDQN)-based algorithm for performing online computation offloading in MEC. This algorithm optimizes transmission power and scheduling of CPU frequency when minimizing both task computation delay and energy consumption. 
 To optimize delay and energy consumption, Wu \textit{et al.} in \cite{wu2023multi} investigated the computation offloading problem in a queuing-based MEC IIoT system. They modeled the problem as a POMDP and proposed a multi-agent proximal policy optimization (PPO)-based method to obtain the optimal offloading strategy in dynamic environments. 
- Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the IIoT systems to jointly optimize task offloading and resource allocation to achieve lower energy consumption and decreased task delay.
- Liu \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL, which can generate interactive information along with resource decisions. 
- She \textit{et al.} in \cite{she2024efficient} investigated the computation offloading optimization problem and proposed DRL-based approach to minimize both the transmission delay and energy, based on POMDP.
-  Although delay-energy trade-off approaches~\cite{liao2023online}--\cite{she2024efficient} effectively address time-sensitive tasks, they are not suitable for applications with strict requirements on delay or energy consumption. 
+Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the IIoT systems to jointly optimize task offloading and resource allocation to achieve lower energy consumption and decreased task delay.
+Liu \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL, which can generate interactive information along with resource decisions. 
+She \textit{et al.} in \cite{she2024efficient} investigated the computation offloading optimization problem and proposed a DRL-based approach to minimize both the transmission delay and energy, based on POMDP.
+Although delay-energy trade-off approaches~\cite{liao2023online}--\cite{she2024efficient} effectively address time-sensitive tasks, they are not suitable for applications with strict requirements on delay or energy consumption. 
 
- 
+
 Incorporating task processing deadlines for time-sensitive applications in energy-constrained MEC systems requires achieving an effective balance among delay, energy consumption, and computation rate. 
-  In \cite{gao2022large}, Gao \textit{et al.} introduced an attention-based multi-agent algorithm designed for decentralized computation offloading.
- To optimize privacy protection and quality of service, authors in \cite{wu2024privacy} investigated the joint computation offloading and power allocation problems for the IIoT network. They modeled the problem as an MDP and proposed a multi-agent DQN-based algorithm. 
-  In \cite{Bolourian-WCL24}, the authors proposed an offloading algorithm using deep Q-learning for wireless-powered IoT devices in MEC systems. This algorithm aims to minimize the task drop rate while the devices solely rely on harvested energy for operation. 
-  Chen \textit{et al.} in \cite{chen2021drl} addressed a joint optimization problem involving computation offloading and resource allocation, aiming to reduce both task processing delay and energy consumption across all MDs.
-  Wu \textit{et al.} in \cite{wu2023computation} introduced a stochastic game-based resource allocation in the SDN-based MEC network. They used an MDP and proposed a multi-agent RL method to minimize both energy consumption and processing delay. While studies \cite{gao2022large}--\cite{wu2023computation} have explored delay-sensitive applications with prossecing deadline and addressed energy-constrained MEC, they overlook user-specific demands and fail to meet QoE requirements effectively.
+In \cite{gao2022large}, Gao \textit{et al.} introduced an attention-based multi-agent algorithm designed for decentralized computation offloading.
+To optimize privacy protection and quality of service, authors in \cite{wu2024privacy} investigated the joint computation offloading and power allocation problems for the IIoT network. They modeled the problem as an MDP and proposed a multi-agent DQN-based algorithm. 
+In \cite{Bolourian-WCL24}, the authors proposed an offloading algorithm using deep Q-learning for wireless-powered IoT devices in MEC. This algorithm aims to minimize the task drop rate while the devices solely rely on harvested energy for operation. 
+Chen \textit{et al.} in \cite{chen2021drl} addressed a joint optimization problem involving computation offloading and resource allocation, aiming to reduce both task processing delay and energy consumption across all MDs.
+Wu \textit{et al.} in \cite{wu2023computation} introduced a stochastic game-based resource allocation in the SDN-based MEC. They used an MDP and proposed a multi-agent RL method to minimize both energy consumption and delay. While studies \cite{gao2022large}--\cite{wu2023computation} have explored delay-sensitive applications with processing deadlines and addressed energy-constrained MEC, they overlook user-specific demands and fail to meet QoE requirements effectively.
 
 
-In contrast to the aforementioned related works \cite{zhang2023offline}--\cite{wu2023computation}, which neglect key performance aspects of user satisfaction, we are motivated to effectively address QoE optimization, where QoE accounts for task completion rate, processing delay, and energy consumption. 
-  Specefically, different from \cite{zhang2023offline}--\cite{li2022integrated}, \cite{munir2021multi}--\cite{dai2020edge}, and \cite{liao2023online}--\cite{she2024efficient}, which considered delay-tolerant tasks, we take into account delay-sensitive tasks with processing deadlines. This is challenging to address, as processing deadlines impact the load dynamics at the ENs, which in turn affect the delay of offloaded tasks.
-Although works \cite{gao2022large}--\cite{wu2023computation} taking these key performance factor into consideration, they fail to address user-specific demands. To effectively address personalized QoE optimization, we designed an adaptive balance for key QoE factors according to the dynamic user's individual preferences, such as prioritizing reduced task delay or energy saving, which may vary over time. 
-  
- 
-  
 
-QoE is a time-varying performance measure that reflects user satisfaction, where each user may have unique QoE requirements. According to the MDs' individual preferences, each delay, energy consumption, and computation rate may take precedence over two others.
-  
-In addition, the limited processing capacities of ENs necessitate careful consideration when allocating resources to MDs. The processing capacity allocated to an MD depends on the dynamic workload of an EN at any given time. Some studies have failed to account for these challenges in dynamic network environments, resulting in reduced system performance. For example, in \cite{chen2021drl}, it is assumed that MDs have sufficient transmission and computation resources from ENs, which may not reflect real-world conditions. While the works \cite{zhao2019deep}, \cite{dai2020edge}, and \cite{wu2024privacy} investigated limited resources in MEC, they did not consider dynamic workloads at ENs in decision-making processes, leading to potential performance issues.
-Certain studies such as \cite{sun2024hierarchical}, \cite{gong2022edge}-\cite{gao2022large} have addressed load levels at ENs and proposed task offloading algorithms. However, these algorithms often require global system information, resulting in high signaling overhead. In contrast to these works, we propose a distributed algorithm that effectively manages unknown load dynamics at ENs. This algorithm enables each MD to make offloading decisions independently, without requiring information (e.g., task models, offloading decisions) from other MDs, thereby reducing signaling overhead and improving overall system performance.
 
+In contrast to~\cite{zhang2023offline}--\cite{huang2021deadline}, which do not account for energy-constrained and time-sensitive MEC, we are motivated to address both issues to provide individual QoE requirements effectively. 
+Although~\cite{liao2023online}--\cite{she2024efficient} taking delay and energy consumption into consideration as joint optimization objectives, they fail to address applications with strict processing deadlines. This is challenging to address, as processing deadlines impact the load dynamics at the ENs, affecting the delay of offloaded tasks.  
+On the other hand, QoE is a time-varying performance measure that reflects user satisfaction, where each user may have unique QoE requirements. According to the MDs' individual preferences each key QoE factor may take precedence over others. Different from \cite{gao2022large}--\cite{wu2023computation}, which overlooked personalized user preferences, we designed an adaptive balance to enhance QoE for MEC users effectively. 
 
 
 
 
-%Some existing works primarily focus on simplified MEC networks, investigating single MEC network models. For instance, studies \cite{zhou2021deep}, \cite{liu2021learn} only examine single-server or single-user scenarios, while \cite{huang2019deep}--\cite{wu2023computation} do not account for delay-sensitive tasks. In contrast, our research addresses a more realistic MEC scenario, considering delay-sensitive tasks with processing deadlines. This is challenging due to the interplay between processing deadlines, load dynamics at the ENs, and the resulting offloaded task delays. Additionally, the absence of robust underlying resource scheduling systems can lead to data congestion during transmission and inefficient resource allocation, hindering overall system performance \cite{wang2020reinforcement}--\cite{chen2021drl}. Hence, more accurate MEC models are necessary to handle the complexities of dynamic resource scheduling in large-scale scenarios.
-%To better represent real-world scenarios, authors in \cite{Bolourian-WCL24}--\cite{9253665} have applied queuing theory to model MEC systems. This approach helps capture the dynamic nature of networks, enabling MEC systems to allocate computational and transmission resources more efficiently. In a similar vein, we approached the offloading process as a holistic queuing system, where multiple queues ensure fair resource scheduling for MEC, leading to more accurate and efficient resource management.
 
+%QoE is a time-varying performance measure that reflects user satisfaction, where each user may have unique QoE requirements. According to the MDs' individual preferences, each delay, energy consumption, and computation rate may take precedence over two others.
 
+In addition, the limited computing resourses of ENs necessitate careful consideration when allocating resources to MDs. The allocated resource to an MD depends on the dynamic workload of an EN at any given time. Some studies have failed to account for these challenges in dynamic network environments, resulting in reduced system performance. For example, in \cite{chen2021drl}, it is assumed that MDs have sufficient transmission and computation resources from ENs, which may not reflect real-world conditions. While~\cite{dai2020edge},~\cite{wu2024privacy}, and~\cite{zhao2019deep} investigated limited resources in MEC, they did not consider dynamic workloads at ENs in decision-making processes, leading to potential performance issues.
+Some studies such as~\cite{sun2024hierarchical},~\cite{gong2022edge}, and~\cite{gao2022large} have addressed load levels at ENs and proposed task offloading algorithms. However, these algorithms often require global system information, resulting in high signaling overhead. In contrast to these works, we propose a distributed algorithm that effectively manages unknown load dynamics at ENs. This algorithm enables each MD to make offloading decisions independently, without requiring information (e.g., task models, offloading decisions) from other MDs, thereby reducing signaling overhead and improving overall system performance.
 
 
 
@@ -773,138 +809,16 @@ Certain studies such as \cite{sun2024hierarchical}, \cite{gong2022edge}-\cite{ga
 
 
 
- 
- \begin{table*}[htbp]\textcolor{blue}{
- 		\renewcommand{\arraystretch}{0.2}
- 		\captionsetup{name=TABLE}
- 		\caption{Comparison of Related Works}
- 		\scalebox{1}{%
- 			\begin{tabular}{ lp{5.4cm}p{4cm}p{2cm}p{4cm}l} 
- 				\toprule
- 				\textbf{Paper}  &  \textbf{Problem} &  \textbf{Objective} & \textbf{Method} &  \textbf{Limitation}  \\ \midrule
- 				\cite{li2022integrated} & Online computation offloading & Minimize computation delay & Actor-critic network & Overlooking energy consumtion \\ \midrule
- 				%\cite{li2020joint} & Caching and computation offloading & Minimize total system delay &  Multi-agent DQN & Not consider system energy consumtion \\ \midrule
- 				\cite{tang2022double}  & Computation offloading & Minimize total system delay & DDQN & Overlooking energy consumtion \\ \midrule
- 				%\cite{wang2020reinforcement} & Mobility aware computation offloading & Minimize energy consumtion & Q-learning & Not consider computation delay\\ \midrule
- 				\cite{liu2021learn}  & Resource allocation and computation offloading & Minimize computation cost  & Multi-agent actor-critic network &  Not consider delay-sensitive tasks \\\midrule
- 				\cite{wu2023computation}   & Stochastic game-based resource allocation & Minimize computation delay and energy
-consumption & Multi-agent RL & Not consider tasks with maximum delay tolerance\\\midrule
- 				\cite{zhou2021deep} & Resource allocation and computation offloading & Minimize total energy consumption & DDQN & Limited to a single edge server \\\midrule				
- 				%\cite{huang2019deep} & Wireless-powered MEC & Computation offloading and resource allocations & Maximize computation rate & MIP & DQN & Not consider delay-sensitive tasks \\\midrule
- 				\cite{wu2024privacy} &  power allocation and computation offloading  & Optimize quality of service  & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
- 				\cite{dai2020edge} & Resource allocation and computation offloading & Minimize energy consumption & DDPG & Not take user's demand into consideration \\\midrule
- 				\cite{zhao2019deep} & User association and resource allocation & Optimize downlink utility  & Multi-agent D3QN & Not consider system delay and energy consumtion \\\midrule
- 				\cite{liao2023online}  & Online computation offloading & Minimize computation delay and energy consumption & DDQN & Only for a single MEC system model  \\\midrule
- 				\cite{wu2024combining}   & Privacy aware computation offloading & Optimization of computation rate and energy consumption  & Actor-critic network  & Not take user's demand into consideration \\\midrule
- 				\cite{Bolourian-WCL24}  & Energy harvesting  computation offloading & Minimize drop rate and energy consumption.  & DQN & Does not account for computation delay  \\\midrule
- 				\cite{huang2021deadline}  & Computation offloading & Minimize drop rate and energy consumption & DDPG & Not consider computation delay \\ \midrule
- 				\cite{gong2022edge} & Resource allocation and computation offloading & Minimize computation delay and energy
-consumption & DRL & Not take user's demand into consideration\\\midrule
- 				\cite{sun2024hierarchical} & Computation offloading and service caching & Minimize average delay & Hierarchical DRL & Not consider system energy consumtion \\\midrule
- 				\cite{wu2023multi}  & Computation offloading & Minimize computation delay and energy
-consumption  & Multi-agent PPO&  Not consider tasks with maximum delay tolerance \\\midrule
- 				\cite{9253665}  &  Computation offloading & Minimize drop rate and computation delay.  & D3QN + LSTM & Not consider system energy consumtion\\\midrule
- 				\cite{gao2022large}  & Decentralized computation offloading & Optimize system cost and computation rates  & Multi-agent actor-critic network& Not take user's demand into consideration \\\midrule
- 				QECO  &  Computation offloading & Maximize the QoE of each MD individually & D3QN + LSTM & \\
- 				\toprule
- 		\end{tabular}}
- 		\label{table1}}
- \end{table*}
 
 
-%\subsection{Analysis and Motivation}
-%Despite extensive research efforts, task offloading continues to encounter significant challenges in real-world scenarios involving multiple MDs and ENs. We discuss these challenges from two aspects, i.e., system modeling and target objective optimization.
- 
- % \subsubsection{System modeling}
 
-%Some existing works primarily focus on simplified MEC networks, investigating single MEC network models. For instance, studies \cite{zhou2021deep}, \cite{liu2021learn} only examine single-server or single-user scenarios, while \cite{huang2019deep}--\cite{wu2023computation} do not account for delay-sensitive tasks. In contrast, our research addresses a more realistic MEC scenario, considering delay-sensitive tasks with processing deadlines. This is challenging due to the interplay between processing deadlines, load dynamics at the ENs, and the resulting offloaded task delays. Additionally, the absence of robust underlying resource scheduling systems can lead to data congestion during transmission and inefficient resource allocation, hindering overall system performance \cite{wang2020reinforcement}--\cite{chen2021drl}. Hence, more accurate MEC models are necessary to handle the complexities of dynamic resource scheduling in large-scale scenarios.
-%To better represent real-world scenarios, authors in \cite{Bolourian-WCL24}--\cite{9253665} have applied queuing theory to model MEC systems. This approach helps capture the dynamic nature of networks, enabling MEC systems to allocate computational and transmission resources more efficiently. In a similar vein, we approached the offloading process as a holistic queuing system, where multiple queues ensure fair resource scheduling for MEC, leading to more accurate and efficient resource management.
 
-%In addition, the limited processing capacities of ENs necessitate careful consideration when allocating resources to MDs. The processing capacity allocated to an MD depends on the dynamic workload of an EN at any given time. Some studies have failed to account for these challenges in dynamic network environments, resulting in reduced system performance. For example, in \cite{chen2021drl}, it is assumed that MDs have sufficient transmission and computation resources from ENs, which may not reflect real-world conditions. While the works \cite{zhao2019deep}, \cite{dai2020edge}, and \cite{wu2024privacy} investigated limited resources in MEC, they did not consider dynamic workloads at ENs in decision-making processes, leading to potential performance issues.
-%Certain studies such as \cite{sun2024hierarchical}, \cite{gong2022edge}-\cite{gao2022large} have addressed load levels at ENs and proposed task offloading algorithms. However, these algorithms often require global system information, resulting in high signaling overhead. In contrast to these works, we propose a distributed algorithm that effectively manages unknown load dynamics at ENs. This algorithm enables each MD to make offloading decisions independently, without requiring information (e.g., task models, offloading decisions) from other MDs, thereby reducing signaling overhead and improving overall system performance.
 
-%Some existing works primarily investigate simplified MEC networks, focusing on single MEC network models, or do not account for delay-sensitive tasks and may overlook critical performance factors in real-time applications. Comparing with the works \cite{zhou2021deep}, \cite{liu2021learn}, which considering only single-server and single-user scenarios, and the works \cite{huang2019deep}--\cite{wu2023computation} that do not account for delay-sensitive tasks, we consider a different and more realistic MEC scenario involving multuple MDs and ENs, which take into account delay-sensitive tasks with processing deadlines. This is challenging to address, because the processing deadlines will affect the load level dynamics at the edge nodes and hence affect the delay of the offloaded tasks. Moreover, due to the absence of robust underlying resource scheduling systems, issues such as data congestion during transmission and resource allocation can arise, leading to suboptimal system performance \cite{wang2020reinforcement}--\cite{chen2021drl}. Therefore, more accurate MEC models are needed to address the complexities of dynamic resource scheduling in large-scale scenarios. To reflecting real-world scenarios more accurately, the authors in \cite{Bolourian-WCL24}--\cite{9253665} applied queuing theory to model MEC systems. It helps in modeling the dynamic nature of network, allowing MEC systems to allocate computational and transmission resources more efficiently. Similarly, we approached the offloading process as a holistic queuing system, where multiple queues provide faired resources schatuling for MEC. 
 
-%Besides, due to the limited processing capacities of ENs, the processing capacity that an EN allocates to an MD depends on the EN's workload each time. Some studies did not take into account the challenges of a dynamic network environment and treating this dynamic workload as part of the environment, negatively impact system performance and requires careful consideration. For instance, in \cite{chen2021drl}, MDs are assumed to have sufficient transmission and computation resources from ENs, which may not always align with real-world conditions. While the works \cite{zhao2019deep}, \cite{dai2020edge}, \cite{wu2024privacy} investigated the limited resources in MEC, they did not consider the dynamic workload at ENs in decision making processes, imposing significant challenges in overall system performance. Although some existing works \cite{sun2024hierarchical}, \cite{gong2022edge}--\cite{gao2022large} have addressed the load levels at the ENs and proposed task offloading algorithms, however, these algorithms in require global information of the system and may incur high signaling overhead. Different from those works  \cite{sun2024hierarchical}, \cite{zhao2019deep}--\cite{wu2024privacy}, \cite{gong2022edge}--\cite{gao2022large} we propose a distributed algorithm that can address the unknown load dynamics at the ENs. It enables each MDs to make its offloading decision without knowing the information (e.g., task models, offloading decisions) of other MDs.
 
 
-% Besides, some works with more advanced scarios do not take into account the underlying resources schetuling systems. As a result, the processing and transmission of each task should always be accomplished within one time slot (or before the arrival of the next task), which may not always be guaranteed in practice. Different from those works [10]–[15], we consider delay-sensitive tasks together with queuing systems and take into account the practical scenario where the processing and transmission of each task can continue for multiple time slots.
-% Moreover, due to the absence of robust underlying resource scheduling systems, issues such as data congestion during transmission and resource allocation can arise, leading to suboptimal system performance []. Therefore, more accurate MEC models are needed to address the complexities of dynamic resource scheduling in large-scale scenarios. 
-%Despite these advancements, task offloading still faces significant challenges in real-world scenarios with multiple MDs and ENs. In such scenarios, it is essential for MDs to make offloading decisions independently  without prior knowledge of other MDs’ tasks and offloading models. However,  existing works fail to adequately address this challenge. In addition, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay \cite{guo2022energy}, but also by energy consumption \cite{tang2022uav}. Albeit some existing works have investigated the trade-off between delay and energy consumption \cite{li2022joint}, they fail to properly estimate the QoE value and address the user demands and requirements. Although deep Q-networks (DQN) offer a valuable tool, a more comprehensive approach is required to accurately estimate the QoE while addressing the aforementioned challenges in practical scenarios where global information is limited.
-% \subsubsection{Algorithme design}
 
-
- 
-
-%Considering delay and energy consumption as optimization objectives is one of the main research streams on MEC. Most existing works optimize the two individually. The fact that the conflicts between objectives are neglected easily leads to biased optimization results. Meanwhile, a few studies focus on the maximization of the number of completed tasks, which also reflects the benefits that an MEC system brings to us. Therefore, delay, energy consumption and the number of completed tasks are three important concerns when designing MEC systems.
- %However, to the best of our knowledge, little research has been dedicated to a system with these three objectives taken into account. Different from the works \cite{li2022integrated}--\cite{dai2020edge}, which only focus on delay-optimal optimazation or energy-efficient optimazation, we are motivated to emphasize MEC system with delay, energy consumption and the number of completed tasks as three objectives for QoE optimization.  Multi objective studies \cite{chen2021drl}--\cite{gao2022large} mostly have investigated the trade-off between two or three of these factor but they fail to properly address the user demands and fulfill QoE requirements. QoE is a time-varying performance measure that reflects user satisfaction, where each user may have unique QoE requirements according to the MDs individual preferences.  In contrast \cite{li2022integrated}--\cite{gao2022large}, to effectively address personalized QoE optimization, we define an adaptive trade-off between task completion and cost reduction, where a weighted sum between completion delay and energy consumption plays as an associated cost. Each MD dynamically adjusts these weights to reflect the importance of different factors based on its energy modes.
- 
- %\subsubsection{Optimization Objectives}
-%Considering delay and energy consumption as optimization objectives represents a significant research focus in MEC. Most existing studies tend to optimize these two objectives independently, often neglecting the conflicts that arise between them, which can lead to skewed optimization results. Additionally, some research has prioritized maximizing the number of completed tasks, highlighting the advantages that MEC systems offer. Therefore, delay, energy consumption, and the number of completed tasks are critical factors in the design of MEC systems. However, to the best of our knowledge, there has been limited research that simultaneously addresses all three objectives.
-%Different from works \cite{li2022integrated}-\cite{dai2020edge}, which only focus on delay-optimal optimization or energy-efficient optimization, we are motivated to emphasize the MEC system with delay, energy consumption, and the number of completed tasks as three objectives for QoE optimization. Multi-objective studies \cite{chen2021drl}-\cite{gao2022large} have mostly investigated the trade-off between two or three of these factors but fail to properly address user demands and fulfill QoE requirements. QoE is a time-varying performance measure that reflects user satisfaction, where each user may have unique QoE requirements according to the MDs' individual preferences.
-%In contrast to \cite{li2022integrated}-\cite{gao2022large}, to effectively address personalized QoE optimization, we define an adaptive trade-off between task completion and cost reduction. We introduce a weighted sum between completion delay and energy consumption as an associated cost. Each MD dynamically adjusts these weights to reflect the importance of different factors based on its energy modes. \color{black}
-
-
-
-
-
- 
-
- 	 	 
-
- 
-% \textbf{ Task Offloading Considering EN's Workload}	\\
-
-
-
-
-%Other works have proposed distributed task offloading algorithms considering the load levels at the edge nodes, where each mobile device makes its offloading decision in a decentralized manner. 
-
-
-%Although DRL-based methods have demonstrated their effectiveness in handling network dynamics, task offloading still encounters several challenges that require further attention.  As shown in Table~\ref{table1}, current research primarily focuses on minimizing energy consumption \cite{tang2022uav}, reducing processing delays \cite{guo2022energy}, \cite{seo2022differential}, maximizing computation rates~\cite{huang2019deep}, or optimizing a weighted balance among performance factors \cite{li2022joint}. However, QoE is a time-varying performance measure that reflects user satisfaction and is not affected only by delay, as considered in \cite{sun2024hierarchical}, \cite{9253665} but also by energy consumption \cite{Bolourian-WCL24}, \cite{huang2021deadline}. A more comprehensive approach is required to address the dynamic requirements of individual users in real-time scenarios with multiple MDs and ENs. While some existing works such as \cite{liao2023online}, \cite{wu2024privacy}, \cite{dai2020edge}, \cite{gao2022large}, \cite{li2022joint} have investigated the trade-off between delay and energy consumption, they fail to address the user demands and fulfill QoE requirements properly. In contrast to the aforementioned works, we propose a DRL-based distributed algorithm that provides users with an appropriate balance among QoE factors based on their demands. 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-  %In these researchs authours mostly investigated MEC networks and explored computation offloading problem, but in some works such as \cite{zhou2021deep} \cite{liao2023online} have mainly focused on single MEC network model, and has not taken into account the challenges of dynamic network environment with multiple ENs. In fact, the channel quality, requested task, and energy state on an MDs all change dynamically with time in an actual MEC scenario, thus a more realistic MEC scenario is needed, involving delay-sensitive tasks with processing deadlines in multiple MDs and ENs, which poses a more intricate challenge.
- 
-
-
-
-%In \cite{chen2019energy}, Chen \textit{et al.} introduced an online algorithm with polynomial time complexity for offloading in MEC. This algorithm achieves a close-to-optimal energy consumption while ensuring that the delay is bounded. 
-
-
-
-%Liao \textit{et al.} in \cite{liao2023online} introduced a double reinforcement learning algorithm for performing online computation offloading in MEC. This algorithm optimizes transmission power and scheduling of CPU frequency to minimize both task computation delay and energy consumption. In \cite{huang2021deadline}, Huang \textit{et al.} proposed a DRL-based method based on a partially observable MDP, which guarantees the deadlines of real-time tasks while minimizing the total energy consumption of MDs. Liu  \textit{et al.} in \cite{liu2021learn} investigated a two-timescale computing offloading and resource allocation problem and proposed a resource coordination algorithm based on multi-agent DRL, which can generate interactive information along with resource decisions. In \cite{chen2019energy}, Chen \textit{et al.} introduced an online algorithm with polynomial time complexity for offloading in MEC. This algorithm achieves a close-to-optimal energy consumption while ensuring that the delay is bounded. In \cite{dai2020edge}, Dai \textit{et al.} introduced the integration of action refinement into DRL and designed an algorithm to concurrently optimize resource allocation and computation offloading. Zhou \textit{et al.} in \cite{zhou2021deep} used an MDP to study MEC and modeled the interactions between the policy-system environment. They proposed a Q-learning approach to achieve optimal resource allocation strategies and computation offloading. Gong \textit{et al.} in \cite{gong2022edge} proposed a DRL-based network structure in the industrial internet of things system to jointly optimize task offloading and resource allocation, which can enable the system to achieve lower total cost of energy consumption and task delay. In \cite{gao2022large}, Gao \textit{et al.} introduced an attention-based multi-agent algorithm designed for decentralized computation offloading. This algorithm effectively tackles the challenges of dynamic resource allocation in large-scale heterogeneous networks. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\color{black}
 
 \section{System Model} 
 \label{section:III}
@@ -946,7 +860,7 @@ We investigate a MEC system consisting of a set of MDs denoted by $\mathcal{I} =
 
 
 
-We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{red}{The size of task \( z_i(t) \) is selected randomly and uniformly from a discrete set \( \Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\} \), where \( \theta \) represents the number of these values. Note that task sizes are drawn from a discrete set since, in many applications, tasks typically come with predefined sizes,~\cite{wang2020intelligent},~\cite{zhang2019toward}. We consider $\lambda_i(t) \in \Lambda \cup \{0\}$ to include the case that no task has arrived.} We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
+We define $z_i(t)$ as the index assigned to the computation task arriving at MD $i \in \mathcal{I}$ in time slot $t \in \mathcal{T}$. Let $\lambda_i(t)$ denote the size of this task in bits. \textcolor{blue}{The size of task \( z_i(t) \) is selected randomly and uniformly from a discrete set \( \Lambda = \{\lambda_1, \lambda_2, \ldots, \lambda_{\theta}\} \), where \( \theta \) represents the number of these values. Note that task sizes are drawn from a discrete set since, in many applications, tasks typically come with predefined sizes,~\cite{wang2020intelligent},~\cite{zhang2019toward}. We consider $\lambda_i(t) \in \Lambda \cup \{0\}$ to include the case that no task has arrived.} We also denote the task's processing density as $\rho_i(t)$ that indicates the number of CPU cycles required to complete the execution of a unit of the task. Furthermore, we denote the deadline of this task by $\Delta_i(t)$ which is the number of time slots that the task must be completed to avoid being dropped.
 %At the beginning of time slot $t \in \mathcal{T}$, if MD $i \in \mathcal{I}$ has a newly arrived task, we define $z_i(t)$ as the unique index assigned to that task. Let $\lambda_i(t)$ be the number of newly arrived bits at the beginning of time slot $t \in \mathcal{T}$. If a new task $z_i(t)$ exists at the start of time slot $t$, then $\lambda_i(t)$ is equal to the size of task $z_i(t)$. Otherwise, $\lambda_i(t) = 0$. We consider $\rho_i(t)$ to represent the processing density of task $z_i(t)$, indicating the number of CPU cycles required to process a unit of the task.
 
 We define two binary variables, $x_i(t)$ and $y_{i,j}(t)$ for $i \in \mathcal{I}$ and $j \in \mathcal{J}$ to determine the offloading decision and offloading target, respectively. Specifically, $x_i(t)$ indicates whether task $z_i(t)$ is assigned to the computation queue ($x_i(t) = 0$) or to the transmission queue ($x_i(t) = 1$), and $y_{i,j}(t)$ indicates whether task $z_i(t)$ is offloaded to EN $j \in \mathcal{J}$. If the task is dispatched to EN $j$, we set $y_{i,j}(t) = 1$; otherwise, $y_{i,j}(t) = 0$.
@@ -1015,7 +929,7 @@ To compute the MD's energy consumption in the time slot $t \in \mathcal{T}$, we 
 \end{alignat}
 where $p_i^{\text{C}} = 10^{-27}(f_i)^3$ represents the energy consumption of MD $i$'s CPU frequency \cite{mao2016dynamic}.
 \subsubsection{Edge Execution}
-We model the edge execution by the queues associated with MDs deployed at ENs. \textcolor{blue}{If computation task $z_i(t')$ is dispatched to EN $j$ in time $t' < t$, we let $z_{i,j}^{\text{E}}(t)$, $\lambda_{i,j}^{\text{E}}(t)$ (in bits), and $\rho_{i,j}^{\text{E}}(t)$ denote the unique index of the task, the task size, and the number of CPU cycles required per unit of the task in the $i^{\text{th}}$ queue at EN $j$, respectively. } We define $\eta_{i,j}^{\text{E}}(t)$ (in bits) as the length of this queue at the end of time slot $t \in \mathcal{T}$. We refer to a queue as an active queue in a certain time slot if it is not empty. That being said, if at least one task is already in the queue from previous time slots or there is a task arriving at the queue, that queue is active. We define $\mathcal{B}_j(t)$ to denote the set of active queues at EN $j$ in time slot $t$.
+We model the edge execution by the queues associated with MDs deployed at ENs. \textcolor{black}{If computation task $z_i(t')$ is dispatched to EN $j$ in time $t' < t$, we let $z_{i,j}^{\text{E}}(t)$, $\lambda_{i,j}^{\text{E}}(t)$ (in bits), and $\rho_{i,j}^{\text{E}}(t)$ denote the unique index of the task, the task size, and the number of CPU cycles required per unit of the task in the $i^{\text{th}}$ queue at EN $j$, respectively. } We define $\eta_{i,j}^{\text{E}}(t)$ (in bits) as the length of this queue at the end of time slot $t \in \mathcal{T}$. We refer to a queue as an active queue in a certain time slot if it is not empty. That being said, if at least one task is already in the queue from previous time slots or there is a task arriving at the queue, that queue is active. We define $\mathcal{B}_j(t)$ to denote the set of active queues at EN $j$ in time slot $t$.
 \begin{alignat}{1}
 	\mathcal{B}_j(t) = \textcolor{white}{i}\Big\{i \textcolor{white}{i}\big| i \in \mathcal{I}, \lambda_{i,j}^{\text{E}}(t)>0\,\, \textcolor{white}{i}\text{or}\textcolor{white}{i} \,\, \eta_{i,j}^{\text{E}}(t-1)>0\textcolor{white}{i}\Big\}.\textcolor{white}{i}
 	\label{9}  
@@ -1070,7 +984,7 @@ In addition to the energy consumed by EN $j$ for task processing, we also take i
 	\label{16}
 \end{alignat}
 where $p_i^{\text{I}}$ is the standby energy consumption of MD $i \in \mathcal{I}$.  
-\textcolor{red}{Recall that $y_{i,j}(t)$ is the binary offloading indicator. Moreover, among all $j \in \mathcal{J}$, $y_{i,j}=1$ only for one $j$ which is the corresponding EN.}
+\textcolor{blue}{Recall that $y_{i,j}(t)$ is the binary offloading indicator. Moreover, among all $j \in \mathcal{J}$, $y_{i,j}=1$ only for one $j$ which is the corresponding EN.}
 
 %\textcolor{blue}{We also denote the total energy consumption for the offloaded task $z_{i,j}^{\text{E}}(t)$ in time slot $t$ as $E^{\text{O}}_i(t)$, which is,}
 %\begin{alignat}{1}
@@ -1131,8 +1045,9 @@ where vector $\boldsymbol{y}_i(t)=(y_{i,j}(t))_{j \in \mathcal{J}}$ represents t
 
 
 \subsection{QoE Function}
-\textcolor{red}{The QoE function reflects user satisfaction with task computation, whether using local or edge resources. QoE accounts for task completion rate, processing delay, and energy consumption. Each user may have unique QoE requirements~\cite{wang2017qoe}. Therefore, we define a multi-dimensional, adaptive structure to assess QoE, balancing these factors according to the MDs preferences, such as prioritizing reduced task delay or energy saving, which may vary over time~\cite{wang2019intelligent},~\cite{mehrabi2019energy},~\cite{lu2020edge}. To capture personalized QoE requirements, we define QoE as a weighted sum of the above factors. Each MD dynamically adjusts these weights to reflect the importance of different factors based on its energy modes, which are performance, power-saving, and ultra-power-saving modes. We now calculate task delay and energy consumption and then introduce the associated cost and QoE function.}
+\textcolor{blue}{The QoE function reflects user satisfaction with task computation, whether using local or edge resources. QoE accounts for task completion rate, processing delay, and energy consumption. Each user may have unique QoE requirements~\cite{wang2017qoe}. Therefore, we define a multi-dimensional, adaptive structure to assess QoE, balancing these factors according to the MDs preferences, such as prioritizing reduced task delay or energy saving, which may vary over time~\cite{lu2020edge},~\cite{wang2019intelligent}. To capture personalized QoE requirements, we define QoE as a weighted sum of the above factors. Each MD dynamically adjusts these weights to reflect the importance of different factors based on its energy modes, which are performance, power-saving, and ultra-power-saving modes. We now calculate task delay and energy consumption and then introduce the associated cost and QoE function.}
 
+%,~\cite{mehrabi2019energy}
 
 %\textcolor{blue}{The QoE function evaluates the influence of agent's actions based on its personalized QoE requirement \cite{wang2017qoe}, by taking several key performance factors into account. It incorporates a multi-dimensional and adaptive structure that establishes an appropriate balance among these QoE factors according to the MD's preference, such as individual preferences for reducing task delays or energy consumption, which may vary over time \cite{wang2019intelligent}, \cite{mehrabi2019energy}. To reflect the agent’s personalized QoE requirements, an adaptive trade-off between task completion and cost reduction is designed, where a weighted sum between completion delay and energy consumption plays as an associated cost. The MDs adjusted the weights dynamically to define the significance of each factor based on its energy mode—performance, power-saving, or ultra-power-saving. Based on the system model, we first calculate task delay and energy consumption and then represent the associated cost and QoE function accordingly.}
 	
@@ -1150,7 +1065,7 @@ where $\mathcal{D}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t))= 0$ if task $z_i(t
 %\end{alignat}
 
 
-\textcolor{blue}{$\mathcal{E}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t)) = (1-x_i(t)) E_i^{\text{L}}(t)+x_i(t) \bigg( E_i^{\text{T}}(t) + $
+\textcolor{blue}{$\mathcal{E}_i(\boldsymbol{s}_i(t),\boldsymbol{a}_i(t)) = (1-x_i(t)) E_i^{\text{L}}(t)+x_i(t) \bigg( E_i^{\text{T}}(t) + $\vspace{0mm}
 \begin{alignat}{1}
 	\hspace{1.2cm}    E_i^{\text{I}}(t) +  \sum\limits_{j \in \mathcal{J}}  \sum\limits_{t^{'}=t}^{T}\mathbbm{1}\big(z_{i,j}^{\text{E}}(t') = z_i(t)\big)
 	  E_{i,j}^{\text{E}}(t')\bigg).
@@ -1191,6 +1106,13 @@ where $\gamma \in (0,1]$ is a discount factor and determines the balance between
 \section{DRL-Based Offloading Algorithm} \label{section:V}
 We now present QECO algorithm so as to address the distributed offloading decision-making of MDs. The aim is to empower MDs to identify the most efficient action that maximizes their long-term QoE. In the following, we introduce a neural network that characterizes the MD's state-action Q-values mapping, followed by a description of the information exchange between the MDs and ENs.
 
+\subsection{DQN-based Approach}
+We utilize the DQN technique to find the mapping between each state-action pair to Q-values in the formulated MDP. As shown in Fig.~\ref{DQN}, each MD $i \in \mathcal{I}$ is equipped with a neural network comprising six layers. These layers include an input layer, an LSTM layer, two dense layers, an advantage-value (A\&V) layer, and an output layer. The parameter vector $\theta_i$ of MD $i$'s neural network is defined to maintain the connection weights and neuron biases across all layers. For MD $i \in \mathcal{I}$, we utilize the state information as the input of neural network. The state information $\lambda_i(t)$, $\delta_i^{\text{C}}(t)$, $\delta_i^{\text{T}}(t)$, $\phi_i(t)$, and $\boldsymbol{\eta}_i^{\text{E}}(t-1)$ are directly passed to the dense layer, while the state information $\mathcal{H}(t)$ is first supplied to the LSTM layer and then the resulting output is sent to the dense layer. The role and responsibilities of each layer are detailed as follows.
+
+
+\subsubsection{Predicting Workloads at ENs}
+In order to capture the dynamic behavior of workloads at the ENs, we employ the LSTM network \cite{hochreiter1997long}. This network maintains a memory state $\mathcal{H}(t)$ that evolves over time, enabling the neural network to predict future workloads at the ENs based on historical data. By taking the matrix $\mathcal{H}(t)$ as an input, the LSTM network learns the patterns of workload dynamics. The architecture of the LSTM consists of $T^{\text{s}}$ units, each equipped with a set of hidden neurons, and it processes individual rows of the matrix $\mathcal{H}(t)$ sequentially. Through this interconnected design, MD tracks the variations in sequences from $\boldsymbol{h}_1(t)$ to $\boldsymbol{h}_{T^{\text{s}}}(t)$, where vector $\boldsymbol{h}_i(t) = (h_{i,j}(t))_{j \in \mathcal{J}}$, thereby revealing workload fluctuations at the ENs across different time slots. The final LSTM unit produces an output that encapsulates the anticipated workload dynamics, and is then connected to the subsequent layer neurons for further learning.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{ DQN}
@@ -1200,16 +1122,6 @@ We now present QECO algorithm so as to address the distributed offloading decisi
 	%\vspace*{-4.5mm}
 	\label{DQN}
 \end{figure}
-
-
-\subsection{DQN-based Approach}
-We utilize the DQN technique to find the mapping between each state-action pair to Q-values in the formulated MDP. As shown in Fig.~\ref{DQN}, each MD $i \in \mathcal{I}$ is equipped with a neural network comprising six layers. These layers include an input layer, an LSTM layer, two dense layers, an advantage-value (A\&V) layer, and an output layer. The parameter vector $\theta_i$ of MD $i$'s neural network is defined to maintain the connection weights and neuron biases across all layers. For MD $i \in \mathcal{I}$, we utilize the state information as the input of neural network. The state information $\lambda_i(t)$, $\delta_i^{\text{C}}(t)$, $\delta_i^{\text{T}}(t)$, $\phi_i(t)$, and $\boldsymbol{\eta}_i^{\text{E}}(t-1)$ are directly passed to the dense layer, while the state information $\mathcal{H}(t)$ is first supplied to the LSTM layer and then the resulting output is sent to the dense layer. The role and responsibilities of each layer are detailed as follows.
-
-
-\subsubsection{Predicting Workloads at ENs}
-In order to capture the dynamic behavior of workloads at the ENs, we employ the LSTM network \cite{hochreiter1997long}. This network maintains a memory state $\mathcal{H}(t)$ that evolves over time, enabling the neural network to predict future workloads at the ENs based on historical data. By taking the matrix $\mathcal{H}(t)$ as an input, the LSTM network learns the patterns of workload dynamics. The architecture of the LSTM consists of $T^{\text{s}}$ units, each equipped with a set of hidden neurons, and it processes individual rows of the matrix $\mathcal{H}(t)$ sequentially. Through this interconnected design, MD tracks the variations in sequences from $\boldsymbol{h}_1(t)$ to $\boldsymbol{h}_{T^{\text{s}}}(t)$, where vector $\boldsymbol{h}_i(t) = (h_{i,j}(t))_{j \in \mathcal{J}}$, thereby revealing workload fluctuations at the ENs across different time slots. The final LSTM unit produces an output that encapsulates the anticipated workload dynamics, and is then connected to the subsequent layer neurons for further learning.
-
-
 
 
 %\subsubsection{workload Prediction}
@@ -1248,13 +1160,32 @@ where $\theta_i$ establishes a functional relationship that maps Q-values to pai
 %, which characterizes the long-term QoE under any observed state $\boldsymbol{s}_i(t) \in \mathcal{S}$ and action $\mathcal{A} \in \mathcal{A}$. 
 
 
+
+
+
+\subsection{QoE-Oriented DRL-Based Algorithm}
+\label{section:1}
+
+%Our proposed QoE-Driven DRL-Based Algorithm is designed to efficiently distribute computational loads for training neural networks on MDs while leveraging the support of ENs. The primary objective of this algorithm is to utilize the experience of each MD to train its neural network, allowing the MD to make informed decisions that maximize its long-term QoE. To achieve efficient training, each MD $i \in \mathcal{I}$ is paired with a dedicated EN $n_i \in \mathcal{J}$ that assists in the training process. The selection of EN $n_i$ is based on its maximum transmission capacity with MD $i$. We define the set $\mathcal{I}_j \subset \mathcal{I}$ as the group of MDs whose training is facilitated by EN $j \in \mathcal{J}$.
+
+The QECO algorithm is meticulously designed to optimize the allocation of computational tasks between MDs and ENs. Since the training of neural networks imposes an extensive computational workload on MDs, we enable MDs to utilize ENs for training their neural networks, effectively reducing their computational workload. For each MD $i \in \mathcal{I}$, there is an associated EN, denoted as EN $j_i \in \mathcal{J}$, which assists in the training process. This EN possesses the highest transmission capacity among all ENs. We define $\mathcal{I}_j \subset \mathcal{I}$ as the set of MDs for which training is executed by EN $j \in \mathcal{J}$, i.e. $\mathcal{I}_j = \{i \in \mathcal{I} | j_i = j\}$. This approach is feasible due to the minimal information exchange and processing requirements for training compared to MD's tasks. The algorithms to be executed at MD $i \in \mathcal{I}$ and EN $j \in \mathcal{J}$ are given in Algorithms ~\ref{alg:cap} and ~\ref{alg:cap2}, respectively. The core concept involves training neural networks with MD experiences (i.e., state, action, QoE, next state) to map Q-values to each state-action pair. This mapping allows MD to identify the action in the observed state with the highest Q-value and maximize its long-term QoE.
+
+
+
+
+
+In detail, EN $j \in \mathcal{J}$ maintains a replay buffer denotes as $\mathcal{M}_i$ with two neural networks for MD $i$: $\textit{Net}_i^{\text{E}}$, denoting the evaluation network, and $\textit{Net}_i^{\text{T}}$, denoting the target network, which have the same neural network architecture. However, they possess distinct parameter vectors $\theta^{\text{E}}_i$ and $\theta^{\text{T}}_i$, respectively. Their Q-values are represented by $Q_i^{\text{E}}(\boldsymbol{s}_i(t), \boldsymbol{a}; \theta^{\text{E}}_i)$ and $Q_i^{\text{T}}(\boldsymbol{s}_i(t), \boldsymbol{a}; \theta^{\text{T}}_i)$ for MD $i \in \mathcal{I}_j$, respectively, associating the action $\boldsymbol{a} \in \mathcal{A}$ under the state $\boldsymbol{s}_i(t) \in \mathcal{S}$. The replay buffer records the observed experience $(\boldsymbol{s}_i(t), \boldsymbol{a}_i(t), \boldsymbol{q}_i(t), \boldsymbol{s}_i(t+1))$ of MD $i$. Moreover, $\textit{Net}_i^{\text{E}}$ is responsible for action selection, while $\textit{Net}_i^{\text{T}}$ characterizes the target Q-values, which represent the estimated long-term QoE resulting from an action in the observed state. The target Q-value serves as the reference for updating the network parameter vector $\theta^{\text{E}}_i$. This update occurs through the minimization of disparities between the Q-values under $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$. In the following, we introduce the offloading decision algorithm of MD $i \in \mathcal{I}$ and the training process algorithm running in EN $j \in \mathcal{J}$.
+
+% i.e., $\textbf{\textit{s}}_i(1) = \big(\lambda_i(1), \delta_i^{\text{C}}(1), \delta_i^{\text{T}}(1), \boldsymbol{\eta}_i^{\text{E}}(0),\phi_i(1), \mathcal{H}(1) \big)$, where we set $\boldsymbol{\eta}_i^{\text{E}}(0)=0$ for all $j \in \mathcal{J}$, and $ \mathcal{H}(1)$ is a zero matrix with size $T^s \times N$. 
+
+
 \begin{algorithm} [tbp]
 	\caption{\textcolor{blue}{Offloading Decision Algorithm at MD $i \in \mathcal{I}$}}\label{alg:cap}
 	\begin{algorithmic}[1]
-		\renewcommand{\algorithmicrequire}{\textbf{Input:}} 
-		\renewcommand{\algorithmicensure}{\textbf{Output:}}
-		\Require state space $\mathcal{S}$, action space $\mathcal{A}$
-		\Ensure MD $i \in \mathcal{I}$ experience  \textcolor{blue}{ $(\hspace{-0.2mm}\boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.3mm}+\hspace{-0.3mm}\hspace{-0.2mm}1\hspace{-0.2mm}\hspace{-0.2mm})\hspace{-0.2mm})$}
+		\renewcommand{\algorithmicrequire}{\textbf{\textcolor{blue}{Input:}}} 
+		\renewcommand{\algorithmicensure}{\textbf{\textcolor{blue}{Output:}}}
+		\Require \textcolor{blue}{ state space $\mathcal{S}$, action space $\mathcal{A}$, parameters vector~$\theta_i^{\text{E}}$}
+		\Ensure \textcolor{blue}{MD $i \in \mathcal{I}$ experience  \textcolor{blue}{ $(\hspace{-0.2mm}\boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.3mm}+\hspace{-0.3mm}\hspace{-0.2mm}1\hspace{-0.2mm}\hspace{-0.2mm})\hspace{-0.2mm})$}}
 		\For {episode 1 to $N^{\text{ep}}$}
 		\State Initialize $\boldsymbol{s}_i(1)$
 		\For {time slot $t \in \mathcal{T}$}
@@ -1270,54 +1201,6 @@ where $\theta_i$ establishes a functional relationship that maps Q-values to pai
 		\EndFor
 		\EndFor
 		\EndFor
-	\end{algorithmic}
-\end{algorithm}
-
-
-\subsection{QoE-Oriented DRL-Based Algorithm}
-\label{section:1}
-
-%Our proposed QoE-Driven DRL-Based Algorithm is designed to efficiently distribute computational loads for training neural networks on MDs while leveraging the support of ENs. The primary objective of this algorithm is to utilize the experience of each MD to train its neural network, allowing the MD to make informed decisions that maximize its long-term QoE. To achieve efficient training, each MD $i \in \mathcal{I}$ is paired with a dedicated EN $n_i \in \mathcal{J}$ that assists in the training process. The selection of EN $n_i$ is based on its maximum transmission capacity with MD $i$. We define the set $\mathcal{I}_j \subset \mathcal{I}$ as the group of MDs whose training is facilitated by EN $j \in \mathcal{J}$.
-
-The QECO algorithm is meticulously designed to optimize the allocation of computational tasks between MDs and ENs. Since the training of neural networks imposes an extensive computational workload on MDs, we enable MDs to utilize ENs for training their neural networks, effectively reducing their computational workload. For each MD $i \in \mathcal{I}$, there is an associated EN, denoted as EN $j_i \in \mathcal{J}$, which assists in the training process. This EN possesses the highest transmission capacity among all ENs. We define $\mathcal{I}_j \subset \mathcal{I}$ as the set of MDs for which training is executed by EN $j \in \mathcal{J}$, i.e. $\mathcal{I}_j = \{i \in \mathcal{I} | j_i = j\}$. This approach is feasible due to the minimal information exchange and processing requirements for training compared to MD's tasks. The algorithms to be executed at MD $i \in \mathcal{I}$ and EN $j \in \mathcal{J}$ are given in Algorithms ~\ref{alg:cap} and ~\ref{alg:cap2}, respectively. The core concept involves training neural networks with MD experiences (i.e., state, action, QoE, next state) to map Q-values to each state-action pair. This mapping allows MD to identify the action in the observed state with the highest Q-value and maximize its long-term QoE.
-
-
-
-
-In detail, EN $j \in \mathcal{J}$ maintains a replay buffer denotes as $\mathcal{M}_i$ with two neural networks for MD $i$: $\textit{Net}_i^{\text{E}}$, denoting the evaluation network, and $\textit{Net}_i^{\text{T}}$, denoting the target network, which have the same neural network architecture. However, they possess distinct parameter vectors $\theta^{\text{E}}_i$ and $\theta^{\text{T}}_i$, respectively. Their Q-values are represented by $Q_i^{\text{E}}(\boldsymbol{s}_i(t), \boldsymbol{a}; \theta^{\text{E}}_i)$ and $Q_i^{\text{T}}(\boldsymbol{s}_i(t), \boldsymbol{a}; \theta^{\text{T}}_i)$ for MD $i \in \mathcal{I}_j$, respectively, associating the action $\boldsymbol{a} \in \mathcal{A}$ under the state $\boldsymbol{s}_i(t) \in \mathcal{S}$. The replay buffer records the observed experience $(\boldsymbol{s}_i(t), \boldsymbol{a}_i(t), \boldsymbol{q}_i(t), \boldsymbol{s}_i(t+1))$ of MD $i$. Moreover, $\textit{Net}_i^{\text{E}}$ is responsible for action selection, while $\textit{Net}_i^{\text{T}}$ characterizes the target Q-values, which represent the estimated long-term QoE resulting from an action in the observed state. The target Q-value serves as the reference for updating the network parameter vector $\theta^{\text{E}}_i$. This update occurs through the minimization of disparities between the Q-values under $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$. In the following, we introduce the offloading decision algorithm of MD $i \in \mathcal{I}$ and the training process algorithm running in EN $j \in \mathcal{J}$.
-
-% i.e., $\textbf{\textit{s}}_i(1) = \big(\lambda_i(1), \delta_i^{\text{C}}(1), \delta_i^{\text{T}}(1), \boldsymbol{\eta}_i^{\text{E}}(0),\phi_i(1), \mathcal{H}(1) \big)$, where we set $\boldsymbol{\eta}_i^{\text{E}}(0)=0$ for all $j \in \mathcal{J}$, and $ \mathcal{H}(1)$ is a zero matrix with size $T^s \times N$. 
-
-\begin{algorithm}[tbp]
-	\caption{\textcolor{blue}{Training Process Algorithm at EN $j \in \mathcal{J}$}}\label{alg:cap2}
-	\begin{algorithmic}[1]
-		\renewcommand{\algorithmicrequire}{\textbf{\textcolor{blue}{Input:}}} 
-		\renewcommand{\algorithmicensure}{\textbf{\textcolor{blue}{Output:}}}
-		\Require \textcolor{blue}{experience $(\hspace{-0.2mm}\boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.3mm}+\hspace{-0.3mm}\hspace{-0.2mm}1\hspace{-0.2mm}\hspace{-0.2mm})\hspace{-0.2mm})$ from MD $i \in \mathcal{I}$}
-		\Ensure \textcolor{blue}{The parameters vector $\theta_i^{\text{E}}$ }
-		\State Initialize replay buffer $\mathcal{M}_i$ for each MD $i \in \mathcal{I}_j$;
-		\State Initialize $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$ with random parameters $\theta_i^{\text{E}}$ and $\theta_i^{\text{T}}$ respectively, for each MD $i \in \mathcal{I}_j$;
-		\State Set Count := 0
-		\While{True} \Comment{\textit{infinite loop}}
-		\If{receive an \textit{UpdateRequest} from MD $i \in \mathcal{I}_j$}
-		\State Send $\theta_i^{\text{E}}$ to MD $i \in \mathcal{I}$;
-		\EndIf
-		\If {an experience \hspace{-0.2mm} $(\hspace{-0.2mm}\boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.3mm}+\hspace{-0.3mm}\hspace{-0.2mm}1\hspace{-0.2mm}\hspace{-0.2mm})\hspace{-0.2mm})$ is received \\ \;\;\;\; from MD $i \in \mathcal{I}_j$}
-		\State Store $(\boldsymbol{s}_i(t'), \boldsymbol{a}_i(t'), \boldsymbol{q}_i(t'), \boldsymbol{s}_i(t'\hspace{-1mm}+1))$ in $\mathcal{M}_i$;
-		\State Get a collection of experiences  $\mathcal{I}$ from $\mathcal{M}_i$; 
-		\For{each experience $i \in \mathcal{I}$} 
-		\State Get experience $(\boldsymbol{s}_i(\hspace{-0.2mm}n\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}n\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}n\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}n\hspace{-0.5mm}+1\hspace{-0.2mm}))$; 
-		\State Generate $\hat{Q}_{i,n}^{\text{T}}$ according to   \eqref{28};
-		\EndFor
-		\State Set vector  $\hat{\mathbf{Q}}_i^{\text{T}} := (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$;
-		\State Update $\theta_i^{\text{E}}$ to minimize $L(\theta_i^{\text{E}}$, $\hat{\mathbf{Q}}_i^{\text{T}})$ in   \eqref{30};
-		\State Count := Count + 1;
-		\If {mod(Count, \textit{ReplaceThreshold}) = 0}
-		\State $\theta_i^{\text{T}}$ := $\theta_i^{\text{E}}$;
-		\EndIf
-		\EndIf
-		\EndWhile
-		
 	\end{algorithmic}
 \end{algorithm}
 
@@ -1346,6 +1229,39 @@ $\mathcal{F}_i^t =\bigg \{ t' \bigg|\; t' \leq t,\; \lambda_i(t')>0, \; (1 - x_i
 Therefore, MD $i$ observes a set of QoEs $\{\boldsymbol{q}_i(t') \mid t' \in \mathcal{F}_i^t\}$ at the beginning of time slot $t+1$, where the set $\mathcal{F}_i^t$ for some $i \in \mathcal{I}$ can be empty. Subsequently, MD $i$ sends its experience $(\boldsymbol{s}_i(t), \boldsymbol{a}_i(t), \boldsymbol{q}_i(t), \boldsymbol{s}_i(t+1))$ to EN $j_i$ for each task $z_i(t')$ in $t' \in \mathcal{F}_i^t$.
 
 
+\begin{algorithm}[tbp]
+	\caption{\textcolor{blue}{Training Process Algorithm at EN $j \in \mathcal{J}$}}\label{alg:cap2}
+	\begin{algorithmic}[1]
+		\renewcommand{\algorithmicrequire}{\textbf{\textcolor{blue}{Input:}}} 
+		\renewcommand{\algorithmicensure}{\textbf{\textcolor{blue}{Output:}}}
+		\Require \textcolor{blue}{experience $(\hspace{-0.2mm}\boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.3mm}+\hspace{-0.3mm}\hspace{-0.2mm}1\hspace{-0.2mm}\hspace{-0.2mm})\hspace{-0.2mm})$ from MD $i \in \mathcal{I}$}
+		\Ensure \textcolor{blue}{parameters vector $\theta_i^{\text{E}}$ }
+		\State Initialize replay buffer $\mathcal{M}_i$ for each MD $i \in \mathcal{I}_j$;
+		\State Initialize $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$ with random parameters $\theta_i^{\text{E}}$ and $\theta_i^{\text{T}}$ respectively, for each MD $i \in \mathcal{I}_j$;
+		\State Set Count := 0
+		\While{True} \Comment{\textit{infinite loop}}
+		\If{receive an \textit{UpdateRequest} from MD $i \in \mathcal{I}_j$}
+		\State Send $\theta_i^{\text{E}}$ to MD $i \in \mathcal{I}$;
+		\EndIf
+		\If {an experience \hspace{-0.2mm} $(\hspace{-0.2mm}\boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}t\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}t\hspace{-0.3mm}+\hspace{-0.3mm}\hspace{-0.2mm}1\hspace{-0.2mm}\hspace{-0.2mm})\hspace{-0.2mm})$ is received \\ \;\;\;\; from MD $i \in \mathcal{I}_j$}
+		\State Store $(\boldsymbol{s}_i(t'), \boldsymbol{a}_i(t'), \boldsymbol{q}_i(t'), \boldsymbol{s}_i(t'\hspace{-1mm}+1))$ in $\mathcal{M}_i$;
+		\State Get a collection of experiences  $\mathcal{I}$ from $\mathcal{M}_i$; 
+		\For{each experience $i \in \mathcal{I}$} 
+		\State Get experience $(\boldsymbol{s}_i(\hspace{-0.2mm}n\hspace{-0.2mm}), \boldsymbol{a}_i(\hspace{-0.2mm}n\hspace{-0.2mm}), \boldsymbol{q}_i(\hspace{-0.2mm}n\hspace{-0.2mm}), \boldsymbol{s}_i(\hspace{-0.2mm}n\hspace{-0.5mm}+1\hspace{-0.2mm}))$; 
+		\State Generate $\hat{Q}_{i,n}^{\text{T}}$ according to   \eqref{28};
+		\EndFor
+		\State Set vector  $\hat{\mathbf{Q}}_i^{\text{T}} := (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$;
+		\State Update $\theta_i^{\text{E}}$ to minimize $L(\theta_i^{\text{E}}$, $\hat{\mathbf{Q}}_i^{\text{T}})$ in   \eqref{30};
+		\State Count := Count + 1;
+		\If {mod(Count, \textit{ReplaceThreshold}) = 0}
+		\State $\theta_i^{\text{T}}$ := $\theta_i^{\text{E}}$;
+		\EndIf
+		\EndIf
+		\EndWhile
+		
+	\end{algorithmic}
+\end{algorithm}
+
 
 
 
@@ -1364,7 +1280,7 @@ where $\tilde{\boldsymbol{a}}_n$ denotes the optimal action for the state $\bold
 \end{alignat} 
 In particular, regarding experience $n$, the target-Q value $\hat{Q}_{i,n}^{\text{T}}$ represents the long-term QoE for action $\boldsymbol{a}_i(n)$ under state $\boldsymbol{s}_i(n)$. This value corresponds to the QoE observed in experience $n$, as well as the approximate expected upcoming QoE. %based on $\textit{Net}_i^{\text{T}}_i$, i.e., $\gamma Q_i^{\text{T}}(\mathcal{S}_i(i+1)), \mathcal{A}_i^{\text{N}}; \theta_i^{\text{T}})$
 %Based on the set $\mathcal{N}$, the EN trains the MD's neural network using previous sample experiences. Simultaneously, it updates $\theta^{\text{E}}_i$ in $\textit{Net}_i^{\text{E}}$ and computes vector $\hat{\mathbf{Q}}_i^{\text{T}} = (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$. The key idea of updating $\textit{Net}_i^{\text{E}}$ is to minimize the disparity in Q-values between $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$, as indicated by the following loss function:
-\textcolor{red}{Based on the set $\mathcal{N}$, the EN computes the vector $\hat{\mathbf{Q}}_i^{\text{T}} = (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$ and trains the MD's neural network (Lines 11-21 of Algorithm~\ref{alg:cap2}) to update the parameter vector $\theta^{\text{E}}_i$ in $\textit{Net}_i^{\text{E}}$ for the next MD's \textit{UpdateRequest}.} The key idea of updating $\textit{Net}_i^{\text{E}}$ is to minimize the disparity in Q-values between $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$, as indicated by the following loss function:
+\textcolor{blue}{Based on the set $\mathcal{N}$, the EN computes the vector $\hat{\mathbf{Q}}_i^{\text{T}} = (\hat{Q}^{\text{T}}_{i,n})_{n \in \mathcal{N}}$ and trains the MD's neural network (Lines 11-21 of Algorithm~\ref{alg:cap2}) to update the parameter vector $\theta^{\text{E}}_i$ in $\textit{Net}_i^{\text{E}}$ for the next MD's \textit{UpdateRequest}.} The key idea of updating $\textit{Net}_i^{\text{E}}$ is to minimize the disparity in Q-values between $\textit{Net}_i^{\text{E}}$ and $\textit{Net}_i^{\text{T}}$, as indicated by the following loss function:
 \begin{alignat}{1}
 	\hspace{-2mm}L(\theta_i^{\text{E}},\hat{\mathbf{Q}}_i^{\text{T}}) = {1 \over |\mathcal{N}| }\hspace{-1mm} \sum\limits_{n \in \mathcal{N}} \bigg(Q_i^{\text{E}}(\boldsymbol{s}_i(n) , \boldsymbol{a}_i(n); \theta_i^{\text{E}} ) -   \hat{Q}^{\text{T}}_{i,n}  \bigg)^2.
 	\label{31}  
@@ -1410,7 +1326,7 @@ The computational complexity of the QECO algorithm is determined by the number o
 
 
 \section{Performance Evaluation}\label{section:VI}
-In this section, we first present the simulation setup and training configuration. \textcolor{red}{We then evaluate the performance of QECO in comparison to three baseline schemes in addition to the existing state-of-the-art works~\cite{yang2018distributed},~\cite{qiu2020distributed}. We further analyze the convergence
+In this section, we first present the simulation setup and training configuration. \textcolor{blue}{We then evaluate the performance of QECO in comparison to three baseline schemes in addition to the existing state-of-the-art works~\cite{yang2018distributed},~\cite{qiu2020distributed}. We further analyze the convergence
 of our proposed algorithm.}
 
 %We begin by presenting the simulation setting and training configuration, followed by the evaluation of QECO algorithm under multiple key performance metrics in comparison to benchmark methods.
@@ -1443,7 +1359,7 @@ This existing method is a distributed optimization algorithm designed for delay-
 
 \item \textcolor{blue}{\textbf{DCDRL}~\cite{qiu2020distributed}: This method is based on the actor-critic framework \cite{NIPS1999_6449f44a}, which underpins many state-of-the-art DRL algorithms, such as DDPG \cite{lillicrap2015continuous}, and PPO \cite{schulman2017proximal}. DCDRL is designed for distributed computation offloading in a queuing-based MEC environment.} %We select DCDRL as a benchmark due to its similarity to our work.}
 
-
+\end{enumerate}
 
 	
 
@@ -1460,12 +1376,17 @@ This existing method is a distributed optimization algorithm designed for delay-
 %\newpage
 
 
+
 \subsection{Performance Comparison and Convergence}
 \label{section:2}
 
 
 
-\end{enumerate}
+
+We first evaluate the number of completed tasks when comparing our proposed QECO algorithm with the other four schemes. As illustrated in Fig.~\ref{chart1}\,(a), the QECO algorithm consistently outperforms the benchmark methods when we vary the task arrival rate. At a lower task arrival rate (i.e., 50), most of the methods demonstrate similar proficiency in completing tasks. However, as the task arrival rate increases, the efficiency of QECO becomes more evident. Specifically, when the task arrival rate increases to 250, our algorithm can increase the number of completed tasks by 72.1\%, 46.8\%, and 28.6\% compared to RD, PGOA, and DCDRL, respectively.
+Similarly, in Fig.~\ref{chart1}\,(b), as the number of MDs increases, QECO shows significant improvements in the number of completed tasks compared to other methods, especially when faced with a large number of MDs. When there are 110 MDs, our proposed algorithm can effectively increase the number of completed tasks by at least 22.8\% comparing with other methods. This achievement is attributed to the QECO's ability to effectively handle unknown workloads and prevent congestion at the ENs.
+
+
 
 \begin{figure}[tbp]
 \captionsetup{name=Fig.}
@@ -1484,10 +1405,6 @@ This existing method is a distributed optimization algorithm designed for delay-
 \caption{\textcolor{blue}{The number of completed tasks under different computation workloads: (a) task arrival rate; (b) the number of MDs.}}
 \label{chart1}
 \end{figure}
-
-
-
-
 
 \begin{figure}[tbp]
 \captionsetup{name=Fig.}
@@ -1577,10 +1494,6 @@ This existing method is a distributed optimization algorithm designed for delay-
 
 
 
-We first evaluate the number of completed tasks when comparing our proposed QECO algorithm with the other four schemes. As illustrated in Fig.~\ref{chart1}\,(a), the QECO algorithm consistently outperforms the benchmark methods when we vary the task arrival rate. At a lower task arrival rate (i.e., 50), most of the methods demonstrate similar proficiency in completing tasks. However, as the task arrival rate increases, the efficiency of QECO becomes more evident. Specifically, when the task arrival rate increases to 250, our algorithm can increase the number of completed tasks by 72.1\%, 46.8\%, and 28.6\% compared to RD, PGOA, and DCDRL, respectively.
-Similarly, in Fig.~\ref{chart1}\,(b), as the number of MDs increases, QECO shows significant improvements in the number of completed tasks compared to other methods, especially when faced with a large number of MDs. When there are 110 MDs, our proposed algorithm can effectively increase the number of completed tasks by at least 22.8\% comparing with other methods. This achievement is attributed to the QECO's ability to effectively handle unknown workloads and prevent congestion at the ENs.
-
-
 
 Figs.~\ref{chart2}\,(a) and ~\ref{chart2}\,(b) illustrate the overall energy consumption for different values of task arrival rate and the number of MDs, respectively. At the lower task arrival rate, the total energy consumption of all methods is close to each other. The total energy consumption increases when we have a higher task arrival rate.  
 %When the task arrival rate increases, the total energy consumption of each method increases differently. It can be found that the production of more computational tasks leads to a continuous increase in energy consumption until the capacity is saturated, and the energy consumption remains constant at its maximum. The QECO algorithm takes into account the battery level of the MD in its decision-making process. 
@@ -1601,7 +1514,7 @@ As shown in Fig.~\ref{chart3}\,(a), the QECO algorithm maintains a lower average
 
 
 
-We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. \textcolor{red}{Fig.~\ref{chart4}\,(a) shows the average QoE for different values of the task arrival rate. This figure highlights the superiority of the QECO algorithm in providing MDs with an enhanced experience. At lower task arrival rates (i.e., 50-150), QECO maintains an average QoE of at least 0.72, while the other methods experience a steeper decline, with average QoE dropping to 0--0.56. Specifically, when the task arrival rate is 200, QECO improves the average QoE by at least 65.7\% compared to other methods. As task arrival rates increase to 300, the average QoE significantly decreases for all methods due to increased competition for resources in the MEC system. However, QECO still maintains a positive average QoE, while other methods fall to negative values. At higher task arrival rates (i.e., 350–450), QECO achieves 42.6\%, 28.5\%, and 22.6\% improvement in QoE compared to RD, PGOA, and DCDRL, respectively.}
+We further investigate the overall improvement achieved by the QECO algorithm in comparison to other methods in terms of the average QoE. This metric signifies the advantages MDs obtain by utilizing different algorithms. \textcolor{blue}{Fig.~\ref{chart4}\,(a) shows the average QoE for different values of the task arrival rate. This figure highlights the superiority of the QECO algorithm in providing MDs with an enhanced experience. At lower task arrival rates (i.e., 50-150), QECO maintains an average QoE of at least 0.72, while the other methods experience a steeper decline, with average QoE dropping to 0--0.56. Specifically, when the task arrival rate is 200, QECO improves the average QoE by at least 65.7\% compared to other methods. As task arrival rates increase to 300, the average QoE significantly decreases for all methods due to increased competition for resources in the MEC system. However, QECO still maintains a positive average QoE, while other methods fall to negative values. At higher task arrival rates (i.e., 350–450), QECO achieves 42.6\%, 28.5\%, and 22.6\% improvement in QoE compared to RD, PGOA, and DCDRL, respectively.}
 
 
 
@@ -1617,10 +1530,6 @@ We further investigate the overall improvement achieved by the QECO algorithm in
 	\vspace*{-3mm}
 	\label{chart01}
 \end{figure}
-
-
-
-
 
 \begin{figure}
 	\captionsetup{name=Fig.}
@@ -1642,8 +1551,8 @@ We further investigate the overall improvement achieved by the QECO algorithm in
 
 
 
-\textcolor{red}{	
-	We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart01} and Fig.~\ref{chart02}. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart01}, the MD's network progressively learns efficient policies over the episodes, ultimately stabilizing as it approaches convergence. Specifically, DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. 
+\textcolor{blue}{	
+We finally delve into the investigation of the convergence performance of the QECO algorithm in Fig.~\ref{chart01} and Fig.~\ref{chart02}. To validate the effectiveness of the QECO algorithm, we assess its convergence rate compared to the vanilla DQN and DDQN configurations \cite{van2016deep}, measured by the average QoE across episodes. As shown in Fig.~\ref{chart01}, the MD's network progressively learns efficient policies over the episodes, ultimately stabilizing as it approaches convergence. Specifically, DQN, DDQN, and our proposed QECO algorithm converge after approximately 650, 550, and 450 iterations, respectively. 
 The QECO algorithm demonstrates the faster convergence while achieving a higher average QoE than the other methods. This underscores the beneficial impact of workload prediction by the LSTM network and highlights its effectiveness in efficiently utilizing the computing resources of MDs and ENs.
 }
 
@@ -1655,6 +1564,7 @@ Furthermore, we explore the impact of two main hyper-parameters on the convergen
 
 
 \section{Conclusion}
+
 \label{section:VII}
 %In this study, our focus was directed towards addressing the challenge of offloading in MEC systems, where strict task processing deadlines and energy constraints adversely impact system performance. To address this challenge, we propose the QECO algorithm specifically designed to empower MDs to make offloading decisions without relying on knowledge about task models or other MDs' offloading decisions. The QECO algorithm not only adapts to the uncertain dynamics of load levels at ENs but also effectively manages the ever-changing system environment. Through extensive simulations, we demonstrate that QECO outperforms several established benchmark techniques. Specifically, it can significantly increase the average user's QoE. This advantage can lead to improvements in key performance metrics, including task completion rate, task delay, and energy consumption, according to the user's demands under different system conditions. 
 %There are multiple directions for extend this research. A complementary approach involves extending the simplified task model by considering dependent divisible tasks that correspond to actual computational tasks. This can be achieved by incorporating a call graph~\cite{kwok1996dynamic} representation to develop relationships among task partitions. Furthermore, in order to accelerate the learning of optimal offloading policies, it is beneficial to enable MDs to take advantage of federated learning~\cite{li2020federated} techniques in the training process. This allows MDs to collectively contribute to improving the offloading model and enables continuous learning when new MDs join the network.
@@ -1663,8 +1573,9 @@ In this paper, we focused on addressing the challenge of offloading in MEC syste
 There are multiple directions for future work. A complementary approach involves extending the task model by considering interdependencies among tasks. This can be achieved by incorporating a task call graph representation. Furthermore, in order to accelerate the learning of optimal offloading policies, it will be beneficial to take advantages of federated learning techniques in the training process. This will allow MDs to collectively contribute to improving the offloading model and enable continuous learning when new MDs join the network.
 
 
-
-
+\bibliographystyle{IEEEtranN} % IEEEtranN is the natbib compatible bst file
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{paper}
 
 
 %
@@ -1732,9 +1643,7 @@ There are multiple directions for future work. A complementary approach involves
 
 
 
-\bibliographystyle{IEEEtranN} % IEEEtranN is the natbib compatible bst file
-% argument is your BibTeX string definitions and bibliography database(s)
-\bibliography{paper}
+
 
 \end{document}
 
